@@ -1,0 +1,30 @@
+﻿ --válasszon-- 
+Amerikai Dollár
+Angol Font
+Argentin Pezó
+Ausztrál Dollár
+Bolgár Leva
+Brazil Reál
+Cseh Korona
+Dán Korona
+Dél-Afrikai Rand
+Dél-Koreai Von
+Euró
+Forint
+Horvát Kuna
+India Rúpia
+Indonézia Rúpia
+Japán Yen
+Kanadai Dollár
+Kínai Juan
+Lengyel Zloty
+Mexikó Pezó
+Norvég Korona
+Orosz Rubel
+Svájci Frank
+Svéd Korona
+Szaúdi Riál
+Szerb Dinár
+Ukrán Hrivnya
+Új Román Lej
+Új Török Lira

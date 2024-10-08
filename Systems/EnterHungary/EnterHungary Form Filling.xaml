@@ -1,0 +1,625 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="EnterHungary_Form_Filling" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="excel_FilePath_In" Type="InArgument(x:String)" />
+    <x:Property Name="credentials_In" Type="InArgument(ui:PasswordCredentials)" />
+    <x:Property Name="emailRecipient_In" Type="InArgument(x:String)" />
+    <x:Property Name="BreakTriggerScopeInArgument" Type="InArgument(x:String)" />
+    <x:Property Name="in_Smtp_host" Type="InArgument(x:String)" />
+    <x:Property Name="in_Smtp_port" Type="InArgument(x:Int32)" />
+    <x:Property Name="in_RobotEmail_cred" Type="InArgument(ui:PasswordCredentials)" />
+    <x:Property Name="in_Registration_date" Type="InArgument(x:String)" />
+    <x:Property Name="in_Registration_number" Type="InArgument(x:String)" />
+  </x:Members>
+  <this:EnterHungary_Form_Filling.in_RobotEmail_cred>
+    <InArgument x:TypeArguments="ui:PasswordCredentials" />
+  </this:EnterHungary_Form_Filling.in_RobotEmail_cred>
+  <this:EnterHungary_Form_Filling.in_Registration_date>
+    <InArgument x:TypeArguments="x:String" />
+  </this:EnterHungary_Form_Filling.in_Registration_date>
+  <this:EnterHungary_Form_Filling.in_Registration_number>
+    <InArgument x:TypeArguments="x:String" />
+  </this:EnterHungary_Form_Filling.in_Registration_number>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap:VirtualizedContainerService.HintSize>1523,1523</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Activities.System.Collections</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.Web</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>UiPath.Web</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>Microsoft.Extensions.DependencyModel</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldCollapseAll">True</x:Boolean>
+      <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence sap2010:Annotation.AnnotationText="Description: Enter Hungary oldal megnyitása, &quot;DataTable-es Kitöltés.xaml&quot; meghívása&#xA;&#xA;Preconditions: arguments" DisplayName="EnterHungary_Form_Filling" sap:VirtualizedContainerService.HintSize="596,1458" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="callerType" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="534,1313" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <TryCatch.Try>
+        <Sequence DisplayName="TRY BLOCK - Form FIlling" sap:VirtualizedContainerService.HintSize="496,1062" sap2010:WorkflowViewState.IdRef="Sequence_1034">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,173" sap2010:WorkflowViewState.IdRef="LogMessage_152">
+            <ui:LogMessage.Level>
+              <InArgument x:TypeArguments="ui:LogLevel">
+                <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2828">UiPath.Core.Activities.LogLevel.Info</CSharpValue>
+              </InArgument>
+            </ui:LogMessage.Level>
+            <ui:LogMessage.Message>
+              <InArgument x:TypeArguments="x:Object">
+                <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2827">"Chrome Megnyitása"</CSharpValue>
+              </InArgument>
+            </ui:LogMessage.Message>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:LogMessage>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Login - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="434,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Systems\\EnterHungary\\Login.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="x:String" x:Key="in_Email">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2829">credentials_In.Username</CSharpValue>
+              </InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_Password">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2830">credentials_In.Password</CSharpValue>
+              </InArgument>
+              <InArgument x:TypeArguments="ss:SecureString" x:Key="in_SecurePassword" />
+            </ui:InvokeWorkflowFile.Arguments>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:InvokeWorkflowFile>
+          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="434,84" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+            <ui:CommentOut.Body>
+              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="1174,2391" sap2010:WorkflowViewState.IdRef="Sequence_1036">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <uix:NApplicationCard AttachMode="ByInstance" CloseMode="IfOpenedByAppBrowser" DisplayName="Use Browser Chrome: New Incognito Tab" sap:VirtualizedContainerService.HintSize="1112,2303" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="Simulate" IsIncognito="True" OpenMode="IfNotOpen" ScopeGuid="1b2bf6aa-0995-4a9a-8e91-3bb2d0c3cd06" Version="V2" WindowResize="Maximize">
+                  <uix:NApplicationCard.Body>
+                    <ActivityAction x:TypeArguments="x:Object">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Chrome Browser" sap:VirtualizedContainerService.HintSize="1078,2023" sap2010:WorkflowViewState.IdRef="Sequence_1031">
+                        <Sequence.Variables>
+                          <Variable x:TypeArguments="x:Int32" Name="whileIndex" />
+                          <Variable x:TypeArguments="sd:DataTable" Name="Munka1Sheet_dt" />
+                          <Variable x:TypeArguments="x:Int32" Name="ExcelRowCount" />
+                          <Variable x:TypeArguments="x:Int32" Name="maxLoopCounter" />
+                        </Sequence.Variables>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1016,175" sap2010:WorkflowViewState.IdRef="LogMessage_149">
+                          <ui:LogMessage.Level>
+                            <InArgument x:TypeArguments="ui:LogLevel">
+                              <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1295">UiPath.Core.Activities.LogLevel.Info</CSharpValue>
+                            </InArgument>
+                          </ui:LogMessage.Level>
+                          <ui:LogMessage.Message>
+                            <InArgument x:TypeArguments="x:Object">
+                              <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1296">"Chrome Megnyitása"</CSharpValue>
+                            </InArgument>
+                          </ui:LogMessage.Message>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:LogMessage>
+                        <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="1016,57" sap2010:WorkflowViewState.IdRef="NGoToUrl_11" Url="https://enterhungary.gov.hu/eh/login" Version="V3">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NGoToUrl>
+                        <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="1016,57" sap2010:WorkflowViewState.IdRef="Delay_62">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Delay>
+                        <Sequence DisplayName="Bejelentkezés az oldalra" sap:VirtualizedContainerService.HintSize="1016,1447" sap2010:WorkflowViewState.IdRef="Sequence_787">
+                          <Sequence.Variables>
+                            <Variable x:TypeArguments="x:String" Name="throwaway" />
+                          </Sequence.Variables>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'azonosító / e-mail cím'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="954,250" sap2010:WorkflowViewState.IdRef="NTypeInto_290" ScopeIdentifier="1b2bf6aa-0995-4a9a-8e91-3bb2d0c3cd06" Version="V3">
+                            <uix:NTypeInto.Target>
+                              <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/login" CvType="InputBox" DesignTimeRectangle="414, 268, 523, 34" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='form-control' aaname='' /&gt;" Guid="a1503e66-886d-4637-a909-4d0933c93974" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAg8AAAAmCAYAAABDGXh1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF4SURBVHhe7dkxbsJAFEXR7H9tyCtwSUMBDbgBo4mewSMTKUp+7XOkV9gzC7iyvxoAQIF4AABKPuJhmqY2jmMbhqEdDgczMzPb8dID6YL0wVaPhxzk0vF4bOfzuV0uFzMzM9vx0gPpgvTBNiB6PKQsciGH8zy35/NpZmZmO97j8Vi6IH2QTlj1eEhVXK/X5TIAQKQLbrfb0gmrHg/5t5HCAADYSh+kE1Yf8eCrAwDwU/pAPAAA/yYeAIAS8QAAlIgHAKBEPAAAJeIBACgRDwBAiXgAAErEAwBQIh4AgBLxAACUiAcAoEQ8AAAl4gEAKBEPAECJeAAASsQDAFAiHgCAEvEAAJSIBwCgRDwAACXiAQAoEQ8AQIl4AABKfo2HYRja/X5/PwEAvKQP0gmrHg/jOLbT6fR+AgB4SR+kE1Y9HqZpWqoiF+Z5fr8FAPYqPZAuSB+kE1Y9HiIHKYtcyr8NMzMz2+/SA+mCbTjERzwAAPxFPAAABa19A+vGt+YpqwN5AAAAAElFTkSuQmCC" InformativeScreenshot="0a40477ba0e77a34bd989576f25fd0f8.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Enter Hungary Bejelentkezés' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="3">
+                                    <uix:Target CvTextArgument="azonosito / e-mail cim" CvType="Text" DesignTimeRectangle="414, 235, 143, 28" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='azonosító / e-mail cím' check:innerText='azonosító / e-mail cím' /&gt;" Guid="1794aec1-a0fc-4805-9721-0742c77d40bf" ImageBase64="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" SearchSteps="FuzzySelector, Image, CV" />
+                                    <uix:Target CvTextArgument="Belepes" CvType="Text" DesignTimeRectangle="413, 187, 53, 17" ElementType="Text" Guid="f4718f85-598d-4882-98e3-bec2883f12f1" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                                    <uix:Target DesignTimeRectangle="414, 317, 37, 28" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Jelszó' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Jelszó' tag='LABEL' type='' class='' check:innerText='Jelszó' /&gt;" Guid="a68e56d7-bbc4-4f51-b1e6-65e7609e95b6" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACkAAAAgCAYAAACPb1E+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANcSURBVFhH7ZXBS+NAFMb9nwILPQiBhYKHnrYIFgTLHrYIBoQtgsHDFkEqSBA27EHqpReLIPEUYcmCkILUg0SQTcFNFyEHIVAIeAgI336Tjrbp2r1sDwr9YA6ZTN785nvvTebwBjSDnJZmkNPSDHJamkFOS28M8jFB1AsQhLGc+JcS+EdVFJfrcMJEzv2fklsLel6BstaC/yAnpYaQ/Q6MDwrULQfRo5ybqBjeYRmKWoV9NwXI2EdrPQflfRXW7d/xXgVk3LVg7Jiwb1/O4j8hk7CD1l4V5QUVhU86zNMOBtn9GzLuuWjuaCjOM8aShtqBBfdXBO+oDn2jiurn4dD3bQRpShOEVxYa2xpK+cEexrGLYIx1MmTUgbnCGnlXQnXPhLFVQk5RUD70ED9mIZPQQW2Ba5e4yUGDa8tQVQ2tn1lIbSUPhTFE3QnI+MpESTznK6h/NaCvMOV8Luy6mWxOgEwQnFYJVYRxEQ3eJyGsDQZZNNDpZyHj6wY3U1E7C+mNFGNklERw94pQchU0r2nVYwRnm9B5HXZPrn1aM8/afJqjXoYUi3cLPFUOxVW6kDqhoSy6jwHsOzo0mu6+h4ZwnS4UN0xYFwHiDCPT+qOOAuNpxz4zwamY3ywryH22ZAkNFJ3XkVfyqLelOdREyPSUDFpak5By6NsNuPdjkOn3ATqnJvSlAayybMCVuyd3LIcCY29ashYpuV9u086kNr40UBRZ+R7KmYmQTOdBialhXb1wJbzUOM9ivfqnOt1Q6FqAhGVif+GBC7Xs2ocArVUe5mMD/nOjDMvMvBx2z8TGiW+aqHAjdZ3O9WLEcYSw68Ft+3w/VpNdG03RlZGA4E+hLdxgak+66BJYZZzKNwde14cvRi9kygl0rBFIhXbgwGd2gnYTOh1Xlk14/QGW0ETI9FRnNdaRTJ8cgxoag7w0CZVdp6434f32YC5m59OxUIcrSo4uO/uMM/quoMPqZu+gIaS4RtgY4+2f9EP4Fw7s7y68mwBPf83kPqArAUuDD+kv1YfX5roTC/a5h0jUHh0X86l7oyN1Mg2TrgkuHVgnLVhnT9nIai66aKDGhqgsijuKV85IV70WzcVXrIOVAm/7GprnvOdGXHwtGqb7FWsGOS3NIKelGeS09AYggT8JQvX+GNRo1QAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NTypeInto.Target>
+                            <uix:NTypeInto.Text>
+                              <InArgument x:TypeArguments="x:String">
+                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1297">credentials_In.Username</CSharpValue>
+                              </InArgument>
+                            </uix:NTypeInto.Text>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NTypeInto>
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Jelszó'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="954,250" sap2010:WorkflowViewState.IdRef="NTypeInto_291" ScopeIdentifier="1b2bf6aa-0995-4a9a-8e91-3bb2d0c3cd06" Version="V3">
+                            <uix:NTypeInto.Target>
+                              <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/login" CvType="InputBox" DesignTimeRectangle="414, 350, 523, 34" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl name='jelszo' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl name='jelszo' tag='INPUT' type='text' class='pw-in form-control' aaname='' /&gt;" Guid="4f3a025b-9e4d-4fe7-ae71-dca21bfc6457" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAg8AAAAmCAYAAABDGXh1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF4SURBVHhe7dkxbsJAFEXR7H9tyCtwSUMBDbgBo4mewSMTKUp+7XOkV9gzC7iyvxoAQIF4AABKPuJhmqY2jmMbhqEdDgczMzPb8dID6YL0wVaPhxzk0vF4bOfzuV0uFzMzM9vx0gPpgvTBNiB6PKQsciGH8zy35/NpZmZmO97j8Vi6IH2QTlj1eEhVXK/X5TIAQKQLbrfb0gmrHg/5t5HCAADYSh+kE1Yf8eCrAwDwU/pAPAAA/yYeAIAS8QAAlIgHAKBEPAAAJeIBACgRDwBAiXgAAErEAwBQIh4AgBLxAACUiAcAoEQ8AAAl4gEAKBEPAECJeAAASsQDAFAiHgCAEvEAAJSIBwCgRDwAACXiAQAoEQ8AQIl4AABKfo2HYRja/X5/PwEAvKQP0gmrHg/jOLbT6fR+AgB4SR+kE1Y9HqZpWqoiF+Z5fr8FAPYqPZAuSB+kE1Y9HiIHKYtcyr8NMzMz2+/SA+mCbTjERzwAAPxFPAAABa19A+vGt+YpqwN5AAAAAElFTkSuQmCC" InformativeScreenshot="c2a433795e45f0de4548f50a8a934f6e.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Enter Hungary Bejelentkezés' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="3">
+                                    <uix:Target DesignTimeRectangle="414, 317, 37, 28" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Jelszó' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Jelszó' tag='LABEL' type='' class='' check:innerText='Jelszó' /&gt;" Guid="2495a5ee-9d7c-4d57-b8c4-5a89f52c26ba" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACkAAAAgCAYAAACPb1E+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANcSURBVFhH7ZXBS+NAFMb9nwILPQiBhYKHnrYIFgTLHrYIBoQtgsHDFkEqSBA27EHqpReLIPEUYcmCkILUg0SQTcFNFyEHIVAIeAgI336Tjrbp2r1sDwr9YA6ZTN785nvvTebwBjSDnJZmkNPSDHJamkFOS28M8jFB1AsQhLGc+JcS+EdVFJfrcMJEzv2fklsLel6BstaC/yAnpYaQ/Q6MDwrULQfRo5ybqBjeYRmKWoV9NwXI2EdrPQflfRXW7d/xXgVk3LVg7Jiwb1/O4j8hk7CD1l4V5QUVhU86zNMOBtn9GzLuuWjuaCjOM8aShtqBBfdXBO+oDn2jiurn4dD3bQRpShOEVxYa2xpK+cEexrGLYIx1MmTUgbnCGnlXQnXPhLFVQk5RUD70ED9mIZPQQW2Ba5e4yUGDa8tQVQ2tn1lIbSUPhTFE3QnI+MpESTznK6h/NaCvMOV8Luy6mWxOgEwQnFYJVYRxEQ3eJyGsDQZZNNDpZyHj6wY3U1E7C+mNFGNklERw94pQchU0r2nVYwRnm9B5HXZPrn1aM8/afJqjXoYUi3cLPFUOxVW6kDqhoSy6jwHsOzo0mu6+h4ZwnS4UN0xYFwHiDCPT+qOOAuNpxz4zwamY3ywryH22ZAkNFJ3XkVfyqLelOdREyPSUDFpak5By6NsNuPdjkOn3ATqnJvSlAayybMCVuyd3LIcCY29ashYpuV9u086kNr40UBRZ+R7KmYmQTOdBialhXb1wJbzUOM9ivfqnOt1Q6FqAhGVif+GBC7Xs2ocArVUe5mMD/nOjDMvMvBx2z8TGiW+aqHAjdZ3O9WLEcYSw68Ft+3w/VpNdG03RlZGA4E+hLdxgak+66BJYZZzKNwde14cvRi9kygl0rBFIhXbgwGd2gnYTOh1Xlk14/QGW0ETI9FRnNdaRTJ8cgxoag7w0CZVdp6434f32YC5m59OxUIcrSo4uO/uMM/quoMPqZu+gIaS4RtgY4+2f9EP4Fw7s7y68mwBPf83kPqArAUuDD+kv1YfX5roTC/a5h0jUHh0X86l7oyN1Mg2TrgkuHVgnLVhnT9nIai66aKDGhqgsijuKV85IV70WzcVXrIOVAm/7GprnvOdGXHwtGqb7FWsGOS3NIKelGeS09AYggT8JQvX+GNRo1QAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                                    <uix:Target CvTextArgument="azonosito / e-mail cim" CvType="Text" DesignTimeRectangle="414, 235, 143, 28" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='azonosító / e-mail cím' check:innerText='azonosító / e-mail cím' /&gt;" Guid="c6540219-fa28-42aa-9ca1-c76ca63af9c8" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJMAAAAgCAYAAAAWu0rOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAg/SURBVHhe7ZnxZ2PbFsff/xSG88MQLmF+CMPEZcLQmB8mSsPQKBPzw40SKRXlRn6oDBVlooz0h5EwUoaUkV7GGbek3rz06pV3lUM511wOw/d91z77pCdpmqRvzmPetb8cmn3OWXvttT577b1P/wEjo4hkYDKKTAYmo8hkYDKKTAYmo8hkYDKKTAYmo8hkYDKKTAYmo8hkYDKKTH8PmL66sF9lEYslUHw3gqebZ+qrg34tw2eTKL93dOMcuSMMPw/huPr39ySOe3jSg30hI/YweJ1H6kkZ3dHcCNyUO0Bz3ULsfg6tz3d8N6S/BUzOhyrSsRhS2z04jIVz2kP3ZBZUHpz3ZaT4bPrnPpyvuvk2CaS7acQeFJkg3fYdyTtvIWfFkChx3GpCcZLE82gruJaUvLfnT8TC2+H8ibhA//8wSaXZL6O818PoC397I7RfJpBUAfYfGcvjs6/47D5BWiZqTh+VH2NIbs2w9T2I4xm876J/LmXzv4SJVam1XUb93RDuN44xBBNn7cc26ps5pBMxWA8yKOx2MRQ/hd7XZRQ28sivX1+FnTaGKoEO7E4D5Y0MEvEEMhsVNI4GY+fcsxYqm1W0jmj/JZ+x4kitldEMV48FNtT9t1UUVhKw7ieRecH7HZtQeBh2qiiWGuj/ITbqyNH/2P00cvSxWOv6kF0N0d2voPA0iXiC90p1tD85c2eic1xGMpZC5cPsNc4b9dHcziPzII7kswKqh33cusLQ/56AvNdGe6+ITFLH4JhLKO20dvKMu9/W+hj4NScnIsdGo1RERVWURTDR1mkXjS3x10LiSR6VA/p7NUJvt4jiLicjXxvnqtNCdT2NhPRZa2NwSXCPGig+Y/ym/dC6hokzvLedYknPorhTRXktwdLHpWOnD9ebhCnHhMq92FqTMMlanVO/racc2E4RWUlmLM6y6cPifKgwKdJGe+tlVLcLSN/j73hBD3yRDRcDXYqzpSrqtTJyjyykVMUIgkhbv/6C5k8ZxKWvMEwMWPtFXNlPE8JqKef7cy+H5tmswFNMfneT43xShX2l28Ji1aquiI008ttVVF6mYdFm5pU9e4Z/GaL5XMbEMa4UUKkR7Mf+b7+N4yaYsgTHHpbRu+Q783LCPrxRFwXGKb0rfc6HyT1tIKv7Sq7kkFtNI73ZZmzEL+6XViWX4VwlOeGqqG7lkNDvSVt+q0Kg/FjmXg9UfgNNLnOuS3D0318GaKzSgAJGt4lkhskArSwan4jmFYMqQVlrYBCQemWjLoF+6rcFDiZLTKy27xxLGzfMR9wEL7LhCAwc8Eoddng2qKSFYJIg0lblYbCPUE+pQGbYf7rmJ0G1nTXVfiNIzLS8izYKP2g4dNu1WA0P84RHqpbexHN5bW3Qxx8r6M+CL4Dp/nWyvc9NP8FjYD2M3haU3epH3eucnCwNk0BZSqp7NzbYyq+bMKVrelLIu1t8N1QcJDeSL2uDMIbMTcJESvudJuo7UoVYWhlsSeA4wTLYIyn9FnIH/hKkAsIqk9kPUSoDq3HjqgfmOxhXJ61A3pkk2EL+cIQ/F9r4UwVZzZB4hnueLuzxKBbBRJ87BVYrJugkhIUk5hnt6SBOirC8ISwyYWZVrnGAWR1XWa1Vxc4hI9VUYPnXb+gfNtHYb6irKcufqgCT8QxgSPEwMIacsUrJSfNYQzonJ0vD5HJiPmHy11s3l+GZMBGcca60XY6rda5f9oZoyTtThWYMk3feRvERHZWEWSlk1rJITcHkXXRRTMYQf9EaG/GhYMk7CJ8EuGzt0QGLR0064DsYChA1AdMSNuS3WvNLWV12E8groJeA6VCW0DTqUkkDBQGZmCxaEuBVC9bzWaBRhEktgfQ/vaZh0ldhs47eP39BlRt3f2ng9YjV6t+TSRNNwuC3hWFalJOlYWIlkYNE/EX75kFiJkzhXGm7PzC+AYlB7KYmooZJvyABD8orO1ElNQi2nJJ+YgCTxQlnZTnIx6eWiyDYPFLL2r8QpiVshCUb3+pT+vaQSXJmwMQEhJc52Ugn9DeoseQ5BtjauDlb1bJ4T3y75agsiZNPBgS9uex3mamkiebD9NvCnCwNk/S9FsplWNHDpKtALIP6CWcEN6z9gyKNBg7IHkGWihiy3NDaZwMM5Dofwf1LQ3Yvw1OFjRH3N/absvruExzPF8HkBaDeZuMvHukPGmh/ZH8SdJcBkI9sMuOvpmAKlq9nsv/yOBYX3mVPARZ7XESLJ0hnNEB7R8Yb2gcECkCR4E0nJaRgQxt/zkrEo7nrOhid2egdD27OftGdYfpjQU7uABNHqJZtxjvHk5l9Kvmz0T/maXjmBvybYOJ9WcK4PIxLM/cYmcd8QRz/nRuucNkOrgc8dbBP77KPOpeF8L34egO29mchTPJ7ng3Z3Ao8oXviX1l97Z6CSQIX7K/keszNLQPvfmoiz8CHbWRqBHU67rpiJTa7C75FsZ+OTm7omrkvEd0ZJgI0Lyd3goliDLtbnCQhX5Wdy/8BTCLv0kb3bQvt9zaGVzKrRxiec1CeC+dcV6PwJZUpmIVfWE2OWmgdyPucneHxcNbKvyRG4RLLU6FqYz9jzbGhfPnUR6/D+4fBhzpfHgMy/ExfgucZ2NFJF+1OD7b4r5u9ywF6HF/zTQtdVjlvVgUJ/Frqq6bv1+AD+3rHvk6nxjgh7vku6OfFtT9gXEfsa3gZ6msqVrfmRHyfel/iMDgbzpkEnHoXrJ7vuuidDDBUD075NSNXnjMV31ljoSZgMjL6FhmYjCKTgckoMhmYjCKTgckoMhmYjCKTgckoMhmYjCKTgckoMhmYjCIS8B9ZM6g4MddXxQAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image, CV" />
+                                    <uix:Target CvTextArgument="Belepes" CvType="Text" DesignTimeRectangle="413, 187, 53, 17" ElementType="Text" Guid="39c064fb-c691-46c7-9774-4b2629a4a30f" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NTypeInto.Target>
+                            <uix:NTypeInto.Text>
+                              <InArgument x:TypeArguments="x:String">
+                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1298">credentials_In.Password</CSharpValue>
+                              </InArgument>
+                            </uix:NTypeInto.Text>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NTypeInto>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Belépés'" sap:VirtualizedContainerService.HintSize="954,189" sap2010:WorkflowViewState.IdRef="NClick_138" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1b2bf6aa-0995-4a9a-8e91-3bb2d0c3cd06" Version="V3">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/login" CvElementArea="497, 397, 81, 37" CvTextArea="510, 408, 54, 17" CvTextArgument="Belepes" CvType="Button" DesignTimeRectangle="499, 399, 77, 34" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='btn btn-success' aaname='Belépés' check:innerText='Belépés' /&gt;" Guid="8be64eab-09dc-442d-a2fd-77298a2aece2" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFEAAAAmCAYAAAC8qHdPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAN4SURBVGhD7Zq9T9tAGIf7ByKxscA/4ZXsWbJnyZLJi6UqQyMhsUSp0qFRVVPqImoaBYElZEqIAqbEAX59X3/Fdi7BCRdKpXujR4rvw5d78t6dB7+DiheHkighMhLtaxu7H3ex2djExvsNRQ72wn7YUzoSiVzBjbY+bGF7bxs7ezuKHOyF/bCntMhEIhvmBqLOiizsiX3FkUhkuyoDi8Ge2FcciURe86IOCjHsKw4lcUWURAkoiRJQEiWgJEpASZTA25J47gATC/pMXQXdO8C/aaEyU1cM7cSG/zSEdawJ61+CPIlHFryofxKPHpzLZvGJCyVq0K+GGA6WuE+eLy04YxddS75ARrJEB62krITaqR2I7Z8W/PFzM/Fts0aJjA5rAni/60lZpWfBfYgGeqIeTh1a3D4vsV1H52aa3/6dheaXqG6Psos+nWNzej/K/P5pJaoPWTReyaa+9Pvi8Md97H+d9i3KGiVqKJ9QGe1D5mFUdmhiSBOx7FJwrR104D75sO2oPiNRQ3Pkw7/toNrm6xKMAQn1OigH9SyR4t5C4zNnuoaq48BH0fEM2CTXdWLpJVR+1FbaMiRLzMXEhWmXkzb6lQf/upHp1xxRBsRlaYltlkT7WHfaducbSUnKQonOeXqrKAcHUJz5i8drRBKr05WwImvMRPpnf3bhPvo00fDfbt1GA+TjthX2SUsU/SlBUGYd8f1ZYvx9CosDneJFxqv0bMpUuh47sM50lIOMX541SgwJJnXXDZYgT8q70jP1GWYkzt5vilhi49oHRs3g+7PjMe0y9DMLDu+Nkz6a6cwvyOtIvDdRpe/GgCaY7GkC0hK7tH/RDpfslzOEy9l10su5CvMeGLrV4PrZ8TLUgr7OuahuMWuUSAfLMS9nnlQtLOONnsS4F3WU4jbfGzDig0BwsGBso3kQifpUgXFCyy6oDyVinD9YaM+MT/CF49Vg/KolSzg+dPq9qO8SSJaYC8HDdsnu0oNvVE/hT+g0FZ7ORLuK/QFp4H2LgybpjVpBVsfLuX+ReoR5cGH1so8488czYP5J/WI6xd1LI5K9HPIkvjriPfFfoCRKQEmUwH8s8e2gJEpASZSAkigBJVECQonqNZLizH2NRL3QVJy5LzSpV+ueh72wH/YkfLWOgyvYMDfiNa/Iwl7YT1ogR0aiitVCSXxxAH8B6rlD8dij0hUAAAAASUVORK5CYII=" InformativeScreenshot="7f352f25efac1c02f1e8482d75e6e679.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Enter Hungary Bejelentkezés' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="3">
+                                    <uix:Target CvElementArea="781, 398, 66, 36" CvTextArea="793, 409, 40, 13" CvTextArgument="vissza" CvType="Button" DesignTimeRectangle="782, 399, 64, 34" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='vissza' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='vissza' tag='A' type='' class='btn btn-default' check:innerText='vissza' /&gt;" Guid="077bf8c6-c51f-49a8-8247-0191c386561d" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEQAAAAmCAYAAAB9Lz3jAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMVSURBVGhD7ZrNS+NAGIf3f8oph0JAEDzkZE8BweBFBAPCysIWD/YiPSzBgyfpQunFsLDUg3RB3FMFUbHksFChtCDkoAQKAQ+BwG/n7UzzMcqCS5Go80Bo5iOl75P3nenXJygKKCESBSGPj48YDoe4ubnB9fX1uz4oRoqVYs6TCqEBmvTw8IAkSUTv+4VipFgp5ryUVAjZogkfDYqZYp+RCiFTHyEzZChmin1GKoTq6qOSj10JYSghEkqIhBIioYRIKCESryQkRtD3EcSiWWJeSYiPg0oV7exNYGl5JSFvh/kISXy4FQveWLQFoyML5uGAnbFxzUHnnvfjrovG2iJ0TYOmGah+bsOPWH8SwW9to7pA/Rr0JRv102B6id+yYK1kx2JFg3MSTsfiWw+1jSoM8Xz23hmC//zkMbcMGRyasI5GokWM4K2YaP6h87yQAN6qCfcqW1Di+4itMuzxogF9s5MFE4cISZTM2IO97MKffTCdBBhNxDmT2tvT4RxzWS9lbkLwpwlzxWMaBOxFW2YTlB9FIVyUe/E00vi8AW3T+/fdTdj1klCZ8NiBtu+L1suYnxAWetPMymbwPZ8xxZKJhyzFlwwsbrno9APEMwFJiN6+DWPBRq3Vy+56juCnA/Pb5TSjUu4v0d5Zz0pqSS+DEL5mcAkkx4Z3x/ufrCFEQltxB+6GAX2tjUE+wskIvVYNFtuZ6r9zqR904FQa6OW/2JqcocbmuVdZxpUkQxh3rLapbG5Z+ayy1BfdzwpJidD9osHti2YeKkO2pnAlIbpbBhrnUqn0XVZmszkcys5yCJkumOuo71rSopYXEiEYh1mZRJdwTf4eJQ5GCHJ3P/jhQN89Y1cwHScOjK/8vACtVZQ1YiAed6blWBIhIl21bXQL9Z8XEqC7Y0+3zdnW2vjFcynqN7G9zIKRt2N2/QGbbyxn2y4d9VOSHmPQcsTziS2XMqssQt46SoiEEiKhhEgoIRJKiIQSIqGESDwrRP2UyUmFqB+7OakQ9XcITiqEoAGyRZOort7zQTFSrHkZREGIQgmRAP4Cx0zyapMkqlIAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image, CV" />
+                                    <uix:Target DesignTimeRectangle="414, 317, 37, 28" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Jelszó' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Jelszó' tag='LABEL' type='' class='' check:innerText='Jelszó' /&gt;" Guid="09bcffe6-cf0d-4bea-963b-4572d8d60de2" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACkAAAAgCAYAAACPb1E+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANcSURBVFhH7ZXBS+NAFMb9nwILPQiBhYKHnrYIFgTLHrYIBoQtgsHDFkEqSBA27EHqpReLIPEUYcmCkILUg0SQTcFNFyEHIVAIeAgI336Tjrbp2r1sDwr9YA6ZTN785nvvTebwBjSDnJZmkNPSDHJamkFOS28M8jFB1AsQhLGc+JcS+EdVFJfrcMJEzv2fklsLel6BstaC/yAnpYaQ/Q6MDwrULQfRo5ybqBjeYRmKWoV9NwXI2EdrPQflfRXW7d/xXgVk3LVg7Jiwb1/O4j8hk7CD1l4V5QUVhU86zNMOBtn9GzLuuWjuaCjOM8aShtqBBfdXBO+oDn2jiurn4dD3bQRpShOEVxYa2xpK+cEexrGLYIx1MmTUgbnCGnlXQnXPhLFVQk5RUD70ED9mIZPQQW2Ba5e4yUGDa8tQVQ2tn1lIbSUPhTFE3QnI+MpESTznK6h/NaCvMOV8Luy6mWxOgEwQnFYJVYRxEQ3eJyGsDQZZNNDpZyHj6wY3U1E7C+mNFGNklERw94pQchU0r2nVYwRnm9B5HXZPrn1aM8/afJqjXoYUi3cLPFUOxVW6kDqhoSy6jwHsOzo0mu6+h4ZwnS4UN0xYFwHiDCPT+qOOAuNpxz4zwamY3ywryH22ZAkNFJ3XkVfyqLelOdREyPSUDFpak5By6NsNuPdjkOn3ATqnJvSlAayybMCVuyd3LIcCY29ashYpuV9u086kNr40UBRZ+R7KmYmQTOdBialhXb1wJbzUOM9ivfqnOt1Q6FqAhGVif+GBC7Xs2ocArVUe5mMD/nOjDMvMvBx2z8TGiW+aqHAjdZ3O9WLEcYSw68Ft+3w/VpNdG03RlZGA4E+hLdxgak+66BJYZZzKNwde14cvRi9kygl0rBFIhXbgwGd2gnYTOh1Xlk14/QGW0ETI9FRnNdaRTJ8cgxoag7w0CZVdp6434f32YC5m59OxUIcrSo4uO/uMM/quoMPqZu+gIaS4RtgY4+2f9EP4Fw7s7y68mwBPf83kPqArAUuDD+kv1YfX5roTC/a5h0jUHh0X86l7oyN1Mg2TrgkuHVgnLVhnT9nIai66aKDGhqgsijuKV85IV70WzcVXrIOVAm/7GprnvOdGXHwtGqb7FWsGOS3NIKelGeS09AYggT8JQvX+GNRo1QAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                                    <uix:Target CvTextArgument="Belepes" CvType="Text" DesignTimeRectangle="413, 187, 53, 17" ElementType="Text" Guid="efa4bd0e-4a2c-496c-965b-b138f5ec86df" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NClick.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NClick>
+                          <uix:NCheckState DisplayName="Check App State 'Az e-mail'" sap:VirtualizedContainerService.HintSize="954,454" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="1b2bf6aa-0995-4a9a-8e91-3bb2d0c3cd06" Timeout="10" Version="V3">
+                            <uix:NCheckState.IfExists>
+                              <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,205" sap2010:WorkflowViewState.IdRef="Sequence_1032">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Throw sap:VirtualizedContainerService.HintSize="388,115" sap2010:WorkflowViewState.IdRef="Throw_1">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <InArgument x:TypeArguments="s:Exception">
+                                    <CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2813">new BusinessRuleException("Az e-mail vagy jelszó hibás")</CSharpValue>
+                                  </InArgument>
+                                </Throw>
+                              </Sequence>
+                            </uix:NCheckState.IfExists>
+                            <uix:NCheckState.IfNotExists>
+                              <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,105" sap2010:WorkflowViewState.IdRef="Sequence_1033">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </Sequence>
+                            </uix:NCheckState.IfNotExists>
+                            <uix:NCheckState.Target>
+                              <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/login?enter" DesignTimeRectangle="415, 499, 455, 19" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;strong' tag='STRONG' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='STRONG' class='' aaname='Az e-mail cím vagy jelszó hibás. ' check:innerText='Az e-mail cím vagy jelszó hibás. Ha elfelejtette jelszavát, itt kérhet újat.' /&gt;" Guid="7f409e8e-6970-4ea8-a182-9dd1b670fc17" ImageBase64="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" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Enter Hungary Bejelentkezés' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="2">
+                                    <uix:Target CvTextArgument="Nincs fiokja?" CvType="Text" DesignTimeRectangle="415, 428, 173, 19" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='STRONG' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='STRONG' type='' class='' aaname='                                         Nincs fiókja?                                                                              ' check:innerText='Nincs fiókja? Regisztráció »' /&gt;" Guid="320a0867-5bed-4e31-bde6-bc67b872e655" ImageBase64="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" SearchSteps="Selector, FuzzySelector, CV" />
+                                    <uix:Target CvElementArea="497, 362, 80, 37" CvTextArea="510, 373, 54, 17" CvTextArgument="Belepes" CvType="Button" DesignTimeRectangle="499, 364, 77, 34" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='btn btn-success' aaname='Belépés' check:innerText='Belépés' /&gt;" Guid="585f6f75-51cb-4e6d-974d-5eeee4981c80" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFEAAAAmCAYAAAC8qHdPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAN4SURBVGhD7Zq9T9tAGIf7BzKwMME/4ZXsWbJnyZLJi6UqQyMhsUSp0qFRVVPqImoaBYElZEqIAqbEAX59X3/Fdi7BCRdKpXujR4rvw5d78t6dB7+DiheHkighMhLtaxu7H3ex2djExvsNRQ72wn7YUzoSiVzBjbY+bGF7bxs7ezuKHOyF/bCntMhEIhvmBqLOiizsiX3FkUhkuyoDi8Ge2FcciURe86IOCjHsKw4lcUWURAkoiRJQEiWgJEpASZTA25J47gATC/pMXQXdO8C/aaEyU1cM7cSG/zSEdawJ61+CPIlHFryofxKPHpzLZvGJCyVq0K+GGA6WuE+eLy04YxddS75ARrJEB62krITaqR2I7Z8W/PFzM/Fts0aJjA5rAni/60lZpWfBfYgGeqIeTh1a3D4vsV1H52aa3/6dheaXqG6Psos+nWNzej/K/P5pJaoPWTReyaa+9Pvi8Md97H+d9i3KGiVqKJ9QGe1D5mFUdmhiSBOx7FJwrR104D75sO2oPiNRQ3Pkw7/toNrm6xKMAQn1OigH9SyR4t5C4zNnuoaq48BH0fEM2CTXdWLpJVR+1FbaMiRLzMXEhWmXkzb6lQf/upHp1xxRBsRlaYltlkT7WHfaducbSUnKQonOeXqrKAcHUJz5i8drRBKr05WwImvMRPpnf3bhPvo00fDfbt1GA+TjthX2SUsU/SlBUGYd8f1ZYvx9CosDneJFxqv0bMpUuh47sM50lIOMX541SgwJJnXXDZYgT8q70jP1GWYkzt5vilhi49oHRs3g+7PjMe0y9DMLDu+Nkz6a6cwvyOtIvDdRpe/GgCaY7GkC0hK7tH/RDpfslzOEy9l10su5CvMeGLrV4PrZ8TLUgr7OuahuMWuUSAfLMS9nnlQtLOONnsS4F3WU4jbfGzDig0BwsGBso3kQifpUgXFCyy6oDyVinD9YaM+MT/CF49Vg/KolSzg+dPq9qO8SSJaYC8HDdsnu0oNvVE/hT+g0FZ7ORLuK/QFp4H2LgybpjVpBVsfLuX+ReoR5cGH1so8488czYP5J/WI6xd1LI5K9HPIkvjriPfFfoCRKQEmUwH8s8e2gJEpASZSAkigBJVECQonqNZLizH2NRL3QVJy5LzSpV+ueh72wH/YkfLWOgyvYMDfiNa/Iwl7YT1ogR0aiitVCSXxxAH8Bq8RD+RtLGv8AAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, CV" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NCheckState.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NCheckState>
+                          <uix:NGetText DisplayName="Get Text 'ügyeim'" sap:VirtualizedContainerService.HintSize="954,182" sap2010:WorkflowViewState.IdRef="NGetText_15" ScopeIdentifier="1b2bf6aa-0995-4a9a-8e91-3bb2d0c3cd06" Timeout="180" Version="V3">
+                            <uix:NGetText.Target>
+                              <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases" CvElementArea="396, 427, 98, 37" CvTextArea="410, 438, 70, 17" CvTextArgument="uj kerelem" CvType="Button" DesignTimeRectangle="398, 429, 95, 34" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='új kérelem' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='A' type='' class='btn btn-success' /&gt;" Guid="ca2fb5a2-164f-4f7d-99c5-d73034b0aa53" InformativeScreenshot="e52c7648885517ab003d849be1c79da0.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary Ügyek' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="3">
+                                    <uix:Target DesignTimeRectangle="398, 345, 1140, 46" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='H4' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H4' type='' class='header-line' aaname='ügyeim' check:innerText='ÜGYEIM' /&gt;" Guid="2c913732-3c98-41d5-ae01-4cb1f1b1e166" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                                    <uix:Target CvTextArgument="Az elmult idoszak ugyei" CvType="Text" DesignTimeRectangle="396, 407, 154, 17" ElementType="Text" Guid="df99cb74-ce1c-40b3-8e1b-4bf36f302346" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                                    <uix:Target DesignTimeRectangle="398, 220, 1140, 70" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='DIV' class='navbar-collapse collapse ' aaname='                         csab ito                                                                      ' /&gt;" Guid="64e0efd2-7a7d-4953-b615-5225e4d2d1e0" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NGetText.Target>
+                            <uix:NGetText.TextString>
+                              <OutArgument x:TypeArguments="x:String">
+                                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_193">throwaway</CSharpReference>
+                              </OutArgument>
+                            </uix:NGetText.TextString>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NGetText>
+                        </Sequence>
+                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke DataTable-es Kitöltés.xaml" sap:VirtualizedContainerService.HintSize="1016,197" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Systems\\EnterHungary\\DataTable-es Kitöltés.xaml">
+                          <ui:InvokeWorkflowFile.Arguments>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_excel_FilePath">
+                              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2812">excel_FilePath_In</CSharpValue>
+                            </InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_Smtp_host">
+                              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2826">in_Smtp_host</CSharpValue>
+                            </InArgument>
+                            <InArgument x:TypeArguments="x:Int32" x:Key="in_Smtp_port">
+                              <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2825">in_Smtp_port</CSharpValue>
+                            </InArgument>
+                            <InArgument x:TypeArguments="ui:PasswordCredentials" x:Key="in_RobotEmail_cred">
+                              <CSharpValue x:TypeArguments="ui:PasswordCredentials" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2824">in_RobotEmail_cred</CSharpValue>
+                            </InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_Registration_date">
+                              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2823">in_Registration_date</CSharpValue>
+                            </InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_Registration_number">
+                              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2822">in_Registration_number</CSharpValue>
+                            </InArgument>
+                          </ui:InvokeWorkflowFile.Arguments>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:InvokeWorkflowFile>
+                      </Sequence>
+                    </ActivityAction>
+                  </uix:NApplicationCard.Body>
+                  <uix:NApplicationCard.TargetApp>
+                    <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="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" Selector="&lt;html app='chrome.exe' title='New Incognito Tab' /&gt;" Title="New Incognito Tab" Url="chrome://newtab/" />
+                  </uix:NApplicationCard.TargetApp>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </uix:NApplicationCard>
+              </Sequence>
+            </ui:CommentOut.Body>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:CommentOut>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="DataTable-es Kitöltés - Invoke Workflow file" sap:VirtualizedContainerService.HintSize="434,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Systems\\EnterHungary\\DataTable-es Kitöltés.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="x:String" x:Key="in_excel_FilePath">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2831">excel_FilePath_In</CSharpValue>
+              </InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_Smtp_host">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2832">in_Smtp_host</CSharpValue>
+              </InArgument>
+              <InArgument x:TypeArguments="x:Int32" x:Key="in_Smtp_port">
+                <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2833">in_Smtp_port</CSharpValue>
+              </InArgument>
+              <InArgument x:TypeArguments="ui:PasswordCredentials" x:Key="in_RobotEmail_cred">
+                <CSharpValue x:TypeArguments="ui:PasswordCredentials" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2834">in_RobotEmail_cred</CSharpValue>
+              </InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_Registration_date">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2835">in_Registration_date</CSharpValue>
+              </InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_Registration_number">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2836">in_Registration_number</CSharpValue>
+              </InArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:InvokeWorkflowFile>
+          <Assign DisplayName="Assign callerType" sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_33">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">
+                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_112">callerType</CSharpReference>
+              </OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">end</InArgument>
+            </Assign.Value>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </Assign>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Email Küldés.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="434,195" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Systems\\Utils\\Email Küldés.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="x:String" x:Key="email_recipient_In">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_720">emailRecipient_In</CSharpValue>
+              </InArgument>
+              <InArgument x:TypeArguments="ue:CurrentRowQuickHandle" x:Key="currentRow_In" />
+              <InArgument x:TypeArguments="x:String" x:Key="callerType_In">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_721">callerType</CSharpValue>
+              </InArgument>
+              <InArgument x:TypeArguments="x:Int32" x:Key="RowNumber_In" />
+              <InArgument x:TypeArguments="x:String" x:Key="in_Smtp_host">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2821">in_Smtp_host</CSharpValue>
+              </InArgument>
+              <InArgument x:TypeArguments="x:Int32" x:Key="in_Smtp_port">
+                <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2820">in_Smtp_port</CSharpValue>
+              </InArgument>
+              <InArgument x:TypeArguments="ui:PasswordCredentials" x:Key="in_RobotEmail_cred">
+                <CSharpValue x:TypeArguments="ui:PasswordCredentials" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2819">in_RobotEmail_cred</CSharpValue>
+              </InArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:InvokeWorkflowFile>
+        </Sequence>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="ui:BusinessRuleException" sap:VirtualizedContainerService.HintSize="500,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="ui:BusinessRuleException">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="ui:BusinessRuleException" Name="BusinessException" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="BusinesRuleException" sap:VirtualizedContainerService.HintSize="416,69" sap2010:WorkflowViewState.IdRef="Sequence_1035">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,141" sap2010:WorkflowViewState.IdRef="LogMessage_150">
+                <ui:LogMessage.Level>
+                  <InArgument x:TypeArguments="ui:LogLevel">
+                    <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2815">UiPath.Core.Activities.LogLevel.Error</CSharpValue>
+                  </InArgument>
+                </ui:LogMessage.Level>
+                <ui:LogMessage.Message>
+                  <InArgument x:TypeArguments="x:Object">
+                    <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2814">string.Format("BusinessRuleException: {0}", BusinessException.Message)</CSharpValue>
+                  </InArgument>
+                </ui:LogMessage.Message>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:LogMessage>
+              <ui:ReportStatus DisplayName="Report Status" sap:VirtualizedContainerService.HintSize="388,90" sap2010:WorkflowViewState.IdRef="ReportStatus_1">
+                <ui:ReportStatus.StatusText>
+                  <InArgument x:TypeArguments="x:Object">
+                    <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2816">string.Format("Hiba: {0}", BusinessException.Message)</CSharpValue>
+                  </InArgument>
+                </ui:ReportStatus.StatusText>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:ReportStatus>
+            </Sequence>
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+      <TryCatch.Finally>
+        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,141" sap2010:WorkflowViewState.IdRef="LogMessage_151">
+          <ui:LogMessage.Level>
+            <InArgument x:TypeArguments="ui:LogLevel">
+              <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2817">UiPath.Core.Activities.LogLevel.Info</CSharpValue>
+            </InArgument>
+          </ui:LogMessage.Level>
+          <ui:LogMessage.Message>
+            <InArgument x:TypeArguments="x:Object">
+              <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2818">"End of File: EnterHungary Form Filling"</CSharpValue>
+            </InArgument>
+          </ui:LogMessage.Message>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsPinned">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:LogMessage>
+      </TryCatch.Finally>
+    </TryCatch>
+  </Sequence>
+</Activity>

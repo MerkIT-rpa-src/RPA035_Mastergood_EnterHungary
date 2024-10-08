@@ -1,0 +1,252 @@
+﻿ --válasszon-- 
+Afganisztán
+Albánia
+Algéria
+Am. Csendes-Óceáni-Szigetek
+Amerikai Szamoa
+Amerikai Virgin-Szigetek
+Andorra
+Angola
+Anguilla
+Antarktisz
+Antigua És Barbuda
+Arab Emírségek
+Argentína
+Aruba
+Ausztria
+Ausztrália
+Azerbajdzsán
+Bahama-Szigetek
+Bahrein
+Banglades
+Barbados
+Belgium
+Belize
+Benin
+Bermuda
+Bhután
+Bissau-Guinea
+Bolívia
+Bosznia-Hercegovina
+Botswana
+Bouvet-Sziget
+Brazília
+Brit Indiai-Óceáni Terület
+Brit Virgin-Szigetek
+Brunei
+Bulgária
+Burkina Faso
+Burundi
+Chile
+Ciprus
+Comore-Szigetek
+Cook-Szigetek
+Costa Rica
+Csehország
+Csád
+Dominikai Köztársaság
+Dominikai Közösség
+Dzsibuti
+Dánia
+Dél-Afrikai Köztársaság
+Dél-Szudán
+Déli-Georgia És Déli-Sandwich-Szigetek
+Ecuador
+Egyenlítői-Guinea
+Egyesült Államok
+Egyiptom
+Elefántcsontpart
+Eritrea
+Etiópia
+Falkland-Szigetek (Malvinas)
+Fehéroroszország
+Feröer
+Fidzsi-Szigetek
+Finnország
+Francia Déli Területek
+Francia Guyana
+Francia Polinézia
+Franciaország
+Fülöp-Szigetek
+Gabon
+Gambia
+Ghána
+Gibraltár
+Grenada
+Grönland
+Grúzia
+Guadeloupe
+Guam
+Guatemala
+Guinea
+Guyana
+Görögország
+Haiti
+Heard És Mcdonald-Szigetek
+Holland Antillák
+Hollandia
+Honduras
+Hongkong
+Hontalan
+Horvátország
+India
+Indonézia
+Irak
+Irán
+Ismeretlen
+Izland
+Izrael
+Jamaica
+Japán
+Jemen
+Jordánia
+Kajmán-Szigetek
+Kambodzsa
+Kamerun
+Kanada
+Karácsony-Sziget
+Katar
+Kazahsztán
+Kelet-Timor
+Kenya
+Kirgizisztán
+Kiribati
+Kolumbia
+Kongó
+Kongói Demokratikus Közt.
+Koreai Köztársaság
+Koreai Népi Demokratikus Közt.
+Koszovó
+Kuba
+Kuwait
+Kína
+Kókusz (Keeling)-Szigetek
+Közép-Afrikai Köztársaság
+Laosz
+Lengyelország
+Lesotho
+Lettország
+Libanon
+Libéria
+Liechtenstein
+Litvánia
+Luxemburg
+Líbia
+Macedónia
+Madagaszkár
+Magyarország
+Makao
+Malajzia
+Malawi
+Maldív-Szigetek
+Mali
+Marokkó
+Marshall-Szigetek
+Martinique
+Mauritius
+Mauritánia
+Mayotte
+Mexikó
+Mianmar
+Mikronézia
+Moldova
+Monaco
+Mongólia
+Montenegro
+Montserrat
+Mozambik
+Málta
+Nagy-Britannia
+Namíbia
+Nauru
+Nepál
+Nicaragua
+Niger
+Nigéria
+Niue
+Norfolk-Sziget
+Norvégia
+Nyugat-Szahara
+Németország
+Olaszország
+Omán
+Oroszország
+Pakisztán
+Palau
+Palesztina
+Panama
+Paraguay
+Peru
+Pitcairn-Szigetek
+Portugália
+Puerto Rico
+Pápua Új-Guinea
+Románia
+Ruanda
+Réunion
+Saint Kitts És Nevis
+Saint Lucia
+Saint Vincent
+Saint-Martin Szigetek
+Saint-Pierre És Miquelon
+Salamon-Szigetek
+Salvador
+San Marino
+Sao Tomé És Príncipe
+Seychelle-Szigetek
+Sierra Leone
+Spanyolország
+Srí Lanka
+Suriname
+Svalbard
+Svájc
+Svédország
+Szamoa
+Szaúd-Arábia
+Szenegál
+Szent Ilona
+Szerbia
+Szingapúr
+Szlovákia
+Szlovénia
+Szomália
+Szudán
+Szváziföld
+Szíria
+Tajvan
+Tanzánia
+Thaiföld
+Tibeti
+Togo
+Tokelau-Szigetek
+Tonga
+Trinidad És Tobago
+Tunézia
+Turks- És Caicos-Szigetek
+Tuvalu
+Tádzsikisztán
+Törökország
+Türkmenisztán
+Uganda
+Ukrajna
+Uruguay
+Vanuatu
+Vatikán
+Venezuela
+Vietnam
+Volt Csehszlovákia
+Volt Jugoszlávia
+Volt Ndk
+Volt Szovjetúnió
+Wallis És Futuna
+Zaire
+Zambia
+Zimbabwe
+Zöld-Foki Köztársaság
+Északi-Mariana-Szigetek
+Észtország
+Írország
+Örményország
+Új-Kaledónia
+Új-Zéland
+Üzbegisztán

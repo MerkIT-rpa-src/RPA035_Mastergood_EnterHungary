@@ -1,0 +1,92 @@
+{
+  "name": "RPA999-EnterHungary3.0-DOBOZOS",
+  "projectId": "c0c78366-52ae-4961-b1da-57937219c677",
+  "description": "",
+  "main": "Systems\\Old\\Master Workflow.xaml",
+  "dependencies": {
+    "EnterHungary.Descriptors": "[1.0.10]",
+    "UiPath.Excel.Activities": "[2.23.4]",
+    "UiPath.GSuite.Activities": "[2.2.5]",
+    "UiPath.Mail.Activities": "[1.23.10]",
+    "UiPath.System.Activities": "[24.10.4]",
+    "UiPath.Testing.Activities": "[24.10.0]",
+    "UiPath.UIAutomation.Activities": "[24.10.2]",
+    "UiPath.WebAPI.Activities": "[1.16.2]"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "23.4.3.0",
+  "projectVersion": "3.0.12",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": true,
+    "pipType": "ChildSession"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": [
+        "UnitTests\\Sandbox.xaml",
+        "Systems\\NotUsed\\File Uploads.xaml",
+        "UnitTests\\Sandbox 2.xaml",
+        "Systems/Utils/Get Dropdown Values.xaml",
+        "Systems/Utils/Get Postcodes From EH.xaml"
+      ]
+    },
+    "fileInfoCollection": [
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "25d527af-93cf-4915-835b-fe0fcc261e2d",
+        "testCaseType": "TestCase",
+        "fileName": "UnitTests\\TestCase_Login.xaml"
+      }
+    ],
+    "saveToCloud": false
+  },
+  "expressionLanguage": "CSharp",
+  "entryPoints": [
+    {
+      "filePath": "BLL\\ReadDropdownValuesFromTxt.cs",
+      "uniqueId": "8976c044-1228-45d7-81d4-ec088dbcd1d8",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "Systems\\Old\\Master Workflow.xaml",
+      "uniqueId": "369650df-6721-4748-a467-2ee3b48163f1",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "BLL\\Workflow.cs",
+      "uniqueId": "667bd4d1-b74f-40d8-a2d2-b4c86c7de635",
+      "input": [],
+      "output": []
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {
+    "iconUrl": ".package/Merkit Composite Transparent.png"
+  },
+  "targetFramework": "Windows"
+}

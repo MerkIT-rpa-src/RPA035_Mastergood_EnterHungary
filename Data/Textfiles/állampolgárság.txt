@@ -1,0 +1,218 @@
+﻿ --válasszon-- 
+Abu Dabi
+Afgán
+Albán
+Algériai
+Amerikai
+Andorrai
+Angolai
+Antigua Es Barbuda-I
+Argentin
+Arubai (Holland)
+Ausztrál
+Azeri
+Bahamai
+Bahreini
+Bangladesi
+Barbadoszi
+Belga
+Belizei
+Benini
+Bhutani
+Bolgár
+Boliviai
+Bosnyák
+Botswanai
+Brazil
+Brit
+Brit Tengerentúli Területek-I
+Brunei
+Burkina Faso-Beli
+Burundi
+Cape Verde-Beli
+Chilei
+Ciprusi
+Comorosi
+Cook Szigeteki
+Costa Rica-I
+Cseh
+Csádi
+Dominikai
+Dominikai Köztársaság-Beli
+Dubai
+Dzsibuti
+Dán
+Dél-Afrikai
+Dél-Szudáni
+Ecuadori
+Egyenlitoi Guinea-Beli
+Egyesult Arab Emiratusok-Beli
+Egyiptomi
+Elefantcsontparti
+Ensz
+Eritreai
+Eszaki Mariana Sziget-I (Amerikai)
+Etióp
+Fehérorosz
+Fidzsi
+Finn
+Francia
+Fülöp Szigeteki
+Gaboni
+Gambiai
+Ghánai
+Grenadai
+Grúz
+Guatemalai
+Guinea-Bissau-I
+Guineai
+Guyanai
+Görög
+Haiti
+Holland
+Hondurasi
+Hong Kongi (Kinai)
+Hontalan
+Horvát
+Indiai
+Indonéz
+Iraki
+Iráni
+Ismeretlen
+Izlandi
+Izraeli
+Jamaikai
+Japán
+Jemeni
+Jordán
+Jugoszláv
+Kambodzsai
+Kameruni
+Kanadai
+Katari
+Kazah
+Kelet-Timori
+Kenyai
+Kirgiz
+Kiribati
+Kolumbiai
+Kongói
+Kongói Demokratikus Köztársasági
+Kongói, Zairei
+Koreai
+Koszovói
+Kubai
+Kuvaiti
+Kínai
+Közép Afrikai Köztársaság-Beli
+Laoszi
+Lengyel
+Lesothoi
+Lett
+Libanoni
+Libériai
+Lichtensteini
+Litván
+Luxemburgi
+Líbiai
+Magyar
+Makaoi (Kinai)
+Makedón
+Malawi
+Maldiv Szigeteki
+Malgas
+Mali
+Maltai
+Maláj
+Marokkói
+Marshall Szigeteki
+Mauritan
+Mauritiusi
+Menekült (1954. Szeptember 28. Utáni)
+Menekült (Korabbi)
+Mexikoi
+Mianmari (Burmai)
+Mikronéz
+Moldáv
+Monacoi
+Mongol
+Montenegroi
+Mozambiki
+Namibiai
+Naurui
+Nepáli
+Nicaraguai
+Nigeri
+Nigériai
+Norvég
+Nyugat Szahara-I
+Német
+Olasz
+Omani
+Orosz
+Osztrák
+Pakisztáni
+Palau-Beli
+Palesztin
+Panamai
+Paraguayi
+Perui
+Portugál
+Pápua Új Guinea-I
+Román
+Ruandai
+Saint Kitts And Nevis-Beli
+Saint Lucia-Beli
+Saint Vincent And The Grenadienes
+Salamon Szigetek-I
+Salvadori
+San Marino-I
+Sao Tome And Principe-Beli
+Seychelle Szigeteki
+Sierra Leone-I
+Spanyol
+Sri Lanka-I
+Surinamei
+Svájci
+Svéd
+Szamoai
+Szaudi
+Szenegáli
+Szerb
+Szerb-Montenegroi
+Szingapuri
+Szlovák
+Szlovén
+Szomáliai
+Szovjet
+Szudáni
+Szváziföldi
+Szír
+Tadzsik
+Tajvani (Kinai)
+Tanzániai
+Thai
+Tibeti
+Togói
+Tongai
+Trinidad Es Tobago-I
+Tunéziai
+Tuvalui
+Török
+Türkmen
+Ugandai
+Ukrán
+Uruguayi
+Vanuatui
+Vatikáni
+Venezuelai
+Vietnámi
+Zambiai
+Zimbabwei
+Állampolgárság Nélküli
+Észak-Koreai
+Észt
+Ír
+Örmény
+Új Zéland-I
+Üzbég

@@ -1,0 +1,5 @@
+﻿ --válasszon-- 
+Alapfokú
+Felsőfokú
+Középfokú
+Nincs

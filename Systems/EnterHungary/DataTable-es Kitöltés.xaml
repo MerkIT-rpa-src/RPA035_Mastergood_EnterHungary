@@ -1,0 +1,1083 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="DataTable_es_Kitöltés" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_excel_FilePath" Type="InArgument(x:String)" />
+    <x:Property Name="in_Smtp_host" Type="InArgument(x:String)" />
+    <x:Property Name="in_Smtp_port" Type="InArgument(x:Int32)" />
+    <x:Property Name="in_RobotEmail_cred" Type="InArgument(ui:PasswordCredentials)" />
+    <x:Property Name="in_Registration_date" Type="InArgument(x:String)" />
+    <x:Property Name="in_Registration_number" Type="InArgument(x:String)" />
+  </x:Members>
+  <this:DataTable_es_Kitöltés.in_RobotEmail_cred>
+    <InArgument x:TypeArguments="ui:PasswordCredentials" />
+  </this:DataTable_es_Kitöltés.in_RobotEmail_cred>
+  <this:DataTable_es_Kitöltés.in_Registration_date>
+    <InArgument x:TypeArguments="x:String" />
+  </this:DataTable_es_Kitöltés.in_Registration_date>
+  <this:DataTable_es_Kitöltés.in_Registration_number>
+    <InArgument x:TypeArguments="x:String" />
+  </this:DataTable_es_Kitöltés.in_Registration_number>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap:VirtualizedContainerService.HintSize>1378,7479</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Web</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.Web</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Description: Excel-ből adatok felvitele az EH oldalásra&#xA;- Excel sorainak olvasása&#xA;- &quot;Igénylés beadása&quot; meghívása&#xA;- Ha a file feltöltést implementálni kell, ise kell betenni az &quot;EH_Fajlmellkletek&quot; meghívását&#xA;&#xA;Preconditions: arguments" DisplayName="DataTable_es_Kitöltés" sap:VirtualizedContainerService.HintSize="1388,7414" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="dt_Sheet_munka1" />
+      <Variable x:TypeArguments="x:Int32" Name="CurrentIndex" />
+      <Variable x:TypeArguments="x:String" Name="dt_Sheet_munka1_text" />
+      <Variable x:TypeArguments="x:String" Name="currentURL" />
+      <Variable x:TypeArguments="x:String" Name="EllenorzesStatus" />
+      <Variable x:TypeArguments="x:String" Name="FeldolgozottsagiAllapot" />
+      <Variable x:TypeArguments="x:String" Name="errorCaseID" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="1326,122" sap2010:WorkflowViewState.IdRef="Delay_10" />
+    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="1326,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Munka1">
+      <ui:ReadRange.DataTable>
+        <OutArgument x:TypeArguments="sd:DataTable">
+          <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">dt_Sheet_munka1</CSharpReference>
+        </OutArgument>
+      </ui:ReadRange.DataTable>
+      <ui:ReadRange.WorkbookPath>
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">in_excel_FilePath</CSharpValue>
+        </InArgument>
+      </ui:ReadRange.WorkbookPath>
+    </ui:ReadRange>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1326,173" sap2010:WorkflowViewState.IdRef="LogMessage_1">
+      <ui:LogMessage.Level>
+        <InArgument x:TypeArguments="ui:LogLevel">
+          <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">UiPath.Core.Activities.LogLevel.Trace</CSharpValue>
+        </InArgument>
+      </ui:LogMessage.Level>
+      <ui:LogMessage.Message>
+        <InArgument x:TypeArguments="x:Object">
+          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">"Munkalap beolvasva DataTable-be"</CSharpValue>
+        </InArgument>
+      </ui:LogMessage.Message>
+    </ui:LogMessage>
+    <ui:OutputDataTable DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="1326,112" sap2010:WorkflowViewState.IdRef="OutputDataTable_1">
+      <ui:OutputDataTable.DataTable>
+        <InArgument x:TypeArguments="sd:DataTable">
+          <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_76">dt_Sheet_munka1</CSharpValue>
+        </InArgument>
+      </ui:OutputDataTable.DataTable>
+      <ui:OutputDataTable.Text>
+        <OutArgument x:TypeArguments="x:String">
+          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_7">dt_Sheet_munka1_text</CSharpReference>
+        </OutArgument>
+      </ui:OutputDataTable.Text>
+    </ui:OutputDataTable>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1326,173" sap2010:WorkflowViewState.IdRef="LogMessage_15">
+      <ui:LogMessage.Level>
+        <InArgument x:TypeArguments="ui:LogLevel">
+          <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_87">UiPath.Core.Activities.LogLevel.Fatal</CSharpValue>
+        </InArgument>
+      </ui:LogMessage.Level>
+      <ui:LogMessage.Message>
+        <InArgument x:TypeArguments="x:Object">
+          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_77">dt_Sheet_munka1_text</CSharpValue>
+        </InArgument>
+      </ui:LogMessage.Message>
+    </ui:LogMessage>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Ügyeim oldal" sap:VirtualizedContainerService.HintSize="1326,6524" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="Simulate" OpenMode="IfNotOpen" ScopeGuid="78d5ca3d-8080-4004-8666-1f619115c79c" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <ui:ForEachRow ColumnNames="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="671,2011" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+            <ui:ForEachRow.Body>
+              <ActivityAction x:TypeArguments="sd:DataRow">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="637,1847" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:MultipleAssign DisplayName="Assign EllenorzesStatus, FeldolgozottsagiAllapot" sap:VirtualizedContainerService.HintSize="575,179" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                    <ui:MultipleAssign.AssignOperations>
+                      <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                          <ui:AssignOperation.To>
+                            <OutArgument x:TypeArguments="x:String">
+                              <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_15">EllenorzesStatus</CSharpReference>
+                            </OutArgument>
+                          </ui:AssignOperation.To>
+                          <ui:AssignOperation.Value>
+                            <InArgument x:TypeArguments="x:String">
+                              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_118">CurrentRow["Ellenőrzés Státusz"].ToString()</CSharpValue>
+                            </InArgument>
+                          </ui:AssignOperation.Value>
+                        </ui:AssignOperation>
+                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                          <ui:AssignOperation.To>
+                            <OutArgument x:TypeArguments="x:String">
+                              <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_16">FeldolgozottsagiAllapot</CSharpReference>
+                            </OutArgument>
+                          </ui:AssignOperation.To>
+                          <ui:AssignOperation.Value>
+                            <InArgument x:TypeArguments="x:String">
+                              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_119">CurrentRow["Feldolgozottsági Állapot"].ToString()</CSharpValue>
+                            </InArgument>
+                          </ui:AssignOperation.Value>
+                        </ui:AssignOperation>
+                      </scg:List>
+                    </ui:MultipleAssign.AssignOperations>
+                  </ui:MultipleAssign>
+                  <If sap2010:Annotation.AnnotationText="(EllenorzesStatus.Equals(&quot;PASS&quot;)) &amp;&amp; (String.IsNullOrEmpty(FeldolgozottsagiAllapot)) &amp;&amp; (! String.IsNullOrEmpty(CurrentRow[&quot;Ügyszám&quot;].ToString()))" DisplayName="PASS Ellenőrzés Státusz + üres feldolg. állapot + kitöltött Ügyszám? (If)" sap:VirtualizedContainerService.HintSize="575,508" sap2010:WorkflowViewState.IdRef="If_4">
+                    <If.Condition>
+                      <InArgument x:TypeArguments="x:Boolean">
+                        <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_120">(EllenorzesStatus.Equals("PASS")) &amp;&amp; (String.IsNullOrEmpty(FeldolgozottsagiAllapot)) &amp;&amp; (! String.IsNullOrEmpty(CurrentRow["Ügyszám"].ToString()))</CSharpValue>
+                      </InArgument>
+                    </If.Condition>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If.Then>
+                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,193" sap2010:WorkflowViewState.IdRef="Sequence_280">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign DisplayName="Change EllenorzesStatus" sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_5">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">
+                              <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_17">FeldolgozottsagiAllapot</CSharpReference>
+                            </OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">Részleges Feldolgozottság</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,103" sap2010:WorkflowViewState.IdRef="Sequence_281">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                  <Switch x:TypeArguments="x:String" DisplayName="Switch" sap:VirtualizedContainerService.HintSize="575,1072" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+                    <Switch.Expression>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_121">EllenorzesStatus</CSharpValue>
+                      </InArgument>
+                    </Switch.Expression>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Sequence x:Key="FAIL" DisplayName="FAIL - Log és Státusz Jelentés" sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:LogMessage sap:VirtualizedContainerService.HintSize="354,175" sap2010:WorkflowViewState.IdRef="LogMessage_2">
+                        <ui:LogMessage.Level>
+                          <InArgument x:TypeArguments="ui:LogLevel">
+                            <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_88">UiPath.Core.Activities.LogLevel.Fatal</CSharpValue>
+                          </InArgument>
+                        </ui:LogMessage.Level>
+                        <ui:LogMessage.Message>
+                          <InArgument x:TypeArguments="x:Object">
+                            <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6" xml:space="preserve">string.Format("a {0}. sorban &lt;{1} {2}&gt; igénylése hibastátusz miatt kihagyásra került",
+	CurrentIndex+1,
+	CurrentRow["Személy: Vezetéknév"],
+	CurrentRow["Személy: Keresztnév"])</CSharpValue>
+                          </InArgument>
+                        </ui:LogMessage.Message>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:LogMessage>
+                      <ui:ReportStatus DisplayName="Report Status" sap:VirtualizedContainerService.HintSize="354,113" sap2010:WorkflowViewState.IdRef="ReportStatus_1">
+                        <ui:ReportStatus.StatusText>
+                          <InArgument x:TypeArguments="x:Object">
+                            <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8" xml:space="preserve">string.Format("a {0}. sorban &lt;{1} {2}&gt; igénylése hibastátusz miatt kihagyásra került", CurrentIndex+1,
+	CurrentRow["Személy: Vezetéknév"],
+	CurrentRow["Személy: Keresztnév"])</CSharpValue>
+                          </InArgument>
+                        </ui:ReportStatus.StatusText>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:ReportStatus>
+                    </Sequence>
+                    <TryCatch x:Key="PASS" DisplayName="Try Catch - PASS" sap:VirtualizedContainerService.HintSize="535,843" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <TryCatch.Try>
+                        <Switch x:TypeArguments="x:String" DisplayName="Switch Feldolgozottság" sap:VirtualizedContainerService.HintSize="497,615" sap2010:WorkflowViewState.IdRef="Switch`1_3">
+                          <Switch.Default>
+                            <Throw sap:VirtualizedContainerService.HintSize="334,90" sap2010:WorkflowViewState.IdRef="Throw_1">
+                              <InArgument x:TypeArguments="s:Exception">
+                                <CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_99">new System.Exception("Feldolgozottsági állapot nem megfelelő értékkel rendelkezik, a switch default case-ben hibát dobtunk")</CSharpValue>
+                              </InArgument>
+                            </Throw>
+                          </Switch.Default>
+                          <Switch.Expression>
+                            <InArgument x:TypeArguments="x:String">
+                              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_132">FeldolgozottsagiAllapot</CSharpValue>
+                            </InArgument>
+                          </Switch.Expression>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:LogMessage x:Key="Sikeres" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,141" sap2010:WorkflowViewState.IdRef="LogMessage_3">
+                            <ui:LogMessage.Level>
+                              <InArgument x:TypeArguments="ui:LogLevel">
+                                <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_89">UiPath.Core.Activities.LogLevel.Fatal</CSharpValue>
+                              </InArgument>
+                            </ui:LogMessage.Level>
+                            <ui:LogMessage.Message>
+                              <InArgument x:TypeArguments="x:Object">
+                                <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_72" xml:space="preserve">String.Format("Korábban már feldolgoztuk {0} {1} jelentkezését. Forrás: tábla {2}. sora",
+CurrentRow["Személy: Vezetéknév"],
+CurrentRow["Személy: Keresztnév"],
+CurrentIndex+1)</CSharpValue>
+                              </InArgument>
+                            </ui:LogMessage.Message>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:LogMessage>
+                          <ui:LogMessage x:Key="Kihagyás" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,141" sap2010:WorkflowViewState.IdRef="LogMessage_4">
+                            <ui:LogMessage.Level>
+                              <InArgument x:TypeArguments="ui:LogLevel">
+                                <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_90">UiPath.Core.Activities.LogLevel.Fatal</CSharpValue>
+                              </InArgument>
+                            </ui:LogMessage.Level>
+                            <ui:LogMessage.Message>
+                              <InArgument x:TypeArguments="x:Object">
+                                <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_73" xml:space="preserve">String.Format("Kérésre kihagytuk {0} {1}, {2} jelentkezését. Forrás: tábla {3}. sora",
+CurrentRow["Személy: Vezetéknév"],
+CurrentRow["Személy: Keresztnév"],
+CurrentRow["Személy: Útlevél száma/Személy ig."],
+CurrentIndex+1)</CSharpValue>
+                              </InArgument>
+                            </ui:LogMessage.Message>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:LogMessage>
+                          <Sequence x:Key="Részleges Feldolgozottság" DisplayName="Switch - Részleges Feldolgozottság" sap:VirtualizedContainerService.HintSize="416,365" sap2010:WorkflowViewState.IdRef="Sequence_252">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="x:String" Name="currentURL" />
+                            </Sequence.Variables>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <If sap2010:Annotation.AnnotationText="Kérelem törlése" DisplayName="If Ügyszám" sap:VirtualizedContainerService.HintSize="354,88" sap2010:WorkflowViewState.IdRef="If_1">
+                              <If.Condition>
+                                <InArgument x:TypeArguments="x:Boolean">
+                                  <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_14">System.Text.RegularExpressions.Regex.Match(CurrentRow["Ügyszám"].ToString(), @"\d{8,}").Success</CSharpValue>
+                                </InArgument>
+                              </If.Condition>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <If.Then>
+                                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="534,1381" sap2010:WorkflowViewState.IdRef="Sequence_243">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="472,114" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Version="V3">
+                                    <uix:NGoToUrl.Url>
+                                      <InArgument x:TypeArguments="x:String">
+                                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_15">"https://enterhungary.gov.hu/eh/cases/edit/"+System.Text.RegularExpressions.Regex.Match(CurrentRow["Ügyszám"].ToString(), @"\d{8,}").ToString()</CSharpValue>
+                                      </InArgument>
+                                    </uix:NGoToUrl.Url>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </uix:NGoToUrl>
+                                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Kérelem törlése'" sap:VirtualizedContainerService.HintSize="472,189" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="78d5ca3d-8080-4004-8666-1f619115c79c" Version="V3">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/10853642" CvElementArea="374, 830, 132, 37" CvTextArea="386, 840, 105, 14" CvTextArgument="Kerelem torlese" CvType="Button" DesignTimeRectangle="375, 823, 129, 34" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Kérelem törlése' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Kérelem törlése' tag='A' type='' class='btn btn-danger' check:innerText='Kérelem törlése' /&gt;" Guid="e4573adb-2237-4506-95b1-634c1fc28015" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIUAAAAmCAYAAADqUlh8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAT1SURBVHhe7ZxvTxpZFMZ5JzHUboyrJaG6blgMWA3bSdFdQ1s1KExFjf0a+2a/a5Nt3xiTdc2qwRKR1Urg2XNmuDAzdwYcC5rguckvYe6duX/Oeeaec0kgAilSPEVEIUUrLlH89+Uzjv78A5823+LTu9+FUYf8zP5mvztLRxTcwDf9ZW7h88EuvnzcE0Yc9jP7m/3uFEZHFKwYvsHvYWG0Yb+z/1XpiILVIjvE04T9zv5XpSsKijF+DwhPA/a/KiIKwUJEIWiIKAQNEYWgIaIQNEQUgsYjiaKMWmocrVd5HPu2h2A9DSQMnPm1PShlnG8VcUSfD3eLONv1u8dLHt8icdRNve04nwR+TKO6p7cNm8GJwjTQjNAinHUHBdRnx9HMFXDoqD/LzaFhbHy/IJgHF0UB19OedTIfcmhG7frTlQSw9N7d7ou/KA5LBhrzWVw8giCYIYrCXxAD56FFsbuKhlf89yZ4p3hMhiSKMqqZSbQy3vBg4nKJ3qIoDRWh8JEyHG9DEfUEGahUwNUvU9QeQXOlaLftbaCemrHqEH2G5lIep6pPTRR3GGODnPHymd3fRAI3myZO3y2iOTFGdcTLZXz1e0u3c2jE+Tnqd3qKSOLqg912vGXg1mqjPmMzuM05d8Kgtemi6M6D+nmRRH2r3Gk7/y3ZbYtNopl9j3/abT1tFJIhiCJIEHu4WLbrT9rX50YcWFjD39Y1G+45WvE53Kybdmy26k1c/Uw7zpuCVWc5PU33GQWrD68o+o9By5xM47Id80/WKHZHx+iZNfx7wHV2/1gO2P79wuQO7R6xBK4Lpj1nK2yOWXO21xC0NrcoDjcX0XLM7aiUpZCUwuU+XW9n0fqBPiuxHpRxuqME08dGIRmwKFKo5+gtjcyjpiVaZIBoEjVeoKqztmJVZzus9euGO9xwv9NZVJx1ZDyoOpco7jZGZwdi9tdwy44pta+ZXiHJRxSV1/T2kxBd87acuIgL6zpgbR5RVDNjuM13dwbb2RG7TonCL4HtZ6OQDFgU9Ma9WkWNdgrM5txGtdppCA1lFNtw39YdzzDsIN/n2o5xOvBeY7BjPEIKKYpqhoSWcwjNwunwgLX53KPPXfVdxoUxR2GDQkPGQNUsdwXWz0YhGbAo1CRo+0zQ9ulMMn2M6aaHKIIcxGiiCDsGO8bzzCOKQr/HzeF+EdVcGs0Y2ZdyCiss9rNRSIYkCvtY1YzO4Hq73c7btPNaI8AovG2quOqsVzgNcq8xvl8UZznKW+4QPnqLoozLBdpp75oH7FDSq+bRz0YhGZooGOsLGEqc1BcwnARils7fKi5SsnS+XXQlgbrhOK6SsRZWcWolgvy2mKiUTLvd48DwY4QUhZWjkCOdOQgnmtE4bnommv1E0U40o46ElTimE8sZO3ungAollqr+5G2KbLvcFl0fG4VkqKJQR1Ok1UnExFdjHq0YxztiYgrNZXVSCDIcQUauZdQxk5iMo7Hif/oIP0ZIUdCaKm8otvNconOdI+lRabV7zPU9kvYXBXOykUXjxbjdDx0tWz8tosoC7xyHeV10LI3TcdgpzF42CsngRCGMDCIKQUNEIWiIKAQNEYWgIaIQNEQUgoaIQtDwF4X8bPDJEvizQfmB8dMl8AfG8lcETw/2M/ub/e77VwRcuIEVwzdxjBFGHPIz+9spCC4uUUiRwkVEIcVTgP8BEi1QeZjj9bEAAAAASUVORK5CYII=" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/edit]' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive">
+                                        <uix:TargetAnchorable.Anchors>
+                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="2">
+                                            <uix:Target CvElementArea="519, 830, 67, 36" CvTextArea="532, 841, 41, 13" CvTextArgument="vissza" CvType="Button" DesignTimeRectangle="521, 823, 64, 34" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='vissza' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;a' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='vissza' type='' tag='A' class='btn btn-default' check:innerText='vissza' /&gt;" Guid="38a06c52-dc59-48b3-b884-5a8e4d533c3a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEQAAAAmCAYAAAB9Lz3jAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMgSURBVGhD7Zq/a9tAFMf7P92kwSAwBDp4ipYaCjadrSkmEE/xEhwoIoOn4ILx0hAoyVA8BBcKMgQTElQoOGAUKGhoEBgEHgSCb+9JJ1m6uJCCSZ3kPiDC3enkex/uvfOPvIGigBIiURCyWCwwm81wfX2Nq6urF31RjBQrxZwnE0IDdNP9/T2iKBK9LxeKkWKlmPNSMiFki254bVDMFHtKJoRMvYadIUMxU+wpmRDKq9dKPnYlhKOESCghEkqIhBIioYRIPJ0Qf4rJLBCNzeXJhPhfTWj7I2y6kqfbIc+EtQnxz02wAxuhaMeENjqsieFcjB85SX8UwOk3YZQZGGPQ3tbRvvCSscDBYMeAzvsZ07D1oY3RL97vj9B+X0U1vbZ1sFIX4onwxxaa77ag0bzSFsz+tLiWR7K+HTIfosk6sHOrCMcdsN1hnCZ5IeFlB1rjDF76cSn04ce5FGJyqMH8IuRwQt9H8OBjVQj7QId5nrvPc+Glrx25GNQ0WDei/Q+sTwgPe7jL0Bmnq6JFM7QukqpREEKiGidLIRnJHPN0GegqaH5B6AqcI/6cc1+0Hs8ahXAlF61l2gQjtHI7ppgyPuyjOvRyHa2+DZenVIZvw6rp0GstDL67D3fHYgKrYuJMchbcDmHtLFOK0vG/C0lqRiKB5GiHk0QOpyAkZe7C7rdQLRlofysuPrizMdirQtvmNeS36ORPm3ysoP7ZFW3BbQ9GiUuiWiPYiB0SL5jXgM7Yx2iP/71MdfxFSMrPHio8BVYtf3pcyQILf3Rh1E7gSrvm4bMD/vobIYQvmgrmfhvtkgUnt/BCDaECmPv60jtN36OE8O48hOm8yMNJQ+O7h9eh0EF320DvVozliGtSbZCJCi67qJd5cd4EIYgcWCWGyvFUdCTkhQQ3PTTp2IyPVh3GzgBOXHv5cfxpeRyzsoFm34nrCL2xo+M0O3bji8+jaVzc6IDXpNyR6/GU3QwhzxwlREIJkVBCJJQQCSVEQgmRUEIkVgpRP2UmZELUj90JmRD17xAJmRCCBsgW3UR59ZIvipFizcsgCkIUSogE8AevDfKhoMUQSAAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image, CV" />
+                                            <uix:Target CvTextArgument="adatkezelesi tajekoztato" CvType="Text" DesignTimeRectangle="8, 947, 1903, 83" FullSelectorArgument="&lt;webctrl class='footer-section' tag='SECTION' /&gt;" FuzzySelectorArgument="&lt;webctrl class='footer-section' tag='SECTION' type='' aaname='              ' check:innerText='adatkezelési tájékoztató' /&gt;" Guid="f01f628a-abad-4544-9fe7-fba347947407" ImageBase64="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" SearchSteps="FuzzySelector, Image, CV" />
+                                          </scg:List>
+                                        </uix:TargetAnchorable.Anchors>
+                                      </uix:TargetAnchorable>
+                                    </uix:NClick.Target>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </uix:NClick>
+                                  <ui:BlockUserInput TimeoutMS="{x:Null}" BlockType="All" DisplayName="Block User Input" sap:VirtualizedContainerService.HintSize="472,437" sap2010:WorkflowViewState.IdRef="BlockUserInput_1" KeyModifiers="Alt, Ctrl" SpecialKey="True">
+                                    <ui:BlockUserInput.Body>
+                                      <ui:UseForegroundScope WaitForeground="{x:Null}" DisplayName="Use Foreground" sap:VirtualizedContainerService.HintSize="436,278" sap2010:WorkflowViewState.IdRef="UseForegroundScope_1">
+                                        <ui:UseForegroundScope.Body>
+                                          <ActivityAction x:TypeArguments="x:Object">
+                                            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts 'OK'" sap:VirtualizedContainerService.HintSize="334,199" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" ScopeIdentifier="78d5ca3d-8080-4004-8666-1f619115c79c" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V3">
+                                              <uix:NKeyboardShortcuts.Target>
+                                                <uix:TargetAnchorable DesignTimeRectangle="1032, 163, 68, 32" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;ctrl name='enterhungary.gov.hu says' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='enterhungary.gov.hu says' role='dialog' /&gt;&lt;ctrl role='push button' automationid='' /&gt;" Guid="3999cac3-b5b3-4a1e-81e4-3fc67900f569" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEgAAAAkCAYAAAAq23xmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALHSURBVGhD7ZpNaxNBGMf9HH4BvagIUg+CePIL9FCIX6B3BQ9CfaEievCiYI1HD6UFIUouItUq1IPWogSN2D2FHLpJkyZxm83m7XH+MzubZyfiLWNh5w9/+sxLssyPmWeynTlGTv9UCtDr7z26/HCfTtzw6fjVvUwZY8bY3/zoxTSUEkCPN4K/fjCLfrJ5GFOJAb37GcmGM7dqtP45JL8zko1ZEsaMsYMBWHz4Fcl6CWhhpSkrX34NqfgtpIv39xOaWTHGjLGDAcpXnjUngE7GOSfojejSg+zB0cbYm8FYxmdv1yaAdAceZ9WcAeQAGeYMIAfIMGcAOUCGOQPIATLMGUAOkGHOAHKADHMG0H8A1KR8eUCtvnyc0IgqXkCLy7q9S7uituV1VHk5oG30bYSUS33PbAzx2DKgGuWrY/GUEe2WArr+vE2Pdvrki5rQ78YAOKAGrfmif39Aa3nzu2ZjiMd2Aa32JIzKjnq10Z77iCkypu0iyhNAuU8DCgXMrYJ6P7JhiMdWAc2XhuIJYjYky0lbQfHLB0ncqkZUwV8Bai7Vd7aGeGwV0JI3IupGtDTV1qGtrl5WCpDSkAqWlpY2xGOrgBbL8QyaalNQKqVGEre80Gpy1oZ4bDcHFSORU6Zz0LzINZgtb1dR1oDE0ipE1NIx6z9LQzy2C0jvSnwXK4ktX9SE1SCGMAGEXU8uSyTwDTuJGuKxZUDCyweU94YSipL6HTRZRhwQyio/2drqIR7bB3TEzRlADpBhzgBygAxzBpADZJgzgBwgw5wB5AAZ5gwgB8gwZwA5QIY5A0gCOnVT/UrFoZk7OFQHh6cFkwTQwlP1bvQqPnq+cK+e+mAWbB495/Ls6JlfXnjxJaT67+xdXthrq8sLmDlgkbq8AK1sHiY0s+78e+P6i5bnD+naepvO3bH3L86j4vN363LsYMCVAuRkiugPm4bKxb/wbVoAAAAASUVORK5CYII=" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Residence in Hungary [cases/edit] - Google Chrome' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                                                  <uix:TargetAnchorable.Anchors>
+                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                      <uix:Target DesignTimeRectangle="737, 76, 462, 144" FullSelectorArgument="&lt;ctrl name='enterhungary.gov.hu says' role='dialog' /&gt;&lt;ctrl idx='2' role='pane' /&gt;" FuzzySelectorArgument="&lt;ctrl name='enterhungary.gov.hu says' role='dialog' /&gt;&lt;ctrl automationid='' role='pane' /&gt;" Guid="6da0c3d4-0a1f-44aa-a90b-bccb589dbab8" ImageBase64="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" SearchSteps="Selector, FuzzySelector, Image" />
+                                                    </scg:List>
+                                                  </uix:TargetAnchorable.Anchors>
+                                                </uix:TargetAnchorable>
+                                              </uix:NKeyboardShortcuts.Target>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </uix:NKeyboardShortcuts>
+                                          </ActivityAction>
+                                        </ui:UseForegroundScope.Body>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ui:UseForegroundScope>
+                                    </ui:BlockUserInput.Body>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:BlockUserInput>
+                                  <ui:UpdateRowItem ColumnIndex="{x:Null}" ColumnName="Feldolgozottsági Állapot" DisplayName="Update Row Item (Feldolg. Állapot)" sap:VirtualizedContainerService.HintSize="472,224" sap2010:WorkflowViewState.IdRef="UpdateRowItem_1">
+                                    <ui:UpdateRowItem.Row>
+                                      <InArgument x:TypeArguments="sd:DataRow">
+                                        <CSharpValue x:TypeArguments="sd:DataRow" sap2010:WorkflowViewState.IdRef="CSharpValue`1_34">CurrentRow</CSharpValue>
+                                      </InArgument>
+                                    </ui:UpdateRowItem.Row>
+                                    <ui:UpdateRowItem.Value>
+                                      <InArgument x:TypeArguments="x:Object">
+                                        <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_33">string.Empty</CSharpValue>
+                                      </InArgument>
+                                    </ui:UpdateRowItem.Value>
+                                  </ui:UpdateRowItem>
+                                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="472,57" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                                    <ui:CommentOut.Body>
+                                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="496,163" sap2010:WorkflowViewState.IdRef="Sequence_253">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ueab:WriteCellX DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="WriteCellX_1">
+                                          <ueab:WriteCellX.Cell>
+                                            <InArgument x:TypeArguments="ue:IReadWriteCellRef">
+                                              <CSharpValue x:TypeArguments="ue:IReadWriteCellRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_16">CurrentRow.ByField["Feldolgozottsági Állapot"]</CSharpValue>
+                                            </InArgument>
+                                          </ueab:WriteCellX.Cell>
+                                          <ueab:WriteCellX.Value>
+                                            <InArgument x:TypeArguments="x:Object">
+                                              <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_17">string.Empty</CSharpValue>
+                                            </InArgument>
+                                          </ueab:WriteCellX.Value>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </ueab:WriteCellX>
+                                      </Sequence>
+                                    </ui:CommentOut.Body>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:CommentOut>
+                                  <ui:UpdateRowItem ColumnIndex="{x:Null}" ColumnName="Ügyszám" DisplayName="Update Row Item (Ügyszám)" sap:VirtualizedContainerService.HintSize="472,224" sap2010:WorkflowViewState.IdRef="UpdateRowItem_2">
+                                    <ui:UpdateRowItem.Row>
+                                      <InArgument x:TypeArguments="sd:DataRow">
+                                        <CSharpValue x:TypeArguments="sd:DataRow" sap2010:WorkflowViewState.IdRef="CSharpValue`1_36">CurrentRow</CSharpValue>
+                                      </InArgument>
+                                    </ui:UpdateRowItem.Row>
+                                    <ui:UpdateRowItem.Value>
+                                      <InArgument x:TypeArguments="x:Object">
+                                        <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_35">string.Empty</CSharpValue>
+                                      </InArgument>
+                                    </ui:UpdateRowItem.Value>
+                                  </ui:UpdateRowItem>
+                                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="472,48" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                                    <ui:CommentOut.Body>
+                                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="496,270" sap2010:WorkflowViewState.IdRef="Sequence_254">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ueab:WriteCellX DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_2">
+                                          <ueab:WriteCellX.Cell>
+                                            <InArgument x:TypeArguments="ue:IReadWriteCellRef">
+                                              <CSharpValue x:TypeArguments="ue:IReadWriteCellRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_18">CurrentRow.ByField["Ügyszám"]</CSharpValue>
+                                            </InArgument>
+                                          </ueab:WriteCellX.Cell>
+                                          <ueab:WriteCellX.Value>
+                                            <InArgument x:TypeArguments="x:Object">
+                                              <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_19">string.Empty</CSharpValue>
+                                            </InArgument>
+                                          </ueab:WriteCellX.Value>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </ueab:WriteCellX>
+                                      </Sequence>
+                                    </ui:CommentOut.Body>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:CommentOut>
+                                </Sequence>
+                              </If.Then>
+                              <If.Else>
+                                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,252" sap2010:WorkflowViewState.IdRef="Sequence_244">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,164" sap2010:WorkflowViewState.IdRef="LogMessage_5">
+                                    <ui:LogMessage.Level>
+                                      <InArgument x:TypeArguments="ui:LogLevel">
+                                        <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_21">UiPath.Core.Activities.LogLevel.Warn</CSharpValue>
+                                      </InArgument>
+                                    </ui:LogMessage.Level>
+                                    <ui:LogMessage.Message>
+                                      <InArgument x:TypeArguments="x:Object">
+                                        <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_71" xml:space="preserve">string.Format("&lt;{0} {1}&gt; sorában( {2}. sor) Részleges a feldolgozottsági státusz, és a robot nem talált a megkezdett kérelemhez tartozó ügyszámot.",
+	CurrentRow["Személy: Vezetéknév"],
+	CurrentRow["Személy: Keresztnév"],
+	CurrentIndex+1)</CSharpValue>
+                                      </InArgument>
+                                    </ui:LogMessage.Message>
+                                  </ui:LogMessage>
+                                </Sequence>
+                              </If.Else>
+                            </If>
+                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Új Kérelem Indítása - (Invoke Workflow File)" DisplayName="Új Kérelem Indítása - (Invoke Workflow File)" sap:VirtualizedContainerService.HintSize="354,99" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Systems\\EnterHungary\\ÚjKérelemIndítása.xaml">
+                              <ui:InvokeWorkflowFile.Arguments>
+                                <InArgument x:TypeArguments="ui:PasswordCredentials" x:Key="in_RobotEmail_cred">
+                                  <CSharpValue x:TypeArguments="ui:PasswordCredentials" sap2010:WorkflowViewState.IdRef="CSharpValue`1_143">in_RobotEmail_cred</CSharpValue>
+                                </InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="in_excel_FilePath">
+                                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_144">in_excel_FilePath</CSharpValue>
+                                </InArgument>
+                                <InArgument x:TypeArguments="sd:DataRow" x:Key="in_CurrentRow">
+                                  <CSharpValue x:TypeArguments="sd:DataRow" sap2010:WorkflowViewState.IdRef="CSharpValue`1_145">CurrentRow</CSharpValue>
+                                </InArgument>
+                                <InArgument x:TypeArguments="x:Int32" x:Key="in_CurrentIndex">
+                                  <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_146">CurrentIndex</CSharpValue>
+                                </InArgument>
+                                <OutArgument x:TypeArguments="x:String" x:Key="out_errorCaseID">
+                                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_18">errorCaseID</CSharpReference>
+                                </OutArgument>
+                                <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_dt_Sheet_munka1">
+                                  <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_19">dt_Sheet_munka1</CSharpReference>
+                                </InOutArgument>
+                              </ui:InvokeWorkflowFile.Arguments>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:InvokeWorkflowFile>
+                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Igénylés Beadása.xaml - Invoke Workflow File" DisplayName="Igénylés Beadása.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="354,90" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Systems\\EnterHungary\\Igénylés Beadása.xaml">
+                              <ui:InvokeWorkflowFile.Arguments>
+                                <InArgument x:TypeArguments="sd:DataRow" x:Key="in_CurrentRow">
+                                  <CSharpValue x:TypeArguments="sd:DataRow" sap2010:WorkflowViewState.IdRef="CSharpValue`1_56">CurrentRow</CSharpValue>
+                                </InArgument>
+                                <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_Sheet_munka1">
+                                  <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_55">dt_Sheet_munka1</CSharpValue>
+                                </InArgument>
+                                <InArgument x:TypeArguments="x:Int32" x:Key="in_CurrentIndex">
+                                  <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_54">CurrentIndex</CSharpValue>
+                                </InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="in_excel_FilePath">
+                                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_65">in_excel_FilePath</CSharpValue>
+                                </InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="in_CurrentURL">
+                                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_106">currentURL</CSharpValue>
+                                </InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="in_Smtp_host">
+                                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_131">in_Smtp_host</CSharpValue>
+                                </InArgument>
+                                <InArgument x:TypeArguments="x:Int32" x:Key="in_Smtp_port">
+                                  <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_130">in_Smtp_port</CSharpValue>
+                                </InArgument>
+                                <InArgument x:TypeArguments="ui:PasswordCredentials" x:Key="in_RobotEmail_cred">
+                                  <CSharpValue x:TypeArguments="ui:PasswordCredentials" sap2010:WorkflowViewState.IdRef="CSharpValue`1_129">in_RobotEmail_cred</CSharpValue>
+                                </InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="in_Registration_date">
+                                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_128">in_Registration_date</CSharpValue>
+                                </InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="in_Registration_number">
+                                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_127">in_Registration_number</CSharpValue>
+                                </InArgument>
+                              </ui:InvokeWorkflowFile.Arguments>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:InvokeWorkflowFile>
+                          </Sequence>
+                          <Sequence x:Key="" DisplayName="Switch - Null (Új Kérelem Indítása)" sap:VirtualizedContainerService.HintSize="416,606" sap2010:WorkflowViewState.IdRef="Sequence_265">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Új Kérelem Indítása - (Invoke Workflow File)" DisplayName="Új Kérelem Indítása - (Invoke Workflow File)" sap:VirtualizedContainerService.HintSize="354,235" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Systems\\EnterHungary\\ÚjKérelemIndítása.xaml">
+                              <ui:InvokeWorkflowFile.Arguments>
+                                <InArgument x:TypeArguments="ui:PasswordCredentials" x:Key="in_RobotEmail_cred">
+                                  <CSharpValue x:TypeArguments="ui:PasswordCredentials" sap2010:WorkflowViewState.IdRef="CSharpValue`1_142">in_RobotEmail_cred</CSharpValue>
+                                </InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="in_excel_FilePath">
+                                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_147">in_excel_FilePath</CSharpValue>
+                                </InArgument>
+                                <InArgument x:TypeArguments="sd:DataRow" x:Key="in_CurrentRow">
+                                  <CSharpValue x:TypeArguments="sd:DataRow" sap2010:WorkflowViewState.IdRef="CSharpValue`1_148">CurrentRow</CSharpValue>
+                                </InArgument>
+                                <InArgument x:TypeArguments="x:Int32" x:Key="in_CurrentIndex">
+                                  <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_149">CurrentIndex</CSharpValue>
+                                </InArgument>
+                                <OutArgument x:TypeArguments="x:String" x:Key="out_errorCaseID">
+                                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_20">errorCaseID</CSharpReference>
+                                </OutArgument>
+                                <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_dt_Sheet_munka1">
+                                  <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_21">dt_Sheet_munka1</CSharpReference>
+                                </InOutArgument>
+                              </ui:InvokeWorkflowFile.Arguments>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:InvokeWorkflowFile>
+                            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="354,57" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+                              <ui:CommentOut.Body>
+                                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="512,250" sap2010:WorkflowViewState.IdRef="Sequence_287">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <Sequence DisplayName="Ügyszám Lementése" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="Sequence_256">
+                                    <Sequence.Variables>
+                                      <Variable x:TypeArguments="x:String" Name="errorCaseID" />
+                                    </Sequence.Variables>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="530,466" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_2" MaxIterations="45">
+                                      <ui:InterruptibleDoWhile.Body>
+                                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,320" sap2010:WorkflowViewState.IdRef="Sequence_276">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <Delay Duration="00:00:04" sap:VirtualizedContainerService.HintSize="354,122" sap2010:WorkflowViewState.IdRef="Delay_12" />
+                                          <uix:NGetUrl DisplayName="Get URL" sap:VirtualizedContainerService.HintSize="354,110" sap2010:WorkflowViewState.IdRef="NGetUrl_4" Version="V3">
+                                            <uix:NGetUrl.CurrentUrl>
+                                              <OutArgument x:TypeArguments="x:String">
+                                                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_10">currentURL</CSharpReference>
+                                              </OutArgument>
+                                            </uix:NGetUrl.CurrentUrl>
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </uix:NGetUrl>
+                                        </Sequence>
+                                      </ui:InterruptibleDoWhile.Body>
+                                      <ui:InterruptibleDoWhile.Condition>
+                                        <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_108">!System.Text.RegularExpressions.Regex.Match(currentURL, @"(?&lt;prefix&gt;\/)(?&lt;ID&gt;\d+)(?&lt;postfix&gt;\/?)").Success</CSharpValue>
+                                      </ui:InterruptibleDoWhile.Condition>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ui:InterruptibleDoWhile>
+                                    <If DisplayName="If - There is a MATCH" sap:VirtualizedContainerService.HintSize="530,564" sap2010:WorkflowViewState.IdRef="If_3">
+                                      <If.Condition>
+                                        <InArgument x:TypeArguments="x:Boolean">
+                                          <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_109">System.Text.RegularExpressions.Regex.Match(currentURL, @"(?&lt;prefix&gt;\/)(?&lt;ID&gt;\d+)(?&lt;postfix&gt;\/?)").Success</CSharpValue>
+                                        </InArgument>
+                                      </If.Condition>
+                                      <If.Then>
+                                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,193" sap2010:WorkflowViewState.IdRef="Sequence_277">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_4">
+                                            <Assign.To>
+                                              <OutArgument x:TypeArguments="x:String">
+                                                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_22">errorCaseID</CSharpReference>
+                                              </OutArgument>
+                                            </Assign.To>
+                                            <Assign.Value>
+                                              <InArgument x:TypeArguments="x:String">
+                                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_107">System.Text.RegularExpressions.Regex.Match(currentURL, @"(?&lt;prefix&gt;\/)(?&lt;ID&gt;\d+)(?&lt;postfix&gt;\/?)").Groups["ID"].Value</CSharpValue>
+                                              </InArgument>
+                                            </Assign.Value>
+                                          </Assign>
+                                        </Sequence>
+                                      </If.Then>
+                                      <If.Else>
+                                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,201" sap2010:WorkflowViewState.IdRef="Sequence_278">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <Throw sap:VirtualizedContainerService.HintSize="354,113" sap2010:WorkflowViewState.IdRef="Throw_3">
+                                            <InArgument x:TypeArguments="s:Exception">
+                                              <CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_110">new System.Exception()</CSharpValue>
+                                            </InArgument>
+                                          </Throw>
+                                        </Sequence>
+                                      </If.Else>
+                                    </If>
+                                    <ui:UpdateRowItem ColumnIndex="{x:Null}" ColumnName="Ügyszám" DisplayName="Update Row Item" sap:VirtualizedContainerService.HintSize="530,224" sap2010:WorkflowViewState.IdRef="UpdateRowItem_4">
+                                      <ui:UpdateRowItem.Row>
+                                        <InArgument x:TypeArguments="sd:DataRow">
+                                          <CSharpValue x:TypeArguments="sd:DataRow" sap2010:WorkflowViewState.IdRef="CSharpValue`1_48">CurrentRow</CSharpValue>
+                                        </InArgument>
+                                      </ui:UpdateRowItem.Row>
+                                      <ui:UpdateRowItem.Value>
+                                        <InArgument x:TypeArguments="x:Object">
+                                          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_49">errorCaseID</CSharpValue>
+                                        </InArgument>
+                                      </ui:UpdateRowItem.Value>
+                                    </ui:UpdateRowItem>
+                                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="530,57" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+                                      <ui:CommentOut.Body>
+                                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="496,270" sap2010:WorkflowViewState.IdRef="Sequence_264">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ueab:WriteCellX DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_4">
+                                            <ueab:WriteCellX.Cell>
+                                              <InArgument x:TypeArguments="ue:IReadWriteCellRef">
+                                                <CSharpValue x:TypeArguments="ue:IReadWriteCellRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_50">CurrentRow.ByField["Ügyszám"]</CSharpValue>
+                                              </InArgument>
+                                            </ueab:WriteCellX.Cell>
+                                            <ueab:WriteCellX.Value>
+                                              <InArgument x:TypeArguments="x:Object">
+                                                <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_51">errorCaseID</CSharpValue>
+                                              </InArgument>
+                                            </ueab:WriteCellX.Value>
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </ueab:WriteCellX>
+                                        </Sequence>
+                                      </ui:CommentOut.Body>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ui:CommentOut>
+                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="530,164" sap2010:WorkflowViewState.IdRef="LogMessage_13">
+                                      <ui:LogMessage.Level>
+                                        <InArgument x:TypeArguments="ui:LogLevel">
+                                          <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_53">UiPath.Core.Activities.LogLevel.Trace</CSharpValue>
+                                        </InArgument>
+                                      </ui:LogMessage.Level>
+                                      <ui:LogMessage.Message>
+                                        <InArgument x:TypeArguments="x:Object">
+                                          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_52" xml:space="preserve">String.Format("{0} {1} kérelmének ügyszáma lementve ",
+CurrentRow["Személy: Vezetéknév"],
+CurrentRow["Személy: Keresztnév"])</CSharpValue>
+                                        </InArgument>
+                                      </ui:LogMessage.Message>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ui:LogMessage>
+                                  </Sequence>
+                                  <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="Munka1">
+                                    <ui:WriteRange.DataTable>
+                                      <InArgument x:TypeArguments="sd:DataTable">
+                                        <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_63">dt_Sheet_munka1</CSharpValue>
+                                      </InArgument>
+                                    </ui:WriteRange.DataTable>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:WriteRange.WorkbookPath>
+                                      <InArgument x:TypeArguments="x:String">
+                                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_64">in_excel_FilePath</CSharpValue>
+                                      </InArgument>
+                                    </ui:WriteRange.WorkbookPath>
+                                  </ui:WriteRange>
+                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,48" sap2010:WorkflowViewState.IdRef="LogMessage_16">
+                                    <ui:LogMessage.Level>
+                                      <InArgument x:TypeArguments="ui:LogLevel">
+                                        <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_92">UiPath.Core.Activities.LogLevel.Fatal</CSharpValue>
+                                      </InArgument>
+                                    </ui:LogMessage.Level>
+                                    <ui:LogMessage.Message>
+                                      <InArgument x:TypeArguments="x:Object">
+                                        <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_81" xml:space="preserve">string.Format("Megkezdődött {0} {1} engedély kérelmének kitöltése. Forrás: tábla {2}. sora",
+CurrentRow["Személy: Vezetéknév"],
+CurrentRow["Személy: Keresztnév"],
+CurrentIndex+1)</CSharpValue>
+                                      </InArgument>
+                                    </ui:LogMessage.Message>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:LogMessage>
+                                </Sequence>
+                              </ui:CommentOut.Body>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:CommentOut>
+                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Igénylés Beadása.xaml - Invoke Workflow File" DisplayName="Igénylés Beadása.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="354,226" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Systems\\EnterHungary\\Igénylés Beadása.xaml">
+                              <ui:InvokeWorkflowFile.Arguments>
+                                <InArgument x:TypeArguments="sd:DataRow" x:Key="in_CurrentRow">
+                                  <CSharpValue x:TypeArguments="sd:DataRow" sap2010:WorkflowViewState.IdRef="CSharpValue`1_59">CurrentRow</CSharpValue>
+                                </InArgument>
+                                <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_Sheet_munka1">
+                                  <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_58">dt_Sheet_munka1</CSharpValue>
+                                </InArgument>
+                                <InArgument x:TypeArguments="x:Int32" x:Key="in_CurrentIndex">
+                                  <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_57">CurrentIndex</CSharpValue>
+                                </InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="in_excel_FilePath">
+                                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_66">in_excel_FilePath</CSharpValue>
+                                </InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="in_CurrentURL">
+                                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_111">currentURL</CSharpValue>
+                                </InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="in_Smtp_host">
+                                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_126">in_Smtp_host</CSharpValue>
+                                </InArgument>
+                                <InArgument x:TypeArguments="x:Int32" x:Key="in_Smtp_port">
+                                  <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_125">in_Smtp_port</CSharpValue>
+                                </InArgument>
+                                <InArgument x:TypeArguments="ui:PasswordCredentials" x:Key="in_RobotEmail_cred">
+                                  <CSharpValue x:TypeArguments="ui:PasswordCredentials" sap2010:WorkflowViewState.IdRef="CSharpValue`1_124">in_RobotEmail_cred</CSharpValue>
+                                </InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="in_Registration_date">
+                                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_123">in_Registration_date</CSharpValue>
+                                </InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="in_Registration_number">
+                                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_122">in_Registration_number</CSharpValue>
+                                </InArgument>
+                              </ui:InvokeWorkflowFile.Arguments>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:InvokeWorkflowFile>
+                          </Sequence>
+                        </Switch>
+                      </TryCatch.Try>
+                      <TryCatch.Catches>
+                        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="501,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ActivityAction x:TypeArguments="s:Exception">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                            </ActivityAction.Argument>
+                            <Sequence DisplayName="Exception Sequence" sap:VirtualizedContainerService.HintSize="416,309" sap2010:WorkflowViewState.IdRef="Sequence_279">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,173" sap2010:WorkflowViewState.IdRef="LogMessage_21">
+                                <ui:LogMessage.Level>
+                                  <InArgument x:TypeArguments="ui:LogLevel">
+                                    <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_112">UiPath.Core.Activities.LogLevel.Error</CSharpValue>
+                                  </InArgument>
+                                </ui:LogMessage.Level>
+                                <ui:LogMessage.Message>
+                                  <InArgument x:TypeArguments="x:Object">
+                                    <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_113">exception.StackTrace</CSharpValue>
+                                  </InArgument>
+                                </ui:LogMessage.Message>
+                              </ui:LogMessage>
+                              <ui:Break sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="Break_1" />
+                            </Sequence>
+                          </ActivityAction>
+                        </Catch>
+                      </TryCatch.Catches>
+                    </TryCatch>
+                  </Switch>
+                </Sequence>
+              </ActivityAction>
+            </ui:ForEachRow.Body>
+            <ui:ForEachRow.CurrentIndex>
+              <OutArgument x:TypeArguments="x:Int32">
+                <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">CurrentIndex</CSharpReference>
+              </OutArgument>
+            </ui:ForEachRow.CurrentIndex>
+            <ui:ForEachRow.DataTable>
+              <InArgument x:TypeArguments="sd:DataTable">
+                <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">dt_Sheet_munka1</CSharpValue>
+              </InArgument>
+            </ui:ForEachRow.DataTable>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:ForEachRow>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" ContentHash="jBjIay6zdUmXkuVQTRzWFA" IconBase64="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" InformativeScreenshot="3b13ae0625eec859df72c0010145ca39.jpg" Reference="rlGBiR1EJky82ITx9uF30g/2ifqSkjRhkmO0cjFts31zQ" Selector="&lt;html app='chrome.exe' title='Residence in Hungary Ügyek' /&gt;" Title="Residence in Hungary Ügyek" Url="https://enterhungary.gov.hu/eh/cases" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

@@ -1,0 +1,17 @@
+﻿{
+	"AppName": "RPA999_EnterHungary (Dev)",
+	"AppCode": "RPA999",
+	"LogDir":"C:\\RPA",        
+	"AssetFolder":"",  
+	"MaxProcessableItemCount":0,
+	"UseOrchestrator": false,
+	"ErrorWeight":3,
+	"MaxAllowedErrorCount":10,
+	"Queue":"",
+	"OrchestratorFolder": "",     	
+	"ProcessesToKill": "EXCEL;chrome",  
+	"ClientConfigFolder": "",                 
+	"Lang":0,
+	"LogFileName":"Log_{0}.txt", 	
+	"DebugLogFileName":""
+}

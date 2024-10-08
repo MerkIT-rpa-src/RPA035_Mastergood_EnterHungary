@@ -1,0 +1,20 @@
+﻿{
+	"To":"",
+	"Cc":"",
+	"BCc":"",
+	"Subject":"Subject_TEST_PLACEHOLDER",
+	"Body":"Body_TEXT_PLACEHOLDER",        
+	"IsBodyHtml":true,
+	"Attachment":"",
+	"SmtpServer":"",
+	"SmtpFrom":"",
+	"SenderType":1,
+	"SmtpPort":587,
+	"SmtpEnableSsl":false,
+	"SmtpHostEmail":"",
+	"SentOnBehalfOf":"",
+	"OutlookAccount":"", 
+	"SmtpCredentialAssetName":"",
+	"UseMerkitTemplate":true,
+	"MsgBody_Table":""
+}
