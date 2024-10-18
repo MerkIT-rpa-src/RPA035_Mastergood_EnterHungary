@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.emailRecipient_In="csendes mód" this:Main.robotEmail_frissites_In="True" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.emailRecipient_In="csendes mód" this:Main.robotEmail_frissites_In="True" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mb="clr-namespace:Merkit_RPA_Framework.BLL;assembly=RPA999-EnterHungary3.0-DOBOZOS.Core" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="credentials_Out" Type="OutArgument(ui:PasswordCredentials)" />
     <x:Property Name="excel_FilePath_Out" Type="OutArgument(x:String)" />
@@ -6,7 +6,7 @@
     <x:Property Name="robotEmail_frissites_In" Type="InArgument(x:Boolean)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1014,2093</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1233,2219</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -138,7 +138,7 @@
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Description: RPA999-EnterHungary3.0-DOBOZOS main  Process&#xA;- Call InitFirstRun workflow &#xA;- Call Init workflow&#xA;- Call DataValidator workflow&#xA;- Call Processor workflow (if &quot;DataValidator&quot; ok)&#xA;&#xA;Preconditions: arguments&#xD;&#xA;&#xD;&#xA;- BODY ÉS CÍMZETT ARGUMENTUMBAN ÉRKEZIK&#xA;- SMTP PARAMÉTEREK A SHARED MAPPÁBBÓL ASSETKÉNT ÉRKEZNEK&#xA;- AZ AUTENTUKÁCIÓ A GET USERNAME PASSWORD ACTIVITYVEL, FORRÁS LEHET LOCAL WINDOWS CRED. MAN. VAGY PASSWORD ASSET AZ ORCHESTRATORBÓL&#xD;&#xA;" DisplayName="Master (Main) Workflow" sap:VirtualizedContainerService.HintSize="608,2028" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Description: RPA999-EnterHungary3.0-DOBOZOS main  Process&#xA;- Call InitFirstRun workflow &#xA;- Call Init workflow&#xA;- Call DataValidator workflow&#xA;- Call Processor workflow (if &quot;DataValidator&quot; ok)&#xA;&#xA;Preconditions: arguments&#xA;&#xA;- BODY ÉS CÍMZETT ARGUMENTUMBAN ÉRKEZIK&#xA;- SMTP PARAMÉTEREK A SHARED MAPPÁBBÓL ASSETKÉNT ÉRKEZNEK&#xA;- AZ AUTENTUKÁCIÓ A GET USERNAME PASSWORD ACTIVITYVEL, FORRÁS LEHET LOCAL WINDOWS CRED. MAN. VAGY PASSWORD ASSET AZ ORCHESTRATORBÓL&#xA;" DisplayName="Master (Main) Workflow" sap:VirtualizedContainerService.HintSize="608,2154" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="headerCheckFlag_bool" />
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Name="fileValueDict" />
@@ -154,6 +154,9 @@
       <Variable x:TypeArguments="x:Boolean" Name="instantExitWithError" />
       <Variable x:TypeArguments="x:Boolean" Name="finished" />
       <Variable x:TypeArguments="x:Boolean" Name="initFirstOk" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtMellekletekParamsHosszabitas" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtMellekletekParamsMegszuntetes" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtMellekletekParamsValtozas" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -161,7 +164,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage sap2010:Annotation.AnnotationText="Log Message: &quot;MASTER WOKFLOW INDÍTÁSA&quot;" DisplayName="Log Message: &quot;MASTER WOKFLOW INDÍTÁSA&quot;" sap:VirtualizedContainerService.HintSize="546,126" sap2010:WorkflowViewState.IdRef="LogMessage_1">
+    <ui:LogMessage sap2010:Annotation.AnnotationText="Log Message: &quot;MASTER WOKFLOW INDÍTÁSA&quot;" DisplayName="Log Message: &quot;MASTER WOKFLOW INDÍTÁSA&quot;" sap:VirtualizedContainerService.HintSize="546,99" sap2010:WorkflowViewState.IdRef="LogMessage_1">
       <ui:LogMessage.Level>
         <InArgument x:TypeArguments="ui:LogLevel">
           <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">UiPath.Core.Activities.LogLevel.Info</CSharpValue>
@@ -180,7 +183,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Invoke InitFirstRun.xaml" DisplayName="Invoke InitFirstRun.xaml" sap:VirtualizedContainerService.HintSize="546,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" UnSafe="False" WorkflowFileName="MainLogic\\InitFirstRun.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Invoke InitFirstRun.xaml" DisplayName="Invoke InitFirstRun.xaml" sap:VirtualizedContainerService.HintSize="546,235" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" UnSafe="False" WorkflowFileName="MainLogic\\InitFirstRun.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="out_FileValueDict">
           <CSharpReference x:TypeArguments="scg:Dictionary(x:String, x:String)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_16">fileValueDict</CSharpReference>
@@ -196,9 +199,6 @@
         </OutArgument>
         <OutArgument x:TypeArguments="x:String" x:Key="excel_FilePath_Out">
           <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_13">excel_FilePath_Out</CSharpReference>
-        </OutArgument>
-        <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dtMellekletekParams">
-          <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_12">dtMellekletekParams</CSharpReference>
         </OutArgument>
         <OutArgument x:TypeArguments="x:String" x:Key="out_Registration_date">
           <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_11">registration_date</CSharpReference>
@@ -218,6 +218,15 @@
         <OutArgument x:TypeArguments="x:Boolean" x:Key="out_InitFirstOk">
           <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_21">initFirstOk</CSharpReference>
         </OutArgument>
+        <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dtMellekletekParamsHosszabitas">
+          <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_22">dtMellekletekParamsHosszabitas</CSharpReference>
+        </OutArgument>
+        <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dtMellekletekParamsMegszuntetes">
+          <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_23">dtMellekletekParamsMegszuntetes</CSharpReference>
+        </OutArgument>
+        <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dtMellekletekParamsValtozas">
+          <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_24">dtMellekletekParamsValtozas</CSharpReference>
+        </OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -227,7 +236,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <If sap2010:Annotation.AnnotationText="If initFirstOk. then continue running" DisplayName="If initFirstOk. then continue running" sap:VirtualizedContainerService.HintSize="546,1201" sap2010:WorkflowViewState.IdRef="If_4">
+    <If sap2010:Annotation.AnnotationText="If initFirstOk. then continue running" DisplayName="If initFirstOk. then continue running" sap:VirtualizedContainerService.HintSize="546,1378" sap2010:WorkflowViewState.IdRef="If_4">
       <If.Condition>
         <InArgument x:TypeArguments="x:Boolean">
           <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_43">initFirstOk</CSharpValue>
@@ -241,13 +250,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="512,897" sap2010:WorkflowViewState.IdRef="Sequence_11">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="512,1074" sap2010:WorkflowViewState.IdRef="Sequence_11">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InitRun.xaml " sap:VirtualizedContainerService.HintSize="450,145" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_14" UnSafe="False" WorkflowFileName="MainLogic\\InitRun.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InitRun.xaml " sap:VirtualizedContainerService.HintSize="450,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_14" UnSafe="False" WorkflowFileName="MainLogic\\InitRun.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <OutArgument x:TypeArguments="s:Exception" x:Key="out_SystemError">
                 <CSharpReference x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpReference`1_19">systemError</CSharpReference>
@@ -260,7 +269,7 @@
               </OutArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke DataValidator.xaml" sap:VirtualizedContainerService.HintSize="450,145" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="MainLogic\\DataValidator.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke DataValidator.xaml" sap:VirtualizedContainerService.HintSize="450,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="MainLogic\\DataValidator.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <InArgument x:TypeArguments="x:String" x:Key="in_Excel_FilePath">
                 <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_31">excel_FilePath_Out</CSharpValue>
@@ -283,9 +292,10 @@
               <InOutArgument x:TypeArguments="x:Boolean" x:Key="io_Finished">
                 <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_20">finished</CSharpReference>
               </InOutArgument>
+              <InArgument x:TypeArguments="mb:Config" x:Key="in_Config" />
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
-          <If sap2010:Annotation.AnnotationText="if headers are present, then call Processor" DisplayName="DataValidator ok (headers are present)?" sap:VirtualizedContainerService.HintSize="450,519" sap2010:WorkflowViewState.IdRef="If_3">
+          <If sap2010:Annotation.AnnotationText="if headers are present, then call Processor" DisplayName="DataValidator ok (headers are present)?" sap:VirtualizedContainerService.HintSize="450,578" sap2010:WorkflowViewState.IdRef="If_3">
             <If.Condition>
               <InArgument x:TypeArguments="x:Boolean">
                 <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_32">! finished</CSharpValue>
@@ -299,13 +309,13 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <If.Then>
-              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,224" sap2010:WorkflowViewState.IdRef="Sequence_8">
+              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,283" sap2010:WorkflowViewState.IdRef="Sequence_8">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Processor.xaml" sap:VirtualizedContainerService.HintSize="354,136" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_15" UnSafe="False" WorkflowFileName="MainLogic\\Processor.xaml">
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Processor.xaml" sap:VirtualizedContainerService.HintSize="354,195" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_15" UnSafe="False" WorkflowFileName="MainLogic\\Processor.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
                     <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtMellekletekParams">
                       <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_40">dtMellekletekParams</CSharpValue>
@@ -334,6 +344,8 @@
                     <InArgument x:TypeArguments="ui:PasswordCredentials" x:Key="in_RobotEmail_cred">
                       <CSharpValue x:TypeArguments="ui:PasswordCredentials" sap2010:WorkflowViewState.IdRef="CSharpValue`1_33">robotEmail_cred</CSharpValue>
                     </InArgument>
+                    <InArgument x:TypeArguments="mb:Config" x:Key="in_Config" />
+                    <InArgument x:TypeArguments="mb:EmailConfig" x:Key="in_EmailConfig" />
                   </ui:InvokeWorkflowFile.Arguments>
                 </ui:InvokeWorkflowFile>
               </Sequence>
@@ -360,7 +372,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <ui:LogMessage sap2010:Annotation.AnnotationText="Log Message: &quot;A MASTER WOKFLOW LEÁLLT.&quot;" DisplayName="Log Message: &quot;A MASTER WOKFLOW LEÁLLT.&quot;" sap:VirtualizedContainerService.HintSize="546,126" sap2010:WorkflowViewState.IdRef="LogMessage_3">
+    <ui:LogMessage sap2010:Annotation.AnnotationText="Log Message: &quot;A MASTER WOKFLOW LEÁLLT.&quot;" DisplayName="Log Message: &quot;A MASTER WOKFLOW LEÁLLT.&quot;" sap:VirtualizedContainerService.HintSize="546,99" sap2010:WorkflowViewState.IdRef="LogMessage_3">
       <ui:LogMessage.Level>
         <InArgument x:TypeArguments="ui:LogLevel">
           <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_42">UiPath.Core.Activities.LogLevel.Info</CSharpValue>
@@ -379,7 +391,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <Sequence DisplayName="FINISH" sap:VirtualizedContainerService.HintSize="546,104" sap2010:WorkflowViewState.IdRef="Sequence_10">
+    <Sequence DisplayName="FINISH" sap:VirtualizedContainerService.HintSize="546,48" sap2010:WorkflowViewState.IdRef="Sequence_10">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>

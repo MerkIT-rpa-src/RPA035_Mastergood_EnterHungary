@@ -5,19 +5,21 @@
     <x:Property Name="robotEmail_frissites_In" Type="InArgument(x:Boolean)" />
     <x:Property Name="credentials_Out" Type="OutArgument(ui:PasswordCredentials)" />
     <x:Property Name="excel_FilePath_Out" Type="OutArgument(x:String)" />
-    <x:Property Name="out_dtMellekletekParams" Type="OutArgument(sd:DataTable)" />
     <x:Property Name="out_Registration_date" Type="OutArgument(x:String)" />
     <x:Property Name="out_Registration_number" Type="OutArgument(x:String)" />
     <x:Property Name="out_Smtp_host" Type="OutArgument(x:String)" />
     <x:Property Name="out_Smtp_port" Type="OutArgument(x:Int32)" />
     <x:Property Name="out_RobotEmail_cred" Type="OutArgument(ui:PasswordCredentials)" />
     <x:Property Name="out_InitFirstOk" Type="OutArgument(x:Boolean)" />
+    <x:Property Name="out_dtMellekletekParamsHosszabitas" Type="OutArgument(sd:DataTable)" />
+    <x:Property Name="out_dtMellekletekParamsMegszuntetes" Type="OutArgument(sd:DataTable)" />
+    <x:Property Name="out_dtMellekletekParamsValtozas" Type="OutArgument(sd:DataTable)" />
   </x:Members>
   <this:InitFirstRun.robotEmail_frissites_In>
     <InArgument x:TypeArguments="x:Boolean" />
   </this:InitFirstRun.robotEmail_frissites_In>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1398,1165</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1233,1165</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -128,6 +130,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
       <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="InitFirstRun Sequence" sap:VirtualizedContainerService.HintSize="700,1100" sap2010:WorkflowViewState.IdRef="Sequence_9">
@@ -145,7 +148,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <Flowchart sap2010:Annotation.AnnotationText="Description:  Init First Flowchart&#xA;&#xA;Precondition: arguments" DisplayName="InitFirstRun Flowchart" sap:VirtualizedContainerService.HintSize="1458,778" sap2010:WorkflowViewState.IdRef="Flowchart_2">
+        <Flowchart sap2010:Annotation.AnnotationText="Description:  Init First Flowchart&#xA;&#xA;Precondition: arguments" DisplayName="InitFirstRun Flowchart" sap:VirtualizedContainerService.HintSize="1293,778" sap2010:WorkflowViewState.IdRef="Flowchart_2">
           <Flowchart.Variables>
             <Variable x:TypeArguments="x:Int32" Name="screenWidth">
               <Variable.Default>
@@ -170,7 +173,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Flowchart.StartNode>
-            <x:Reference>__ReferenceID11</x:Reference>
+            <x:Reference>__ReferenceID10</x:Reference>
           </Flowchart.StartNode>
           <FlowStep x:Name="__ReferenceID0">
             <sap:WorkflowViewStateService.ViewState>
@@ -187,12 +190,12 @@
               </sap:WorkflowViewStateService.ViewState>
             </Sequence>
           </FlowStep>
-          <FlowStep x:Name="__ReferenceID5">
+          <FlowStep x:Name="__ReferenceID4">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <av:Point x:Key="ShapeLocation">270,13</av:Point>
                 <av:Size x:Key="ShapeSize">110,70</av:Size>
-                <av:PointCollection x:Key="ConnectorLocation">380,48 440,48</av:PointCollection>
+                <av:PointCollection x:Key="ConnectorLocation">380,48 410,48 410,50 445,50</av:PointCollection>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Read Dropdown Values From Txt" DisplayName="ReadDropdownValuesFromTxt.cs - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="BLL\\ReadDropdownValuesFromTxt.cs">
@@ -211,40 +214,73 @@
               </sap:WorkflowViewStateService.ViewState>
             </ui:InvokeWorkflowFile>
             <FlowStep.Next>
-              <FlowStep x:Name="__ReferenceID2">
+              <FlowStep x:Name="__ReferenceID9">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <av:Point x:Key="ShapeLocation">440,13</av:Point>
+                    <av:Point x:Key="ShapeLocation">445,15</av:Point>
                     <av:Size x:Key="ShapeSize">110,70</av:Size>
-                    <av:PointCollection x:Key="ConnectorLocation">495,83 495,113 165,113 165,133</av:PointCollection>
+                    <av:PointCollection x:Key="ConnectorLocation">500,85 500,135</av:PointCollection>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:BuildDataTable sap2010:Annotation.AnnotationText="Build dtMellekletekParams Data Table" DisplayName="Build dtMellekletekParams Data Table" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="BuildDataTable_2" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Id&quot; msdata:Caption=&quot;&quot; type=&quot;xs:int&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Kod&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Tablazat&quot; msdata:Caption=&quot;&quot; type=&quot;xs:int&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Sor&quot; msdata:Caption=&quot;&quot; type=&quot;xs:int&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Leiras&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;      &lt;xs:unique name=&quot;Constraint1&quot;&gt;&#xA;        &lt;xs:selector xpath=&quot;.//TableName&quot; /&gt;&#xA;        &lt;xs:field xpath=&quot;Kod&quot; /&gt;&#xA;      &lt;/xs:unique&gt;&#xA;      &lt;xs:unique name=&quot;Constraint2&quot;&gt;&#xA;        &lt;xs:selector xpath=&quot;.//TableName&quot; /&gt;&#xA;        &lt;xs:field xpath=&quot;Id&quot; /&gt;&#xA;      &lt;/xs:unique&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Id&gt;1&lt;/Id&gt;&#xA;    &lt;Kod&gt;utlevel&lt;/Kod&gt;&#xA;    &lt;Tablazat&gt;1&lt;/Tablazat&gt;&#xA;    &lt;Sor&gt;1&lt;/Sor&gt;&#xA;    &lt;Leiras&gt;érvényes útlevél teljes másolata&lt;/Leiras&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Id&gt;2&lt;/Id&gt;&#xA;    &lt;Kod&gt;arckep&lt;/Kod&gt;&#xA;    &lt;Tablazat&gt;1&lt;/Tablazat&gt;&#xA;    &lt;Sor&gt;2&lt;/Sor&gt;&#xA;    &lt;Leiras&gt;arckép&lt;/Leiras&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Id&gt;3&lt;/Id&gt;&#xA;    &lt;Kod&gt;meghatalmazas&lt;/Kod&gt;&#xA;    &lt;Tablazat&gt;1&lt;/Tablazat&gt;&#xA;    &lt;Sor&gt;4&lt;/Sor&gt;&#xA;    &lt;Leiras&gt;meghatalmazott eljárása esetén meghatalmazás&lt;/Leiras&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Id&gt;4&lt;/Id&gt;&#xA;    &lt;Kod&gt;szallashely01&lt;/Kod&gt;&#xA;    &lt;Tablazat&gt;4&lt;/Tablazat&gt;&#xA;    &lt;Sor&gt;1&lt;/Sor&gt;&#xA;    &lt;Leiras&gt;lakásbérleti jogviszonyt igazoló lakásbérleti szerződés&quot;&lt;/Leiras&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Id&gt;5&lt;/Id&gt;&#xA;    &lt;Kod&gt;lakastulajdlap&lt;/Kod&gt;&#xA;    &lt;Tablazat&gt;4&lt;/Tablazat&gt;&#xA;    &lt;Sor&gt;2&lt;/Sor&gt;&#xA;    &lt;Leiras&gt;lakás tulajdonjogát igazoló okirat&lt;/Leiras&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Id&gt;6&lt;/Id&gt;&#xA;    &lt;Kod&gt;fogljogviszonyelozetesmegallap&lt;/Kod&gt;&#xA;    &lt;Tablazat&gt;5&lt;/Tablazat&gt;&#xA;    &lt;Sor&gt;1&lt;/Sor&gt;&#xA;    &lt;Leiras&gt;a foglalkoztatási jogviszony létesítésére irányuló előzetes megállapodás&lt;/Leiras&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Id&gt;7&lt;/Id&gt;&#xA;    &lt;Kod&gt;egyebszukseges1&lt;/Kod&gt;&#xA;    &lt;Tablazat&gt;6&lt;/Tablazat&gt;&#xA;    &lt;Sor&gt;1&lt;/Sor&gt;&#xA;    &lt;Leiras&gt;munkaerőigény&lt;/Leiras&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Id&gt;8&lt;/Id&gt;&#xA;    &lt;Kod&gt;egyebszukseges2&lt;/Kod&gt;&#xA;    &lt;Tablazat&gt;6&lt;/Tablazat&gt;&#xA;    &lt;Sor&gt;2&lt;/Sor&gt;&#xA;    &lt;Leiras&gt;munkaerőkölcsönzési szerződés&lt;/Leiras&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Id&gt;9&lt;/Id&gt;&#xA;    &lt;Kod&gt;egyebszukseges3&lt;/Kod&gt;&#xA;    &lt;Tablazat&gt;6&lt;/Tablazat&gt;&#xA;    &lt;Sor&gt;3&lt;/Sor&gt;&#xA;    &lt;Leiras&gt;Petrovszka meghatalmazás&lt;/Leiras&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Id&gt;10&lt;/Id&gt;&#xA;    &lt;Kod&gt;egyebszukseges4&lt;/Kod&gt;&#xA;    &lt;Tablazat&gt;6&lt;/Tablazat&gt;&#xA;    &lt;Sor&gt;4&lt;/Sor&gt;&#xA;    &lt;Leiras&gt;OIF utalási bizonylat&lt;/Leiras&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Id&gt;11&lt;/Id&gt;&#xA;    &lt;Kod&gt;egyebszukseges5&lt;/Kod&gt;&#xA;    &lt;Tablazat&gt;6&lt;/Tablazat&gt;&#xA;    &lt;Sor&gt;5&lt;/Sor&gt;&#xA;    &lt;Leiras&gt;Nyilvántartásbavételi határozat&lt;/Leiras&gt;&#xA;  &lt;/TableName&gt;&#xA;&lt;/NewDataSet&gt;">
-                  <ui:BuildDataTable.DataTable>
-                    <OutArgument x:TypeArguments="sd:DataTable">
-                      <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_18">out_dtMellekletekParams</CSharpReference>
-                    </OutArgument>
-                  </ui:BuildDataTable.DataTable>
+                <Sequence DisplayName="Build dtMellekletekParams Data Tables" sap:VirtualizedContainerService.HintSize="450,355" sap2010:WorkflowViewState.IdRef="Sequence_31">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                </ui:BuildDataTable>
-                <FlowStep.Next>
-                  <FlowStep x:Name="__ReferenceID4">
+                  <ui:BuildDataTable sap2010:Annotation.AnnotationText="Build dtMellekletekParams Data Table" DisplayName="Build Hosszabitas dtMellekletekParams Data Table" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_3" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Id&quot; msdata:Caption=&quot;&quot; type=&quot;xs:int&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Kod&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Tablazat&quot; msdata:Caption=&quot;&quot; type=&quot;xs:int&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Sor&quot; msdata:Caption=&quot;&quot; type=&quot;xs:int&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Leiras&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;      &lt;xs:unique name=&quot;Constraint1&quot;&gt;&#xD;&#xA;        &lt;xs:selector xpath=&quot;.//TableName&quot; /&gt;&#xD;&#xA;        &lt;xs:field xpath=&quot;Kod&quot; /&gt;&#xD;&#xA;      &lt;/xs:unique&gt;&#xD;&#xA;      &lt;xs:unique name=&quot;Constraint2&quot;&gt;&#xD;&#xA;        &lt;xs:selector xpath=&quot;.//TableName&quot; /&gt;&#xD;&#xA;        &lt;xs:field xpath=&quot;Id&quot; /&gt;&#xD;&#xA;      &lt;/xs:unique&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Id&gt;1&lt;/Id&gt;&#xD;&#xA;    &lt;Kod&gt;utlevel&lt;/Kod&gt;&#xD;&#xA;    &lt;Tablazat&gt;1&lt;/Tablazat&gt;&#xD;&#xA;    &lt;Sor&gt;1&lt;/Sor&gt;&#xD;&#xA;    &lt;Leiras&gt;érvényes útlevél teljes másolata&lt;/Leiras&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Id&gt;2&lt;/Id&gt;&#xD;&#xA;    &lt;Kod&gt;meghatalmazas&lt;/Kod&gt;&#xD;&#xA;    &lt;Tablazat&gt;1&lt;/Tablazat&gt;&#xD;&#xA;    &lt;Sor&gt;4&lt;/Sor&gt;&#xD;&#xA;    &lt;Leiras&gt;meghatalmazott eljárása esetén meghatalmazás&lt;/Leiras&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Id&gt;3&lt;/Id&gt;&#xD;&#xA;    &lt;Kod&gt;tarsbiztkartya&lt;/Kod&gt;&#xD;&#xA;    &lt;Tablazat&gt;2&lt;/Tablazat&gt;&#xD;&#xA;    &lt;Sor&gt;1&lt;/Sor&gt;&#xD;&#xA;    &lt;Leiras&gt;a magyar hatóságok által kiállított társadalombiztosítási kártya másolata &lt;/Leiras&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Id&gt;4&lt;/Id&gt;&#xD;&#xA;    &lt;Kod&gt;6havijovedelemig&lt;/Kod&gt;&#xD;&#xA;    &lt;Tablazat&gt;3&lt;/Tablazat&gt;&#xD;&#xA;    &lt;Sor&gt;1&lt;/Sor&gt;&#xD;&#xA;    &lt;Leiras&gt;munkáltató által kiállított jövedelemigazolás az előző 6 hónapról &lt;/Leiras&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Id&gt;5&lt;/Id&gt;&#xD;&#xA;    &lt;Kod&gt;elozoevijovedelemig&lt;/Kod&gt;&#xD;&#xA;    &lt;Tablazat&gt;3&lt;/Tablazat&gt;&#xD;&#xA;    &lt;Sor&gt;2&lt;/Sor&gt;&#xD;&#xA;    &lt;Leiras&gt;előző évi adóhatósági jövedelemigazolás &lt;/Leiras&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Id&gt;6&lt;/Id&gt;&#xD;&#xA;    &lt;Kod&gt;lakasberleti&lt;/Kod&gt;&#xD;&#xA;    &lt;Tablazat&gt;4&lt;/Tablazat&gt;&#xD;&#xA;    &lt;Sor&gt;2&lt;/Sor&gt;&#xD;&#xA;    &lt;Leiras&gt;lakásbérleti jogviszonyt igazoló lakásbérleti szerződés &lt;/Leiras&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Id&gt;7&lt;/Id&gt;&#xD;&#xA;    &lt;Kod&gt;elozetesmegallapodas&lt;/Kod&gt;&#xD;&#xA;    &lt;Tablazat&gt;5&lt;/Tablazat&gt;&#xD;&#xA;    &lt;Sor&gt;1&lt;/Sor&gt;&#xD;&#xA;    &lt;Leiras&gt;a foglalkoztatási jogviszony létesítésére irányuló előzetes megállapodás &lt;/Leiras&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Id&gt;8&lt;/Id&gt;&#xD;&#xA;    &lt;Kod&gt;szakkepzettseg&lt;/Kod&gt;&#xD;&#xA;    &lt;Tablazat&gt;5&lt;/Tablazat&gt;&#xD;&#xA;    &lt;Sor&gt;3&lt;/Sor&gt;&#xD;&#xA;    &lt;Leiras&gt;szakképzettséget igazoló okirat hiteles fordítással ellátva (amennyiben a munkakör szakképzettséghez kötött)&lt;/Leiras&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Id&gt;9&lt;/Id&gt;&#xD;&#xA;    &lt;Kod&gt;egyebszukseges1&lt;/Kod&gt;&#xD;&#xA;    &lt;Tablazat&gt;6&lt;/Tablazat&gt;&#xD;&#xA;    &lt;Sor&gt;1&lt;/Sor&gt;&#xD;&#xA;    &lt;Leiras&gt;Adóigazolás&lt;/Leiras&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Id&gt;10&lt;/Id&gt;&#xD;&#xA;    &lt;Kod&gt;egyebszukseges2&lt;/Kod&gt;&#xD;&#xA;    &lt;Tablazat&gt;6&lt;/Tablazat&gt;&#xD;&#xA;    &lt;Sor&gt;2&lt;/Sor&gt;&#xD;&#xA;    &lt;Leiras&gt;ÁNYK adatlap  M30&lt;/Leiras&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;&lt;/NewDataSet&gt;">
+                    <ui:BuildDataTable.DataTable>
+                      <OutArgument x:TypeArguments="sd:DataTable">
+                        <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_42">out_dtMellekletekParamsHosszabitas</CSharpReference>
+                      </OutArgument>
+                    </ui:BuildDataTable.DataTable>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <av:Point x:Key="ShapeLocation">110,133</av:Point>
-                        <av:Size x:Key="ShapeSize">110,70</av:Size>
-                        <av:PointCollection x:Key="ConnectorLocation">220,168 280,168</av:PointCollection>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Get REGISTRATION_DATE from Shared folder" AssetName="REGISTRATION_DATE" CacheStrategy="None" DisplayName="Get REGISTRATION_DATE  Asset" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="GetRobotAsset_6">
+                  </ui:BuildDataTable>
+                  <ui:BuildDataTable sap2010:Annotation.AnnotationText="Build dtMellekletekParams Data Table" DisplayName="Build Megszuntetes dtMellekletekParams Data Table" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_4" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Id&quot; msdata:Caption=&quot;&quot; type=&quot;xs:int&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Kod&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Tablazat&quot; msdata:Caption=&quot;&quot; type=&quot;xs:int&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Sor&quot; msdata:Caption=&quot;&quot; type=&quot;xs:int&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Leiras&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;      &lt;xs:unique name=&quot;Constraint1&quot;&gt;&#xD;&#xA;        &lt;xs:selector xpath=&quot;.//TableName&quot; /&gt;&#xD;&#xA;        &lt;xs:field xpath=&quot;Kod&quot; /&gt;&#xD;&#xA;      &lt;/xs:unique&gt;&#xD;&#xA;      &lt;xs:unique name=&quot;Constraint2&quot;&gt;&#xD;&#xA;        &lt;xs:selector xpath=&quot;.//TableName&quot; /&gt;&#xD;&#xA;        &lt;xs:field xpath=&quot;Id&quot; /&gt;&#xD;&#xA;      &lt;/xs:unique&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Id&gt;1&lt;/Id&gt;&#xD;&#xA;    &lt;Kod&gt;utlevel&lt;/Kod&gt;&#xD;&#xA;    &lt;Tablazat&gt;1&lt;/Tablazat&gt;&#xD;&#xA;    &lt;Sor&gt;1&lt;/Sor&gt;&#xD;&#xA;    &lt;Leiras&gt;érvényes útlevél teljes másolata&lt;/Leiras&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Id&gt;2&lt;/Id&gt;&#xD;&#xA;    &lt;Kod&gt;tartengedely&lt;/Kod&gt;&#xD;&#xA;    &lt;Tablazat&gt;1&lt;/Tablazat&gt;&#xD;&#xA;    &lt;Sor&gt;2&lt;/Sor&gt;&#xD;&#xA;    &lt;Leiras&gt;tartózkodási engedély &lt;/Leiras&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Id&gt;3&lt;/Id&gt;&#xD;&#xA;    &lt;Kod&gt;szallashelybejelento&lt;/Kod&gt;&#xD;&#xA;    &lt;Tablazat&gt;1&lt;/Tablazat&gt;&#xD;&#xA;    &lt;Sor&gt;4&lt;/Sor&gt;&#xD;&#xA;    &lt;Leiras&gt;aláírt szálláshely-bejelentő lap&lt;/Leiras&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Id&gt;4&lt;/Id&gt;&#xD;&#xA;    &lt;Kod&gt;szallashely01&lt;/Kod&gt;&#xD;&#xA;    &lt;Tablazat&gt;1&lt;/Tablazat&gt;&#xD;&#xA;    &lt;Sor&gt;5&lt;/Sor&gt;&#xD;&#xA;    &lt;Leiras&gt;lakásbérleti szerződés, vagy a lakás tulajdonjogát igazoló okirat, vagy befogadó nyilatkozat.&lt;/Leiras&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;&lt;/NewDataSet&gt;">
+                    <ui:BuildDataTable.DataTable>
+                      <OutArgument x:TypeArguments="sd:DataTable">
+                        <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_45">out_dtMellekletekParamsMegszuntetes</CSharpReference>
+                      </OutArgument>
+                    </ui:BuildDataTable.DataTable>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:BuildDataTable>
+                  <ui:BuildDataTable sap2010:Annotation.AnnotationText="Build dtMellekletekParams Data Table" DisplayName="Build Valtozas dtMellekletekParams Data Table" sap:VirtualizedContainerService.HintSize="388,83" sap2010:WorkflowViewState.IdRef="BuildDataTable_6" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Id&quot; msdata:Caption=&quot;&quot; type=&quot;xs:int&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Kod&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Tablazat&quot; msdata:Caption=&quot;&quot; type=&quot;xs:int&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Sor&quot; msdata:Caption=&quot;&quot; type=&quot;xs:int&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Leiras&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;      &lt;xs:unique name=&quot;Constraint1&quot;&gt;&#xD;&#xA;        &lt;xs:selector xpath=&quot;.//TableName&quot; /&gt;&#xD;&#xA;        &lt;xs:field xpath=&quot;Kod&quot; /&gt;&#xD;&#xA;      &lt;/xs:unique&gt;&#xD;&#xA;      &lt;xs:unique name=&quot;Constraint2&quot;&gt;&#xD;&#xA;        &lt;xs:selector xpath=&quot;.//TableName&quot; /&gt;&#xD;&#xA;        &lt;xs:field xpath=&quot;Id&quot; /&gt;&#xD;&#xA;      &lt;/xs:unique&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Id&gt;1&lt;/Id&gt;&#xD;&#xA;    &lt;Kod&gt;utlevel&lt;/Kod&gt;&#xD;&#xA;    &lt;Tablazat&gt;1&lt;/Tablazat&gt;&#xD;&#xA;    &lt;Sor&gt;1&lt;/Sor&gt;&#xD;&#xA;    &lt;Leiras&gt;érvényes útlevél teljes másolata&lt;/Leiras&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Id&gt;2&lt;/Id&gt;&#xD;&#xA;    &lt;Kod&gt;tartengedely&lt;/Kod&gt;&#xD;&#xA;    &lt;Tablazat&gt;1&lt;/Tablazat&gt;&#xD;&#xA;    &lt;Sor&gt;2&lt;/Sor&gt;&#xD;&#xA;    &lt;Leiras&gt;tartózkodási engedély &lt;/Leiras&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Id&gt;3&lt;/Id&gt;&#xD;&#xA;    &lt;Kod&gt;meghatalmazas&lt;/Kod&gt;&#xD;&#xA;    &lt;Tablazat&gt;1&lt;/Tablazat&gt;&#xD;&#xA;    &lt;Sor&gt;3&lt;/Sor&gt;&#xD;&#xA;    &lt;Leiras&gt;meghatalmazott eljárása esetén meghatalmazás &lt;/Leiras&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Id&gt;4&lt;/Id&gt;&#xD;&#xA;    &lt;Kod&gt;szallashelybejelento&lt;/Kod&gt;&#xD;&#xA;    &lt;Tablazat&gt;1&lt;/Tablazat&gt;&#xD;&#xA;    &lt;Sor&gt;4&lt;/Sor&gt;&#xD;&#xA;    &lt;Leiras&gt;aláírt szálláshely-bejelentő lap&lt;/Leiras&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Id&gt;5&lt;/Id&gt;&#xD;&#xA;    &lt;Kod&gt;szallashely01&lt;/Kod&gt;&#xD;&#xA;    &lt;Tablazat&gt;1&lt;/Tablazat&gt;&#xD;&#xA;    &lt;Sor&gt;5&lt;/Sor&gt;&#xD;&#xA;    &lt;Leiras&gt;lakásbérleti szerződés, vagy a lakás tulajdonjogát igazoló okirat, vagy befogadó nyilatkozat.&lt;/Leiras&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;&lt;/NewDataSet&gt;">
+                    <ui:BuildDataTable.DataTable>
+                      <OutArgument x:TypeArguments="sd:DataTable">
+                        <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_47">out_dtMellekletekParamsMegszuntetes</CSharpReference>
+                      </OutArgument>
+                    </ui:BuildDataTable.DataTable>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:BuildDataTable>
+                </Sequence>
+                <FlowStep.Next>
+                  <FlowStep x:Name="__ReferenceID2">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <av:Point x:Key="ShapeLocation">445,135</av:Point>
+                        <av:Size x:Key="ShapeSize">110,70</av:Size>
+                        <av:PointCollection x:Key="ConnectorLocation">500,205 500,235 170,235 170,255</av:PointCollection>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Get SMTP_HOST from Shared folder" AssetName="SMTP_HOST" CacheStrategy="None" DisplayName="Get SMTP_HOST from Shared folder" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="GetRobotAsset_7">
                       <ui:GetRobotAsset.Value>
                         <OutArgument x:TypeArguments="x:String">
-                          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_19">out_Registration_date</CSharpReference>
+                          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_22">out_Smtp_host</CSharpReference>
                         </OutArgument>
                       </ui:GetRobotAsset.Value>
                       <sap:WorkflowViewStateService.ViewState>
@@ -254,18 +290,18 @@
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:GetRobotAsset>
                     <FlowStep.Next>
-                      <FlowStep x:Name="__ReferenceID3">
+                      <FlowStep x:Name="__ReferenceID5">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <av:Point x:Key="ShapeLocation">280,133</av:Point>
+                            <av:Point x:Key="ShapeLocation">115,255</av:Point>
                             <av:Size x:Key="ShapeSize">110,70</av:Size>
-                            <av:PointCollection x:Key="ConnectorLocation">390,168 420,168 420,170 445,170</av:PointCollection>
+                            <av:PointCollection x:Key="ConnectorLocation">225,290 275,290</av:PointCollection>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Get REGISTRATION_NUMBER from Shared folder" AssetName="REGISTRATION_NUMBER" CacheStrategy="None" DisplayName="Get REGISTRATION_NUMBER Asset" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="GetRobotAsset_5">
+                        <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Get SMTP_PORT from Shared folder" AssetName="SMTP_PORT" CacheStrategy="None" DisplayName="Get SMTP_PORT from Shared folder" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="GetRobotAsset_8">
                           <ui:GetRobotAsset.Value>
-                            <OutArgument x:TypeArguments="x:String">
-                              <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_20">out_Registration_number</CSharpReference>
+                            <OutArgument x:TypeArguments="x:Int32">
+                              <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_23">out_Smtp_port</CSharpReference>
                             </OutArgument>
                           </ui:GetRobotAsset.Value>
                           <sap:WorkflowViewStateService.ViewState>
@@ -275,129 +311,270 @@
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:GetRobotAsset>
                         <FlowStep.Next>
-                          <FlowStep x:Name="__ReferenceID6">
+                          <FlowStep x:Name="__ReferenceID1">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <av:Point x:Key="ShapeLocation">445,135</av:Point>
+                                <av:Point x:Key="ShapeLocation">275,255</av:Point>
                                 <av:Size x:Key="ShapeSize">110,70</av:Size>
-                                <av:PointCollection x:Key="ConnectorLocation">500,205 500,235 170,235 170,255</av:PointCollection>
+                                <av:PointCollection x:Key="ConnectorLocation">385,290 445,290</av:PointCollection>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Get SMTP_HOST from Shared folder" AssetName="SMTP_HOST" CacheStrategy="None" DisplayName="Get SMTP_HOST from Shared folder" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="GetRobotAsset_7">
-                              <ui:GetRobotAsset.Value>
-                                <OutArgument x:TypeArguments="x:String">
-                                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_22">out_Smtp_host</CSharpReference>
-                                </OutArgument>
-                              </ui:GetRobotAsset.Value>
+                            <Sequence sap2010:Annotation.AnnotationText="Get Enter Hungary Username/Password from windows Credentials" DisplayName="Get Enter Hungary Username/Password from windows Credentials" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_16">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                   <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                            </ui:GetRobotAsset>
-                            <FlowStep.Next>
-                              <FlowStep x:Name="__ReferenceID7">
+                              <TryCatch sap2010:Annotation.AnnotationText="Try Catch Get Enter Hungary Username/Password from windows Credentials" DisplayName="Try Catch Get Enter Hungary Username/Password from windows Credentials" sap:VirtualizedContainerService.HintSize="550,1042" sap2010:WorkflowViewState.IdRef="TryCatch_7">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <av:Point x:Key="ShapeLocation">115,255</av:Point>
-                                    <av:Size x:Key="ShapeSize">110,70</av:Size>
-                                    <av:PointCollection x:Key="ConnectorLocation">225,290 275,290</av:PointCollection>
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Get SMTP_PORT from Shared folder" AssetName="SMTP_PORT" CacheStrategy="None" DisplayName="Get SMTP_PORT from Shared folder" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="GetRobotAsset_8">
-                                  <ui:GetRobotAsset.Value>
-                                    <OutArgument x:TypeArguments="x:Int32">
-                                      <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_23">out_Smtp_port</CSharpReference>
-                                    </OutArgument>
-                                  </ui:GetRobotAsset.Value>
+                                <TryCatch.Try>
+                                  <Sequence DisplayName="Get Enter Hungary Username/Password Sequence" sap:VirtualizedContainerService.HintSize="512,760" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <uas:GetUsernamePasswordX OrchestratorCredentialName="{x:Null}" TimeoutInSeconds="{x:Null}" AutosubmitTimeoutSeconds="10" CredentialName="UiPath: Enter Hungary" CredentialsSource="CredentialsManager" DisplayName="Get Username/Password" sap:VirtualizedContainerService.HintSize="450,207" sap2010:WorkflowViewState.IdRef="GetUsernamePasswordX_8">
+                                      <uas:GetUsernamePasswordX.Credential>
+                                        <OutArgument x:TypeArguments="ui:PasswordCredentials">
+                                          <CSharpReference x:TypeArguments="ui:PasswordCredentials" sap2010:WorkflowViewState.IdRef="CSharpReference`1_39">credentials_Out</CSharpReference>
+                                        </OutArgument>
+                                      </uas:GetUsernamePasswordX.Credential>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </uas:GetUsernamePasswordX>
+                                    <If DisplayName="Has Username/password?" sap:VirtualizedContainerService.HintSize="450,465" sap2010:WorkflowViewState.IdRef="If_7">
+                                      <If.Condition>
+                                        <InArgument x:TypeArguments="x:Boolean">
+                                          <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_35">String.IsNullOrEmpty(credentials_Out.Username) || credentials_Out.SecurePassword.Length==0</CSharpValue>
+                                        </InArgument>
+                                      </If.Condition>
+                                      <If.Then>
+                                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,201" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <Throw DisplayName="Throw &quot;Nem adott meg felhasználónevet/jelszót az EnterHungary oldalához.&quot;" sap:VirtualizedContainerService.HintSize="354,113" sap2010:WorkflowViewState.IdRef="Throw_5">
+                                            <InArgument x:TypeArguments="s:Exception">
+                                              <CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_33">new BusinessRuleException("Nem adott meg felhasználónevet/jelszót az EnterHungary oldalához")</CSharpValue>
+                                            </InArgument>
+                                          </Throw>
+                                        </Sequence>
+                                      </If.Then>
+                                      <If.Else>
+                                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,103" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </Sequence>
+                                      </If.Else>
+                                    </If>
+                                  </Sequence>
+                                </TryCatch.Try>
+                                <TryCatch.Catches>
+                                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="516,22" sap2010:WorkflowViewState.IdRef="Catch`1_6">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ActivityAction x:TypeArguments="s:Exception">
+                                      <ActivityAction.Argument>
+                                        <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                      </ActivityAction.Argument>
+                                      <Throw DisplayName="Throw &quot;Nem adott meg felhasználónevet/jelszót az EnterHungary oldalához.&quot;" sap:VirtualizedContainerService.HintSize="335,90" sap2010:WorkflowViewState.IdRef="Throw_4">
+                                        <InArgument x:TypeArguments="s:Exception">
+                                          <CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_31">new BusinessRuleException("Nem adott meg felhasználónevet/jelszót az EnterHungary oldalához")</CSharpValue>
+                                        </InArgument>
+                                      </Throw>
+                                    </ActivityAction>
+                                  </Catch>
+                                </TryCatch.Catches>
+                              </TryCatch>
+                            </Sequence>
+                            <FlowStep.Next>
+                              <FlowStep x:Name="__ReferenceID6">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <av:Point x:Key="ShapeLocation">445,255</av:Point>
+                                    <av:Size x:Key="ShapeSize">110,70</av:Size>
+                                    <av:PointCollection x:Key="ConnectorLocation">500,325 500,355 170,355 170,375</av:PointCollection>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <TryCatch sap2010:Annotation.AnnotationText="Try get Robot Email Fiók , if error, force robotEmail_frissites" DisplayName="Robot Email Fiók " sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="TryCatch_8">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                </ui:GetRobotAsset>
-                                <FlowStep.Next>
-                                  <FlowStep x:Name="__ReferenceID1">
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <av:Point x:Key="ShapeLocation">275,255</av:Point>
-                                        <av:Size x:Key="ShapeSize">110,70</av:Size>
-                                        <av:PointCollection x:Key="ConnectorLocation">385,290 445,290</av:PointCollection>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                    <Sequence sap2010:Annotation.AnnotationText="Get Enter Hungary Username/Password from windows Credentials" DisplayName="Get Enter Hungary Username/Password from windows Credentials" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                                  <TryCatch.Try>
+                                    <uas:GetUsernamePasswordX OrchestratorCredentialName="{x:Null}" sap2010:Annotation.AnnotationText="Get RobotEmail from local Credential" AutosubmitTimeoutSeconds="0" CredentialName="UiPath: RobotEmail" CredentialsSource="CredentialsManager" DisplayName="Get RobotEmail from local Credential" sap:VirtualizedContainerService.HintSize="334,175" sap2010:WorkflowViewState.IdRef="GetUsernamePasswordX_4" TimeoutInSeconds="5">
+                                      <uas:GetUsernamePasswordX.Credential>
+                                        <OutArgument x:TypeArguments="ui:PasswordCredentials">
+                                          <CSharpReference x:TypeArguments="ui:PasswordCredentials" sap2010:WorkflowViewState.IdRef="CSharpReference`1_21">out_RobotEmail_cred</CSharpReference>
+                                        </OutArgument>
+                                      </uas:GetUsernamePasswordX.Credential>
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </uas:GetUsernamePasswordX>
+                                  </TryCatch.Try>
+                                  <TryCatch.Catches>
+                                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="440,152" sap2010:WorkflowViewState.IdRef="Catch`1_7">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ActivityAction x:TypeArguments="s:Exception">
+                                        <ActivityAction.Argument>
+                                          <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                        </ActivityAction.Argument>
+                                        <Assign DisplayName="Assign robotEmail_frissites_In to true" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_10">
+                                          <Assign.To>
+                                            <OutArgument x:TypeArguments="x:Boolean">
+                                              <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_41">robotEmail_frissites_In</CSharpReference>
+                                            </OutArgument>
+                                          </Assign.To>
+                                          <Assign.Value>
+                                            <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                                          </Assign.Value>
+                                        </Assign>
+                                      </ActivityAction>
+                                    </Catch>
+                                  </TryCatch.Catches>
+                                </TryCatch>
+                                <FlowStep.Next>
+                                  <FlowStep x:Name="__ReferenceID8">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <av:Point x:Key="ShapeLocation">115,375</av:Point>
+                                        <av:Size x:Key="ShapeSize">110,70</av:Size>
+                                        <av:PointCollection x:Key="ConnectorLocation">225,410 285,410</av:PointCollection>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <Sequence sap2010:Annotation.AnnotationText="Robot Email Fiók Update, if need" DisplayName="Robot Email Fiók Update, if need" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                           <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <TryCatch sap2010:Annotation.AnnotationText="Try Catch Get Enter Hungary Username/Password from windows Credentials" DisplayName="Try Catch Get Enter Hungary Username/Password from windows Credentials" sap:VirtualizedContainerService.HintSize="550,1042" sap2010:WorkflowViewState.IdRef="TryCatch_7">
-                                        <sap:WorkflowViewStateService.ViewState>
-                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                          </scg:Dictionary>
-                                        </sap:WorkflowViewStateService.ViewState>
+                                      <TryCatch DisplayName="Try Catch If Robot Email Update" sap:VirtualizedContainerService.HintSize="434,389" sap2010:WorkflowViewState.IdRef="TryCatch_9">
                                         <TryCatch.Try>
-                                          <Sequence DisplayName="Get Enter Hungary Username/Password Sequence" sap:VirtualizedContainerService.HintSize="512,760" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                                          <If DisplayName="If Robot Email Update" sap:VirtualizedContainerService.HintSize="546,1001" sap2010:WorkflowViewState.IdRef="If_5">
+                                            <If.Condition>
+                                              <InArgument x:TypeArguments="x:Boolean">
+                                                <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_27">robotEmail_frissites_In</CSharpValue>
+                                              </InArgument>
+                                            </If.Condition>
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <uas:GetUsernamePasswordX OrchestratorCredentialName="{x:Null}" TimeoutInSeconds="{x:Null}" AutosubmitTimeoutSeconds="10" CredentialName="UiPath: Enter Hungary" CredentialsSource="CredentialsManager" DisplayName="Get Username/Password" sap:VirtualizedContainerService.HintSize="450,207" sap2010:WorkflowViewState.IdRef="GetUsernamePasswordX_8">
-                                              <uas:GetUsernamePasswordX.Credential>
-                                                <OutArgument x:TypeArguments="ui:PasswordCredentials">
-                                                  <CSharpReference x:TypeArguments="ui:PasswordCredentials" sap2010:WorkflowViewState.IdRef="CSharpReference`1_39">credentials_Out</CSharpReference>
-                                                </OutArgument>
-                                              </uas:GetUsernamePasswordX.Credential>
-                                              <sap:WorkflowViewStateService.ViewState>
-                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                </scg:Dictionary>
-                                              </sap:WorkflowViewStateService.ViewState>
-                                            </uas:GetUsernamePasswordX>
-                                            <If DisplayName="Has Username/password?" sap:VirtualizedContainerService.HintSize="450,465" sap2010:WorkflowViewState.IdRef="If_7">
-                                              <If.Condition>
-                                                <InArgument x:TypeArguments="x:Boolean">
-                                                  <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_35">String.IsNullOrEmpty(credentials_Out.Username) || credentials_Out.SecurePassword.Length==0</CSharpValue>
-                                                </InArgument>
-                                              </If.Condition>
-                                              <If.Then>
-                                                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,201" sap2010:WorkflowViewState.IdRef="Sequence_27">
-                                                  <sap:WorkflowViewStateService.ViewState>
-                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                    </scg:Dictionary>
-                                                  </sap:WorkflowViewStateService.ViewState>
-                                                  <Throw DisplayName="Throw &quot;Nem adott meg felhasználónevet/jelszót az EnterHungary oldalához.&quot;" sap:VirtualizedContainerService.HintSize="354,113" sap2010:WorkflowViewState.IdRef="Throw_5">
-                                                    <InArgument x:TypeArguments="s:Exception">
-                                                      <CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_33">new BusinessRuleException("Nem adott meg felhasználónevet/jelszót az EnterHungary oldalához")</CSharpValue>
+                                            <If.Then>
+                                              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="512,760" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <uas:GetUsernamePasswordX OrchestratorCredentialName="{x:Null}" TimeoutInSeconds="{x:Null}" AutosubmitTimeoutSeconds="10" CredentialName="UiPath: RobotEmail" CredentialsSource="CredentialsManager" DisplayName="Get Username/Password" sap:VirtualizedContainerService.HintSize="450,207" sap2010:WorkflowViewState.IdRef="GetUsernamePasswordX_7">
+                                                  <uas:GetUsernamePasswordX.Credential>
+                                                    <OutArgument x:TypeArguments="ui:PasswordCredentials">
+                                                      <CSharpReference x:TypeArguments="ui:PasswordCredentials" sap2010:WorkflowViewState.IdRef="CSharpReference`1_40">out_RobotEmail_cred</CSharpReference>
+                                                    </OutArgument>
+                                                  </uas:GetUsernamePasswordX.Credential>
+                                                </uas:GetUsernamePasswordX>
+                                                <If DisplayName="Has Username/password?" sap:VirtualizedContainerService.HintSize="450,465" sap2010:WorkflowViewState.IdRef="If_8">
+                                                  <If.Condition>
+                                                    <InArgument x:TypeArguments="x:Boolean">
+                                                      <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_36">String.IsNullOrEmpty(out_RobotEmail_cred.Username) || out_RobotEmail_cred.SecurePassword.Length==0</CSharpValue>
                                                     </InArgument>
-                                                  </Throw>
-                                                </Sequence>
-                                              </If.Then>
-                                              <If.Else>
-                                                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,103" sap2010:WorkflowViewState.IdRef="Sequence_28">
-                                                  <sap:WorkflowViewStateService.ViewState>
-                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                    </scg:Dictionary>
-                                                  </sap:WorkflowViewStateService.ViewState>
-                                                </Sequence>
-                                              </If.Else>
-                                            </If>
-                                          </Sequence>
+                                                  </If.Condition>
+                                                  <If.Then>
+                                                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,201" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                      <Throw DisplayName="Throw &quot;Nem adott meg felhasználónevet/jelszót  a robot e-mail-hez&quot;" sap:VirtualizedContainerService.HintSize="354,113" sap2010:WorkflowViewState.IdRef="Throw_6">
+                                                        <InArgument x:TypeArguments="s:Exception">
+                                                          <CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_37" xml:space="preserve">new BusinessRuleException("Nem adott meg felhasználónevet/jelszót  a robot e-mail-hez")</CSharpValue>
+                                                        </InArgument>
+                                                      </Throw>
+                                                    </Sequence>
+                                                  </If.Then>
+                                                  <If.Else>
+                                                    <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,103" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                    </Sequence>
+                                                  </If.Else>
+                                                </If>
+                                              </Sequence>
+                                            </If.Then>
+                                            <If.Else>
+                                              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,103" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                              </Sequence>
+                                            </If.Else>
+                                          </If>
                                         </TryCatch.Try>
                                         <TryCatch.Catches>
-                                          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="516,22" sap2010:WorkflowViewState.IdRef="Catch`1_6">
+                                          <Catch x:TypeArguments="ui:BusinessRuleException" sap:VirtualizedContainerService.HintSize="400,22" sap2010:WorkflowViewState.IdRef="Catch`1_9">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <ActivityAction x:TypeArguments="ui:BusinessRuleException">
+                                              <ActivityAction.Argument>
+                                                <DelegateInArgument x:TypeArguments="ui:BusinessRuleException" Name="exception" />
+                                              </ActivityAction.Argument>
+                                              <Throw DisplayName="Throw &quot;Nem adott meg felhasználónevet/jelszót  a robot e-mail-hez&quot;" sap:VirtualizedContainerService.HintSize="335,90" sap2010:WorkflowViewState.IdRef="Throw_9">
+                                                <InArgument x:TypeArguments="s:Exception">
+                                                  <CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_39" xml:space="preserve">new BusinessRuleException("Nem adott meg felhasználónevet/jelszót  a robot e-mail-hez")</CSharpValue>
+                                                </InArgument>
+                                              </Throw>
+                                            </ActivityAction>
+                                          </Catch>
+                                          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,160" sap2010:WorkflowViewState.IdRef="Catch`1_10">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
@@ -405,9 +582,9 @@
                                               <ActivityAction.Argument>
                                                 <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                                               </ActivityAction.Argument>
-                                              <Throw DisplayName="Throw &quot;Nem adott meg felhasználónevet/jelszót az EnterHungary oldalához.&quot;" sap:VirtualizedContainerService.HintSize="335,90" sap2010:WorkflowViewState.IdRef="Throw_4">
+                                              <Throw DisplayName="Throw &quot;Nem adott meg felhasználónevet/jelszót  a robot e-mail-hez&quot;" sap:VirtualizedContainerService.HintSize="335,90" sap2010:WorkflowViewState.IdRef="Throw_11">
                                                 <InArgument x:TypeArguments="s:Exception">
-                                                  <CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_31">new BusinessRuleException("Nem adott meg felhasználónevet/jelszót az EnterHungary oldalához")</CSharpValue>
+                                                  <CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_41" xml:space="preserve">new BusinessRuleException("Nem adott meg felhasználónevet/jelszót  a robot e-mail-hez")</CSharpValue>
                                                 </InArgument>
                                               </Throw>
                                             </ActivityAction>
@@ -416,36 +593,53 @@
                                       </TryCatch>
                                     </Sequence>
                                     <FlowStep.Next>
-                                      <FlowStep x:Name="__ReferenceID8">
+                                      <FlowStep x:Name="__ReferenceID7">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <av:Point x:Key="ShapeLocation">445,255</av:Point>
+                                            <av:Point x:Key="ShapeLocation">285,375</av:Point>
                                             <av:Size x:Key="ShapeSize">110,70</av:Size>
-                                            <av:PointCollection x:Key="ConnectorLocation">500,325 500,355 170,355 170,375</av:PointCollection>
+                                            <av:PointCollection x:Key="ConnectorLocation">395,410 445,410</av:PointCollection>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <TryCatch sap2010:Annotation.AnnotationText="Try get Robot Email Fiók , if error, force robotEmail_frissites" DisplayName="Robot Email Fiók " sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="TryCatch_8">
+                                        <TryCatch sap2010:Annotation.AnnotationText="File Browser Window" DisplayName="Try Catch Browse For File" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="TryCatch_6">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
                                           <TryCatch.Try>
-                                            <uas:GetUsernamePasswordX OrchestratorCredentialName="{x:Null}" sap2010:Annotation.AnnotationText="Get RobotEmail from local Credential" AutosubmitTimeoutSeconds="0" CredentialName="UiPath: RobotEmail" CredentialsSource="CredentialsManager" DisplayName="Get RobotEmail from local Credential" sap:VirtualizedContainerService.HintSize="334,175" sap2010:WorkflowViewState.IdRef="GetUsernamePasswordX_4" TimeoutInSeconds="5">
-                                              <uas:GetUsernamePasswordX.Credential>
-                                                <OutArgument x:TypeArguments="ui:PasswordCredentials">
-                                                  <CSharpReference x:TypeArguments="ui:PasswordCredentials" sap2010:WorkflowViewState.IdRef="CSharpReference`1_21">out_RobotEmail_cred</CSharpReference>
-                                                </OutArgument>
-                                              </uas:GetUsernamePasswordX.Credential>
+                                            <Sequence DisplayName="Browse For File Sequence" sap:VirtualizedContainerService.HintSize="496,412" sap2010:WorkflowViewState.IdRef="Sequence_24">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                  <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                            </uas:GetUsernamePasswordX>
+                                              <Assign DisplayName="Assign out_InitFirstOk to true" sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_9">
+                                                <Assign.To>
+                                                  <OutArgument x:TypeArguments="x:Boolean">
+                                                    <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_36">out_InitFirstOk</CSharpReference>
+                                                  </OutArgument>
+                                                </Assign.To>
+                                                <Assign.Value>
+                                                  <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                                                </Assign.Value>
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                              </Assign>
+                                              <ui:SelectFile DisplayName="Browse For File" Filter="Excel|*.xlsx;*.xls;*.xlsm;*.xlsb" sap:VirtualizedContainerService.HintSize="434,161" sap2010:WorkflowViewState.IdRef="SelectFile_4">
+                                                <ui:SelectFile.SelectedFile>
+                                                  <OutArgument x:TypeArguments="x:String">
+                                                    <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_37">excel_FilePath_Out</CSharpReference>
+                                                  </OutArgument>
+                                                </ui:SelectFile.SelectedFile>
+                                              </ui:SelectFile>
+                                            </Sequence>
                                           </TryCatch.Try>
                                           <TryCatch.Catches>
-                                            <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="440,152" sap2010:WorkflowViewState.IdRef="Catch`1_7">
+                                            <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="502,422" sap2010:WorkflowViewState.IdRef="Catch`1_5">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -456,250 +650,46 @@
                                                 <ActivityAction.Argument>
                                                   <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                                                 </ActivityAction.Argument>
-                                                <Assign DisplayName="Assign robotEmail_frissites_In to true" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_10">
-                                                  <Assign.To>
-                                                    <OutArgument x:TypeArguments="x:Boolean">
-                                                      <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_41">robotEmail_frissites_In</CSharpReference>
-                                                    </OutArgument>
-                                                  </Assign.To>
-                                                  <Assign.Value>
-                                                    <InArgument x:TypeArguments="x:Boolean">True</InArgument>
-                                                  </Assign.Value>
-                                                </Assign>
+                                                <Sequence DisplayName="Browse For File Exception Sequence" sap:VirtualizedContainerService.HintSize="496,352" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <Assign DisplayName="Assign out_InitFirstOk to false" sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_7">
+                                                    <Assign.To>
+                                                      <OutArgument x:TypeArguments="x:Boolean">
+                                                        <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_33">out_InitFirstOk</CSharpReference>
+                                                      </OutArgument>
+                                                    </Assign.To>
+                                                    <Assign.Value>
+                                                      <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                                                    </Assign.Value>
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                  </Assign>
+                                                  <ui:MessageBox ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText="Message Box: &quot;&quot;Nem választott ki feldolgozandó excel filet, a folyamat leáll.&quot;" AutoCloseAfter="00:00:00" Caption="Figyelem!!" DisplayName="Message Box: &quot;&quot;Nem választott ki feldolgozandó excel filet, a folyamat leáll.&quot;" sap:VirtualizedContainerService.HintSize="434,150" sap2010:WorkflowViewState.IdRef="MessageBox_6">
+                                                    <ui:MessageBox.Text>
+                                                      <InArgument x:TypeArguments="x:Object">
+                                                        <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_26">"Nem választott ki feldolgozandó excel filet, a folyamat leáll."</CSharpValue>
+                                                      </InArgument>
+                                                    </ui:MessageBox.Text>
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                  </ui:MessageBox>
+                                                </Sequence>
                                               </ActivityAction>
                                             </Catch>
                                           </TryCatch.Catches>
                                         </TryCatch>
                                         <FlowStep.Next>
-                                          <FlowStep x:Name="__ReferenceID10">
-                                            <sap:WorkflowViewStateService.ViewState>
-                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                <av:Point x:Key="ShapeLocation">115,375</av:Point>
-                                                <av:Size x:Key="ShapeSize">110,70</av:Size>
-                                                <av:PointCollection x:Key="ConnectorLocation">225,410 285,410</av:PointCollection>
-                                              </scg:Dictionary>
-                                            </sap:WorkflowViewStateService.ViewState>
-                                            <Sequence sap2010:Annotation.AnnotationText="Robot Email Fiók Update, if need" DisplayName="Robot Email Fiók Update, if need" sap:VirtualizedContainerService.HintSize="496,477" sap2010:WorkflowViewState.IdRef="Sequence_23">
-                                              <sap:WorkflowViewStateService.ViewState>
-                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                  <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
-                                                </scg:Dictionary>
-                                              </sap:WorkflowViewStateService.ViewState>
-                                              <TryCatch DisplayName="Try Catch If Robot Email Update" sap:VirtualizedContainerService.HintSize="434,389" sap2010:WorkflowViewState.IdRef="TryCatch_9">
-                                                <TryCatch.Try>
-                                                  <If DisplayName="If Robot Email Update" sap:VirtualizedContainerService.HintSize="546,1001" sap2010:WorkflowViewState.IdRef="If_5">
-                                                    <If.Condition>
-                                                      <InArgument x:TypeArguments="x:Boolean">
-                                                        <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_27">robotEmail_frissites_In</CSharpValue>
-                                                      </InArgument>
-                                                    </If.Condition>
-                                                    <sap:WorkflowViewStateService.ViewState>
-                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                      </scg:Dictionary>
-                                                    </sap:WorkflowViewStateService.ViewState>
-                                                    <If.Then>
-                                                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="512,760" sap2010:WorkflowViewState.IdRef="Sequence_21">
-                                                        <sap:WorkflowViewStateService.ViewState>
-                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                          </scg:Dictionary>
-                                                        </sap:WorkflowViewStateService.ViewState>
-                                                        <uas:GetUsernamePasswordX OrchestratorCredentialName="{x:Null}" TimeoutInSeconds="{x:Null}" AutosubmitTimeoutSeconds="10" CredentialName="UiPath: RobotEmail" CredentialsSource="CredentialsManager" DisplayName="Get Username/Password" sap:VirtualizedContainerService.HintSize="450,207" sap2010:WorkflowViewState.IdRef="GetUsernamePasswordX_7">
-                                                          <uas:GetUsernamePasswordX.Credential>
-                                                            <OutArgument x:TypeArguments="ui:PasswordCredentials">
-                                                              <CSharpReference x:TypeArguments="ui:PasswordCredentials" sap2010:WorkflowViewState.IdRef="CSharpReference`1_40">out_RobotEmail_cred</CSharpReference>
-                                                            </OutArgument>
-                                                          </uas:GetUsernamePasswordX.Credential>
-                                                        </uas:GetUsernamePasswordX>
-                                                        <If DisplayName="Has Username/password?" sap:VirtualizedContainerService.HintSize="450,465" sap2010:WorkflowViewState.IdRef="If_8">
-                                                          <If.Condition>
-                                                            <InArgument x:TypeArguments="x:Boolean">
-                                                              <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_36">String.IsNullOrEmpty(out_RobotEmail_cred.Username) || out_RobotEmail_cred.SecurePassword.Length==0</CSharpValue>
-                                                            </InArgument>
-                                                          </If.Condition>
-                                                          <If.Then>
-                                                            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,201" sap2010:WorkflowViewState.IdRef="Sequence_29">
-                                                              <sap:WorkflowViewStateService.ViewState>
-                                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                </scg:Dictionary>
-                                                              </sap:WorkflowViewStateService.ViewState>
-                                                              <Throw DisplayName="Throw &quot;Nem adott meg felhasználónevet/jelszót  a robot e-mail-hez&quot;" sap:VirtualizedContainerService.HintSize="354,113" sap2010:WorkflowViewState.IdRef="Throw_6">
-                                                                <InArgument x:TypeArguments="s:Exception">
-                                                                  <CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_37" xml:space="preserve">new BusinessRuleException("Nem adott meg felhasználónevet/jelszót  a robot e-mail-hez")</CSharpValue>
-                                                                </InArgument>
-                                                              </Throw>
-                                                            </Sequence>
-                                                          </If.Then>
-                                                          <If.Else>
-                                                            <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,103" sap2010:WorkflowViewState.IdRef="Sequence_30">
-                                                              <sap:WorkflowViewStateService.ViewState>
-                                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                </scg:Dictionary>
-                                                              </sap:WorkflowViewStateService.ViewState>
-                                                            </Sequence>
-                                                          </If.Else>
-                                                        </If>
-                                                      </Sequence>
-                                                    </If.Then>
-                                                    <If.Else>
-                                                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,103" sap2010:WorkflowViewState.IdRef="Sequence_22">
-                                                        <sap:WorkflowViewStateService.ViewState>
-                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                          </scg:Dictionary>
-                                                        </sap:WorkflowViewStateService.ViewState>
-                                                      </Sequence>
-                                                    </If.Else>
-                                                  </If>
-                                                </TryCatch.Try>
-                                                <TryCatch.Catches>
-                                                  <Catch x:TypeArguments="ui:BusinessRuleException" sap:VirtualizedContainerService.HintSize="400,22" sap2010:WorkflowViewState.IdRef="Catch`1_9">
-                                                    <sap:WorkflowViewStateService.ViewState>
-                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                      </scg:Dictionary>
-                                                    </sap:WorkflowViewStateService.ViewState>
-                                                    <ActivityAction x:TypeArguments="ui:BusinessRuleException">
-                                                      <ActivityAction.Argument>
-                                                        <DelegateInArgument x:TypeArguments="ui:BusinessRuleException" Name="exception" />
-                                                      </ActivityAction.Argument>
-                                                      <Throw DisplayName="Throw &quot;Nem adott meg felhasználónevet/jelszót  a robot e-mail-hez&quot;" sap:VirtualizedContainerService.HintSize="335,90" sap2010:WorkflowViewState.IdRef="Throw_9">
-                                                        <InArgument x:TypeArguments="s:Exception">
-                                                          <CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_39" xml:space="preserve">new BusinessRuleException("Nem adott meg felhasználónevet/jelszót  a robot e-mail-hez")</CSharpValue>
-                                                        </InArgument>
-                                                      </Throw>
-                                                    </ActivityAction>
-                                                  </Catch>
-                                                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,160" sap2010:WorkflowViewState.IdRef="Catch`1_10">
-                                                    <sap:WorkflowViewStateService.ViewState>
-                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                      </scg:Dictionary>
-                                                    </sap:WorkflowViewStateService.ViewState>
-                                                    <ActivityAction x:TypeArguments="s:Exception">
-                                                      <ActivityAction.Argument>
-                                                        <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
-                                                      </ActivityAction.Argument>
-                                                      <Throw DisplayName="Throw &quot;Nem adott meg felhasználónevet/jelszót  a robot e-mail-hez&quot;" sap:VirtualizedContainerService.HintSize="335,90" sap2010:WorkflowViewState.IdRef="Throw_11">
-                                                        <InArgument x:TypeArguments="s:Exception">
-                                                          <CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_41" xml:space="preserve">new BusinessRuleException("Nem adott meg felhasználónevet/jelszót  a robot e-mail-hez")</CSharpValue>
-                                                        </InArgument>
-                                                      </Throw>
-                                                    </ActivityAction>
-                                                  </Catch>
-                                                </TryCatch.Catches>
-                                              </TryCatch>
-                                            </Sequence>
-                                            <FlowStep.Next>
-                                              <FlowStep x:Name="__ReferenceID9">
-                                                <sap:WorkflowViewStateService.ViewState>
-                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                    <av:Point x:Key="ShapeLocation">285,375</av:Point>
-                                                    <av:Size x:Key="ShapeSize">110,70</av:Size>
-                                                    <av:PointCollection x:Key="ConnectorLocation">395,410 445,410</av:PointCollection>
-                                                  </scg:Dictionary>
-                                                </sap:WorkflowViewStateService.ViewState>
-                                                <TryCatch sap2010:Annotation.AnnotationText="File Browser Window" DisplayName="Try Catch Browse For File" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="TryCatch_6">
-                                                  <sap:WorkflowViewStateService.ViewState>
-                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                      <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
-                                                    </scg:Dictionary>
-                                                  </sap:WorkflowViewStateService.ViewState>
-                                                  <TryCatch.Try>
-                                                    <Sequence DisplayName="Browse For File Sequence" sap:VirtualizedContainerService.HintSize="496,412" sap2010:WorkflowViewState.IdRef="Sequence_24">
-                                                      <sap:WorkflowViewStateService.ViewState>
-                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                        </scg:Dictionary>
-                                                      </sap:WorkflowViewStateService.ViewState>
-                                                      <Assign DisplayName="Assign out_InitFirstOk to true" sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_9">
-                                                        <Assign.To>
-                                                          <OutArgument x:TypeArguments="x:Boolean">
-                                                            <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_36">out_InitFirstOk</CSharpReference>
-                                                          </OutArgument>
-                                                        </Assign.To>
-                                                        <Assign.Value>
-                                                          <InArgument x:TypeArguments="x:Boolean">True</InArgument>
-                                                        </Assign.Value>
-                                                        <sap:WorkflowViewStateService.ViewState>
-                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                          </scg:Dictionary>
-                                                        </sap:WorkflowViewStateService.ViewState>
-                                                      </Assign>
-                                                      <ui:SelectFile DisplayName="Browse For File" Filter="Excel|*.xlsx;*.xls;*.xlsm;*.xlsb" sap:VirtualizedContainerService.HintSize="434,161" sap2010:WorkflowViewState.IdRef="SelectFile_4">
-                                                        <ui:SelectFile.SelectedFile>
-                                                          <OutArgument x:TypeArguments="x:String">
-                                                            <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_37">excel_FilePath_Out</CSharpReference>
-                                                          </OutArgument>
-                                                        </ui:SelectFile.SelectedFile>
-                                                      </ui:SelectFile>
-                                                    </Sequence>
-                                                  </TryCatch.Try>
-                                                  <TryCatch.Catches>
-                                                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="502,422" sap2010:WorkflowViewState.IdRef="Catch`1_5">
-                                                      <sap:WorkflowViewStateService.ViewState>
-                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                        </scg:Dictionary>
-                                                      </sap:WorkflowViewStateService.ViewState>
-                                                      <ActivityAction x:TypeArguments="s:Exception">
-                                                        <ActivityAction.Argument>
-                                                          <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
-                                                        </ActivityAction.Argument>
-                                                        <Sequence DisplayName="Browse For File Exception Sequence" sap:VirtualizedContainerService.HintSize="496,352" sap2010:WorkflowViewState.IdRef="Sequence_20">
-                                                          <sap:WorkflowViewStateService.ViewState>
-                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                            </scg:Dictionary>
-                                                          </sap:WorkflowViewStateService.ViewState>
-                                                          <Assign DisplayName="Assign out_InitFirstOk to false" sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_7">
-                                                            <Assign.To>
-                                                              <OutArgument x:TypeArguments="x:Boolean">
-                                                                <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_33">out_InitFirstOk</CSharpReference>
-                                                              </OutArgument>
-                                                            </Assign.To>
-                                                            <Assign.Value>
-                                                              <InArgument x:TypeArguments="x:Boolean">False</InArgument>
-                                                            </Assign.Value>
-                                                            <sap:WorkflowViewStateService.ViewState>
-                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                              </scg:Dictionary>
-                                                            </sap:WorkflowViewStateService.ViewState>
-                                                          </Assign>
-                                                          <ui:MessageBox ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText="Message Box: &quot;&quot;Nem választott ki feldolgozandó excel filet, a folyamat leáll.&quot;" AutoCloseAfter="00:00:00" Caption="Figyelem!!" DisplayName="Message Box: &quot;&quot;Nem választott ki feldolgozandó excel filet, a folyamat leáll.&quot;" sap:VirtualizedContainerService.HintSize="434,150" sap2010:WorkflowViewState.IdRef="MessageBox_6">
-                                                            <ui:MessageBox.Text>
-                                                              <InArgument x:TypeArguments="x:Object">
-                                                                <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_26">"Nem választott ki feldolgozandó excel filet, a folyamat leáll."</CSharpValue>
-                                                              </InArgument>
-                                                            </ui:MessageBox.Text>
-                                                            <sap:WorkflowViewStateService.ViewState>
-                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                                              </scg:Dictionary>
-                                                            </sap:WorkflowViewStateService.ViewState>
-                                                          </ui:MessageBox>
-                                                        </Sequence>
-                                                      </ActivityAction>
-                                                    </Catch>
-                                                  </TryCatch.Catches>
-                                                </TryCatch>
-                                                <FlowStep.Next>
-                                                  <x:Reference>__ReferenceID0</x:Reference>
-                                                </FlowStep.Next>
-                                              </FlowStep>
-                                            </FlowStep.Next>
-                                          </FlowStep>
+                                          <x:Reference>__ReferenceID0</x:Reference>
                                         </FlowStep.Next>
                                       </FlowStep>
                                     </FlowStep.Next>
@@ -717,10 +707,55 @@
             </FlowStep.Next>
           </FlowStep>
           <x:Reference>__ReferenceID1</x:Reference>
-          <x:Reference>__ReferenceID2</x:Reference>
-          <x:Reference>__ReferenceID3</x:Reference>
-          <x:Reference>__ReferenceID4</x:Reference>
-          <FlowStep x:Name="__ReferenceID11">
+          <FlowStep x:Name="__ReferenceID3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <av:Point x:Key="ShapeLocation">280,133</av:Point>
+                <av:Size x:Key="ShapeSize">110,70</av:Size>
+                <av:PointCollection x:Key="ConnectorLocation">390,168 420,168 420,170 445,170</av:PointCollection>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Get REGISTRATION_NUMBER from Shared folder" AssetName="REGISTRATION_NUMBER" CacheStrategy="None" DisplayName="Get REGISTRATION_NUMBER Asset" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="GetRobotAsset_5">
+              <ui:GetRobotAsset.Value>
+                <OutArgument x:TypeArguments="x:String">
+                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_20">out_Registration_number</CSharpReference>
+                </OutArgument>
+              </ui:GetRobotAsset.Value>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:GetRobotAsset>
+            <FlowStep.Next>
+              <x:Reference>__ReferenceID2</x:Reference>
+            </FlowStep.Next>
+          </FlowStep>
+          <FlowStep>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <av:Point x:Key="ShapeLocation">110,133</av:Point>
+                <av:Size x:Key="ShapeSize">110,70</av:Size>
+                <av:PointCollection x:Key="ConnectorLocation">220,168 280,168</av:PointCollection>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Get REGISTRATION_DATE from Shared folder" AssetName="REGISTRATION_DATE" CacheStrategy="None" DisplayName="Get REGISTRATION_DATE  Asset" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="GetRobotAsset_6">
+              <ui:GetRobotAsset.Value>
+                <OutArgument x:TypeArguments="x:String">
+                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_19">out_Registration_date</CSharpReference>
+                </OutArgument>
+              </ui:GetRobotAsset.Value>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:GetRobotAsset>
+            <FlowStep.Next>
+              <x:Reference>__ReferenceID3</x:Reference>
+            </FlowStep.Next>
+          </FlowStep>
+          <FlowStep x:Name="__ReferenceID10">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <av:Point x:Key="ShapeLocation">110,13</av:Point>
@@ -765,14 +800,15 @@
               </If.Else>
             </If>
             <FlowStep.Next>
-              <x:Reference>__ReferenceID5</x:Reference>
+              <x:Reference>__ReferenceID4</x:Reference>
             </FlowStep.Next>
           </FlowStep>
+          <x:Reference>__ReferenceID2</x:Reference>
+          <x:Reference>__ReferenceID5</x:Reference>
           <x:Reference>__ReferenceID6</x:Reference>
           <x:Reference>__ReferenceID7</x:Reference>
           <x:Reference>__ReferenceID8</x:Reference>
           <x:Reference>__ReferenceID9</x:Reference>
-          <x:Reference>__ReferenceID10</x:Reference>
         </Flowchart>
       </TryCatch.Try>
       <TryCatch.Catches>
