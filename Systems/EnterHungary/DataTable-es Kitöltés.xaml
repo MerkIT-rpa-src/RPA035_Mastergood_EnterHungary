@@ -6,6 +6,9 @@
     <x:Property Name="in_RobotEmail_cred" Type="InArgument(ui:PasswordCredentials)" />
     <x:Property Name="in_Registration_date" Type="InArgument(x:String)" />
     <x:Property Name="in_Registration_number" Type="InArgument(x:String)" />
+    <x:Property Name="in_dtMellekletekParamsHosszabitas" Type="InArgument(sd:DataTable)" />
+    <x:Property Name="in_dtMellekletekParamsMegszuntetes" Type="InArgument(sd:DataTable)" />
+    <x:Property Name="in_dtMellekletekParamsValtozas" Type="InArgument(sd:DataTable)" />
   </x:Members>
   <this:DataTable_es_Kitöltés.in_RobotEmail_cred>
     <InArgument x:TypeArguments="ui:PasswordCredentials" />
@@ -153,7 +156,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Description: Excel-ből adatok felvitele az EH oldalásra&#xA;- Excel sorainak olvasása&#xA;- &quot;Igénylés beadása&quot; meghívása&#xA;- Ha a file feltöltést implementálni kell, ise kell betenni az &quot;EH_Fajlmellkletek&quot; meghívását&#xA;&#xA;Preconditions: arguments" DisplayName="DataTable_es_Kitöltés" sap:VirtualizedContainerService.HintSize="1275,3588" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Description: Excel-ből adatok felvitele az EH oldalásra&#xA;- Excel sorainak olvasása&#xA;- &quot;Igénylés beadása&quot; meghívása&#xA;- Ha a file feltöltést implementálni kell, ise kell betenni az &quot;EH_Fajlmellkletek&quot; meghívását&#xA;&#xA;Preconditions: arguments" DisplayName="DataTable_es_Kitöltés" sap:VirtualizedContainerService.HintSize="1275,3875" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_Sheet_munka1" />
       <Variable x:TypeArguments="x:Int32" Name="CurrentIndex" />
@@ -219,19 +222,19 @@
         </InArgument>
       </ui:LogMessage.Message>
     </ui:LogMessage>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Ügyeim oldal" sap:VirtualizedContainerService.HintSize="750,2793" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="Simulate" OpenMode="IfNotOpen" ScopeGuid="78d5ca3d-8080-4004-8666-1f619115c79c" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Ügyeim oldal" sap:VirtualizedContainerService.HintSize="750,3080" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="Simulate" OpenMode="IfNotOpen" ScopeGuid="78d5ca3d-8080-4004-8666-1f619115c79c" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <ui:ForEachRow ColumnNames="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="716,2553" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+          <ui:ForEachRow ColumnNames="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="716,2840" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
             <ui:ForEachRow.Body>
               <ActivityAction x:TypeArguments="sd:DataRow">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="682,2389" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="682,2676" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -307,7 +310,7 @@
                       </Sequence>
                     </If.Else>
                   </If>
-                  <Switch x:TypeArguments="x:String" DisplayName="Switch" sap:VirtualizedContainerService.HintSize="648,1684" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+                  <Switch x:TypeArguments="x:String" DisplayName="Switch" sap:VirtualizedContainerService.HintSize="648,1971" sap2010:WorkflowViewState.IdRef="Switch`1_1">
                     <Switch.Expression>
                       <InArgument x:TypeArguments="x:String">
                         <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_121">EllenorzesStatus</CSharpValue>
@@ -362,7 +365,7 @@
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:ReportStatus>
                     </Sequence>
-                    <TryCatch x:Key="PASS" DisplayName="Try Catch - PASS" sap:VirtualizedContainerService.HintSize="608,1455" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                    <TryCatch x:Key="PASS" DisplayName="Try Catch - PASS" sap:VirtualizedContainerService.HintSize="608,1742" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -370,7 +373,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <TryCatch.Try>
-                        <Switch x:TypeArguments="x:String" DisplayName="Switch Feldolgozottság" sap:VirtualizedContainerService.HintSize="570,1227" sap2010:WorkflowViewState.IdRef="Switch`1_3">
+                        <Switch x:TypeArguments="x:String" DisplayName="Switch Feldolgozottság" sap:VirtualizedContainerService.HintSize="570,1514" sap2010:WorkflowViewState.IdRef="Switch`1_3">
                           <Switch.Default>
                             <Throw sap:VirtualizedContainerService.HintSize="334,90" sap2010:WorkflowViewState.IdRef="Throw_1">
                               <InArgument x:TypeArguments="s:Exception">
@@ -431,7 +434,7 @@ CurrentIndex+1)</CSharpValue>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </ui:LogMessage>
-                          <Sequence x:Key="Részleges Feldolgozottság" DisplayName="Switch - Részleges Feldolgozottság" sap:VirtualizedContainerService.HintSize="530,977" sap2010:WorkflowViewState.IdRef="Sequence_252">
+                          <Sequence x:Key="Részleges Feldolgozottság" DisplayName="Switch - Részleges Feldolgozottság" sap:VirtualizedContainerService.HintSize="530,1264" sap2010:WorkflowViewState.IdRef="Sequence_252">
                             <Sequence.Variables>
                               <Variable x:TypeArguments="x:String" Name="currentURL" />
                             </Sequence.Variables>
@@ -708,34 +711,75 @@ CurrentIndex+1)</CSharpValue>
                                 </InArgument>
                               </Assign.Value>
                             </Assign>
-                            <Switch x:TypeArguments="x:String" DisplayName="Switch Ügytípus" sap:VirtualizedContainerService.HintSize="496,432" sap2010:WorkflowViewState.IdRef="Switch`1_6">
+                            <Switch x:TypeArguments="x:String" DisplayName="Switch Ügytípus" sap:VirtualizedContainerService.HintSize="496,719" sap2010:WorkflowViewState.IdRef="Switch`1_6">
                               <Switch.Expression>
                                 <InArgument x:TypeArguments="x:String">
                                   <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_151">UgyTipus</CSharpValue>
                                 </InArgument>
                               </Switch.Expression>
-                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" x:Key="Hosszabbítás" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Systems\\EnterHungary\\HosszabitasUjKerelemInditas.xaml">
-                                <ui:InvokeWorkflowFile.Arguments>
-                                  <InArgument x:TypeArguments="ui:PasswordCredentials" x:Key="in_RobotEmail_cred">
-                                    <CSharpValue x:TypeArguments="ui:PasswordCredentials" sap2010:WorkflowViewState.IdRef="CSharpValue`1_152">in_RobotEmail_cred</CSharpValue>
-                                  </InArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="in_excel_FilePath">
-                                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_153">in_excel_FilePath</CSharpValue>
-                                  </InArgument>
-                                  <InArgument x:TypeArguments="sd:DataRow" x:Key="in_CurrentRow">
-                                    <CSharpValue x:TypeArguments="sd:DataRow" sap2010:WorkflowViewState.IdRef="CSharpValue`1_154">CurrentRow</CSharpValue>
-                                  </InArgument>
-                                  <InArgument x:TypeArguments="x:Int32" x:Key="in_CurrentIndex">
-                                    <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_155">CurrentIndex</CSharpValue>
-                                  </InArgument>
-                                  <OutArgument x:TypeArguments="x:String" x:Key="out_errorCaseID">
-                                    <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_24">errorCaseID</CSharpReference>
-                                  </OutArgument>
-                                  <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_dt_Sheet_munka1">
-                                    <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_25">dt_Sheet_munka1</CSharpReference>
-                                  </InOutArgument>
-                                </ui:InvokeWorkflowFile.Arguments>
-                              </ui:InvokeWorkflowFile>
+                              <Sequence x:Key="Hosszabbítás" sap:VirtualizedContainerService.HintSize="416,459" sap2010:WorkflowViewState.IdRef="Sequence_289">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Systems\\EnterHungary\\HosszabitasUjKerelemInditas.xaml">
+                                  <ui:InvokeWorkflowFile.Arguments>
+                                    <InArgument x:TypeArguments="ui:PasswordCredentials" x:Key="in_RobotEmail_cred">
+                                      <CSharpValue x:TypeArguments="ui:PasswordCredentials" sap2010:WorkflowViewState.IdRef="CSharpValue`1_152">in_RobotEmail_cred</CSharpValue>
+                                    </InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_excel_FilePath">
+                                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_153">in_excel_FilePath</CSharpValue>
+                                    </InArgument>
+                                    <InArgument x:TypeArguments="sd:DataRow" x:Key="in_CurrentRow">
+                                      <CSharpValue x:TypeArguments="sd:DataRow" sap2010:WorkflowViewState.IdRef="CSharpValue`1_154">CurrentRow</CSharpValue>
+                                    </InArgument>
+                                    <InArgument x:TypeArguments="x:Int32" x:Key="in_CurrentIndex">
+                                      <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_155">CurrentIndex</CSharpValue>
+                                    </InArgument>
+                                    <OutArgument x:TypeArguments="x:String" x:Key="out_errorCaseID">
+                                      <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_24">errorCaseID</CSharpReference>
+                                    </OutArgument>
+                                    <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_dt_Sheet_munka1">
+                                      <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_25">dt_Sheet_munka1</CSharpReference>
+                                    </InOutArgument>
+                                  </ui:InvokeWorkflowFile.Arguments>
+                                </ui:InvokeWorkflowFile>
+                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Hosszabítás Igénylés Beadása - Invoke Workflow File (Systems\\EnterHungary\\Hosszabítás Igénylés Beadása.xaml)" sap:VirtualizedContainerService.HintSize="382,195" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="Systems\\EnterHungary\\Hosszabítás Igénylés Beadása.xaml">
+                                  <ui:InvokeWorkflowFile.Arguments>
+                                    <InArgument x:TypeArguments="sd:DataRow" x:Key="in_CurrentRow">
+                                      <CSharpValue x:TypeArguments="sd:DataRow" sap2010:WorkflowViewState.IdRef="CSharpValue`1_164">CurrentRow</CSharpValue>
+                                    </InArgument>
+                                    <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_Sheet_munka1">
+                                      <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_165">dt_Sheet_munka1</CSharpValue>
+                                    </InArgument>
+                                    <InArgument x:TypeArguments="x:Int32" x:Key="in_CurrentIndex">
+                                      <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_166">CurrentIndex</CSharpValue>
+                                    </InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_excel_FilePath">
+                                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_167">in_excel_FilePath</CSharpValue>
+                                    </InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_CurrentURL">
+                                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_168">currentURL</CSharpValue>
+                                    </InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_Smtp_host">
+                                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_169">in_Smtp_host</CSharpValue>
+                                    </InArgument>
+                                    <InArgument x:TypeArguments="x:Int32" x:Key="in_Smtp_port">
+                                      <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_170">in_Smtp_port</CSharpValue>
+                                    </InArgument>
+                                    <InArgument x:TypeArguments="ui:PasswordCredentials" x:Key="in_RobotEmail_cred">
+                                      <CSharpValue x:TypeArguments="ui:PasswordCredentials" sap2010:WorkflowViewState.IdRef="CSharpValue`1_171">in_RobotEmail_cred</CSharpValue>
+                                    </InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_Registration_date">
+                                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_172">in_Registration_date</CSharpValue>
+                                    </InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_Registration_number">
+                                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_173">in_Registration_number</CSharpValue>
+                                    </InArgument>
+                                  </ui:InvokeWorkflowFile.Arguments>
+                                </ui:InvokeWorkflowFile>
+                              </Sequence>
                               <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" x:Key="Törlés" sap:VirtualizedContainerService.HintSize="334,172" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="Systems\\EnterHungary\\TorlesUjKerelemInditas.xaml">
                                 <ui:InvokeWorkflowFile.Arguments>
                                   <InArgument x:TypeArguments="ui:PasswordCredentials" x:Key="in_RobotEmail_cred">
@@ -823,7 +867,7 @@ CurrentIndex+1)</CSharpValue>
                               </sap:WorkflowViewStateService.ViewState>
                             </ui:InvokeWorkflowFile>
                           </Sequence>
-                          <Sequence x:Key="" DisplayName="Switch - Null (Új Kérelem Indítása)" sap:VirtualizedContainerService.HintSize="416,438" sap2010:WorkflowViewState.IdRef="Sequence_265">
+                          <Sequence x:Key="" DisplayName="Switch - Null (Új Kérelem Indítása)" sap:VirtualizedContainerService.HintSize="416,432" sap2010:WorkflowViewState.IdRef="Sequence_265">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
