@@ -128,25 +128,25 @@
       <AssemblyReference>RPA999-EnterHungary3.0-DOBOZOS.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Hosszabítás_Igénylés_Beadása" sap:VirtualizedContainerService.HintSize="1296,1145" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Hosszabítás_Igénylés_Beadása" sap:VirtualizedContainerService.HintSize="1296,1435" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="04. Tartózkodási engedély hosszabbítása iránti kérelem" sap:VirtualizedContainerService.HintSize="1022,1122" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" ScopeGuid="a2c42f64-4cdf-4d03-bfcb-3a358f790481" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="04. Tartózkodási engedély hosszabbítása iránti kérelem" sap:VirtualizedContainerService.HintSize="552,1412" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" ScopeGuid="a2c42f64-4cdf-4d03-bfcb-3a358f790481" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="988,882" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="518,1172" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="Tartózkodás Iránti Kérelem TAB" sap:VirtualizedContainerService.HintSize="954,57" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence DisplayName="Tartózkodás Iránti Kérelem TAB" sap:VirtualizedContainerService.HintSize="484,57" sap2010:WorkflowViewState.IdRef="Sequence_3">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1760,7 +1760,7 @@ in_CurrentRow["Érkezést megelőző ország"].ToString().Substring(1).ToLower()
                 </sap:WorkflowViewStateService.ViewState>
               </uix:NClick>
             </Sequence>
-            <uix:NCheckState DisplayName="Foglalkoztatás TAB (Check State)" sap:VirtualizedContainerService.HintSize="954,57" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="a2c42f64-4cdf-4d03-bfcb-3a358f790481" Version="V3">
+            <uix:NCheckState DisplayName="Foglalkoztatás TAB (Check State)" sap:VirtualizedContainerService.HintSize="484,57" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="a2c42f64-4cdf-4d03-bfcb-3a358f790481" Version="V3">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,242" sap2010:WorkflowViewState.IdRef="Sequence_54">
                   <sap:WorkflowViewStateService.ViewState>
@@ -1806,7 +1806,7 @@ in_CurrentRow["Érkezést megelőző ország"].ToString().Substring(1).ToLower()
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NCheckState>
-            <uix:NCheckState DisplayName="Check App State 'Szerkeszt »'" sap:VirtualizedContainerService.HintSize="954,708" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="a2c42f64-4cdf-4d03-bfcb-3a358f790481" Version="V3">
+            <uix:NCheckState DisplayName="Check App State 'Szerkeszt »'" sap:VirtualizedContainerService.HintSize="484,57" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="a2c42f64-4cdf-4d03-bfcb-3a358f790481" Version="V3">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,242" sap2010:WorkflowViewState.IdRef="Sequence_56">
                   <sap:WorkflowViewStateService.ViewState>
@@ -1872,7 +1872,1119 @@ in_CurrentRow["Érkezést megelőző ország"].ToString().Substring(1).ToLower()
                   </uix:TargetAnchorable.Anchors>
                 </uix:TargetAnchorable>
               </uix:NCheckState.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
             </uix:NCheckState>
+            <Sequence DisplayName="Foglalkoztatás TAB kitöltés" sap:VirtualizedContainerService.HintSize="484,941" sap2010:WorkflowViewState.IdRef="Sequence_58">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Sequence DisplayName="Kérelmező foglalkoztatására" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="Sequence_59">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <uix:NCheck Action="Check" sap2010:Annotation.AnnotationText="belföldi foglalkoztatóval fennálló munkaviszony alapján, a foglalkoztatáspolitikáért felelős miniszter közleményében nem szereplő munkakörben kerül sor*:" DisplayName="belföldi foglalkoztatóval fennálló munkaviszony alapján, a foglalkoztatáspolitikáért felelős miniszter közleményében nem szereplő munkakörben kerül sor*:" sap:VirtualizedContainerService.HintSize="416,246" sap2010:WorkflowViewState.IdRef="NCheck_21" ScopeIdentifier="a2c42f64-4cdf-4d03-bfcb-3a358f790481" Version="V3">
+                  <uix:NCheck.Target>
+                    <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/15627773/tartcelharm-c6" CVScreenId="0275a353-66e8-4a5a-900c-27b92b702220" DesignTimeRectangle="478, 401, 13, 13" DesignTimeScaleFactor="1" ElementType="RadioButton" FullSelectorArgument="&lt;webctrl idx='2' tag='INPUT' type='radio' /&gt;" FuzzySelectorArgument="&lt;webctrl class='' tag='INPUT' type='radio' aaname='' /&gt;" Guid="f8c56a49-d06d-4fb9-933a-c454b6cbcf09" ImageBase64="" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/editurlap]' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                          <uix:Target CVScreenId="0275a353-66e8-4a5a-900c-27b92b702220" CvElementArea="476, 408, 17, 16" CvTextArea="493, 413, 31, 11" CvTextArgument="nem" CvType="RadioButton" DesignTimeRectangle="391, 303, 1138, 49" ElementType="Text" FullSelectorArgument="&lt;webctrl class='panel-heading' tag='DIV' /&gt;" FuzzyMatches="10000" FuzzySelectorArgument="&lt;webctrl class='panel-heading' tag='DIV' type='' aaname='Kérelmező foglalkoztatására ' check:text='Kérelmező foglalkoztatására' /&gt;" Guid="abd552bc-4e46-48e8-9f0d-1654effd5017" ImageBase64="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" SearchSteps="Selector, FuzzySelector, Image, CV" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NCheck.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </uix:NCheck>
+                <uix:NCheck Action="Check" sap2010:Annotation.AnnotationText="belföldi foglalkoztatóval kötött megállapodás teljesítése érdekében harmadik országban letelepedett munkáltatóval fennálló munkaviszonya alapján kerül sor *:" DisplayName="belföldi foglalkoztatóval kötött megállapodás teljesítése érdekében harmadik országban letelepedett munkáltatóval fennálló munkaviszonya alapján kerül sor *:" sap:VirtualizedContainerService.HintSize="416,254" sap2010:WorkflowViewState.IdRef="NCheck_22" ScopeIdentifier="a2c42f64-4cdf-4d03-bfcb-3a358f790481" Version="V3">
+                  <uix:NCheck.Target>
+                    <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/15627773/tartcelharm-c6" CVScreenId="177356c2-b8eb-4c46-82a1-5db3925a280c" DesignTimeRectangle="478, 462, 13, 13" DesignTimeScaleFactor="1" ElementType="RadioButton" FullSelectorArgument="&lt;webctrl idx='2' name='foglalkoztatomegallapodas' tag='INPUT' type='radio' /&gt;" FuzzySelectorArgument="&lt;webctrl class='' name='foglalkoztatomegallapodas' tag='INPUT' type='radio' aaname='' /&gt;" Guid="93402857-3632-4fbd-9ec3-d2bf58ee1528" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/editurlap]' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                          <uix:Target CVScreenId="177356c2-b8eb-4c46-82a1-5db3925a280c" CvElementArea="475, 460, 17, 17" CvTextArea="493, 465, 31, 11" CvTextArgument="nem" CvType="RadioButton" DesignTimeRectangle="464, 456, 60, 28" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname=' nem ' idx='2' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' nem ' type='' tag='LABEL' class='' check:innerText='nem' /&gt;" Guid="681e25c3-6629-44ce-b0f8-f65f445e08ff" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEAAAAAgCAYAAACinX6EAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIsSURBVGhD7ZexS+NQHMf7P/0gkK1TN4OrAYdO9g8wdQgOdTkQOjgUB1GQ0LGSzeHIwUFu6ZaDo7pEENwK0oBDoPCVX0zry/MdZy4BAy8fKG2+75e8l09eXtIONKcjB7rRCpAD3WgFyIFutALkQDdqFbBYLOB5HkajEYbDYfbN25w3ldoEzGYzjMdjzOdzrFarLONv3uac25tILQL45KbTqRwX4PYmSqgsgKc3X+HPwHVNux0qC+B7nKf5Z+A6rm8SnSiRo3LwQre55/8F13G9zNO1DfsqQjjuo2sSiExYhx4KY1svEXyz0TVU7SFccuH/9uDsmiAimLsO/IcE0bUDa3tMH/FaOCYLsM7viklJeLUvg6qeBZDRw8n3JVIO1gn8Q4I4tui0h95xgCQ7gRTxhQ06Ct7qMwEE2r9EnAUpojMLZJjoX90h5X3SGJd7hMHNcntMpkMHPopROeqaAbTn4UkMf7jYjm0dwjUc3L4I7UsfA9pkbwJOfgntfyawyEUgXPGsn+NQKGIBcsclqWMNUA0MP913KY8ebL7CHz42vEcuYAGb3zm8z84E4vxW9VNZQB1PAdXAPgpwIVUI/EWAdG6qfioLYKq+B6gGVhDwEsAxLEzuiyXvfLEApsqboGpgBQH5Ikj7E0TPeZAmiO9jYRH8YgHM//4XUA1MFsBPhvB8kD/SCNTtoX8a5gt4BQGFLQ1pBciBbrQC5EA3WgFyoButADnQjVaAHOjGK7j055IxUoXKAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image, CV" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NCheck.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </uix:NCheck>
+              </Sequence>
+              <Sequence sap2010:Annotation.AnnotationText="A kérelmező magyarországi megélhetésére vonatkozó adatok (DIV)" DisplayName="A kérelmező magyarországi megélhetésére vonatkozó adatok (DIV)" sap:VirtualizedContainerService.HintSize="450,88" sap2010:WorkflowViewState.IdRef="Sequence_60">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <uix:NSetText DisplayName="Set Text '01. várható jövedelem összege'" sap:VirtualizedContainerService.HintSize="416,194" sap2010:WorkflowViewState.IdRef="NSetText_36" Version="V3">
+                  <uix:NSetText.Target>
+                    <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/14914298/tartcelharm-c7" ContentHash="yQxE9aSJrUW0e8_Hee0ViQ" DesignTimeRectangle="622, 469, 318, 43" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl name='varhatojovedelemosszege' tag='INPUT' type='number' /&gt;" FuzzySelectorArgument="&lt;webctrl name='varhatojovedelemosszege' tag='INPUT' type='number' class='form-control ' aaname='' /&gt;" Guid="a873074d-ff5f-42b8-9245-804fcfe5bd13" ImageBase64="" InformativeScreenshot="58b709395bcaf0167e33c43fc70f132e.png" Reference="rlGBiR1EJky82ITx9uF30g/VZZqkwbwhEWlu0EyUMQg5A" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/editurlap]' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                  </uix:NSetText.Target>
+                  <uix:NSetText.Text>
+                    <InArgument x:TypeArguments="x:String">
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_67">in_CurrentRow["Személy: Várható jövedelem"].ToString()</CSharpValue>
+                    </InArgument>
+                  </uix:NSetText.Text>
+                </uix:NSetText>
+                <uix:NSelectItem DisplayName="Select Item '02. várható jövedelem pénznem'" sap:VirtualizedContainerService.HintSize="416,182" sap2010:WorkflowViewState.IdRef="NSelectItem_17" Version="V3">
+                  <uix:NSelectItem.Item>
+                    <InArgument x:TypeArguments="x:String">
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_68">in_CurrentRow["Személy: Várható jövedelem pénznem"].ToString()</CSharpValue>
+                    </InArgument>
+                  </uix:NSelectItem.Item>
+                  <uix:NSelectItem.Target>
+                    <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/14914298/tartcelharm-c7" ContentHash="MCcJSBGW8EC61eBFEcdABQ" DesignTimeRectangle="1333, 469, 318, 43" DesignTimeScaleFactor="1.25" ElementType="DropDown" FullSelectorArgument="&lt;webctrl name='varhatojovedelemosszegepenznem' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl name='varhatojovedelemosszegepenznem' tag='SELECT' type='' class='form-control' aaname='' /&gt;" Guid="169d8dc1-a0fc-4935-a28a-4ad7ac3603e1" ImageBase64="" InformativeScreenshot="f7943a23d3179eea2ee8106930dc19c4.png" Reference="rlGBiR1EJky82ITx9uF30g/02Kqb_QO90e-EDZpQBpAkQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/editurlap]' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                  </uix:NSelectItem.Target>
+                </uix:NSelectItem>
+              </Sequence>
+              <Sequence sap2010:Annotation.AnnotationText="Az összevont engedélyezési eljáráshoz szükséges adatok (DIV)" DisplayName="Az összevont engedélyezési eljáráshoz szükséges adatok (DIV)" sap:VirtualizedContainerService.HintSize="450,88" sap2010:WorkflowViewState.IdRef="Sequence_61">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Sequence sap2010:Annotation.AnnotationText="Magyarországi munkáltató adatai (DIV)" DisplayName="Magyarországi munkáltató adatai (DIV)" sap:VirtualizedContainerService.HintSize="484,88" sap2010:WorkflowViewState.IdRef="Sequence_62">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:String" Name="KSH_number" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NSetText DisplayName="Set Text '01.  rövid cégnév'" sap:VirtualizedContainerService.HintSize="434,194" sap2010:WorkflowViewState.IdRef="NSetText_34" Version="V3">
+                    <uix:NSetText.Target>
+                      <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/14914298/tartcelharm-c7" ContentHash="I7wSxOzGu0m_NOTRGyEOdg" DesignTimeRectangle="631, 373, 309, 43" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl name='munkaltatomunkaltatoneve' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl name='munkaltatomunkaltatoneve' tag='INPUT' type='text' class='form-control ' placeholder='max.40 chars' aaname='' /&gt;" Guid="1b6552d2-4da2-43c6-8fa2-88d3a0e6b295" ImageBase64="" InformativeScreenshot="a81bef3b750571658634abd8de3a86cc.png" Reference="rlGBiR1EJky82ITx9uF30g/kOvUbAuD1E-S_CnLrZocMA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/editurlap]' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                    </uix:NSetText.Target>
+                    <uix:NSetText.Text>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_69">in_CurrentRow["Munkáltató rövid cégnév"].ToString()</CSharpValue>
+                      </InArgument>
+                    </uix:NSetText.Text>
+                  </uix:NSetText>
+                  <uix:NSetText DisplayName="Set Text '02. irányítószám'" sap:VirtualizedContainerService.HintSize="434,194" sap2010:WorkflowViewState.IdRef="NSetText_37" Version="V3">
+                    <uix:NSetText.Target>
+                      <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/14914298/tartcelharm-c7" ContentHash="s5SHcMnZ0EWQWpNRJZMBtg" DesignTimeRectangle="1323, 373, 309, 43" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl aria-role='iranyitoszam' name='munkaltatoiranyitoszam' tag='INPUT' type='number' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='iranyitoszam' name='munkaltatoiranyitoszam' tag='INPUT' type='number' class='form-control ' aaname='' /&gt;" Guid="28f42176-8c79-4de0-b20c-22996d17d161" ImageBase64="" InformativeScreenshot="1799a321ff7d3cb9db4e14950059d51a.png" Reference="rlGBiR1EJky82ITx9uF30g/nUA1ZT_TE0usLvSLcVKWhA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/editurlap]' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                    </uix:NSetText.Target>
+                    <uix:NSetText.Text>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_70">in_CurrentRow["Munkáltató irányítószám"].ToString()</CSharpValue>
+                      </InArgument>
+                    </uix:NSetText.Text>
+                  </uix:NSetText>
+                  <uix:NSetText DisplayName="Set Text '03. település'" sap:VirtualizedContainerService.HintSize="434,194" sap2010:WorkflowViewState.IdRef="NSetText_38" Version="V3">
+                    <uix:NSetText.Target>
+                      <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/14914298/tartcelharm-c7" ContentHash="VoHCH6bTckmgVk1KeqRoww" DesignTimeRectangle="631, 416, 309, 42" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl name='munkaltatotelepules' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl name='munkaltatotelepules' tag='INPUT' type='text' class='form-control ' aaname='' /&gt;" Guid="99c71909-6148-467a-8695-1eef0fd61105" ImageBase64="" InformativeScreenshot="9c2bc075282f7965d4a14b04ee7c8a65.png" Reference="rlGBiR1EJky82ITx9uF30g/q-WBueigmEaUc-KSk-CBMg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/editurlap]' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                    </uix:NSetText.Target>
+                    <uix:NSetText.Text>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_71">in_CurrentRow["Munkáltató település"].ToString()</CSharpValue>
+                      </InArgument>
+                    </uix:NSetText.Text>
+                  </uix:NSetText>
+                  <uix:NSetText DisplayName="Set Text '04. közterület neve'" sap:VirtualizedContainerService.HintSize="434,194" sap2010:WorkflowViewState.IdRef="NSetText_39" Version="V3">
+                    <uix:NSetText.Target>
+                      <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/14914298/tartcelharm-c7" ContentHash="oBwh8z2G-0mbXp-QKRaOtg" DesignTimeRectangle="1323, 416, 309, 42" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl name='munkaltatokozteruletneve' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl name='munkaltatokozteruletneve' tag='INPUT' type='text' class='form-control ' aaname='' /&gt;" Guid="d9039d62-8631-4d90-9142-43c5a4661b54" ImageBase64="" InformativeScreenshot="188fcd94fc8610f63afd9af86445c132.png" Reference="rlGBiR1EJky82ITx9uF30g/RdN0XyqSI06N5i-gnYBfrg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/editurlap]' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                    </uix:NSetText.Target>
+                    <uix:NSetText.Text>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_72">in_CurrentRow["Munkáltató közterület neve"].ToString()</CSharpValue>
+                      </InArgument>
+                    </uix:NSetText.Text>
+                  </uix:NSetText>
+                  <uix:NSelectItem DisplayName="Select Item '05. közterület jellege'" sap:VirtualizedContainerService.HintSize="434,189" sap2010:WorkflowViewState.IdRef="NSelectItem_18" Version="V3">
+                    <uix:NSelectItem.Item>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_73">RPA999EnterHungary3._0DOBOZOS.BLL.CustomFunctions.ToTitleCase(in_CurrentRow["Munkáltató közterület jellege"].ToString())</CSharpValue>
+                      </InArgument>
+                    </uix:NSelectItem.Item>
+                    <uix:NSelectItem.Target>
+                      <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/14914298/tartcelharm-c7" ContentHash="1K0qJoMcMUSxC_cXB4VNfA" DesignTimeRectangle="631, 458, 309, 43" DesignTimeScaleFactor="1.25" ElementType="DropDown" FullSelectorArgument="&lt;webctrl name='munkaltatokozteruletjellege' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl name='munkaltatokozteruletjellege' tag='SELECT' type='' class='form-control' aaname='' /&gt;" Guid="e0edd26f-fb2b-471b-b69d-8ac08dddb32c" ImageBase64="" InformativeScreenshot="0c9744fedff94aaa6c6a8398328e65b4.png" Reference="rlGBiR1EJky82ITx9uF30g/-bM0yezFB0iFPKyO5ksmrw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/editurlap]' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                    </uix:NSelectItem.Target>
+                  </uix:NSelectItem>
+                  <uix:NSetText sap2010:Annotation.AnnotationText="MAXIMUM 10 KARAKTER HOSSZÚ" DisplayName="Set Text '06. házszám/helyrajzi szám'" sap:VirtualizedContainerService.HintSize="434,225" sap2010:WorkflowViewState.IdRef="NSetText_40" Version="V3">
+                    <uix:NSetText.Target>
+                      <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/14914298/tartcelharm-c7" ContentHash="Xh4N52s7V06fELqF0WpZew" DesignTimeRectangle="1323, 458, 309, 43" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl name='munkaltatohazszam' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl name='munkaltatohazszam' tag='INPUT' type='text' class='form-control ' aaname='' /&gt;" Guid="9e377e35-bc89-49ca-b6cb-9180a1235843" ImageBase64="" InformativeScreenshot="967954adbe9965e58e42f0597c39947a.png" Reference="rlGBiR1EJky82ITx9uF30g/uWA6y8zdiUWUrRP0wW7HVQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/editurlap]' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                    </uix:NSetText.Target>
+                    <uix:NSetText.Text>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_74">in_CurrentRow["Munkáltató házszám/hrsz"].ToString()</CSharpValue>
+                      </InArgument>
+                    </uix:NSetText.Text>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NSetText>
+                  <uix:NSelectItem DisplayName="Select Item '11. TEÁOR száma'" sap:VirtualizedContainerService.HintSize="434,189" sap2010:WorkflowViewState.IdRef="NSelectItem_19" Version="V3">
+                    <uix:NSelectItem.Item>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_75">in_CurrentRow["TEÁOR szám"].ToString()</CSharpValue>
+                      </InArgument>
+                    </uix:NSelectItem.Item>
+                    <uix:NSelectItem.Target>
+                      <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/14914298/tartcelharm-c7" ContentHash="RboGmCfoxE6sy_Wg2725Qw" DesignTimeRectangle="631, 586, 309, 42" DesignTimeScaleFactor="1.25" ElementType="DropDown" FullSelectorArgument="&lt;webctrl name='munkaltatoteaorszam' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl name='munkaltatoteaorszam' tag='SELECT' type='' class='form-control' placeholder='0000' aaname='' /&gt;" Guid="a3c80ece-f37d-48e9-92fb-4f47954be49f" ImageBase64="" InformativeScreenshot="df289620e86dc7cfd2f326819b799107.png" Reference="rlGBiR1EJky82ITx9uF30g/w4CTrPdoFkKI7N-8TfA7fA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/editurlap]' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                    </uix:NSelectItem.Target>
+                  </uix:NSelectItem>
+                  <Assign DisplayName="Assign KSH_number" sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_1">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">
+                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">KSH_number</CSharpReference>
+                      </OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_76">in_CurrentRow["KSH-szám"].ToString().Replace(" ", string.Empty)</CSharpValue>
+                      </InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <uix:NSetText DisplayName="Set Text '12.  KSH-szám'" sap:VirtualizedContainerService.HintSize="434,194" sap2010:WorkflowViewState.IdRef="NSetText_35" Version="V3">
+                    <uix:NSetText.Target>
+                      <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/14914298/tartcelharm-c7" ContentHash="zY6hAje51ECj3p0ef5TYEg" DesignTimeRectangle="1323, 586, 309, 42" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl name='munkaltatokshszam' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl name='munkaltatokshszam' tag='INPUT' type='text' class='form-control ' placeholder='12345678 1234 123 12' aaname='' /&gt;" Guid="961e81bc-7e35-410e-86c7-62963017fb0c" ImageBase64="" InformativeScreenshot="a22a7ba54a57890cb02e17cd8c2a405f.png" Reference="rlGBiR1EJky82ITx9uF30g/bLHpT3lJtkOQhrPo_dkT5A" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/editurlap]' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                    </uix:NSetText.Target>
+                    <uix:NSetText.Text>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_77">string.Format("{0} {1} {2} {3}",KSH_number.Substring(0,8),KSH_number.Substring(8,4),KSH_number.Substring(12,3),KSH_number.Substring(15,2))</CSharpValue>
+                      </InArgument>
+                    </uix:NSetText.Text>
+                  </uix:NSetText>
+                  <uix:NSetText DisplayName="Set Text '13. munkáltató adószáma/adóazonosító jele'" sap:VirtualizedContainerService.HintSize="434,187" sap2010:WorkflowViewState.IdRef="NSetText_41" Version="V3">
+                    <uix:NSetText.Target>
+                      <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/14914298/tartcelharm-c7" ContentHash="8AfxxFO0tUudE3aNGTK1FA" DesignTimeRectangle="631, 628, 309, 43" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl aria-role='adoszam' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='adoszam' tag='INPUT' type='text' class='form-control ' placeholder='12345678-1-11 / 1234567890' aaname='' /&gt;" Guid="e1ac45c9-71dc-4ad5-baed-5db05de7f1a6" ImageBase64="" InformativeScreenshot="7511a3cc8371cf4ddbf4fe15a205844e.png" Reference="rlGBiR1EJky82ITx9uF30g/7i17kcq5a0S5LErpPfIvLg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/editurlap]' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                    </uix:NSetText.Target>
+                    <uix:NSetText.Text>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_78">in_CurrentRow["Munkáltató adószáma/adóazonosító jele"].ToString()</CSharpValue>
+                      </InArgument>
+                    </uix:NSetText.Text>
+                  </uix:NSetText>
+                </Sequence>
+                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="484,57" sap2010:WorkflowViewState.IdRef="CommentOut_10">
+                  <ui:CommentOut.Body>
+                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="484,108" sap2010:WorkflowViewState.IdRef="Sequence_93">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Sequence DisplayName="Foglalkoztató (DIV)" sap:VirtualizedContainerService.HintSize="450,48" sap2010:WorkflowViewState.IdRef="Sequence_63">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NSelectItem DisplayName="Select Item '01.  Foglalkoztató'" sap:VirtualizedContainerService.HintSize="416,189" sap2010:WorkflowViewState.IdRef="NSelectItem_20" Item="minősített munkaerő kölcsönző" Version="V3">
+                          <uix:NSelectItem.Target>
+                            <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/14914298/tartcelharm-c7" ContentHash="9H4mYviudUGXQ6n10e9BLQ" DesignTimeRectangle="641, 574, 860, 42" DesignTimeScaleFactor="1.25" ElementType="DropDown" FullSelectorArgument="&lt;webctrl name='foglkoztatotip' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl name='foglkoztatotip' tag='SELECT' type='' class='form-control' aaname='' /&gt;" Guid="b8d1dbad-cd7f-4ade-8e12-3e007cdbc247" ImageBase64="" InformativeScreenshot="f282f3d4003ec871198410542512ef33.png" Reference="rlGBiR1EJky82ITx9uF30g/wHDa2tJ67UGhSTDowUASqQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/editurlap]' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                          </uix:NSelectItem.Target>
+                        </uix:NSelectItem>
+                        <uix:NCheck Action="Check" DisplayName="Check/Uncheck '02a.  foglalkoztató a ..  szerepel - igen'" sap:VirtualizedContainerService.HintSize="416,189" sap2010:WorkflowViewState.IdRef="NCheck_23" Version="V3">
+                          <uix:NCheck.Target>
+                            <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/14914298/tartcelharm-c7" ContentHash="McTpVvhHfEyJHDNuZyCyDg" DesignTimeRectangle="322, 659, 16, 16" DesignTimeScaleFactor="1.25" ElementType="RadioButton" FullSelectorArgument="&lt;webctrl tag='INPUT' type='radio' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='radio' class='' aaname='' /&gt;" Guid="f9bd9ce8-a646-4cb5-974e-1fa250eedf61" ImageBase64="" InformativeScreenshot="1d74376c0ea7f2c629faefab5b7f12e4.png" Reference="rlGBiR1EJky82ITx9uF30g/rfg0YC7wnUKa4uOYc4rVSw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/editurlap]' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                          </uix:NCheck.Target>
+                        </uix:NCheck>
+                        <uix:NSetText DisplayName="Set Text '03. Nyilvántartásba vétel napja'" sap:VirtualizedContainerService.HintSize="387.2,195.2" sap2010:WorkflowViewState.IdRef="NSetText_42" Version="V3">
+                          <uix:NSetText.Target>
+                            <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/14914298/tartcelharm-c7" ContentHash="Km4RcQBPTkG4CWK-5bcYDw" DesignTimeRectangle="641, 692, 299, 43" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl aria-role='datummult' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='datummult' tag='INPUT' type='text' class='form-control datum ' placeholder='YYYY-MM-DD' aaname='' /&gt;" Guid="c1359fba-8948-4fde-9e78-bf706e684905" ImageBase64="" InformativeScreenshot="3bcb83122a47573ad7bc59a59597d284.png" Reference="rlGBiR1EJky82ITx9uF30g/qV_48zNTwk2gaIxyYHqq7A" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/editurlap]' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                          </uix:NSetText.Target>
+                          <uix:NSetText.Text>
+                            <InArgument x:TypeArguments="x:String">
+                              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_79">in_Registration_date</CSharpValue>
+                            </InArgument>
+                          </uix:NSetText.Text>
+                        </uix:NSetText>
+                        <uix:NSetText DisplayName="Set Text '04.  Nyilvántartási száma'" sap:VirtualizedContainerService.HintSize="387.2,188" sap2010:WorkflowViewState.IdRef="NSetText_43" Version="V3">
+                          <uix:NSetText.Target>
+                            <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/14914298/tartcelharm-c7" ContentHash="hjn0CL3BgkmbesviSG83-w" DesignTimeRectangle="1314, 692, 299, 43" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl name='btatv34szam' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl name='btatv34szam' tag='INPUT' type='text' class='form-control ' aaname='' /&gt;" Guid="b8f15f15-f0f8-4a42-aa67-cb1f99e3d82a" ImageBase64="" InformativeScreenshot="8c9f339602aecd5db1aa917b783b5393.png" Reference="rlGBiR1EJky82ITx9uF30g/3AmoRRHrLUCld7rLEJmWHg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/editurlap]' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                          </uix:NSetText.Target>
+                          <uix:NSetText.Text>
+                            <InArgument x:TypeArguments="x:String">
+                              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_80">in_Registration_number</CSharpValue>
+                            </InArgument>
+                          </uix:NSetText.Text>
+                        </uix:NSetText>
+                      </Sequence>
+                    </Sequence>
+                  </ui:CommentOut.Body>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:CommentOut>
+                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="484,57" sap2010:WorkflowViewState.IdRef="CommentOut_9">
+                  <ui:CommentOut.Body>
+                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,262" sap2010:WorkflowViewState.IdRef="Sequence_64">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="382,202" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][k(Tab)][u(hk)]" Version="V3" />
+                    </Sequence>
+                  </ui:CommentOut.Body>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:CommentOut>
+                <Sequence sap2010:Annotation.AnnotationText="Munkakör betöltéséhez szükséges szakképzettsége (DIV)" DisplayName="Munkakör betöltéséhez szükséges szakképzettsége (DIV)" sap:VirtualizedContainerService.HintSize="484,88" sap2010:WorkflowViewState.IdRef="Sequence_65">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NSelectItem DisplayName="Select Item '02. iskolai végzettsége'" sap:VirtualizedContainerService.HintSize="416,189" sap2010:WorkflowViewState.IdRef="NSelectItem_21" Version="V3">
+                    <uix:NSelectItem.Item>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_81">in_CurrentRow["Munkakörhöz szükséges iskolai végzettség"].ToString()</CSharpValue>
+                      </InArgument>
+                    </uix:NSelectItem.Item>
+                    <uix:NSelectItem.Target>
+                      <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/14914298/tartcelharm-c7" ContentHash="Q5yUppGuTUGXh5m3jnUhkQ" DesignTimeRectangle="1314, 485, 299, 43" DesignTimeScaleFactor="1.25" ElementType="DropDown" FullSelectorArgument="&lt;webctrl name='vegzettseg' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl name='vegzettseg' tag='SELECT' type='' class='form-control' aaname='' /&gt;" Guid="d279d6c5-5fcb-47a0-a3f4-260acee39f43" ImageBase64="" InformativeScreenshot="be9a1d251a7637220d9515e5f3921e38.png" Reference="rlGBiR1EJky82ITx9uF30g/u8FTXpJYm0-RJ4GRquG19g" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/editurlap]' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                    </uix:NSelectItem.Target>
+                  </uix:NSelectItem>
+                  <uix:NSetText sap2010:Annotation.AnnotationText="Set Text '03. Magyarországra érkezést megelőző foglalkozás'" DisplayName="Set Text '03. Magyarországra érkezést megelőző foglalkozás'" sap:VirtualizedContainerService.HintSize="416,229" sap2010:WorkflowViewState.IdRef="NSetText_44" Version="V3">
+                    <uix:NSetText.Target>
+                      <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/14914298/tartcelharm-c7" ContentHash="mCDBOy6DTkWd5eTdc3gOAA" DesignTimeRectangle="641, 528, 299, 42" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl name='kulfoldifoglakozas' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl name='kulfoldifoglakozas' tag='INPUT' type='text' class='form-control ' aaname='' /&gt;" Guid="4b70ec30-7038-4cc3-8188-24deb8f97c1a" ImageBase64="" InformativeScreenshot="df1565be5912b6935e414174f5e24462.png" Reference="rlGBiR1EJky82ITx9uF30g/4A0UIxfxBk--7Ze_Meq-WQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/editurlap]' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                    </uix:NSetText.Target>
+                    <uix:NSetText.Text>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_82">String.IsNullOrEmpty(in_CurrentRow["Személy: Magyarországra érkezést megelőző foglalkozás"].ToString()) ? "nincs" : in_CurrentRow["Személy: Magyarországra érkezést megelőző foglalkozás"].ToString()</CSharpValue>
+                      </InArgument>
+                    </uix:NSetText.Text>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NSetText>
+                </Sequence>
+                <Sequence DisplayName="Munkavégzés helye(i) (DIV)" sap:VirtualizedContainerService.HintSize="484,375" sap2010:WorkflowViewState.IdRef="Sequence_85">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NCheck Action="Check" sap2010:Annotation.AnnotationText="Check - a munka természetéből adódóan a munkavégzés helye több vármegye területére terjed ki" DisplayName="Check/Uncheck '03. a munka természetéből adódóan a..'" sap:VirtualizedContainerService.HintSize="450,231" sap2010:WorkflowViewState.IdRef="NCheck_24" Version="V3">
+                    <uix:NCheck.Target>
+                      <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/14914298/tartcelharm-c7" ContentHash="Vpp2Q456jE2biFbPmdInHw" DesignTimeRectangle="1040, 610, 17, 16" DesignTimeScaleFactor="1.25" ElementType="CheckBox" FullSelectorArgument="&lt;webctrl name='munkatobbmegye' tag='INPUT' type='checkbox' /&gt;" FuzzySelectorArgument="&lt;webctrl name='munkatobbmegye' tag='INPUT' type='checkbox' class='' aaname='' /&gt;" Guid="75ab72ab-583a-43be-ac53-c6a3b0ada514" ImageBase64="" InformativeScreenshot="8cd8d80116ff406b00da6136c18fd08f.png" Reference="rlGBiR1EJky82ITx9uF30g/n1ZBWtiZC0-qhirIGTyv4w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/editurlap]' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="304, 602, 753, 35" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='a munka természetéből adódóan a munkavégzés helye több vármegye területére terjed ki  ' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='a munka természetéből adódóan a munkavégzés helye több vármegye területére terjed ki  ' tag='LABEL' type='' class='' check:innerText='a munka természetéből adódóan a munkavégzés helye több vármegye területére terjed ki' /&gt;" Guid="0b9acfd4-8e7c-40ea-a087-73e5f494165a" SearchSteps="FuzzySelector" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NCheck.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NCheck>
+                  <Sequence DisplayName="A munka megkezdésének címe" sap:VirtualizedContainerService.HintSize="450,50" sap2010:WorkflowViewState.IdRef="Sequence_84">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If sap2010:Annotation.AnnotationText="If Munkavégzési irányítószám" DisplayName="If Munkavégzési irányítószám" sap:VirtualizedContainerService.HintSize="450,535" sap2010:WorkflowViewState.IdRef="If_11">
+                      <If.Condition>
+                        <InArgument x:TypeArguments="x:Boolean">
+                          <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_83">in_CurrentRow["Munkavégzési irányítószám"] != null</CSharpValue>
+                        </InArgument>
+                      </If.Condition>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <If.Then>
+                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,245" sap2010:WorkflowViewState.IdRef="Sequence_66">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NSetText DisplayName="Set Text '01.irányítószám'" sap:VirtualizedContainerService.HintSize="382,185" sap2010:WorkflowViewState.IdRef="NSetText_45" Version="V3">
+                            <uix:NSetText.Target>
+                              <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/14914298/tartcelharm-c7" ContentHash="lF6HtFZm5kCwOvpF1xaxEg" DesignTimeRectangle="641, 466, 299, 42" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl aria-role='iranyitoszam' name='munkatobbmegyeiranyitoszam' tag='INPUT' type='number' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='iranyitoszam' name='munkatobbmegyeiranyitoszam' tag='INPUT' type='number' class='form-control ' aaname='' /&gt;" Guid="46dcaa59-ea5a-4bf9-aa85-72672b7b9181" ImageBase64="" InformativeScreenshot="d6a94b38009e1ca97ed303f90e3e15a0.png" Reference="rlGBiR1EJky82ITx9uF30g/w3halONCa02lL9IVbJ_XaQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/editurlap]' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                            </uix:NSetText.Target>
+                            <uix:NSetText.Text>
+                              <InArgument x:TypeArguments="x:String">
+                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_84">in_CurrentRow["Munkavégzési irányítószám"].ToString()</CSharpValue>
+                              </InArgument>
+                            </uix:NSetText.Text>
+                          </uix:NSetText>
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,89" sap2010:WorkflowViewState.IdRef="Sequence_67">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                    <If sap2010:Annotation.AnnotationText="If Munkavégzési település" DisplayName="If Munkavégzési település" sap:VirtualizedContainerService.HintSize="450,88" sap2010:WorkflowViewState.IdRef="If_12">
+                      <If.Condition>
+                        <InArgument x:TypeArguments="x:Boolean">
+                          <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_85">in_CurrentRow["Munkavégzési település"] != null</CSharpValue>
+                        </InArgument>
+                      </If.Condition>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <If.Then>
+                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,275.2" sap2010:WorkflowViewState.IdRef="Sequence_68">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NSetText DisplayName="Set Text '02. település'" sap:VirtualizedContainerService.HintSize="353.6,186.4" sap2010:WorkflowViewState.IdRef="NSetText_46" Version="V3">
+                            <uix:NSetText.Target>
+                              <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/14914298/tartcelharm-c7" ContentHash="lyJsDtPgo0-vK9QIEXt0BQ" DesignTimeRectangle="1314, 466, 299, 42" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl name='munkatobbmegyetelepules' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl name='munkatobbmegyetelepules' tag='INPUT' type='text' class='form-control ' aaname='' /&gt;" Guid="0de27c0d-2789-4733-8a56-e3717315c62f" ImageBase64="" InformativeScreenshot="7e1160f32104b103d19767c2606b07e2.png" Reference="rlGBiR1EJky82ITx9uF30g/WfGe8u5kykynTwDocS1nPA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/editurlap]' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                            </uix:NSetText.Target>
+                            <uix:NSetText.Text>
+                              <InArgument x:TypeArguments="x:String">
+                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_86">in_CurrentRow["Munkavégzési település"].ToString()</CSharpValue>
+                              </InArgument>
+                            </uix:NSetText.Text>
+                          </uix:NSetText>
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104.8" sap2010:WorkflowViewState.IdRef="Sequence_69">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                    <If sap2010:Annotation.AnnotationText="If Munkavégzési közterület neve" DisplayName="If Munkavégzési közterület neve" sap:VirtualizedContainerService.HintSize="450,99" sap2010:WorkflowViewState.IdRef="If_13">
+                      <If.Condition>
+                        <InArgument x:TypeArguments="x:Boolean">
+                          <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_87">in_CurrentRow["Munkavégzési közterület neve"] != null</CSharpValue>
+                        </InArgument>
+                      </If.Condition>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <If.Then>
+                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,275.2" sap2010:WorkflowViewState.IdRef="Sequence_70">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NSetText DisplayName="Set Text '03. közterület neve'" sap:VirtualizedContainerService.HintSize="353.6,186.4" sap2010:WorkflowViewState.IdRef="NSetText_47" Version="V3">
+                            <uix:NSetText.Target>
+                              <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/14914298/tartcelharm-c7" ContentHash="VQdbnMj0W0ek1KTTLcMnzA" DesignTimeRectangle="641, 508, 299, 43" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl name='munkatobbmegyekozteruletneve' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl name='munkatobbmegyekozteruletneve' tag='INPUT' type='text' class='form-control ' aaname='' /&gt;" Guid="b2517b51-2374-40aa-8c36-971e16852249" ImageBase64="" InformativeScreenshot="45cde39c49ecaff2eb491d829bdc5eb9.png" Reference="rlGBiR1EJky82ITx9uF30g/bhC5GvfyQEWfkd2ehtnBaw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/editurlap]' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                            </uix:NSetText.Target>
+                            <uix:NSetText.Text>
+                              <InArgument x:TypeArguments="x:String">
+                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_88">in_CurrentRow["Munkavégzési közterület neve"].ToString()</CSharpValue>
+                              </InArgument>
+                            </uix:NSetText.Text>
+                          </uix:NSetText>
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104.8" sap2010:WorkflowViewState.IdRef="Sequence_71">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                    <If DisplayName="If Munkavégzési közterület jellege" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="If_14">
+                      <If.Condition>
+                        <InArgument x:TypeArguments="x:Boolean">
+                          <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_89">in_CurrentRow["Munkavégzési közterület jellege"] != null</CSharpValue>
+                        </InArgument>
+                      </If.Condition>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <If.Then>
+                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,269.6" sap2010:WorkflowViewState.IdRef="Sequence_72">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NSelectItem DisplayName="Select Item '04. közterület jelleg'" sap:VirtualizedContainerService.HintSize="353.6,180.8" sap2010:WorkflowViewState.IdRef="NSelectItem_22" Version="V3">
+                            <uix:NSelectItem.Item>
+                              <InArgument x:TypeArguments="x:String">
+                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_90" xml:space="preserve">String.Format("{0}{1}",
+in_CurrentRow["Munkavégzési közterület jellege"].ToString().Substring(0,1).ToUpper(),
+in_CurrentRow["Munkavégzési közterület jellege"].ToString().Substring(1).ToLower())</CSharpValue>
+                              </InArgument>
+                            </uix:NSelectItem.Item>
+                            <uix:NSelectItem.Target>
+                              <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/14914298/tartcelharm-c7" ContentHash="03Xi7MjQ0EiGj_WizpGbUg" DesignTimeRectangle="1314, 508, 299, 43" DesignTimeScaleFactor="1.25" ElementType="DropDown" FullSelectorArgument="&lt;webctrl name='munkatobbmegyekozteruletjellege' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl name='munkatobbmegyekozteruletjellege' tag='SELECT' type='' class='form-control' aaname='' /&gt;" Guid="4cf85d92-c83b-4296-a92e-537088da4718" ImageBase64="" InformativeScreenshot="1f3fbcc878e493a8c85cecdc9f21c5cc.png" Reference="rlGBiR1EJky82ITx9uF30g/fIJVLcBBV0GHb8RbwQWZig" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/editurlap]' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                            </uix:NSelectItem.Target>
+                          </uix:NSelectItem>
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104.8" sap2010:WorkflowViewState.IdRef="Sequence_73">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                    <If sap2010:Annotation.AnnotationText="If Munkavégzési házszám/hrsz" DisplayName="If Munkavégzési házszám/hrsz" sap:VirtualizedContainerService.HintSize="450,99" sap2010:WorkflowViewState.IdRef="If_15">
+                      <If.Condition>
+                        <InArgument x:TypeArguments="x:Boolean">
+                          <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_91">in_CurrentRow["Munkavégzési házszám/hrsz"] != null</CSharpValue>
+                        </InArgument>
+                      </If.Condition>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <If.Then>
+                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,275.2" sap2010:WorkflowViewState.IdRef="Sequence_74">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NSetText DisplayName="Set Text '05. házszám/helyrajzi szám'" sap:VirtualizedContainerService.HintSize="353.6,186.4" sap2010:WorkflowViewState.IdRef="NSetText_48" Version="V3">
+                            <uix:NSetText.Target>
+                              <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/14914298/tartcelharm-c7" ContentHash="z7Pm_fBEHEqrARyl9C9lRw" DesignTimeRectangle="641, 551, 299, 42" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl name='munkatobbmegyehazszam' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl name='munkatobbmegyehazszam' tag='INPUT' type='text' class='form-control ' aaname='' /&gt;" Guid="5a0da21e-d2e5-438d-b08f-437a29990f3a" ImageBase64="" InformativeScreenshot="367ceb90300f5b409e081d6bc33d6699.png" Reference="rlGBiR1EJky82ITx9uF30g/QjzoPvLF1kO7II0T0x2dMg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/editurlap]' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                            </uix:NSetText.Target>
+                            <uix:NSetText.Text>
+                              <InArgument x:TypeArguments="x:String">
+                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_92">in_CurrentRow["Munkavégzési házszám/hrsz"].ToString()</CSharpValue>
+                              </InArgument>
+                            </uix:NSetText.Text>
+                          </uix:NSetText>
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104.8" sap2010:WorkflowViewState.IdRef="Sequence_75">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                    <If sap2010:Annotation.AnnotationText="If Munkavégzési Épület" DisplayName="If Munkavégzési Épület" sap:VirtualizedContainerService.HintSize="450,88" sap2010:WorkflowViewState.IdRef="If_16">
+                      <If.Condition>
+                        <InArgument x:TypeArguments="x:Boolean">
+                          <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_93">in_CurrentRow["Munkavégzési Épület"] != null</CSharpValue>
+                        </InArgument>
+                      </If.Condition>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <If.Then>
+                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,275.2" sap2010:WorkflowViewState.IdRef="Sequence_76">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NSetText DisplayName="Set Text '06. épület'" sap:VirtualizedContainerService.HintSize="353.6,186.4" sap2010:WorkflowViewState.IdRef="NSetText_49" Version="V3">
+                            <uix:NSetText.Target>
+                              <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/14914298/tartcelharm-c7" ContentHash="vy83EvfMwkiXvhDASkbONA" DesignTimeRectangle="1314, 551, 299, 42" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl name='munkatobbmegyeepulet' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl name='munkatobbmegyeepulet' tag='INPUT' type='text' class='form-control ' aaname='' /&gt;" Guid="92a0c228-9b77-420e-b568-f9f965ebb7c7" ImageBase64="" InformativeScreenshot="8a9e4f0f79b2babcc977b25fc6cf0fe0.png" Reference="rlGBiR1EJky82ITx9uF30g/rAfNH0sxs0GQ_HY7IjksxQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/editurlap]' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                            </uix:NSetText.Target>
+                            <uix:NSetText.Text>
+                              <InArgument x:TypeArguments="x:String">
+                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_94">in_CurrentRow["Munkavégzési Épület"].ToString()</CSharpValue>
+                              </InArgument>
+                            </uix:NSetText.Text>
+                          </uix:NSetText>
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104.8" sap2010:WorkflowViewState.IdRef="Sequence_77">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                    <If sap2010:Annotation.AnnotationText="If Munkavégzési Lépcsőház" DisplayName="If Munkavégzési Lépcsőház" sap:VirtualizedContainerService.HintSize="450,88" sap2010:WorkflowViewState.IdRef="If_17">
+                      <If.Condition>
+                        <InArgument x:TypeArguments="x:Boolean">
+                          <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_95">in_CurrentRow["Munkavégzési Lépcsőház"] != null</CSharpValue>
+                        </InArgument>
+                      </If.Condition>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <If.Then>
+                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,275.2" sap2010:WorkflowViewState.IdRef="Sequence_78">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NSetText DisplayName="Set Text '07. lépcsőház'" sap:VirtualizedContainerService.HintSize="353.6,186.4" sap2010:WorkflowViewState.IdRef="NSetText_50" Version="V3">
+                            <uix:NSetText.Target>
+                              <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/14914298/tartcelharm-c7" ContentHash="nrhlW_qyy0i9MNlXHsSeQQ" DesignTimeRectangle="641, 593, 299, 43" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl name='munkatobbmegyelepcsohaz' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl name='munkatobbmegyelepcsohaz' tag='INPUT' type='text' class='form-control ' aaname='' /&gt;" Guid="6fab0663-711d-4cba-9111-233cecb21669" ImageBase64="" InformativeScreenshot="86249121693f2ca60906f498ab31ddc0.png" Reference="rlGBiR1EJky82ITx9uF30g/lAASFhQ8A0G7tv8-qDEgrA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/editurlap]' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                            </uix:NSetText.Target>
+                            <uix:NSetText.Text>
+                              <InArgument x:TypeArguments="x:String">
+                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_96">in_CurrentRow["Munkavégzési Lépcsőház"].ToString()</CSharpValue>
+                              </InArgument>
+                            </uix:NSetText.Text>
+                          </uix:NSetText>
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104.8" sap2010:WorkflowViewState.IdRef="Sequence_79">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                    <If sap2010:Annotation.AnnotationText="If Munkavégzési Emelet" DisplayName="If Munkavégzési Emelet" sap:VirtualizedContainerService.HintSize="450,88" sap2010:WorkflowViewState.IdRef="If_18">
+                      <If.Condition>
+                        <InArgument x:TypeArguments="x:Boolean">
+                          <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_97">!string.IsNullOrEmpty(in_CurrentRow["Munkavégzési Emelet"].ToString())</CSharpValue>
+                        </InArgument>
+                      </If.Condition>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <If.Then>
+                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,269.6" sap2010:WorkflowViewState.IdRef="Sequence_80">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NSelectItem DisplayName="Select Item '08. emelet'" sap:VirtualizedContainerService.HintSize="353.6,180.8" sap2010:WorkflowViewState.IdRef="NSelectItem_23" Version="V3">
+                            <uix:NSelectItem.Item>
+                              <InArgument x:TypeArguments="x:String">
+                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_98">in_CurrentRow["Munkavégzési Emelet"].ToString()</CSharpValue>
+                              </InArgument>
+                            </uix:NSelectItem.Item>
+                            <uix:NSelectItem.Target>
+                              <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/14914298/tartcelharm-c7" ContentHash="eqzTrK7-IUivhVYVh7UhzA" DesignTimeRectangle="1314, 593, 299, 43" DesignTimeScaleFactor="1.25" ElementType="DropDown" FullSelectorArgument="&lt;webctrl name='munkatobbmegyeemelet' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl name='munkatobbmegyeemelet' tag='SELECT' type='' class='form-control' aaname='' /&gt;" Guid="4564a839-48b6-45be-a7a7-b3de110ceeb3" ImageBase64="" InformativeScreenshot="aefe4221a01c108407701cdc83299f08.png" Reference="rlGBiR1EJky82ITx9uF30g/V8EpUtycN0qkMy64Wya-Og" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/editurlap]' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                            </uix:NSelectItem.Target>
+                          </uix:NSelectItem>
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104.8" sap2010:WorkflowViewState.IdRef="Sequence_81">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                    <If sap2010:Annotation.AnnotationText="If Munkavégzési ajtó" DisplayName="If Munkavégzési ajtó" sap:VirtualizedContainerService.HintSize="450,88" sap2010:WorkflowViewState.IdRef="If_19">
+                      <If.Condition>
+                        <InArgument x:TypeArguments="x:Boolean">
+                          <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_99">in_CurrentRow["Munkavégzési ajtó"] != null</CSharpValue>
+                        </InArgument>
+                      </If.Condition>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <If.Then>
+                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,245" sap2010:WorkflowViewState.IdRef="Sequence_82">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NSetText DisplayName="Set Text '09. ajtó'" sap:VirtualizedContainerService.HintSize="382,185" sap2010:WorkflowViewState.IdRef="NSetText_51" Version="V3">
+                            <uix:NSetText.Target>
+                              <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/14914298/tartcelharm-c7" ContentHash="aknxojJn7Ue9AQ3rA68fuw" DesignTimeRectangle="641, 636, 299, 42" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl name='munkatobbmegyeajto' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl name='munkatobbmegyeajto' tag='INPUT' type='text' class='form-control ' aaname='' /&gt;" Guid="da8f1a87-2a46-4878-8f60-c83edf85f490" ImageBase64="" InformativeScreenshot="ee908946f8c917a95be83644c57da143.png" Reference="rlGBiR1EJky82ITx9uF30g/JfJvwgs7ok24NcAGCNQo2A" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/editurlap]' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                            </uix:NSetText.Target>
+                            <uix:NSetText.Text>
+                              <InArgument x:TypeArguments="x:String">
+                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_100">in_CurrentRow["Munkavégzési ajtó"].ToString()</CSharpValue>
+                              </InArgument>
+                            </uix:NSetText.Text>
+                          </uix:NSetText>
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,89" sap2010:WorkflowViewState.IdRef="Sequence_83">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                    <TryCatch sap2010:Annotation.AnnotationText="Try Catch Foglalkoztatóval kötött megállapodás kelte" DisplayName="Try Catch Foglalkoztatóval kötött megállapodás kelte" sap:VirtualizedContainerService.HintSize="450,88" sap2010:WorkflowViewState.IdRef="TryCatch_5">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <TryCatch.Try>
+                        <uix:NSetText DisplayName="Set Text '06. foglalkoztatóval kötött előzetes...'" sap:VirtualizedContainerService.HintSize="336,162" sap2010:WorkflowViewState.IdRef="NSetText_52" Version="V3">
+                          <uix:NSetText.Target>
+                            <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/14914298/tartcelharm-c7" ContentHash="yJHydcRlNkuhDQCv6OcHjA" DesignTimeRectangle="641, 472, 299, 43" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl aria-role='datummult' name='foglakoztataskezdete' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='datummult' name='foglakoztataskezdete' tag='INPUT' type='text' class='form-control datum ' placeholder='YYYY-MM-DD' aaname='' /&gt;" Guid="493f5886-0a21-428c-8ba8-790faf2a76ea" ImageBase64="" InformativeScreenshot="ca618251d962265159034dae2e415219.png" Reference="rlGBiR1EJky82ITx9uF30g/rjRS9cRk_0Oz27d1hX-5KQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/editurlap]' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                          </uix:NSetText.Target>
+                          <uix:NSetText.Text>
+                            <InArgument x:TypeArguments="x:String">
+                              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_101" xml:space="preserve">//in_CurrentRow["Foglalkoztatóval kötött megállapodás kelte"].ToString()
+//((DateTime)in_CurrentRow["Foglalkoztatóval kötött megállapodás kelte"]).ToString("yyyyMMdd")
+//((DateTime)CurrentRow["Foglalkoztatóval kötött megállapodás kelte"]).ToString("yyyyMMdd")
+DateTime.Parse(in_CurrentRow["Foglalkoztatóval kötött megállapodás kelte"].ToString(), new System.Globalization.CultureInfo("hu-HU")).ToString("yyyyMMdd")</CSharpValue>
+                            </InArgument>
+                          </uix:NSetText.Text>
+                        </uix:NSetText>
+                      </TryCatch.Try>
+                      <TryCatch.Catches>
+                        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,232" sap2010:WorkflowViewState.IdRef="Catch`1_5">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ActivityAction x:TypeArguments="s:Exception">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                            </ActivityAction.Argument>
+                            <uix:NSetText DisplayName="Set Text '06. foglalkoztatóval kötött előzetes...'" sap:VirtualizedContainerService.HintSize="336,162" sap2010:WorkflowViewState.IdRef="NSetText_53" Version="V3">
+                              <uix:NSetText.Target>
+                                <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/14914298/tartcelharm-c7" ContentHash="yJHydcRlNkuhDQCv6OcHjA" DesignTimeRectangle="641, 472, 299, 43" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl aria-role='datummult' name='foglakoztataskezdete' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='datummult' name='foglakoztataskezdete' tag='INPUT' type='text' class='form-control datum ' placeholder='YYYY-MM-DD' aaname='' /&gt;" Guid="493f5886-0a21-428c-8ba8-790faf2a76ea" ImageBase64="" InformativeScreenshot="ca618251d962265159034dae2e415219.png" Reference="rlGBiR1EJky82ITx9uF30g/rjRS9cRk_0Oz27d1hX-5KQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/editurlap]' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                              </uix:NSetText.Target>
+                              <uix:NSetText.Text>
+                                <InArgument x:TypeArguments="x:String">
+                                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_102" xml:space="preserve">//in_CurrentRow["Foglalkoztatóval kötött megállapodás kelte"].ToString()
+//((DateTime)in_CurrentRow["Foglalkoztatóval kötött megállapodás kelte"]).ToString("yyyyMMdd")
+//((DateTime)CurrentRow["Foglalkoztatóval kötött megállapodás kelte"]).ToString("yyyyMMdd")
+DateTime.Parse(in_CurrentRow["Foglalkoztatóval kötött megállapodás kelte"].ToString(), new System.Globalization.CultureInfo("en-GB")).ToString("yyyyMMdd")</CSharpValue>
+                                </InArgument>
+                              </uix:NSetText.Text>
+                            </uix:NSetText>
+                          </ActivityAction>
+                        </Catch>
+                      </TryCatch.Catches>
+                    </TryCatch>
+                    <uix:NSelectItem DisplayName="Select Item '07. munkakör (FEOR szám)'" sap:VirtualizedContainerService.HintSize="450,182" sap2010:WorkflowViewState.IdRef="NSelectItem_24" Version="V3">
+                      <uix:NSelectItem.Item>
+                        <InArgument x:TypeArguments="x:String">
+                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_103">in_CurrentRow["Munkavállaló: FEOR"].ToString()</CSharpValue>
+                        </InArgument>
+                      </uix:NSelectItem.Item>
+                      <uix:NSelectItem.Target>
+                        <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/14914298/tartcelharm-c7" ContentHash="v_snaqmGF0C_8HibzrILZQ" DesignTimeRectangle="1314, 472, 299, 43" DesignTimeScaleFactor="1.25" ElementType="DropDown" FullSelectorArgument="&lt;webctrl name='feorszam' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl name='feorszam' tag='SELECT' type='' class='form-control' placeholder='0000' aaname='' /&gt;" Guid="adc4fedc-2155-4001-b2f8-61b14d1c01a2" ImageBase64="" InformativeScreenshot="85e825e8b8af09fa8254cc66ca9b7d41.png" Reference="rlGBiR1EJky82ITx9uF30g/nE4XY7lZukuDIn63kaBK_A" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/editurlap]' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                      </uix:NSelectItem.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NSelectItem>
+                  </Sequence>
+                </Sequence>
+                <Sequence DisplayName="A munkakör ellátásához szükséges készségei, ismeretei (DIV)" sap:VirtualizedContainerService.HintSize="484,50" sap2010:WorkflowViewState.IdRef="Sequence_90">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NSelectItem DisplayName="Select Item '03. anyanyelve'" sap:VirtualizedContainerService.HintSize="450,189" sap2010:WorkflowViewState.IdRef="NSelectItem_25" Version="V3">
+                    <uix:NSelectItem.Item>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_107" xml:space="preserve">String.Format("{0}{1}",
+in_CurrentRow["Anyanyelve"].ToString().Substring(0,1).ToUpper(),
+in_CurrentRow["Anyanyelve"].ToString().Substring(1).ToLower())</CSharpValue>
+                      </InArgument>
+                    </uix:NSelectItem.Item>
+                    <uix:NSelectItem.Target>
+                      <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/14914298/tartcelharm-c7" ContentHash="nFlApfDNoEa0L_n1JEE2Gg" DesignTimeRectangle="641, 417, 299, 43" DesignTimeScaleFactor="1.25" ElementType="DropDown" FullSelectorArgument="&lt;webctrl name='anyanyelv' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl name='anyanyelv' tag='SELECT' type='' class='form-control' aaname='' /&gt;" Guid="8b47e638-6506-49ff-ba84-ca1700d29dfb" ImageBase64="" InformativeScreenshot="9ce15c7d63ec3d1e5ada947a752de77c.png" Reference="rlGBiR1EJky82ITx9uF30g/KCjltSrDwkqEDdSivH5cEw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/editurlap]' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                    </uix:NSelectItem.Target>
+                  </uix:NSelectItem>
+                  <If sap2010:Annotation.AnnotationText="If Magyar nyelvismeret" DisplayName="If Magyar nyelvismeret" sap:VirtualizedContainerService.HintSize="450,681" sap2010:WorkflowViewState.IdRef="If_20">
+                    <If.Condition>
+                      <InArgument x:TypeArguments="x:Boolean">
+                        <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_105">in_CurrentRow["Magyar nyelvismeret"].ToString().Equals("igen", StringComparison.OrdinalIgnoreCase)</CSharpValue>
+                      </InArgument>
+                    </If.Condition>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If.Then>
+                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,240" sap2010:WorkflowViewState.IdRef="Sequence_86">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NCheck Action="Check" DisplayName="Check/Uncheck '05a. Beszél magyarul - igen'" sap:VirtualizedContainerService.HintSize="382,180" sap2010:WorkflowViewState.IdRef="NCheck_25" Version="V3">
+                          <uix:NCheck.Target>
+                            <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/14914298/tartcelharm-c7" ContentHash="Wy2RXVs2KEG3MAuyFhDnwA" DesignTimeRectangle="322, 502, 16, 17" DesignTimeScaleFactor="1.25" ElementType="RadioButton" FullSelectorArgument="&lt;webctrl name='tudmagyarul' tag='INPUT' type='radio' /&gt;" FuzzySelectorArgument="&lt;webctrl name='tudmagyarul' tag='INPUT' type='radio' class='' aaname='' /&gt;" Guid="ec2d9c43-dfbd-4053-9c17-6c401d989ad3" ImageBase64="" InformativeScreenshot="09a5f1e4664c314b52ff07582175fbe6.png" Reference="rlGBiR1EJky82ITx9uF30g/jpWVtq9AAECLFSSSR6oq9g" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/editurlap]' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="304, 495, 73, 35" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname=' igen' idx='2' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' igen' type='' tag='LABEL' class='' check:innerText='igen' /&gt;" Guid="b0cf06d8-271b-4ba9-8d3a-13b455370396" SearchSteps="FuzzySelector" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NCheck.Target>
+                        </uix:NCheck>
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,240" sap2010:WorkflowViewState.IdRef="Sequence_87">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NCheck Action="Check" DisplayName="Check/Uncheck 'nem'" sap:VirtualizedContainerService.HintSize="382,180" sap2010:WorkflowViewState.IdRef="NCheck_26" ScopeIdentifier="a2c42f64-4cdf-4d03-bfcb-3a358f790481" Version="V3">
+                          <uix:NCheck.Target>
+                            <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/10196825/tartcelharm-b10" DesignTimeRectangle="509, 646, 13, 13" DesignTimeScaleFactor="1" ElementType="RadioButton" FullSelectorArgument="&lt;webctrl idx='2' tag='INPUT' type='radio' /&gt;" FuzzySelectorArgument="&lt;webctrl class='' tag='INPUT' type='radio' aaname='' /&gt;" Guid="31b1ffef-6d2a-4775-9ba1-dc5b9f88418b" InformativeScreenshot="2d7e94d58bd2b740bc0019049bc51bbe.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/editurlap]' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="2">
+                                  <uix:Target DesignTimeRectangle="495, 640, 60, 28" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname=' nem ' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' nem ' tag='LABEL' type='' class='' check:innerText='nem' /&gt;" Guid="371a8ce6-c68b-4634-a572-6011425b59b1" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEAAAAAgCAYAAACinX6EAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI4SURBVGhD7Zexa9tAFMb9P92kwWAoFLp7MhSiPyCCDPZQT56CCsZkyFQIFONBGAdlLt48FHUo6mIPRYGChoAXCzoYBF/0SU/GTpXajhUikH5gnt67k3Tvu7t3cg0lpxJAbGmpBBBbWioBxJaWSgCxuTCfzzEcDtHr9dDpdGJLn/GikpsAk8kE/X4fjuNgtVrFMVr6jLO9iOQiAJMbjUbiZcP2IopwsgBc3pzhQ2C/om2HkwXgHucyPwT2Y/8iUfP+ytULYaFL9/w+2I/9n7K8M2DcLuB+baP5TkGpBvRLGztjC5dwvhh4X89qdzFQA8x+2zDPGlG7QuPMxNQP4N2Z0DfPnMIP5Rahpo99uXwZrPbHkNWfAqh6C9ffgyQQBphdatge2+KmieaVg0AS8McGtM8O1rFHARS0C3uToDfSo2c20L71sGYs9GGdK3S/yTuEmvo0xW7oOPJaAercxlL8mB8DbMYWRgnWTcySbBOCKboqjVEADde/4paEewutaFU4WzMev+fKFS+h9s+LjySPGpA1MPyMBEjH9mDDiGaYS3v3Z8B+YAcKkF4LvOejBU9c8ioC5HEKHCbAIErzOZ4R4EluryIAOfU7YK8AawdmXYf1J27J4I0FIEyOM8xlntYEWvqM/+8jaK8AESyC2oWFRVqwwjX8e3+rCL6xAITLm3uche6Y/wKHCMCTwR135UiLKv6HFto3rhTwEwQQW1oqAcSWlkoAsaWlEkBsaakEEFtaKgHElhTgEWRq+dOJtKoGAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                                  <uix:Target DesignTimeRectangle="422, 612, 1076, 28" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Beszél magyarul? *:' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Beszél magyarul? *:' tag='DIV' type='' class='uh col-lg-12' check:innerText='Beszél magyarul? *:' /&gt;" Guid="223bd153-d3d6-4307-9349-45a829515f94" ImageBase64="iVBORw0KGgoAAAANSUhEUgAABDgAAAAgCAYAAAD32shqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAdxSURBVHhe7d3PaxrrHsfx8z+5moUgBIQsXCkXEjigdHFDoUIhUqicxQkHgoUiXYS7KBaCFK4USrooCQQLBQvBlhYLAQPBQGAWASEwkMWA8LnzOD8cjWnuyYknmZ73C4ZmJurzzIjB59Pv88wvAoC/2cXFhb5+/aqzszONRqPgKID7xnw+zefUfF7N5xYAkoDvGUAyLOJ7BgEHgDth/ogdHx+P/6B9+fKFjY3tHm7m82k+p4QbAJKG7xlsbPd/W8T3DAIOAAAAAACQeAQcAAAAAAAg8Qg4AAAAAABA4hFwAAAAAACAxCPgAAAAAAAAiUfAAQAAAAAAEo+AAwAAAAAAJB4BBwAAAAAASLyfJ+AYDdQqZlR5bwcHPN/qSj3a0TDY/ecZaudRSvVvwe6f5OxXldrsyA32AQAAAAC4r24n4DjbUTmVUiraLGVXKqrvDf6mwbGr3n/Kqn+aiTIIOGIBh6Pe66rW8hn/PVoqqLLdn//+jIJ/zfV70Qt2POFxAAAAAADumVsMOOqKDYXlHLZUTufUOAwO3AUCjqkKjsHnjgbn/s9yemoULdUOZiOOnrbSGRXWa2q9rqnyvKXWZkWFpZtXggAAAAAAsGgLCzjCwXX5/SRecI93VCv6FQTWclmNz7HowRtwN9cLyoQVIA821D71jg/b2vh1VavhZioQ0luTti4G2tks+c9LZ1V+2dUwXoFwZcDRU93rcyfWp0yxprbtaPCuppI3oE+lMipttmXHKheGn+qqrGRlhe3FqyBGQ3VflpVdLnj9zCq74ve59Gxfb56kVN13ggf63IOarKB/7lFL1Yfh+c+26/e1a67RQ9NXS1vfvcPzzm/q2I+nqPReeO/PuzlXZ+TKObfV/sPrT957H7xr4kQnOVAzn1JhexDsAwAAAABw9xYWcLgn3rGlqtphxcB5W9WlsnZMaGE4XdVzJbXG+666zyyV307Wz3CHQzmXpkS46mxmvEF5+DhH7afefvi8kaPu85xKb4L9awOOlKzHO1GQMHhdUiqdUeXtQK45NrLVejQdTLj2QHY42B95g/2iFQUI9puSrM1O1G/7bVnWs+44ABmHGU92vR6HzLmkVNkLjpzbk+oK7zw6m971iMIH09eSSusb2j0JGjdt/JWA48J7zXx4/S8bvi8r453L8FNNmdg1Mte886Ki2of5VxUAAAAAgLuwoDU4Uso+qGv3NPpvfw3flbX63+n/9e+/ygXH/MF+OQwmruB6g21T8RANtk27v7Y09apHDeXCY9cGHEElROikpVVTKREN5v1+T61DMSNeBXGpIsK0n2/6fRl57aXL2jkb/0Zy2qqmaupMLtGU6Xb9MGbj48yDbxpw2G1trJTUOLyicdlq/1ZV68T70Sze+jgWTAEAAAAAcA8troLjtKNavuANrv1BtBn8xwOQaAsH8cOO6sWMMsWqmh8Hl6s3LkzFhzfQjmcgZjA/7zXDvlwbcMQCB2NOYDIbcDhHu6qvT6bMmLUpwlAjrOAIY4NxBcfv7ahqo/9yUl3i7FWi6o6xs66av61NpuIsWzMBx0xfjZsEHKO+Gisz1xEAAAAAgIRb4BocZoC/Ft1m9Mr1HmY4Jx01n67KMms/RAN61596MlMB8uMAw3OTgGPm8VMBx1FDBVOFEatmmDqvka3dJ1lZy6tazRdUWG+qf+H/auy0pVKuob4c73GTqS3j6TvpguqfJxNYLldw3FLAYc7xeTfYAQAAAADg57D4gOOpX8Ewrm6IVyxcw1Q7hMGB+31LhWJLg9mqDhMYpGvqXvWitxxwzFZzmPUo2k9jAcdxU4UHc/oZMcFGTo2Pu6qYoCN83Jx+muk7Nwk4zDSeHwYcAAAAAAD8hBY3RcU2U1SsyQKdQZVC7eNkOO4OB7LHC2u6sk9sf2FPY7y4p6WND95z3Z628gU1joLfTTEBg6XCs87kzinuUIPToM1bDjjG4UGxGQUYzsGWSkuxxUDNwqn/ik+VsZR9PF3FYV4jlwvXHgmYtT/SNXWCbpsFWqvLmesDDhPweMejhUJN+ytWdGeWeQGH+72htfUfhTDXYZFRAAAAAMD9s7BFRjP5iup7g+mKjdOO6o+DW6ymMio8rGp3PDh31HtVGa9nMX7+UkGV7d54HQ5zNw9zO9ZobYrx1pyEKSPbG3CXlU2H7a6puvf/3kXlzwUcpq12/Ja0233Z+1U/4Bj11VxZVf0gSCkMd6jO85xyr/rBAc9FRxup2buXuOpvh+cQ3CL2sKHcdQGHx94Pb2lrwpSGuofxc7gccDgfNmQt1a+uermWrZ1/Z7T6ema6EAAAAAAAd+h2Ag5I37dilRMTl6a1fKvPfRwAAAAAALg5Ao7bcr6ryswCpDrvqp63VDsIyiWCqTe1TzcunwAAAAAAAHMQcNyi4eeGKvmMrOWCsml/Ck7zwNRq+FNFwmktxBsAAAAAANwuAg4AAAAAAJB4BBwAAAAAACDxCDgAAAAAAEDiEXAAAAAAAIDEI+AAAAAAAACJR8ABAAAAAAASj4ADAAAAAAAkHgEHAAAAAABIOOl/xjcZfIKxq5MAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NCheck.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NCheck>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                  <If sap2010:Annotation.AnnotationText="If Magyar nyelvismeret" DisplayName="If Dolgozott-e korábban Magarországon?" sap:VirtualizedContainerService.HintSize="450,674" sap2010:WorkflowViewState.IdRef="If_21">
+                    <If.Condition>
+                      <InArgument x:TypeArguments="x:Boolean">
+                        <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_106">in_CurrentRow["Dolgozott-e korábban Magarországon?"].ToString().Equals("igen", StringComparison.OrdinalIgnoreCase)</CSharpValue>
+                      </InArgument>
+                    </If.Condition>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If.Then>
+                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,240" sap2010:WorkflowViewState.IdRef="Sequence_88">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NCheck Action="Check" DisplayName="Check/Uncheck - Korábbi munkavégzés MO-n" sap:VirtualizedContainerService.HintSize="382,180" sap2010:WorkflowViewState.IdRef="NCheck_27" ScopeIdentifier="a2c42f64-4cdf-4d03-bfcb-3a358f790481" Version="V3">
+                          <uix:NCheck.Target>
+                            <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/10196825/tartcelharm-b10" DesignTimeRectangle="451, 707, 13, 13" DesignTimeScaleFactor="1" ElementType="RadioButton" FullSelectorArgument="&lt;webctrl name='korabbandolgozottmo' tag='INPUT' type='radio' /&gt;" FuzzySelectorArgument="&lt;webctrl name='korabbandolgozottmo' tag='INPUT' type='radio' class='' aaname='' /&gt;" Guid="4b66d0c5-4bf9-459c-9bcd-e3ac9c1eaf51" InformativeScreenshot="7dcb52952dc91916a7dbad6df1064c93.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/editurlap]' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="2">
+                                  <uix:Target DesignTimeRectangle="437, 701, 58, 28" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname=' igen' idx='2' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' igen' type='' tag='LABEL' class='' check:innerText='igen' /&gt;" Guid="1a80fd3b-d94f-4021-b5e6-8ff0b045eff1" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAD4AAAAgCAYAAABKHcuvAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJ9SURBVGhD7Za/a9tQEMf7P2nSYDAUDB4yWZMhENOlSzTFLiSTuwQHjPCQ0YMRHkxwUYbQyVsC5WUIKhQ7YFwIeAhosaCDIfDtnfwUS7FCEyRUgfQBI+7d+fG+uh96H5BTCuF5oxCeNwrheaMQngTT6RSmaaLdbqPVanlPtnk9ayQmfDweo9vtQgiB1WrlrfGTbV5nf5ZIRDiLGg6H0oqG/a+Kd2YQc1ca6RBbOJcxZ/QtcFxU2TtXOtT2BGlKjy2ce5jL+S1wHMdngdjCeYD5Pf0vOI7jX+Jc6lB6trTIvu1Dr1ag7WuoVOuo79PvUwfXTtCvQlEUlA86sObrjYPgvfRvM9iDJrSPCsWU0Ti1sPgjAySxhfP0fg9R8SHhDyM0SiTSr/ulBZ1s4Wu770OrGRC+n+KDfm+vUh3nP2TAk4vrUxWNi+XGlmQv43cGlEMLMrmEDUPRYM6l1VPRudlmGDQZJsfK85q3V+j/xC3teRyeIZno8ciM+6XpZfwrJt6pHViHXL67P/1yIzW0l8/Oy0xAeCJT/cVhl1dNVEoV6m2NyroJ85ef4Y1w406aEaQmnIn7HQ8fdgGz1sDotzRDrCHOdvs1SKrCGRbFGeVy9nuen2zz+quXFyJ8WBeip4XKWK3q26zzcCvpGN1vO3b9sMAyONzSFM5wGXMP8wB7z109eNjZgD5dPQH3yTNpKq/h3BjY2+tjJpfcnyOcHJQ3L4Zb4qgPW76H/yI8PjbOKZvWozR9HmnAKQZ5kyNjwl18/6LSBSTQw/Qd5tJXzwR1eHJkTDjhCPSPNJSphDW6nZVrn3EyEHD80k+I7AlPiUJ43iiE541CeN7IqXDgLx7z7QjYPCJ7AAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                                  <uix:Target DesignTimeRectangle="422, 673, 1076, 28" ElementType="Text" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='11' isleaf='1' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='uh col-lg-12' isleaf='1' tag='DIV' aaname='Korábban dolgozott már Magyarországon?*:' check:innerText='Korábban dolgozott már Magyarországon?*:' /&gt;" Guid="de6af5de-3dea-4f2e-a25d-095f8a47db8b" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NCheck.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NCheck>
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,240" sap2010:WorkflowViewState.IdRef="Sequence_89">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NCheck Action="Check" DisplayName="Check/Uncheck 'nem'" sap:VirtualizedContainerService.HintSize="382,180" sap2010:WorkflowViewState.IdRef="NCheck_28" ScopeIdentifier="a2c42f64-4cdf-4d03-bfcb-3a358f790481" Version="V3">
+                          <uix:NCheck.Target>
+                            <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/10196825/tartcelharm-b10" DesignTimeRectangle="509, 707, 13, 13" DesignTimeScaleFactor="1" ElementType="RadioButton" FullSelectorArgument="&lt;webctrl idx='2' name='korabbandolgozottmo' tag='INPUT' type='radio' /&gt;" FuzzySelectorArgument="&lt;webctrl class='' name='korabbandolgozottmo' tag='INPUT' type='radio' aaname='' /&gt;" Guid="44501445-c90c-42f5-ac3e-c6db9b718c97" InformativeScreenshot="aa90b9dc9c7bc76456cc7b0522805a8a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/editurlap]' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="2">
+                                  <uix:Target DesignTimeRectangle="495, 701, 60, 28" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname=' nem ' idx='2' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' nem ' type='' tag='LABEL' class='' check:innerText='nem' /&gt;" Guid="f975ac70-cdcf-4b41-88e3-61240fd9c53d" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEAAAAAgCAYAAACinX6EAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI4SURBVGhD7Zexa9tAFMb9P92kwWAoFLp7MhSiPyCCDPZQT56CCsZkyFQIFONBGAdlLt48FHUo6mIPRYGChoAXCzoYBF/0SU/GTpXajhUikH5gnt67k3Tvu7t3cg0lpxJAbGmpBBBbWioBxJaWSgCxuTCfzzEcDtHr9dDpdGJLn/GikpsAk8kE/X4fjuNgtVrFMVr6jLO9iOQiAJMbjUbiZcP2IopwsgBc3pzhQ2C/om2HkwXgHucyPwT2Y/8iUfP+ytULYaFL9/w+2I/9n7K8M2DcLuB+baP5TkGpBvRLGztjC5dwvhh4X89qdzFQA8x+2zDPGlG7QuPMxNQP4N2Z0DfPnMIP5Rahpo99uXwZrPbHkNWfAqh6C9ffgyQQBphdatge2+KmieaVg0AS8McGtM8O1rFHARS0C3uToDfSo2c20L71sGYs9GGdK3S/yTuEmvo0xW7oOPJaAercxlL8mB8DbMYWRgnWTcySbBOCKboqjVEADde/4paEewutaFU4WzMev+fKFS+h9s+LjySPGpA1MPyMBEjH9mDDiGaYS3v3Z8B+YAcKkF4LvOejBU9c8ioC5HEKHCbAIErzOZ4R4EluryIAOfU7YK8AawdmXYf1J27J4I0FIEyOM8xlntYEWvqM/+8jaK8AESyC2oWFRVqwwjX8e3+rCL6xAITLm3uche6Y/wKHCMCTwR135UiLKv6HFto3rhTwEwQQW1oqAcSWlkoAsaWlEkBsaakEEFtaKgHElhTgEWRq+dOJtKoGAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                                  <uix:Target DesignTimeRectangle="422, 673, 1076, 28" ElementType="Text" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='11' isleaf='1' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='uh col-lg-12' isleaf='1' tag='DIV' aaname='Korábban dolgozott már Magyarországon?*:' check:innerText='Korábban dolgozott már Magyarországon?*:' /&gt;" Guid="00a8ab3a-ab7e-46f3-907f-151ba6272497" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NCheck.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NCheck>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                </Sequence>
+              </Sequence>
+              <Sequence DisplayName="2. Nyilatkozat (DIV)" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="Sequence_91">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <uix:NSelectItem DisplayName="Select Item 'E körben'" sap:VirtualizedContainerService.HintSize="416,189" sap2010:WorkflowViewState.IdRef="NSelectItem_26" ScopeIdentifier="28f3816a-d6cb-4dc2-a32c-0fffeeb95f12" Version="V3">
+                  <uix:NSelectItem.Item>
+                    <InArgument x:TypeArguments="x:String">
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_108">RPA999EnterHungary3._0DOBOZOS.BLL.CustomFunctions.ToTitleCase(in_CurrentRow["Érkezést megelőző ország"].ToString())</CSharpValue>
+                    </InArgument>
+                  </uix:NSelectItem.Item>
+                  <uix:NSelectItem.Items>
+                    <scg:List x:TypeArguments="x:String" Capacity="50">
+                      <x:String>--válasszon--</x:String>
+                      <x:String>Afganisztán</x:String>
+                      <x:String>Albánia</x:String>
+                      <x:String>Algéria</x:String>
+                      <x:String>Am. Csendes-Óceáni-Szigetek</x:String>
+                      <x:String>Amerikai Szamoa</x:String>
+                      <x:String>Amerikai Virgin-Szigetek</x:String>
+                      <x:String>Andorra</x:String>
+                      <x:String>Angola</x:String>
+                      <x:String>Anguilla</x:String>
+                      <x:String>Antarktisz</x:String>
+                      <x:String>Antigua És Barbuda</x:String>
+                      <x:String>Arab Emírségek</x:String>
+                      <x:String>Argentína</x:String>
+                      <x:String>Aruba</x:String>
+                      <x:String>Ausztria</x:String>
+                      <x:String>Ausztrália</x:String>
+                      <x:String>Azerbajdzsán</x:String>
+                      <x:String>Bahama-Szigetek</x:String>
+                      <x:String>Bahrein</x:String>
+                      <x:String>Banglades</x:String>
+                      <x:String>Barbados</x:String>
+                      <x:String>Belgium</x:String>
+                      <x:String>Belize</x:String>
+                      <x:String>Benin</x:String>
+                      <x:String>Bermuda</x:String>
+                      <x:String>Bhután</x:String>
+                      <x:String>Bissau-Guinea</x:String>
+                      <x:String>Bolívia</x:String>
+                      <x:String>Bosznia-Hercegovina</x:String>
+                      <x:String>Botswana</x:String>
+                      <x:String>Bouvet-Sziget</x:String>
+                      <x:String>Brazília</x:String>
+                      <x:String>Brit Indiai-Óceáni Terület</x:String>
+                      <x:String>Brit Virgin-Szigetek</x:String>
+                      <x:String>Brunei</x:String>
+                      <x:String>Bulgária</x:String>
+                      <x:String>Burkina Faso</x:String>
+                      <x:String>Burundi</x:String>
+                      <x:String>Chile</x:String>
+                      <x:String>Ciprus</x:String>
+                      <x:String>Comore-Szigetek</x:String>
+                      <x:String>Cook-Szigetek</x:String>
+                      <x:String>Costa Rica</x:String>
+                      <x:String>Csehország</x:String>
+                      <x:String>Csád</x:String>
+                      <x:String>Dominikai Köztársaság</x:String>
+                      <x:String>Dominikai Közösség</x:String>
+                      <x:String>Dzsibuti</x:String>
+                      <x:String>Dánia</x:String>
+                    </scg:List>
+                  </uix:NSelectItem.Items>
+                  <uix:NSelectItem.Target>
+                    <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/14526043/tartcelharm-c7" ContentHash="pNyylfsMMEugrLyhHs8BQw" DesignTimeRectangle="1096, 545, 318, 42" DesignTimeScaleFactor="1.25" ElementType="DropDown" FullSelectorArgument="&lt;webctrl name='tavorszag' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl name='tavorszag' tag='SELECT' type='' class='form-control' aaname='' /&gt;" Guid="a22b0b95-92d5-4d96-8d28-efedd11315c9" ImageBase64="" InformativeScreenshot="ca0477656a364d32ea58f3076e98e91d.png" Reference="rlGBiR1EJky82ITx9uF30g/QJDkvVl94Eu7C0PFtTNkUQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/editurlap]' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                  </uix:NSelectItem.Target>
+                </uix:NSelectItem>
+                <uix:NSelectItem DisplayName="Select Item 'A kiutasítás célországa*'" sap:VirtualizedContainerService.HintSize="416,189" sap2010:WorkflowViewState.IdRef="NSelectItem_27" Item="az állampolgárságom szerinti állam" ScopeIdentifier="28f3816a-d6cb-4dc2-a32c-0fffeeb95f12" Version="V3">
+                  <uix:NSelectItem.Items>
+                    <scg:List x:TypeArguments="x:String" Capacity="4">
+                      <x:String>--válasszon--</x:String>
+                      <x:String>olyan állam, ahol szokásos tartózkodási helyem van, és oda beutazhatok</x:String>
+                      <x:String>az állampolgárságom szerinti állam</x:String>
+                      <x:String>olyan állam, ahová beutazhatok</x:String>
+                    </scg:List>
+                  </uix:NSelectItem.Items>
+                  <uix:NSelectItem.Target>
+                    <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/14526043/tartcelharm-c7" ContentHash="qWPZ6G4xpka1uocWkbZTew" DesignTimeRectangle="622, 727, 792, 43" DesignTimeScaleFactor="1.25" ElementType="DropDown" FullSelectorArgument="&lt;webctrl name='kiutasitasceltip' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl name='kiutasitasceltip' tag='SELECT' type='' class='form-control' aaname='' /&gt;" Guid="7a7c85b2-292b-418c-bd5f-a6ae88852ae4" ImageBase64="" InformativeScreenshot="12ea8e3e4f516a519130fcc72f14bfb6.png" Reference="rlGBiR1EJky82ITx9uF30g/Cd3dS1kGm0CLtJvrfEnagw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/editurlap]' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                  </uix:NSelectItem.Target>
+                </uix:NSelectItem>
+                <uix:NCheck Action="Check" sap2010:Annotation.AnnotationText="2023. évi XC. törvény 242. § (7)" DisplayName="Check/Uncheck 'unchecked'" sap:VirtualizedContainerService.HintSize="416,220" sap2010:WorkflowViewState.IdRef="NCheck_29" ScopeIdentifier="28f3816a-d6cb-4dc2-a32c-0fffeeb95f12" Version="V3">
+                  <uix:NCheck.Target>
+                    <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/14526043/tartcelharm-c7" ContentHash="6xDeGWyaYUiwZKOZyAjeuA" DesignTimeRectangle="302, 527, 16, 17" DesignTimeScaleFactor="1.25" ElementType="RadioButton" FullSelectorArgument="&lt;webctrl name='mentessegkhiv' tag='INPUT' type='radio' /&gt;" FuzzySelectorArgument="&lt;webctrl name='mentessegkhiv' tag='INPUT' type='radio' class='' aaname='' /&gt;" Guid="48a2259d-aef9-4663-a2d9-6b70bf560eb8" ImageBase64="" InformativeScreenshot="4b8a39da9aa45cc337e9b9bfa73b3d32.png" Reference="rlGBiR1EJky82ITx9uF30g/E28ImkJuFkKDEoQj0j_dVQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/editurlap]' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                  </uix:NCheck.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </uix:NCheck>
+                <uix:NSetText DisplayName="Set Text '05b. Az összevont kérelmezési ... - nem'" sap:VirtualizedContainerService.HintSize="416,194" sap2010:WorkflowViewState.IdRef="NSetText_54" ScopeIdentifier="28f3816a-d6cb-4dc2-a32c-0fffeeb95f12" Text="1. vendégmunkás-tartózkodási engedély" Version="V3">
+                  <uix:NSetText.Target>
+                    <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/14526043/tartcelharm-c7" ContentHash="In_uFOwm-0a88_c0TESFVA" DesignTimeRectangle="877, 561, 310, 43" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl name='mentessegkhivpont' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl name='mentessegkhivpont' tag='INPUT' type='text' class='form-control ' aaname='' /&gt;" Guid="503811b7-b712-4ec4-b4af-2ebbcb0ecb4d" ImageBase64="" InformativeScreenshot="2d6ebc425ff8e446664722fa12c34a88.png" Reference="rlGBiR1EJky82ITx9uF30g/m4SneB9jwUq7xBABdxq8MQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/editurlap]' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                  </uix:NSetText.Target>
+                </uix:NSetText>
+                <uix:NCheck Action="Check" sap2010:Annotation.AnnotationText="445/2013. (XI. 28.) Korm. rendelet 15. § (1)" DisplayName="Check/Uncheck 'checked'" sap:VirtualizedContainerService.HintSize="416,220" sap2010:WorkflowViewState.IdRef="NCheck_30" ScopeIdentifier="28f3816a-d6cb-4dc2-a32c-0fffeeb95f12" Version="V3">
+                  <uix:NCheck.Target>
+                    <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/14526043/tartcelharm-c7" ContentHash="Owl_isENikCkdQXRi4G3Hg" DesignTimeRectangle="375, 646, 16, 16" DesignTimeScaleFactor="1.25" ElementType="RadioButton" FullSelectorArgument="&lt;webctrl idx='2' name='mentessegmunkavallas' tag='INPUT' type='radio' /&gt;" FuzzySelectorArgument="&lt;webctrl class='' name='mentessegmunkavallas' tag='INPUT' type='radio' aaname='' /&gt;" Guid="add85c35-767a-4920-bfe6-68fc383b0443" ImageBase64="" InformativeScreenshot="e92d2e910541f2bdddd9e822e9feacb5.png" Reference="rlGBiR1EJky82ITx9uF30g/LOSi_Uw1n0acnnXu-m5cIA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/editurlap]' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                  </uix:NCheck.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </uix:NCheck>
+                <uix:NCheck Action="Check" sap2010:Annotation.AnnotationText="445/2013. (XI. 28.) Korm. rendelet 9. § (1)" DisplayName="Check/Uncheck 'checked'" sap:VirtualizedContainerService.HintSize="416,213" sap2010:WorkflowViewState.IdRef="NCheck_31" ScopeIdentifier="28f3816a-d6cb-4dc2-a32c-0fffeeb95f12" Version="V3">
+                  <uix:NCheck.Target>
+                    <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/14526043/tartcelharm-c7" ContentHash="Bgn0o6o_CUa8V7Y9bvzoYQ" DesignTimeRectangle="375, 765, 16, 16" DesignTimeScaleFactor="1.25" ElementType="RadioButton" FullSelectorArgument="&lt;webctrl idx='2' name='mentessegmpiac' tag='INPUT' type='radio' /&gt;" FuzzySelectorArgument="&lt;webctrl class='' name='mentessegmpiac' tag='INPUT' type='radio' aaname='' /&gt;" Guid="d1734bfa-b34e-47bb-a043-08a6317b7236" ImageBase64="" InformativeScreenshot="d6098f7f7d89690eaccd64043527eb2c.png" Reference="rlGBiR1EJky82ITx9uF30g/wu4bDWHR-Ei4-Dc5axjxBA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/editurlap]' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                          <uix:Target DesignTimeRectangle="357, 757, 75, 35" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname=' nem ' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;label' idx='3' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' nem ' type='' class='' tag='LABEL' check:innerText='nem' /&gt;" Guid="80b857bc-0e7a-4bc3-b0ed-59532b9b7cb5" SearchSteps="FuzzySelector" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NCheck.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </uix:NCheck>
+              </Sequence>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - Mehet (Rögzít) gomb" sap:VirtualizedContainerService.HintSize="450,189" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a2c42f64-4cdf-4d03-bfcb-3a358f790481" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/9946316/tartcelharm-b10" DesignTimeRectangle="780, 831, 120, 34" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='btn btn-success' aaname='Mehet (Rögzít)' check:innerText='Mehet (Rögzít)' /&gt;" Guid="71c08b89-1533-4c48-ab40-42424ae642da" ImageBase64="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" InformativeScreenshot="3fed89ef6846c7358f27c50e18a16092.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/editurlap]' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+                </uix:NClick.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NClick>
+              <Sequence DisplayName="Log és Státusz Jelentés" sap:VirtualizedContainerService.HintSize="450,377" sap2010:WorkflowViewState.IdRef="Sequence_92">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info">
+                  <ui:LogMessage.Message>
+                    <InArgument x:TypeArguments="x:Object">
+                      <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_109">"Munkavállalás űrlap kitöltve"</CSharpValue>
+                    </InArgument>
+                  </ui:LogMessage.Message>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:LogMessage>
+                <ui:ReportStatus DisplayName="Report Status" sap:VirtualizedContainerService.HintSize="416,115" sap2010:WorkflowViewState.IdRef="ReportStatus_1">
+                  <ui:ReportStatus.StatusText>
+                    <InArgument x:TypeArguments="x:Object">
+                      <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_110">"Munkavállalás űrlap kitöltve"</CSharpValue>
+                    </InArgument>
+                  </ui:ReportStatus.StatusText>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:ReportStatus>
+              </Sequence>
+            </Sequence>
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
