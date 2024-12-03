@@ -6,7 +6,7 @@
     <x:Property Name="credentials_Out" Type="OutArgument(ui:PasswordCredentials)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>768.8,868</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1233.6,884.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -90,9 +90,10 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
       <AssemblyReference>RPA021_StarJobs_EnterHungary_Framework.Core</AssemblyReference>
+      <AssemblyReference>RPA999-EnterHungary3.0-DOBOZOS.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Description: RPA099_EnterHungary (New Framework)&#xA;Last Modified: 2024.09.10 (Steve)&#xA;Precondition: arguments&#xA;&#xA;AppStart, Main Entry point for the process&#xA;Prerequsitions/Tasks:&#xA;- Set config(s) path&#xA;- Set email config path&#xA;- Call Framework worklow file and pass the config and email config as argument" DisplayName="RPA021_StarJobs_EnterHungary Main Sequence" sap:VirtualizedContainerService.HintSize="540.8,803.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Description: RPA099_EnterHungary (New Framework)&#xA;Modified: 2024.09.10 (Steve)&#xA;Last modified: 2024.12.02 (Feri)&#xA;Precondition: arguments&#xA;&#xA;AppStart, Main Entry point for the process&#xA;Prerequsitions/Tasks:&#xA;- Set config(s) path&#xA;- Set email config path&#xA;- Call Framework worklow file and pass the config and email config as argument" DisplayName="RPA035_Mastergood_EnterHungary Main Sequence" sap:VirtualizedContainerService.HintSize="540.8,739.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="startupConfigPath" />
       <Variable x:TypeArguments="x:String" Name="emailConfigPath" />
@@ -114,9 +115,7 @@
               </OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">
-                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_9">String.Format("TestConfig{0}.json", isDevelopment ? "_"+ Environment.UserName : "")</CSharpValue>
-              </InArgument>
+              <InArgument x:TypeArguments="x:String">TestConfig.json</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
@@ -134,7 +133,7 @@
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Call Framework v1.0 (&quot;Framework\\Framework.Core\\Framework.xaml&quot;)" DisplayName="Invoke Framework" sap:VirtualizedContainerService.HintSize="478.4,250.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Framework\\Framework.Core\\Framework.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Call Framework v1.0.9(&quot;Framework\\Framework.Core\\Framework.xaml&quot;)" DisplayName="Invoke Framework" sap:VirtualizedContainerService.HintSize="478.4,250.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Framework\\Framework.Core\\Framework.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="in_ConfigFile">
           <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">startupConfigPath</CSharpValue>
@@ -164,10 +163,11 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <Sequence DisplayName="FINISH" sap:VirtualizedContainerService.HintSize="478.4,128" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="FINISH" sap:VirtualizedContainerService.HintSize="478.4,48" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </Sequence>

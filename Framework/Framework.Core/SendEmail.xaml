@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="SendEmail" this:SendEmail.in_UseMerkitTemplate="True" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="SendEmail" this:SendEmail.in_UseMerkitTemplate="True" this:SendEmail.in_UseExceptionRecipient="False" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_To" Type="InArgument(x:String)" />
     <x:Property Name="in_Subject" Type="InArgument(x:String)" />
@@ -19,9 +19,11 @@
     <x:Property Name="in_AssetFolder" Type="InArgument(x:String)" />
     <x:Property Name="in_UseMerkitTemplate" Type="InArgument(x:Boolean)" />
     <x:Property Name="in_MsgTable" Type="InArgument(x:String)" />
+    <x:Property Name="in_UseExceptionRecipient" Type="InArgument(x:Boolean)" />
+    <x:Property Name="in_ExceptionTo" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1331.2,1339.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1233.6,1187.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -57,6 +59,7 @@
       <x:String>UiPath.Mail.Outlook.Activities</x:String>
       <x:String>UiPath.Platform.ResourceHandling</x:String>
       <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Linq.Expressions</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -112,9 +115,14 @@
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>RPA999-EnterHungary3.0-DOBOZOS.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Description: Send Email via Outlook or  SMTP&#xA;Preconditions: - arguments &#xA;                        - Installed Outlook/Notes" DisplayName="SendEmail" sap:VirtualizedContainerService.HintSize="559.2,1274.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Description: Send Email via Outlook or  SMTP&#xA;Preconditions: - arguments &#xA;                        - Installed Outlook/Notes" DisplayName="SendEmail" sap:VirtualizedContainerService.HintSize="559.2,1122.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="smtpHostName" />
       <Variable x:TypeArguments="ss:SecureString" Name="smtpHostPassword" />
@@ -126,14 +134,14 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ReadTextFile File="{x:Null}" DisplayName="Read Text File" FileName="Framework\\Framework.Core\\EmailTemplate\\finalizerEmailTemaplate.html" sap:VirtualizedContainerService.HintSize="496.8,80.8" sap2010:WorkflowViewState.IdRef="ReadTextFile_1">
+    <ui:ReadTextFile File="{x:Null}" DisplayName="Read Text File" FileName="Framework\\Framework.Core\\EmailTemplate\\finalizerEmailTemaplate.html" sap:VirtualizedContainerService.HintSize="496.8,112.8" sap2010:WorkflowViewState.IdRef="ReadTextFile_1">
       <ui:ReadTextFile.Content>
         <OutArgument x:TypeArguments="x:String">
           <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">emailTemplate</CSharpReference>
         </OutArgument>
       </ui:ReadTextFile.Content>
     </ui:ReadTextFile>
-    <Switch x:TypeArguments="x:Int32" DisplayName="Switch" sap:VirtualizedContainerService.HintSize="496.8,981.6" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+    <Switch x:TypeArguments="x:Int32" DisplayName="Switch" sap:VirtualizedContainerService.HintSize="496.8,860.8" sap2010:WorkflowViewState.IdRef="Switch`1_1">
       <Switch.Expression>
         <InArgument x:TypeArguments="x:Int32">
           <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">in_SenderType</CSharpValue>
@@ -145,20 +153,20 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence x:Key="1" DisplayName="SMTP" sap:VirtualizedContainerService.HintSize="449.6,642.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <Sequence x:Key="1" DisplayName="SMTP" sap:VirtualizedContainerService.HintSize="416,626.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info">
+        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info">
           <ui:LogMessage.Message>
             <InArgument x:TypeArguments="x:Object">
               <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">"#Send SMTP email"</CSharpValue>
             </InArgument>
           </ui:LogMessage.Message>
         </ui:LogMessage>
-        <ui:GetRobotCredential TimeoutMS="{x:Null}" CacheStrategy="None" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="387.2,143.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1">
+        <ui:GetRobotCredential TimeoutMS="{x:Null}" CacheStrategy="None" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="353.6,175.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1">
           <ui:GetRobotCredential.AssetName>
             <InArgument x:TypeArguments="x:String">
               <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">in_CredentialAssetName</CSharpValue>
@@ -180,7 +188,7 @@
             </OutArgument>
           </ui:GetRobotCredential.Username>
         </ui:GetRobotCredential>
-        <ui:InvokeCode ContinueOnError="{x:Null}" Code="string customBody;&#xA;&#xA;if(useMerkitTemplate)&#xA;{&#xA;&#x9;customBody = emailTemplate.Replace(&quot;$description_PlaceHolder$&quot;,body).Replace(&quot;$table_PlaceHolder$&quot;,msgTable);&#xA;}else&#xA;{&#xA;&#x9;customBody = body;&#xA;}&#xA;&#xA;&#xA;&#xA;CustomFunctions.SendSMTPEmail(customBody,isBodyHtml,subject,to,cc,bcc,port,host,enableSsl,hostEmail,hostUserName,hostPassword);" DisplayName="Send SMTP Email - Invoke Code" sap:VirtualizedContainerService.HintSize="387.2,164.8" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
+        <ui:InvokeCode ContinueOnError="{x:Null}" Code="string customBody;&#xD;&#xA;string emailTo;&#xD;&#xA;&#xD;&#xA;if(useMerkitTemplate)&#xD;&#xA;{&#xD;&#xA;&#x9;customBody = emailTemplate.Replace(&quot;$description_PlaceHolder$&quot;,body).Replace(&quot;$table_PlaceHolder$&quot;,msgTable);&#xD;&#xA;}else&#xD;&#xA;{&#xD;&#xA;&#x9;customBody = body;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;if(useExceptionRecipient == true)&#xD;&#xA;{&#xD;&#xA;&#x9;emailTo = exceptionTo;&#xD;&#xA;}else&#xD;&#xA;{&#xD;&#xA;&#x9;emailTo = to;&#xD;&#xA;}&#xD;&#xA;Merkit_RPA_Framework.Framework.Framework.Functions.CustomFunctions.SendSMTPEmail(customBody,isBodyHtml,subject,emailTo,cc,bcc,port,host,enableSsl,hostEmail,hostUserName,hostPassword,attchments);" DisplayName="Send SMTP Email - Invoke Code" sap:VirtualizedContainerService.HintSize="353.6,188" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
           <ui:InvokeCode.Arguments>
             <InArgument x:TypeArguments="x:String" x:Key="body">
               <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_16">in_Body</CSharpValue>
@@ -227,17 +235,26 @@
             <InArgument x:TypeArguments="x:String" x:Key="msgTable">
               <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_38">in_MsgTable</CSharpValue>
             </InArgument>
+            <InArgument x:TypeArguments="x:Boolean" x:Key="useExceptionRecipient">
+              <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_39">in_UseExceptionRecipient</CSharpValue>
+            </InArgument>
+            <InArgument x:TypeArguments="x:String" x:Key="exceptionTo">
+              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_40">in_ExceptionTo</CSharpValue>
+            </InArgument>
+            <InArgument x:TypeArguments="s:String[]" x:Key="attchments">
+              <CSharpValue x:TypeArguments="s:String[]" sap2010:WorkflowViewState.IdRef="CSharpValue`1_41">in_Attachments</CSharpValue>
+            </InArgument>
           </ui:InvokeCode.Arguments>
         </ui:InvokeCode>
       </Sequence>
-      <Sequence x:Key="2" DisplayName="Outlook" sap:VirtualizedContainerService.HintSize="449.6,770.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
+      <Sequence x:Key="2" DisplayName="Outlook" sap:VirtualizedContainerService.HintSize="449.6,651.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info">
+        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info">
           <ui:LogMessage.Message>
             <InArgument x:TypeArguments="x:Object">
               <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_17">"#Send Outlook email"</CSharpValue>

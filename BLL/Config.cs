@@ -32,10 +32,8 @@ namespace Merkit_RPA_Framework.BLL
         public string LogDir { get; set; }              // in case custom log true       
         public string AssetFolder { get; set; }         // Define the used asset folder (default Shared) - For email credentials
         public int MaxProcessableItemCount { get; set; }    //QueueItems count
-        public bool UseOrchestrator { get; set; }           //For logging (log in Orchestrator)
-        public int ErrorWeight { get; set; }                //For InstantAbort
-        public int MaxAllowedErrorCount { get; set; }
-        public int LogLevel { get; set; }               //0 - info, 1 - warn, 2 - error
+        public bool UseOrchestrator { get; set; }           //For logging (log in Orchestrator)        
+        public int MaxAllowedErrorCount { get; set; }        
         public string Queue { get; set; }
         public string OrchestratorFolder {get; set; }             
         public Boolean IgnoreUploadedQueueItems {get; set; }             
@@ -44,6 +42,10 @@ namespace Merkit_RPA_Framework.BLL
         public LangEnum Lang { get; set; }
         public string LogFileName { get; set; }         // If LogToFile true
         public string DebugLogFileName { get; set; }    // If LogToFile true
+        public int RecommendedScrResHeight { get; set; }       // Default set tO 1080
+        public int RecommendedScrResWidth { get; set; }        // Default set to 1920  
+        public int ScrResTresholdPercent { get; set; }         // Default set to 10  
+        public Boolean SkipQueueItemOnBusinessError { get; set; }   
 
         #endregion
         
@@ -64,24 +66,26 @@ namespace Merkit_RPA_Framework.BLL
           
         #region "Email parameters"
 
-        public string SmtpServer { get; set; }
-        public int SmtpPort { get; set; }
-        public string SmtpCredentialAssetName { get; set; } 
-        public bool SmtpEnableSsl { get; set; }        
-        public string SmtpHostEmail { get; set; }        
-        
         public string To { get; set; }
         public string Subject { get; set; }
         public string Body { get; set; }        
         public string[] Attachment { get; set; }
+        public string SmtpServer { get; set; }
+        public string SmtpFrom { get; set; }
         public bool IsBodyHtml { get; set; }
         public string Cc { get; set; }
         public string BCc { get; set; }
         public int SenderType { get; set; }
+        public int SmtpPort { get; set; }
+        public bool SmtpEnableSsl { get; set; }        
+        public string SmtpHostEmail { get; set; }        
         public string SentOnBehalfOf { get; set; }
         public string OutlookAccount { get; set; }       
+        public string SmtpCredentialAssetName { get; set; } 
         public Boolean UseMerkitTemplate { get; set; }        
         public string MsgBody_Table { get; set;}        
+        public string ExceptionTo { get; set; }
+        public bool UseExceptionRecipient { get; set; }         
         
         #endregion
     }

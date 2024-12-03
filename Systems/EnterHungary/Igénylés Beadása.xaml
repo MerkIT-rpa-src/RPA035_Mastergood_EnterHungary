@@ -21,7 +21,7 @@
     <InArgument x:TypeArguments="x:String" />
   </this:Igénylés_Beadása.in_Registration_number>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1368,8788</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1367.2,8647.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -76,6 +76,7 @@
       <x:String>System.Numerics</x:String>
       <x:String>RPA999EnterHungary3._0DOBOZOS.BLL</x:String>
       <x:String>RPA999EnterHungary3._0DOBOZOS</x:String>
+      <x:String>Merkit_RPA_Framework.Framework.Framework.Functions</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -157,19 +158,19 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Igénylés_Beadása" sap:VirtualizedContainerService.HintSize="1378,8723" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Igénylés_Beadása" sap:VirtualizedContainerService.HintSize="1377.6,8582.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="04. Tartózkodási engedély iránti kérelem" sap:VirtualizedContainerService.HintSize="1316,8635" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="28f3816a-d6cb-4dc2-a32c-0fffeeb95f12" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="04. Tartózkodási engedély iránti kérelem" sap:VirtualizedContainerService.HintSize="1315.2,8493.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="28f3816a-d6cb-4dc2-a32c-0fffeeb95f12" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1282,8395" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1281.6,8253.6" sap2010:WorkflowViewState.IdRef="TryCatch_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -177,21 +178,21 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <TryCatch.Try>
-              <Sequence DisplayName="Try Blokk - Kitöltés" sap:VirtualizedContainerService.HintSize="1244,8166" sap2010:WorkflowViewState.IdRef="Sequence_106">
+              <Sequence DisplayName="Try Blokk - Kitöltés" sap:VirtualizedContainerService.HintSize="1244.8,8022.4" sap2010:WorkflowViewState.IdRef="Sequence_106">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Sequence DisplayName="Tartózkodás Iránti Kérelem TAB" sap:VirtualizedContainerService.HintSize="1182,4390" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                <Sequence DisplayName="Tartózkodás Iránti Kérelem TAB" sap:VirtualizedContainerService.HintSize="1182.4,1131.2" sap2010:WorkflowViewState.IdRef="Sequence_36">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Sequence DisplayName="Tartózkodási engedély első kérelem/hosszabbítás (DIV)" sap:VirtualizedContainerService.HintSize="453,57" sap2010:WorkflowViewState.IdRef="Sequence_139">
+                  <Sequence DisplayName="Tartózkodási engedély első kérelem/hosszabbítás (DIV)" sap:VirtualizedContainerService.HintSize="451.2,56.8" sap2010:WorkflowViewState.IdRef="Sequence_139">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -209,7 +210,7 @@
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NCheck>
                   </Sequence>
-                  <Sequence DisplayName="A kérelmező személyes adatai (DIV)" sap:VirtualizedContainerService.HintSize="450,2926" sap2010:WorkflowViewState.IdRef="Sequence_140">
+                  <Sequence DisplayName="A kérelmező személyes adatai (DIV)" sap:VirtualizedContainerService.HintSize="451.2,56.8" sap2010:WorkflowViewState.IdRef="Sequence_140">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -480,14 +481,14 @@ in_CurrentRow["Iskolai végzettsége"].ToString().Substring(1).ToLower())</CShar
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NSetText>
                   </Sequence>
-                  <Sequence DisplayName="A kérelmező útlevelének adatai (DIV)" sap:VirtualizedContainerService.HintSize="453,57" sap2010:WorkflowViewState.IdRef="Sequence_141">
+                  <Sequence DisplayName="A kérelmező útlevelének adatai (DIV)" sap:VirtualizedContainerService.HintSize="451.2,56.8" sap2010:WorkflowViewState.IdRef="Sequence_141">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NSetText DisplayName="Set Text '01. útlevél száma'" sap:VirtualizedContainerService.HintSize="388,194" sap2010:WorkflowViewState.IdRef="NSetText_12" Version="V3">
+                    <uix:NSetText DisplayName="Set Text '01. útlevél száma'" sap:VirtualizedContainerService.HintSize="387.2,195.2" sap2010:WorkflowViewState.IdRef="NSetText_12" Version="V3">
                       <uix:NSetText.Target>
                         <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/14726138/tartcelharm" ContentHash="6Aknb-aEpE6d2LSNSFdlIQ" DesignTimeRectangle="631, 716, 309, 43" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl name='utlevelszama' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl name='utlevelszama' tag='INPUT' type='text' class='form-control ' aaname='' /&gt;" Guid="7ae673c7-cca3-4ddd-85f3-a5e42b5aa2f4" ImageBase64="" InformativeScreenshot="febe5ccc1f06df8e2f47ff8b4c4a86ca.png" Reference="rlGBiR1EJky82ITx9uF30g/4Bqln3bAH0y5s0NhHrmRXg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/editurlap]' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
                       </uix:NSetText.Target>
@@ -497,17 +498,17 @@ in_CurrentRow["Iskolai végzettsége"].ToString().Substring(1).ToLower())</CShar
                         </InArgument>
                       </uix:NSetText.Text>
                     </uix:NSetText>
-                    <uix:NSelectItem DisplayName="Select Item '02. útlevél típusa'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NSelectItem_43" Version="V3">
+                    <uix:NSelectItem DisplayName="Select Item '02. útlevél típusa'" sap:VirtualizedContainerService.HintSize="387.2,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_43" Version="V3">
                       <uix:NSelectItem.Item>
                         <InArgument x:TypeArguments="x:String">
-                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_370">RPA999EnterHungary3._0DOBOZOS.BLL.CustomFunctions.ToTitleCase(in_CurrentRow["Útlevél típusa"].ToString())</CSharpValue>
+                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_549">Merkit_RPA_Framework.Framework.Framework.Functions.CustomFunctions.ToTitleCase(in_CurrentRow["Útlevél típusa"].ToString())</CSharpValue>
                         </InArgument>
                       </uix:NSelectItem.Item>
                       <uix:NSelectItem.Target>
                         <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/14726138/tartcelharm" ContentHash="FqF36a_2AUKlEGhPn6tTLw" DesignTimeRectangle="1324, 716, 309, 43" DesignTimeScaleFactor="1.25" ElementType="DropDown" FullSelectorArgument="&lt;webctrl name='utleveltipus' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl name='utleveltipus' tag='SELECT' type='' class='form-control' aaname='' /&gt;" Guid="47df209e-57dd-49ce-b7dd-d9e8c659e38f" ImageBase64="" InformativeScreenshot="0d490df6eb9608281ec15320733d9979.png" Reference="rlGBiR1EJky82ITx9uF30g/h5q7AE5EcEyfQpBWwnUrDQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/editurlap]' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
                       </uix:NSelectItem.Target>
                     </uix:NSelectItem>
-                    <uix:NSetText DisplayName="Set Text '04. kiállításának helye'" sap:VirtualizedContainerService.HintSize="388,194" sap2010:WorkflowViewState.IdRef="NSetText_13" Version="V3">
+                    <uix:NSetText DisplayName="Set Text '04. kiállításának helye'" sap:VirtualizedContainerService.HintSize="387.2,195.2" sap2010:WorkflowViewState.IdRef="NSetText_13" Version="V3">
                       <uix:NSetText.Target>
                         <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/14726138/tartcelharm" ContentHash="IEeS9P8OFUWzJ96kgLyuPQ" DesignTimeRectangle="1324, 759, 309, 42" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl name='kiallitashelye' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl name='kiallitashelye' tag='INPUT' type='text' class='form-control ' aaname='' /&gt;" Guid="e24a896c-46fc-424a-9827-9a58a3e3b655" ImageBase64="" InformativeScreenshot="a794cda714d4ec4cc35e3677565a36f7.png" Reference="rlGBiR1EJky82ITx9uF30g/u_TQdYelKUqYhdhSGflYRA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/editurlap]' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
                       </uix:NSetText.Target>
@@ -517,7 +518,7 @@ in_CurrentRow["Iskolai végzettsége"].ToString().Substring(1).ToLower())</CShar
                         </InArgument>
                       </uix:NSetText.Text>
                     </uix:NSetText>
-                    <If DisplayName="If Útlevél Kiállítása" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="If_4">
+                    <If DisplayName="If Útlevél Kiállítása" sap:VirtualizedContainerService.HintSize="387.2,56.8" sap2010:WorkflowViewState.IdRef="If_4">
                       <If.Condition>
                         <InArgument x:TypeArguments="x:Boolean">
                           <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_284">in_CurrentRow["Személy: Útlevél kiállításának dátuma"] != null</CSharpValue>
@@ -589,7 +590,7 @@ DateTime.Parse(in_CurrentRow["Személy: Útlevél kiállításának dátuma"].To
                         </Sequence>
                       </If.Else>
                     </If>
-                    <TryCatch DisplayName="Try Catch - Útlevél Érvényességének Ideje" sap:VirtualizedContainerService.HintSize="388,48" sap2010:WorkflowViewState.IdRef="TryCatch_6">
+                    <TryCatch DisplayName="Try Catch - Útlevél Érvényességének Ideje" sap:VirtualizedContainerService.HintSize="387.2,49.6" sap2010:WorkflowViewState.IdRef="TryCatch_6">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -637,7 +638,7 @@ DateTime.Parse(in_CurrentRow["Személy: Útlevél lejáratának dátuma"].ToStri
                       </TryCatch.Catches>
                     </TryCatch>
                   </Sequence>
-                  <Sequence DisplayName="A kérelmező magyarországi szálláshelyének adatai (DIV)" sap:VirtualizedContainerService.HintSize="453,57" sap2010:WorkflowViewState.IdRef="Sequence_142">
+                  <Sequence DisplayName="A kérelmező magyarországi szálláshelyének adatai (DIV)" sap:VirtualizedContainerService.HintSize="451.2,56.8" sap2010:WorkflowViewState.IdRef="Sequence_142">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -892,17 +893,17 @@ DateTime.Parse(in_CurrentRow["Személy: Útlevél lejáratának dátuma"].ToStri
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:CommentOut>
                   </Sequence>
-                  <Sequence DisplayName="Teljes körű egészségbiztosítás feltételei (DIV)" sap:VirtualizedContainerService.HintSize="453,57" sap2010:WorkflowViewState.IdRef="Sequence_143">
+                  <Sequence DisplayName="Teljes körű egészségbiztosítás feltételei (DIV)" sap:VirtualizedContainerService.HintSize="451.2,56.8" sap2010:WorkflowViewState.IdRef="Sequence_143">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NSelectItem DisplayName="Select Item '01. Magyarországi tartózkodása idejére...'" sap:VirtualizedContainerService.HintSize="388,180" sap2010:WorkflowViewState.IdRef="NSelectItem_47" Version="V3">
+                    <uix:NSelectItem DisplayName="Select Item '01. Magyarországi tartózkodása idejére...'" sap:VirtualizedContainerService.HintSize="387.2,182.4" sap2010:WorkflowViewState.IdRef="NSelectItem_47" Version="V3">
                       <uix:NSelectItem.Item>
                         <InArgument x:TypeArguments="x:String">
-                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_385">RPA999EnterHungary3._0DOBOZOS.BLL.CustomFunctions.ToTitleCase(in_CurrentRow["Egészségbiztosítás"].ToString())</CSharpValue>
+                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_550">Merkit_RPA_Framework.Framework.Framework.Functions.CustomFunctions.ToTitleCase(in_CurrentRow["Egészségbiztosítás"].ToString())</CSharpValue>
                         </InArgument>
                       </uix:NSelectItem.Item>
                       <uix:NSelectItem.Target>
@@ -910,24 +911,24 @@ DateTime.Parse(in_CurrentRow["Személy: Útlevél lejáratának dátuma"].ToStri
                       </uix:NSelectItem.Target>
                     </uix:NSelectItem>
                   </Sequence>
-                  <Sequence DisplayName="A vissza- vagy továbbutazás feltételei (DIV)" sap:VirtualizedContainerService.HintSize="453,57" sap2010:WorkflowViewState.IdRef="Sequence_144">
+                  <Sequence DisplayName="A vissza- vagy továbbutazás feltételei (DIV)" sap:VirtualizedContainerService.HintSize="451.2,56.8" sap2010:WorkflowViewState.IdRef="Sequence_144">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NSelectItem DisplayName="Select Item '01. Jogszerű tartózkodása lejártakor mely...'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NSelectItem_48" Version="V3">
+                    <uix:NSelectItem DisplayName="Select Item '01. Jogszerű tartózkodása lejártakor mely...'" sap:VirtualizedContainerService.HintSize="387.2,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_48" Version="V3">
                       <uix:NSelectItem.Item>
                         <InArgument x:TypeArguments="x:String">
-                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_386">RPA999EnterHungary3._0DOBOZOS.BLL.CustomFunctions.ToTitleCase(in_CurrentRow["Visszautazási ország"].ToString())</CSharpValue>
+                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_551">Merkit_RPA_Framework.Framework.Framework.Functions.CustomFunctions.ToTitleCase(in_CurrentRow["Visszautazási ország"].ToString())</CSharpValue>
                         </InArgument>
                       </uix:NSelectItem.Item>
                       <uix:NSelectItem.Target>
                         <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/14726138/tartcelharm" ContentHash="QgiBwz64HUK7M8iEyws1WA" DesignTimeRectangle="631, 562, 309, 42" DesignTimeScaleFactor="1.25" ElementType="DropDown" FullSelectorArgument="&lt;webctrl name='tovabborszag' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl name='tovabborszag' tag='SELECT' type='' class='form-control' aaname='' /&gt;" Guid="29024854-6f8e-446a-9261-227f8eea4368" ImageBase64="" InformativeScreenshot="b4995e5d631d209d077b649852d2ebf0.png" Reference="rlGBiR1EJky82ITx9uF30g/LXOne9PN50-YRQbjToChCA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/editurlap]' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
                       </uix:NSelectItem.Target>
                     </uix:NSelectItem>
-                    <If sap2010:Annotation.AnnotationText="If Visszautazáskor közlekedési eszköz" DisplayName="If Visszautazáskor közlekedési eszköz" sap:VirtualizedContainerService.HintSize="388,126" sap2010:WorkflowViewState.IdRef="If_9">
+                    <If sap2010:Annotation.AnnotationText="If Visszautazáskor közlekedési eszköz" DisplayName="If Visszautazáskor közlekedési eszköz" sap:VirtualizedContainerService.HintSize="387.2,100.8" sap2010:WorkflowViewState.IdRef="If_9">
                       <If.Condition>
                         <InArgument x:TypeArguments="x:Boolean">
                           <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_210">in_CurrentRow["Visszautazáskor közlekedési eszköz"] != null</CSharpValue>
@@ -969,7 +970,7 @@ DateTime.Parse(in_CurrentRow["Személy: Útlevél lejáratának dátuma"].ToStri
                         </Sequence>
                       </If.Else>
                     </If>
-                    <If sap2010:Annotation.AnnotationText="If Visszautazás - útlevél van-e" DisplayName="If Visszautazás - útlevél van-e" sap:VirtualizedContainerService.HintSize="388,108" sap2010:WorkflowViewState.IdRef="If_10">
+                    <If sap2010:Annotation.AnnotationText="If Visszautazás - útlevél van-e" DisplayName="If Visszautazás - útlevél van-e" sap:VirtualizedContainerService.HintSize="387.2,80.8" sap2010:WorkflowViewState.IdRef="If_10">
                       <If.Condition>
                         <InArgument x:TypeArguments="x:Boolean">
                           <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_212">in_CurrentRow["Visszautazás - útlevél van-e"].ToString().Equals("igen", StringComparison.OrdinalIgnoreCase) == true</CSharpValue>
@@ -1007,7 +1008,7 @@ DateTime.Parse(in_CurrentRow["Személy: Útlevél lejáratának dátuma"].ToStri
                       </If.Else>
                     </If>
                   </Sequence>
-                  <Sequence sap2010:Annotation.AnnotationText="Magyarországra érkezését megelőző állandó vagy szokásos tartózkodási helye (DIV)" DisplayName="Magyarországra érkezését megelőző állandó vagy szokásos tartózkodási helye (DIV)" sap:VirtualizedContainerService.HintSize="453,155" sap2010:WorkflowViewState.IdRef="Sequence_145">
+                  <Sequence sap2010:Annotation.AnnotationText="Magyarországra érkezését megelőző állandó vagy szokásos tartózkodási helye (DIV)" DisplayName="Magyarországra érkezését megelőző állandó vagy szokásos tartózkodási helye (DIV)" sap:VirtualizedContainerService.HintSize="451.2,100.8" sap2010:WorkflowViewState.IdRef="Sequence_145">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1132,7 +1133,7 @@ in_CurrentRow["Érkezést megelőző ország"].ToString().Substring(1).ToLower()
                       </uix:NSetText.Text>
                     </uix:NSetText>
                   </Sequence>
-                  <Sequence sap2010:Annotation.AnnotationText="Rendelkezik-e más schengeni tagállamban érvényes tartózkodásra jogosító okmánnyal?" DisplayName="Rendelkezik-e más schengeni tagállamban érvényes tartózkodásra jogosító okmánnyal? (DIV)" sap:VirtualizedContainerService.HintSize="453,155" sap2010:WorkflowViewState.IdRef="Sequence_146">
+                  <Sequence sap2010:Annotation.AnnotationText="Rendelkezik-e más schengeni tagállamban érvényes tartózkodásra jogosító okmánnyal?" DisplayName="Rendelkezik-e más schengeni tagállamban érvényes tartózkodásra jogosító okmánnyal? (DIV)" sap:VirtualizedContainerService.HintSize="451.2,100.8" sap2010:WorkflowViewState.IdRef="Sequence_146">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1212,7 +1213,7 @@ in_CurrentRow["Érkezést megelőző ország"].ToString().Substring(1).ToLower()
                       </Sequence>
                     </Switch>
                   </Sequence>
-                  <Sequence DisplayName="Egyéb adatok (DIV)" sap:VirtualizedContainerService.HintSize="453,113" sap2010:WorkflowViewState.IdRef="Sequence_147">
+                  <Sequence DisplayName="Egyéb adatok (DIV)" sap:VirtualizedContainerService.HintSize="451.2,56.8" sap2010:WorkflowViewState.IdRef="Sequence_147">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1534,7 +1535,7 @@ in_CurrentRow["Érkezést megelőző ország"].ToString().Substring(1).ToLower()
                       </Sequence>
                     </Switch>
                   </Sequence>
-                  <Sequence DisplayName="A tartózkodás tervezett időtartama és indokai (DIV)" sap:VirtualizedContainerService.HintSize="453,113" sap2010:WorkflowViewState.IdRef="Sequence_148">
+                  <Sequence DisplayName="A tartózkodás tervezett időtartama és indokai (DIV)" sap:VirtualizedContainerService.HintSize="451.2,56.8" sap2010:WorkflowViewState.IdRef="Sequence_148">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1590,7 +1591,7 @@ DateTime.Parse(in_CurrentRow["Személy: Tartózkodási engedély érvényessége
                       </TryCatch.Catches>
                     </TryCatch>
                   </Sequence>
-                  <Sequence DisplayName="Az okmány átvétele (DIV)" sap:VirtualizedContainerService.HintSize="453,113" sap2010:WorkflowViewState.IdRef="Sequence_149">
+                  <Sequence DisplayName="Az okmány átvétele (DIV)" sap:VirtualizedContainerService.HintSize="451.2,56.8" sap2010:WorkflowViewState.IdRef="Sequence_149">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1696,7 +1697,7 @@ DateTime.Parse(in_CurrentRow["Személy: Tartózkodási engedély érvényessége
                       </If.Else>
                     </If>
                   </Sequence>
-                  <Sequence DisplayName="Nyilatkozat (DIV)" sap:VirtualizedContainerService.HintSize="453,113" sap2010:WorkflowViewState.IdRef="Sequence_115">
+                  <Sequence DisplayName="Nyilatkozat (DIV)" sap:VirtualizedContainerService.HintSize="451.2,56.8" sap2010:WorkflowViewState.IdRef="Sequence_115">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1721,7 +1722,7 @@ in_CurrentRow["Érkezést megelőző ország"].ToString().Substring(1).ToLower()
                       </uix:NSelectItem.Target>
                     </uix:NSelectItem>
                   </Sequence>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '15. Mehet (Rögzít)'" sap:VirtualizedContainerService.HintSize="453,189" sap2010:WorkflowViewState.IdRef="NClick_23" KeyModifiers="None" MouseButton="Left" Version="V3">
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '15. Mehet (Rögzít)'" sap:VirtualizedContainerService.HintSize="451.2,189.6" sap2010:WorkflowViewState.IdRef="NClick_23" KeyModifiers="None" MouseButton="Left" Version="V3">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/14708659/tartcelharm" ContentHash="3L6I6DvlwEiaz573s7B6gQ" DesignTimeRectangle="734, 759, 148, 42" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='btn btn-success' aaname='Mehet (Rögzít)' check:innerText='Mehet (Rögzít)' /&gt;" Guid="d5550aed-acfc-443e-9a9d-74be343cafb6" ImageBase64="" InformativeScreenshot="abaa2883fc07c0cabccc262ad5faa378.png" Reference="rlGBiR1EJky82ITx9uF30g/NvFa4Y6dh0OqGjU4wOt9gA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/editurlap]' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
                     </uix:NClick.Target>
@@ -1732,7 +1733,7 @@ in_CurrentRow["Érkezést megelőző ország"].ToString().Substring(1).ToLower()
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </uix:NClick>
-                  <Sequence DisplayName="Log és Státusz Jelentése" sap:VirtualizedContainerService.HintSize="453,106" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                  <Sequence DisplayName="Log és Státusz Jelentése" sap:VirtualizedContainerService.HintSize="451.2,49.6" sap2010:WorkflowViewState.IdRef="Sequence_35">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1765,7 +1766,7 @@ in_CurrentRow["Érkezést megelőző ország"].ToString().Substring(1).ToLower()
                     </ui:ReportStatus>
                   </Sequence>
                 </Sequence>
-                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1182,57" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1182.4,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_3">
                   <ui:CommentOut.Body>
                     <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,201" sap2010:WorkflowViewState.IdRef="Sequence_37">
                       <sap:WorkflowViewStateService.ViewState>
@@ -1789,16 +1790,16 @@ in_CurrentRow["Érkezést megelőző ország"].ToString().Substring(1).ToLower()
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:CommentOut>
-                <uix:NCheckState sap2010:Annotation.AnnotationText="" DisplayName="Vendégmunkás-tartózkodási engedély TAB (Check State)" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="1182,2907" sap2010:WorkflowViewState.IdRef="NCheckState_6" ScopeIdentifier="28f3816a-d6cb-4dc2-a32c-0fffeeb95f12" Timeout="180" Version="V3">
+                <uix:NCheckState sap2010:Annotation.AnnotationText="" DisplayName="Vendégmunkás-tartózkodási engedély TAB (Check State)" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="1182.4,6021.6" sap2010:WorkflowViewState.IdRef="NCheckState_6" ScopeIdentifier="28f3816a-d6cb-4dc2-a32c-0fffeeb95f12" Timeout="180" Version="V3">
                   <uix:NCheckState.IfExists>
-                    <Sequence DisplayName="Vendégmunkás-tartózkodási engedély TAB Megjelent" sap:VirtualizedContainerService.HintSize="1138,2627" sap2010:WorkflowViewState.IdRef="Sequence_234">
+                    <Sequence DisplayName="Vendégmunkás-tartózkodási engedély TAB Megjelent" sap:VirtualizedContainerService.HintSize="683.2,5740" sap2010:WorkflowViewState.IdRef="Sequence_234">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <uix:NClick ActivateBefore="True" sap2010:Annotation.AnnotationText="Click '04. Vendégmunkás-tartozkodási engedély (TAB)'" ClickType="Single" DisplayName="Click '04. Vendégmunkás-tartozkodási engedély (TAB)'" sap:VirtualizedContainerService.HintSize="1076,220" sap2010:WorkflowViewState.IdRef="NClick_37" KeyModifiers="None" MouseButton="Left" Version="V3">
+                      <uix:NClick ActivateBefore="True" sap2010:Annotation.AnnotationText="Click '04. Vendégmunkás-tartozkodási engedély (TAB)'" ClickType="Single" DisplayName="Click '04. Vendégmunkás-tartozkodási engedély (TAB)'" sap:VirtualizedContainerService.HintSize="620.8,220.8" sap2010:WorkflowViewState.IdRef="NClick_37" KeyModifiers="None" MouseButton="Left" Version="V3">
                         <uix:NClick.Target>
                           <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/14526043" ContentHash="QWIpsf7eDEWxIgewie1jkw" DesignTimeRectangle="663, 544, 425, 52" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Vendégmunkás-tartózkodási engedél*' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Vendégmunkás-tartózkodási engedély (kitöltve)' class='bg-success' tag='A' type='' check:innerText='Vendégmunkás-tartózkodási engedély (kitöltve)' /&gt;" Guid="3f30febc-4951-48be-8a2d-b06101151f50" ImageBase64="" InformativeScreenshot="3b1a82b0f62a42e3b8c22f4934aef3af.png" Reference="rlGBiR1EJky82ITx9uF30g/bjN2dDwkGE22bYqH7d4dmg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/edit]' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
                         </uix:NClick.Target>
@@ -1808,7 +1809,7 @@ in_CurrentRow["Érkezést megelőző ország"].ToString().Substring(1).ToLower()
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </uix:NClick>
-                      <Sequence DisplayName="Vendégmunkás-tartózkodási engedély Tab Kitöltés" sap:VirtualizedContainerService.HintSize="1076,2210" sap2010:WorkflowViewState.IdRef="Sequence_152">
+                      <Sequence DisplayName="Vendégmunkás-tartózkodási engedély Tab Kitöltés" sap:VirtualizedContainerService.HintSize="620.8,5322.4" sap2010:WorkflowViewState.IdRef="Sequence_152">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="x:String" Name="Benyujto" />
                           <Variable x:TypeArguments="x:String" Name="VarhatoJovedelem" />
@@ -1842,7 +1843,7 @@ in_CurrentRow["Érkezést megelőző ország"].ToString().Substring(1).ToLower()
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <uix:NCheckState sap2010:Annotation.AnnotationText="Check App State &quot;Szerkeszt&quot; button" DisplayName="Check App State &quot;Szerkeszt&quot; button" sap:VirtualizedContainerService.HintSize="1014,99" sap2010:WorkflowViewState.IdRef="NCheckState_7" ScopeIdentifier="28f3816a-d6cb-4dc2-a32c-0fffeeb95f12" Timeout="180" Version="V3">
+                        <uix:NCheckState sap2010:Annotation.AnnotationText="Check App State &quot;Szerkeszt&quot; button" DisplayName="Check App State &quot;Szerkeszt&quot; button" sap:VirtualizedContainerService.HintSize="558.4,100.8" sap2010:WorkflowViewState.IdRef="NCheckState_7" ScopeIdentifier="28f3816a-d6cb-4dc2-a32c-0fffeeb95f12" Timeout="180" Version="V3">
                           <uix:NCheckState.IfExists>
                             <Sequence DisplayName="&quot;Szerkeszt&quot; appears" sap:VirtualizedContainerService.HintSize="450,268" sap2010:WorkflowViewState.IdRef="Sequence_159">
                               <sap:WorkflowViewStateService.ViewState>
@@ -1905,16 +1906,16 @@ in_CurrentRow["Érkezést megelőző ország"].ToString().Substring(1).ToLower()
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </uix:NCheckState>
-                        <uix:NCheckState DisplayName="Check App State 'Benyújtó*'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="1014,699" sap2010:WorkflowViewState.IdRef="NCheckState_8" ScopeIdentifier="28f3816a-d6cb-4dc2-a32c-0fffeeb95f12" Timeout="180" Version="V3">
+                        <uix:NCheckState DisplayName="Check App State 'Benyújtó*'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="558.4,564" sap2010:WorkflowViewState.IdRef="NCheckState_8" ScopeIdentifier="28f3816a-d6cb-4dc2-a32c-0fffeeb95f12" Timeout="180" Version="V3">
                           <uix:NCheckState.IfExists>
-                            <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="513,450" sap2010:WorkflowViewState.IdRef="Sequence_168">
+                            <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="513.6,313.6" sap2010:WorkflowViewState.IdRef="Sequence_168">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="451,84" sap2010:WorkflowViewState.IdRef="CommentOut_31">
+                              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="451.2,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_31">
                                 <ui:CommentOut.Body>
                                   <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="606,496" sap2010:WorkflowViewState.IdRef="Sequence_166">
                                     <sap:WorkflowViewStateService.ViewState>
@@ -2145,7 +2146,7 @@ in_CurrentRow["Átvételi ország"].ToString().Substring(1).ToLower())</CSharpVa
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </ui:CommentOut>
-                              <Sequence DisplayName="Benyújtó (DIV)" sap:VirtualizedContainerService.HintSize="451,113" sap2010:WorkflowViewState.IdRef="Sequence_235">
+                              <Sequence DisplayName="Benyújtó (DIV)" sap:VirtualizedContainerService.HintSize="451.2,56.8" sap2010:WorkflowViewState.IdRef="Sequence_235">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -2158,7 +2159,7 @@ in_CurrentRow["Átvételi ország"].ToString().Substring(1).ToLower())</CSharpVa
                                   </uix:NSelectItem.Target>
                                 </uix:NSelectItem>
                               </Sequence>
-                              <Sequence sap2010:Annotation.AnnotationText="A külföldön tartózkodó harmadik országbeli állampolgár kérelmének kedvezményes foglalkoztató vagy minősített kölcsönbeadó útján történő benyújtása esetén a vízum átvételének helye (DIV)" DisplayName="A külföldön tartózkodó harmadik országbeli állampolgár kérelmének kedvezményes foglalkoztató vagy minősített kölcsönbeadó útján történő benyújtása esetén a vízum átvételének helye (DIV)" sap:VirtualizedContainerService.HintSize="451,163" sap2010:WorkflowViewState.IdRef="Sequence_236">
+                              <Sequence sap2010:Annotation.AnnotationText="A külföldön tartózkodó harmadik országbeli állampolgár kérelmének kedvezményes foglalkoztató vagy minősített kölcsönbeadó útján történő benyújtása esetén a vízum átvételének helye (DIV)" DisplayName="A külföldön tartózkodó harmadik országbeli állampolgár kérelmének kedvezményes foglalkoztató vagy minősített kölcsönbeadó útján történő benyújtása esetén a vízum átvételének helye (DIV)" sap:VirtualizedContainerService.HintSize="451.2,109.6" sap2010:WorkflowViewState.IdRef="Sequence_236">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -2220,7 +2221,7 @@ in_CurrentRow["Átvételi ország"].ToString().Substring(1).ToLower())</CSharpVa
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </uix:NCheckState>
-                        <Sequence sap2010:Annotation.AnnotationText="A kérelmező magyarországi megélhetésére vonatkozó adatok (DIV)" DisplayName="A kérelmező magyarországi megélhetésére vonatkozó adatok (DIV)" sap:VirtualizedContainerService.HintSize="1014,88" sap2010:WorkflowViewState.IdRef="Sequence_237">
+                        <Sequence sap2010:Annotation.AnnotationText="A kérelmező magyarországi megélhetésére vonatkozó adatok (DIV)" DisplayName="A kérelmező magyarországi megélhetésére vonatkozó adatok (DIV)" sap:VirtualizedContainerService.HintSize="558.4,88" sap2010:WorkflowViewState.IdRef="Sequence_237">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -2249,7 +2250,7 @@ in_CurrentRow["Átvételi ország"].ToString().Substring(1).ToLower())</CSharpVa
                             </uix:NSelectItem.Target>
                           </uix:NSelectItem>
                         </Sequence>
-                        <Sequence sap2010:Annotation.AnnotationText="Az összevont engedélyezési eljáráshoz szükséges adatok (DIV)" DisplayName="Az összevont engedélyezési eljáráshoz szükséges adatok (DIV)" sap:VirtualizedContainerService.HintSize="1014,550" sap2010:WorkflowViewState.IdRef="Sequence_238">
+                        <Sequence sap2010:Annotation.AnnotationText="Az összevont engedélyezési eljáráshoz szükséges adatok (DIV)" DisplayName="Az összevont engedélyezési eljáráshoz szükséges adatok (DIV)" sap:VirtualizedContainerService.HintSize="558.4,2499.2" sap2010:WorkflowViewState.IdRef="Sequence_238">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -2257,10 +2258,10 @@ in_CurrentRow["Átvételi ország"].ToString().Substring(1).ToLower())</CSharpVa
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <Sequence sap2010:Annotation.AnnotationText="Magyarországi munkáltató adatai (DIV)" DisplayName="Magyarországi munkáltató adatai (DIV)" sap:VirtualizedContainerService.HintSize="450,88" sap2010:WorkflowViewState.IdRef="Sequence_239">
+                          <Sequence sap2010:Annotation.AnnotationText="Magyarországi munkáltató adatai (DIV)" DisplayName="Magyarországi munkáltató adatai (DIV)" sap:VirtualizedContainerService.HintSize="496,2037.6" sap2010:WorkflowViewState.IdRef="Sequence_239">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
@@ -2285,7 +2286,7 @@ in_CurrentRow["Átvételi ország"].ToString().Substring(1).ToLower())</CSharpVa
                                 </InArgument>
                               </uix:NSetText.Text>
                             </uix:NSetText>
-                            <uix:NSetText DisplayName="Set Text '03. település'" sap:VirtualizedContainerService.HintSize="434,194" sap2010:WorkflowViewState.IdRef="NSetText_37" Version="V3">
+                            <uix:NSetText DisplayName="Set Text '03. település'" sap:VirtualizedContainerService.HintSize="433.6,195.2" sap2010:WorkflowViewState.IdRef="NSetText_37" Version="V3">
                               <uix:NSetText.Target>
                                 <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/14914298/tartcelharm-c7" ContentHash="VoHCH6bTckmgVk1KeqRoww" DesignTimeRectangle="631, 416, 309, 42" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl name='munkaltatotelepules' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl name='munkaltatotelepules' tag='INPUT' type='text' class='form-control ' aaname='' /&gt;" Guid="99c71909-6148-467a-8695-1eef0fd61105" ImageBase64="" InformativeScreenshot="9c2bc075282f7965d4a14b04ee7c8a65.png" Reference="rlGBiR1EJky82ITx9uF30g/q-WBueigmEaUc-KSk-CBMg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/editurlap]' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
                               </uix:NSetText.Target>
@@ -2295,7 +2296,7 @@ in_CurrentRow["Átvételi ország"].ToString().Substring(1).ToLower())</CSharpVa
                                 </InArgument>
                               </uix:NSetText.Text>
                             </uix:NSetText>
-                            <uix:NSetText DisplayName="Set Text '04. közterület neve'" sap:VirtualizedContainerService.HintSize="434,194" sap2010:WorkflowViewState.IdRef="NSetText_38" Version="V3">
+                            <uix:NSetText DisplayName="Set Text '04. közterület neve'" sap:VirtualizedContainerService.HintSize="433.6,195.2" sap2010:WorkflowViewState.IdRef="NSetText_38" Version="V3">
                               <uix:NSetText.Target>
                                 <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/14914298/tartcelharm-c7" ContentHash="oBwh8z2G-0mbXp-QKRaOtg" DesignTimeRectangle="1323, 416, 309, 42" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl name='munkaltatokozteruletneve' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl name='munkaltatokozteruletneve' tag='INPUT' type='text' class='form-control ' aaname='' /&gt;" Guid="d9039d62-8631-4d90-9142-43c5a4661b54" ImageBase64="" InformativeScreenshot="188fcd94fc8610f63afd9af86445c132.png" Reference="rlGBiR1EJky82ITx9uF30g/RdN0XyqSI06N5i-gnYBfrg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/editurlap]' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
                               </uix:NSetText.Target>
@@ -2305,17 +2306,17 @@ in_CurrentRow["Átvételi ország"].ToString().Substring(1).ToLower())</CSharpVa
                                 </InArgument>
                               </uix:NSetText.Text>
                             </uix:NSetText>
-                            <uix:NSelectItem DisplayName="Select Item '05. közterület jellege'" sap:VirtualizedContainerService.HintSize="434,189" sap2010:WorkflowViewState.IdRef="NSelectItem_74" Version="V3">
+                            <uix:NSelectItem DisplayName="Select Item '05. közterület jellege'" sap:VirtualizedContainerService.HintSize="433.6,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_74" Version="V3">
                               <uix:NSelectItem.Item>
                                 <InArgument x:TypeArguments="x:String">
-                                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_523">RPA999EnterHungary3._0DOBOZOS.BLL.CustomFunctions.ToTitleCase(in_CurrentRow["Munkáltató közterület jellege"].ToString())</CSharpValue>
+                                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_552">Merkit_RPA_Framework.Framework.Framework.Functions.CustomFunctions.ToTitleCase(in_CurrentRow["Munkáltató közterület jellege"].ToString())</CSharpValue>
                                 </InArgument>
                               </uix:NSelectItem.Item>
                               <uix:NSelectItem.Target>
                                 <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/14914298/tartcelharm-c7" ContentHash="1K0qJoMcMUSxC_cXB4VNfA" DesignTimeRectangle="631, 458, 309, 43" DesignTimeScaleFactor="1.25" ElementType="DropDown" FullSelectorArgument="&lt;webctrl name='munkaltatokozteruletjellege' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl name='munkaltatokozteruletjellege' tag='SELECT' type='' class='form-control' aaname='' /&gt;" Guid="e0edd26f-fb2b-471b-b69d-8ac08dddb32c" ImageBase64="" InformativeScreenshot="0c9744fedff94aaa6c6a8398328e65b4.png" Reference="rlGBiR1EJky82ITx9uF30g/-bM0yezFB0iFPKyO5ksmrw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/editurlap]' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
                               </uix:NSelectItem.Target>
                             </uix:NSelectItem>
-                            <uix:NSetText sap2010:Annotation.AnnotationText="MAXIMUM 10 KARAKTER HOSSZÚ" DisplayName="Set Text '06. házszám/helyrajzi szám'" sap:VirtualizedContainerService.HintSize="434,225" sap2010:WorkflowViewState.IdRef="NSetText_39" Version="V3">
+                            <uix:NSetText sap2010:Annotation.AnnotationText="MAXIMUM 10 KARAKTER HOSSZÚ" DisplayName="Set Text '06. házszám/helyrajzi szám'" sap:VirtualizedContainerService.HintSize="433.6,226.4" sap2010:WorkflowViewState.IdRef="NSetText_39" Version="V3">
                               <uix:NSetText.Target>
                                 <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/14914298/tartcelharm-c7" ContentHash="Xh4N52s7V06fELqF0WpZew" DesignTimeRectangle="1323, 458, 309, 43" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl name='munkaltatohazszam' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl name='munkaltatohazszam' tag='INPUT' type='text' class='form-control ' aaname='' /&gt;" Guid="9e377e35-bc89-49ca-b6cb-9180a1235843" ImageBase64="" InformativeScreenshot="967954adbe9965e58e42f0597c39947a.png" Reference="rlGBiR1EJky82ITx9uF30g/uWA6y8zdiUWUrRP0wW7HVQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/editurlap]' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
                               </uix:NSetText.Target>
@@ -2330,7 +2331,7 @@ in_CurrentRow["Átvételi ország"].ToString().Substring(1).ToLower())</CSharpVa
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </uix:NSetText>
-                            <uix:NSelectItem DisplayName="Select Item '11. TEÁOR száma'" sap:VirtualizedContainerService.HintSize="434,189" sap2010:WorkflowViewState.IdRef="NSelectItem_75" Version="V3">
+                            <uix:NSelectItem DisplayName="Select Item '11. TEÁOR száma'" sap:VirtualizedContainerService.HintSize="433.6,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_75" Version="V3">
                               <uix:NSelectItem.Item>
                                 <InArgument x:TypeArguments="x:String">
                                   <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_525">in_CurrentRow["TEÁOR szám"].ToString()</CSharpValue>
@@ -2340,7 +2341,7 @@ in_CurrentRow["Átvételi ország"].ToString().Substring(1).ToLower())</CSharpVa
                                 <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/14914298/tartcelharm-c7" ContentHash="RboGmCfoxE6sy_Wg2725Qw" DesignTimeRectangle="631, 586, 309, 42" DesignTimeScaleFactor="1.25" ElementType="DropDown" FullSelectorArgument="&lt;webctrl name='munkaltatoteaorszam' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl name='munkaltatoteaorszam' tag='SELECT' type='' class='form-control' placeholder='0000' aaname='' /&gt;" Guid="a3c80ece-f37d-48e9-92fb-4f47954be49f" ImageBase64="" InformativeScreenshot="df289620e86dc7cfd2f326819b799107.png" Reference="rlGBiR1EJky82ITx9uF30g/w4CTrPdoFkKI7N-8TfA7fA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/editurlap]' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
                               </uix:NSelectItem.Target>
                             </uix:NSelectItem>
-                            <Assign DisplayName="Assign KSH_number" sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_11">
+                            <Assign DisplayName="Assign KSH_number" sap:VirtualizedContainerService.HintSize="433.6,114.4" sap2010:WorkflowViewState.IdRef="Assign_11">
                               <Assign.To>
                                 <OutArgument x:TypeArguments="x:String">
                                   <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_27">KSH_number</CSharpReference>
@@ -2352,7 +2353,7 @@ in_CurrentRow["Átvételi ország"].ToString().Substring(1).ToLower())</CSharpVa
                                 </InArgument>
                               </Assign.Value>
                             </Assign>
-                            <uix:NSetText DisplayName="Set Text '12.  KSH-szám'" sap:VirtualizedContainerService.HintSize="434,194" sap2010:WorkflowViewState.IdRef="NSetText_40" Version="V3">
+                            <uix:NSetText DisplayName="Set Text '12.  KSH-szám'" sap:VirtualizedContainerService.HintSize="433.6,195.2" sap2010:WorkflowViewState.IdRef="NSetText_40" Version="V3">
                               <uix:NSetText.Target>
                                 <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/14914298/tartcelharm-c7" ContentHash="zY6hAje51ECj3p0ef5TYEg" DesignTimeRectangle="1323, 586, 309, 42" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl name='munkaltatokshszam' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl name='munkaltatokshszam' tag='INPUT' type='text' class='form-control ' placeholder='12345678 1234 123 12' aaname='' /&gt;" Guid="961e81bc-7e35-410e-86c7-62963017fb0c" ImageBase64="" InformativeScreenshot="a22a7ba54a57890cb02e17cd8c2a405f.png" Reference="rlGBiR1EJky82ITx9uF30g/bLHpT3lJtkOQhrPo_dkT5A" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/editurlap]' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
                               </uix:NSetText.Target>
@@ -2362,7 +2363,7 @@ in_CurrentRow["Átvételi ország"].ToString().Substring(1).ToLower())</CSharpVa
                                 </InArgument>
                               </uix:NSetText.Text>
                             </uix:NSetText>
-                            <uix:NSetText DisplayName="Set Text '13. munkáltató adószáma/adóazonosító jele'" sap:VirtualizedContainerService.HintSize="434,185" sap2010:WorkflowViewState.IdRef="NSetText_41" Version="V3">
+                            <uix:NSetText DisplayName="Set Text '13. munkáltató adószáma/adóazonosító jele'" sap:VirtualizedContainerService.HintSize="433.6,188" sap2010:WorkflowViewState.IdRef="NSetText_41" Version="V3">
                               <uix:NSetText.Target>
                                 <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/14914298/tartcelharm-c7" ContentHash="8AfxxFO0tUudE3aNGTK1FA" DesignTimeRectangle="631, 628, 309, 43" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl aria-role='adoszam' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='adoszam' tag='INPUT' type='text' class='form-control ' placeholder='12345678-1-11 / 1234567890' aaname='' /&gt;" Guid="e1ac45c9-71dc-4ad5-baed-5db05de7f1a6" ImageBase64="" InformativeScreenshot="7511a3cc8371cf4ddbf4fe15a205844e.png" Reference="rlGBiR1EJky82ITx9uF30g/7i17kcq5a0S5LErpPfIvLg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/editurlap]' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
                               </uix:NSetText.Target>
@@ -2373,7 +2374,7 @@ in_CurrentRow["Átvételi ország"].ToString().Substring(1).ToLower())</CSharpVa
                               </uix:NSetText.Text>
                             </uix:NSetText>
                           </Sequence>
-                          <Sequence DisplayName="Foglalkoztató (DIV)" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="Sequence_240">
+                          <Sequence DisplayName="Foglalkoztató (DIV)" sap:VirtualizedContainerService.HintSize="496,56.8" sap2010:WorkflowViewState.IdRef="Sequence_240">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -2411,7 +2412,7 @@ in_CurrentRow["Átvételi ország"].ToString().Substring(1).ToLower())</CSharpVa
                               </uix:NSetText.Text>
                             </uix:NSetText>
                           </Sequence>
-                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="CommentOut_46">
+                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="496,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_46">
                             <ui:CommentOut.Body>
                               <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,290.4" sap2010:WorkflowViewState.IdRef="Sequence_241">
                                 <sap:WorkflowViewStateService.ViewState>
@@ -2429,7 +2430,7 @@ in_CurrentRow["Átvételi ország"].ToString().Substring(1).ToLower())</CSharpVa
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </ui:CommentOut>
-                          <Sequence sap2010:Annotation.AnnotationText="Munkakör betöltéséhez szükséges szakképzettsége (DIV)" DisplayName="Munkakör betöltéséhez szükséges szakképzettsége (DIV)" sap:VirtualizedContainerService.HintSize="450,535" sap2010:WorkflowViewState.IdRef="Sequence_242">
+                          <Sequence sap2010:Annotation.AnnotationText="Munkakör betöltéséhez szükséges szakképzettsége (DIV)" DisplayName="Munkakör betöltéséhez szükséges szakképzettsége (DIV)" sap:VirtualizedContainerService.HintSize="496,88" sap2010:WorkflowViewState.IdRef="Sequence_242">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -2463,7 +2464,7 @@ in_CurrentRow["Átvételi ország"].ToString().Substring(1).ToLower())</CSharpVa
                               </sap:WorkflowViewStateService.ViewState>
                             </uix:NSetText>
                           </Sequence>
-                          <Sequence DisplayName="Munkavégzés helye(i) (DIV)" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="Sequence_243">
+                          <Sequence DisplayName="Munkavégzés helye(i) (DIV)" sap:VirtualizedContainerService.HintSize="496,56.8" sap2010:WorkflowViewState.IdRef="Sequence_243">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -2942,7 +2943,7 @@ DateTime.Parse(in_CurrentRow["Foglalkoztatóval kötött megállapodás kelte"].
                               </uix:NSelectItem>
                             </Sequence>
                           </Sequence>
-                          <Sequence DisplayName="A munkakör ellátásához szükséges készségei, ismeretei (DIV)" sap:VirtualizedContainerService.HintSize="450,50" sap2010:WorkflowViewState.IdRef="Sequence_244">
+                          <Sequence DisplayName="A munkakör ellátásához szükséges készségei, ismeretei (DIV)" sap:VirtualizedContainerService.HintSize="496,49.6" sap2010:WorkflowViewState.IdRef="Sequence_244">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -3090,17 +3091,17 @@ in_CurrentRow["Anyanyelve"].ToString().Substring(1).ToLower())</CSharpValue>
                             </If>
                           </Sequence>
                         </Sequence>
-                        <Sequence DisplayName="2. Nyilatkozat (DIV)" sap:VirtualizedContainerService.HintSize="1014,57" sap2010:WorkflowViewState.IdRef="Sequence_197">
+                        <Sequence DisplayName="2. Nyilatkozat (DIV)" sap:VirtualizedContainerService.HintSize="558.4,1352" sap2010:WorkflowViewState.IdRef="Sequence_197">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <uix:NSelectItem DisplayName="Select Item 'E körben'" sap:VirtualizedContainerService.HintSize="387.2,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_67" ScopeIdentifier="28f3816a-d6cb-4dc2-a32c-0fffeeb95f12" Version="V3">
                             <uix:NSelectItem.Item>
                               <InArgument x:TypeArguments="x:String">
-                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_546">RPA999EnterHungary3._0DOBOZOS.BLL.CustomFunctions.ToTitleCase(in_CurrentRow["Érkezést megelőző ország"].ToString())</CSharpValue>
+                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_553">Merkit_RPA_Framework.Framework.Framework.Functions.CustomFunctions.ToTitleCase(in_CurrentRow["Érkezést megelőző ország"].ToString())</CSharpValue>
                               </InArgument>
                             </uix:NSelectItem.Item>
                             <uix:NSelectItem.Items>
@@ -3216,7 +3217,7 @@ in_CurrentRow["Anyanyelve"].ToString().Substring(1).ToLower())</CSharpValue>
                             </sap:WorkflowViewStateService.ViewState>
                           </uix:NCheck>
                         </Sequence>
-                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - Mehet (Rögzít) gomb" sap:VirtualizedContainerService.HintSize="1014,189" sap2010:WorkflowViewState.IdRef="NClick_26" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="28f3816a-d6cb-4dc2-a32c-0fffeeb95f12" Version="V3">
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - Mehet (Rögzít) gomb" sap:VirtualizedContainerService.HintSize="558.4,189.6" sap2010:WorkflowViewState.IdRef="NClick_26" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="28f3816a-d6cb-4dc2-a32c-0fffeeb95f12" Version="V3">
                           <uix:NClick.Target>
                             <uix:TargetAnchorable BrowserURL="https://enterhungary.gov.hu/eh/cases/edit/9946316/tartcelharm-b10" DesignTimeRectangle="780, 831, 120, 34" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='btn btn-success' aaname='Mehet (Rögzít)' check:innerText='Mehet (Rögzít)' /&gt;" Guid="71c08b89-1533-4c48-ab40-42424ae642da" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHwAAAAmCAYAAAAGC/8vAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAVzSURBVHhe7ZtPb9pIGMb3A/bQS0/Nl+Ba7ly49MQlF05ckCoOaykSF8SKHBYh0c26VeRoRXfjbeQ2CU0wDU7C2+cdzwxjMOBNQjfgGemR4pnxeDy/ef8MkX8hW3JVLPCclQRw79KjN7+9oZeNl/Ti3QurLRXzY47Mc75o4NzIHV/9+opeH7ymvYM9qy0V82OOzHMeugbOO4I7pQ1gtZ1inszVLBo47wZr2bsl5slczaKBs+9Pu8lqu8VczWKB77gs8JzJAs+ZLPCcyQLPmSzwnOmZA6+Re0vkn6a1/f8qew2qHuLvdoVqxxUqpPR5iPaDIdHtgJq99PbH6GmBf3Qp5Jtv+rSf1u55FHH7qLXYlqqnAN4g786nVmqb0j71byIK/HJ8ferzLGdlGlE46pOTAFAld4K5/YO/P+C9pz41ddvDVTh2aXjj6WeVPgcUntcS7eGdR4128r6senrgt0MaTkNyPy621y8ivAx2788E/kefhrQaeBmLmtikDPzWpZq8Lvbq1A2xVb93qaL6/CQ5V5QAvndQoCbqoou6UZddG7Bwn7zLaHFC7SYNpkPqB1hME3i7Sp1r4RdEicauYUkx8OAM98KaRIG1BecOldX9UPkvl4I71Y4Z+NXYvZ7AWmR9dIc53QXU/zC7z3yGf1qY1c0BF2LLMjdOzyF3vGzeqh2bBPONpur58BSXDu39PdDXQminiUtVvk8/+y21rsK4jcfgft+a8djsKadw+Q+w8o0Ab8kJOUZb6V9YUdihxjkWSQMvYAfjRUYdqojJF+EF0I5+JdEew6B7nzpHRXFP4X2HAiyA58mxj2DB7FG8Je1qTmK8FLE7poA65uKlAT/hcKTG4RCAaQKenje/F98jrkvUwWX0zaGi6F+Or9Osss0hByOfGuHEeHZrNG/hLL6HaDAw67JpM8Dlggw+KauJF4CtqGYCb7fQO6Bu1xhDuGBVFwOfd2k81jCoiGseL7psGO2xG9R164CnwZ2rK/zeIBfvE1050nNI+AkLMyEshiLx3ggJb3V/VoEa8Ia8wbXHygQ8XoPwa3Wufr02BByZ5hfEamWpwgpjF5QALvqnFZUDLC4cy1wE/ju1JJ6xHHiFM2LMM5Fh86InCsLIWX0pFKXZvKSFY9PF40oLh8Wb/UUCNoV3MUNBJuCov06vX6eNAd/rsmvFy8BShRVKd7YIfIX1ZQS+8sXXPKP6FfNJA64XXbpvPEP3WQsc170m+Zw/3CNkQeG4L929VDt+t+CzdOVKGYEvJnPZtDngcpcPv7REjFIxNQGcNwWsR8fbBa0Hzpn/LOanaN2mSoM3X8djmCcPNeZSlw7PcQbPMV4+rxpvtHE3kXwKZQL+DF06Xxc+DZBhYjDjyJMALpM2muDc+V7G+8My1U9qiaRtFXARLoTLrcoEqUClPxtUP5L9RU4AWMdGFm4qU9Imcw9k0nGdtHq46PSkTbrreCl1iZSViw2EE4uao6m5Z7MlJ2K80LNL2lSdg6MYu62S7pMEDrUr1LwAMt4YXJBhh1cted7NABwqel3y1bENJbrFYmqvUcLJANYmCuoXjmV1sXhrj2Uim+ZkcT++PsTZfDRDmjiWHXXjk8NJSYeBYg/341042eT4q49aStgMyWOZGqsThwYu18/tWLalWvjh5ZESeYG5qaWWxeP/puf0w8vWCp5kYvy0+kiJUMa/HagwxWHmhL3fqnwlm0SouB+Q8wDrZlngG1GZnPMAcRoLiQydSzTxqT94un+wPFQWeM5kgedMFnjOZIHnTBZ4zrQUuP3UaPe08lMj+zHh7mnlx4T2c+HdEfNjjsxz6efCXLiRdwR3ZN9vtZ1ifsxxHjaXBHBbdr9Y4LkqRD8AM8n7Lc97eF0AAAAASUVORK5CYII=" InformativeScreenshot="3fed89ef6846c7358f27c50e18a16092.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Residence in Hungary [cases/editurlap]' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
                           </uix:NClick.Target>
@@ -3227,7 +3228,7 @@ in_CurrentRow["Anyanyelve"].ToString().Substring(1).ToLower())</CSharpValue>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </uix:NClick>
-                        <Sequence DisplayName="Log és Státusz Jelentés" sap:VirtualizedContainerService.HintSize="1014,406" sap2010:WorkflowViewState.IdRef="Sequence_198">
+                        <Sequence DisplayName="Log és Státusz Jelentés" sap:VirtualizedContainerService.HintSize="558.4,406.4" sap2010:WorkflowViewState.IdRef="Sequence_198">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
