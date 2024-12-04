@@ -11,6 +11,9 @@
     <x:Property Name="in_RobotEmail_cred" Type="InArgument(ui:PasswordCredentials)" />
     <x:Property Name="in_Config" Type="InArgument(mb:Config)" />
     <x:Property Name="in_EmailConfig" Type="InArgument(mb:EmailConfig)" />
+    <x:Property Name="in_dtMellekletekParamsHosszabitas" Type="InArgument(sd:DataTable)" />
+    <x:Property Name="in_dtMellekletekParamsMegszuntetes" Type="InArgument(sd:DataTable)" />
+    <x:Property Name="in_dtMellekletekParamsValtozas" Type="InArgument(sd:DataTable)" />
   </x:Members>
   <this:Processor.in_dtMellekletekParams>
     <InArgument x:TypeArguments="sd:DataTable" />
@@ -25,7 +28,7 @@
     <InArgument x:TypeArguments="ui:PasswordCredentials" />
   </this:Processor.in_RobotEmail_cred>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1288,812</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1334.4,884.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -57,6 +60,8 @@
       <x:String>System.Linq.Expressions</x:String>
       <x:String>System.Numerics</x:String>
       <x:String>Merkit_RPA_Framework.BLL</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -106,16 +111,22 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
       <AssemblyReference>RPA999-EnterHungary3.0-DOBOZOS.Core</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Description:  Processor&#xA;&#xA;Precondition: arguments" DisplayName="Processor" sap:VirtualizedContainerService.HintSize="416,340" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Description:  Processor&#xA;&#xA;Precondition: arguments" DisplayName="Processor" sap:VirtualizedContainerService.HintSize="416,346.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Systems\\EnterHungary\\EnterHungary Form Filling.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="354,195" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Systems\\EnterHungary\\EnterHungary Form Filling.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Systems\\EnterHungary\\EnterHungary Form Filling.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="353.6,197.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Systems\\EnterHungary\\EnterHungary Form Filling.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="excel_FilePath_In">
           <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">in_Excel_FilePath</CSharpValue>
@@ -141,6 +152,15 @@
         </InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_Registration_number">
           <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">in_Registration_number</CSharpValue>
+        </InArgument>
+        <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtMellekletekParamsHosszabitas">
+          <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_9">in_dtMellekletekParamsHosszabitas</CSharpValue>
+        </InArgument>
+        <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtMellekletekParamsMegszuntetes">
+          <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_10">in_dtMellekletekParamsMegszuntetes</CSharpValue>
+        </InArgument>
+        <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtMellekletekParamsValtozas">
+          <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_11">in_dtMellekletekParamsValtozas</CSharpValue>
         </InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>

@@ -8,6 +8,7 @@
     <x:Property Name="in_RobotEmail_cred" Type="InArgument(ui:PasswordCredentials)" />
     <x:Property Name="io_Finished" Type="InOutArgument(x:Boolean)" />
     <x:Property Name="in_Config" Type="InArgument(mb:Config)" />
+    <x:Property Name="in_EmailConfig" Type="InArgument(mb:EmailConfig)" />
   </x:Members>
   <this:DataValidator.in_EmailReceipent>
     <InArgument x:TypeArguments="x:String" />
@@ -16,7 +17,7 @@
     <InArgument x:TypeArguments="ui:PasswordCredentials" />
   </this:DataValidator.in_RobotEmail_cred>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1288,1419</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1334.4,1434.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -48,6 +49,8 @@
       <x:String>System.Linq.Expressions</x:String>
       <x:String>System.Numerics</x:String>
       <x:String>Merkit_RPA_Framework.BLL</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -97,9 +100,15 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
       <AssemblyReference>RPA999-EnterHungary3.0-DOBOZOS.Core</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Description:  Excel Data Validator&#xA;&#xA;Precondition: arguments" DisplayName="DataValidator" sap:VirtualizedContainerService.HintSize="592,1354" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Description:  Excel Data Validator&#xA;&#xA;Precondition: arguments" DisplayName="DataValidator" sap:VirtualizedContainerService.HintSize="592,1369.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="headerCheckFlag" />
       <Variable x:TypeArguments="x:String" Name="callerType" />
@@ -110,7 +119,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Ellenőrzés.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="530,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Systems\\Excel\\Ellenőrzés.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Ellenőrzés.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="529.6,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Systems\\Excel\\Ellenőrzés.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="emailRecipient_In">
           <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">in_EmailReceipent</CSharpValue>
@@ -122,21 +131,18 @@
         <OutArgument x:TypeArguments="x:Boolean" x:Key="headerCheckFlag_bool_Out">
           <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">headerCheckFlag</CSharpReference>
         </OutArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_Smtp_host">
-          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">in_Smtp_host</CSharpValue>
-        </InArgument>
-        <InArgument x:TypeArguments="x:Int32" x:Key="in_Smtp_port">
-          <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">in_Smtp_port</CSharpValue>
-        </InArgument>
         <InArgument x:TypeArguments="ui:PasswordCredentials" x:Key="in_RobotEmail_cred">
           <CSharpValue x:TypeArguments="ui:PasswordCredentials" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">in_RobotEmail_cred</CSharpValue>
         </InArgument>
         <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="in_FileValueDict">
           <CSharpValue x:TypeArguments="scg:Dictionary(x:String, x:String)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_16">in_FileValueDict</CSharpValue>
         </InArgument>
+        <InArgument x:TypeArguments="mb:EmailConfig" x:Key="in_EmailConfig">
+          <CSharpValue x:TypeArguments="mb:EmailConfig" sap2010:WorkflowViewState.IdRef="CSharpValue`1_17">in_EmailConfig</CSharpValue>
+        </InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <Assign DisplayName="Assign io_Finished" sap:VirtualizedContainerService.HintSize="530,114" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <Assign DisplayName="Assign io_Finished" sap:VirtualizedContainerService.HintSize="529.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:Boolean">
           <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">io_Finished</CSharpReference>
@@ -148,7 +154,7 @@
         </InArgument>
       </Assign.Value>
     </Assign>
-    <If DisplayName="If - Headers Are NOT Present" sap:VirtualizedContainerService.HintSize="530,891" sap2010:WorkflowViewState.IdRef="If_1">
+    <If DisplayName="If - Headers Are NOT Present" sap:VirtualizedContainerService.HintSize="529.6,900.8" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Condition>
         <InArgument x:TypeArguments="x:Boolean">
           <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">io_Finished</CSharpValue>
@@ -161,13 +167,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,627" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,634.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:LogMessage sap2010:Annotation.AnnotationText="Log Message: &quot;Az ellenőrzés fázisban nem minden oszlop szerepelt a munkafüzetben ezért a folyamat nem halad tovább a kérelmek beadásával.&quot;" DisplayName="Log Message: &quot;Az ellenőrzés fázisban nem minden oszlop szerepelt a munkafüzetben ezért a folyamat nem halad tovább a kérelmek beadásával.&quot;" sap:VirtualizedContainerService.HintSize="434,230" sap2010:WorkflowViewState.IdRef="LogMessage_2">
+          <ui:LogMessage sap2010:Annotation.AnnotationText="Log Message: &quot;Az ellenőrzés fázisban nem minden oszlop szerepelt a munkafüzetben ezért a folyamat nem halad tovább a kérelmek beadásával.&quot;" DisplayName="Log Message: &quot;Az ellenőrzés fázisban nem minden oszlop szerepelt a munkafüzetben ezért a folyamat nem halad tovább a kérelmek beadásával.&quot;" sap:VirtualizedContainerService.HintSize="433.6,234.4" sap2010:WorkflowViewState.IdRef="LogMessage_2">
             <ui:LogMessage.Level>
               <InArgument x:TypeArguments="ui:LogLevel">
                 <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_10">UiPath.Core.Activities.LogLevel.Warn</CSharpValue>
@@ -184,7 +190,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:LogMessage>
-          <Assign DisplayName="Assign callerType" sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_2">
+          <Assign DisplayName="Assign callerType" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_2">
             <Assign.To>
               <OutArgument x:TypeArguments="x:String">
                 <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">callerType</CSharpReference>
@@ -194,7 +200,7 @@
               <InArgument x:TypeArguments="x:String">missing header</InArgument>
             </Assign.Value>
           </Assign>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Email Küldés.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="434,195" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Systems\\Utils\\Email Küldés.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Email Küldés.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="433.6,197.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Systems\\Utils\\Email Küldés.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <InArgument x:TypeArguments="x:String" x:Key="email_recipient_In">
                 <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_15">in_EmailReceipent</CSharpValue>
@@ -218,7 +224,7 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,103" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:String" Name="callerType" />
           </Sequence.Variables>

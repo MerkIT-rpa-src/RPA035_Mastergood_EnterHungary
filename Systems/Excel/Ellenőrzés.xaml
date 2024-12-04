@@ -15,7 +15,7 @@
     <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" />
   </this:Main.in_FileValueDict>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1233.6,2632.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1687.2,24105.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -161,7 +161,7 @@
       <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap2010:Annotation.AnnotationText="Description: Excel ellenőrzése&#xA;&#xA;Preconditions: arguments&#xA;" DisplayName="Ellenőrzés" sap:VirtualizedContainerService.HintSize="764.8,2568" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Description: Excel ellenőrzése&#xA;&#xA;Preconditions: arguments&#xA;" DisplayName="Ellenőrzés" sap:VirtualizedContainerService.HintSize="1697.6,24040.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="downloadFolderPath" />
       <Variable x:TypeArguments="si:FileInfo" Name="downloaded_file" />
@@ -204,7 +204,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap2010:Annotation.AnnotationText="CSAK LOGOLÁS ÉS ASSISTANTBAN STATUS REPORT HOGY JELEZZÜK HOGY ELKEZDŐDÖT AZ ADATOK ELLENŐRZÉSE" DisplayName="Log Státusz és Jelentés" sap:VirtualizedContainerService.HintSize="702.4,100.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence sap2010:Annotation.AnnotationText="CSAK LOGOLÁS ÉS ASSISTANTBAN STATUS REPORT HOGY JELEZZÜK HOGY ELKEZDŐDÖT AZ ADATOK ELLENŐRZÉSE" DisplayName="Log Státusz és Jelentés" sap:VirtualizedContainerService.HintSize="1635.2,100.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -227,7 +227,7 @@
         </ui:ReportStatus.StatusText>
       </ui:ReportStatus>
     </Sequence>
-    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="702.4,212" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="1635.2,212" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -273,7 +273,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:MultipleAssign>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="702.4,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_11">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1635.2,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_11">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="558.4,349.6" sap2010:WorkflowViewState.IdRef="Sequence_258">
           <sap:WorkflowViewStateService.ViewState>
@@ -311,7 +311,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <TryCatch DisplayName="Ellenőrzés Try Catch" sap:VirtualizedContainerService.HintSize="702.4,2033.6" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Ellenőrzés Try Catch" sap:VirtualizedContainerService.HintSize="1635.2,23506.4" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Variables>
         <Variable x:TypeArguments="x:String" Name="szállás_közterület_jelleg_dropdown" />
         <Variable x:TypeArguments="x:String" Name="callerType" />
@@ -323,14 +323,14 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <Sequence DisplayName="Try Block" sap:VirtualizedContainerService.HintSize="665.6,1592" sap2010:WorkflowViewState.IdRef="Sequence_4">
+        <Sequence DisplayName="Try Block" sap:VirtualizedContainerService.HintSize="1598.4,23064.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="603.2,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_8">
+          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1536,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_8">
             <ui:CommentOut.Body>
               <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="574.4,1210.4" sap2010:WorkflowViewState.IdRef="Sequence_253">
                 <sap:WorkflowViewStateService.ViewState>
@@ -429,13 +429,13 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:CommentOut>
-          <Sequence DisplayName="Minden Ellenőrzése" sap:VirtualizedContainerService.HintSize="603.2,1398.4" sap2010:WorkflowViewState.IdRef="Sequence_27">
+          <Sequence DisplayName="Minden Ellenőrzése" sap:VirtualizedContainerService.HintSize="1536,22871.2" sap2010:WorkflowViewState.IdRef="Sequence_27">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence sap2010:Annotation.AnnotationText="AZ OLDALOM LÉVŐ, A FLOWHOZ SZÜKSÉGES DROPDOWN ELEMEK ÉRTÉKEIT BETÖLTI A LEMENTETT TXT FÁJLOKBÓL VÁLTOZÓKBA" DisplayName="Dropdown Values" sap:VirtualizedContainerService.HintSize="540.8,1229.6" sap2010:WorkflowViewState.IdRef="Sequence_28">
+            <Sequence sap2010:Annotation.AnnotationText="AZ OLDALOM LÉVŐ, A FLOWHOZ SZÜKSÉGES DROPDOWN ELEMEK ÉRTÉKEIT BETÖLTI A LEMENTETT TXT FÁJLOKBÓL VÁLTOZÓKBA" DisplayName="Dropdown Values" sap:VirtualizedContainerService.HintSize="1473.6,1229.6" sap2010:WorkflowViewState.IdRef="Sequence_28">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -730,19 +730,19 @@
                 </sap:WorkflowViewStateService.ViewState>
               </ui:MultipleAssign>
             </Sequence>
-            <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="540.8,48" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_3">
+            <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="1473.6,21520.8" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_3">
               <ueab:ExcelProcessScopeX.Body>
                 <ActivityAction x:TypeArguments="ui:IExcelProcess">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
                   </ActivityAction.Argument>
-                  <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="1339.2,18904" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="None">
+                  <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="1440,21371.2" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="None">
                     <ueab:ExcelApplicationCard.Body>
                       <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Excel File Do" sap:VirtualizedContainerService.HintSize="1305.6,18634.4" sap2010:WorkflowViewState.IdRef="Sequence_40">
+                        <Sequence DisplayName="Excel File Do" sap:VirtualizedContainerService.HintSize="1406.4,21101.6" sap2010:WorkflowViewState.IdRef="Sequence_40">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="scg:Dictionary(x:String, x:Boolean)" Name="Oszlopok_dictionary" />
                             <Variable x:TypeArguments="x:Boolean" Name="HEADERCHECK_flag" />
@@ -752,7 +752,7 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <Sequence DisplayName="DICTIONARY és Fejlécek" sap:VirtualizedContainerService.HintSize="1243.2,2102.4" sap2010:WorkflowViewState.IdRef="Sequence_197">
+                          <Sequence DisplayName="DICTIONARY és Fejlécek" sap:VirtualizedContainerService.HintSize="1344,2102.4" sap2010:WorkflowViewState.IdRef="Sequence_197">
                             <Sequence.Variables>
                               <Variable x:TypeArguments="sd:DataTable" Name="readRange" />
                               <Variable x:TypeArguments="scg:List(x:String)" Name="Fejlécek_List" />
@@ -1165,7 +1165,7 @@
                               </sap:WorkflowViewStateService.ViewState>
                             </ui:ForEach>
                           </Sequence>
-                          <If DisplayName="If HEADEARCHECK_flag" sap:VirtualizedContainerService.HintSize="1243.2,16443.2" sap2010:WorkflowViewState.IdRef="If_51">
+                          <If DisplayName="If HEADEARCHECK_flag" sap:VirtualizedContainerService.HintSize="1344,18910.4" sap2010:WorkflowViewState.IdRef="If_51">
                             <If.Condition>
                               <InArgument x:TypeArguments="x:Boolean">
                                 <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_613">HEADERCHECK_flag</CSharpValue>
@@ -1178,13 +1178,13 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                             <If.Then>
-                              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="1209.6,16144.8" sap2010:WorkflowViewState.IdRef="Sequence_204">
+                              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="1310.4,18612" sap2010:WorkflowViewState.IdRef="Sequence_204">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <ueab:ExcelForEachRowX DisplayName="For Each Excel Row" EmptyRowBehavior="Stop" HasHeaders="True" sap:VirtualizedContainerService.HintSize="1147.2,16056" sap2010:WorkflowViewState.IdRef="ExcelForEachRowX_1" SaveAfterEachRow="True">
+                                <ueab:ExcelForEachRowX DisplayName="For Each Excel Row" EmptyRowBehavior="Stop" HasHeaders="True" sap:VirtualizedContainerService.HintSize="1248,18523.2" sap2010:WorkflowViewState.IdRef="ExcelForEachRowX_1" SaveAfterEachRow="True">
                                   <ueab:ExcelForEachRowX.Body>
                                     <ActivityAction x:TypeArguments="ue:CurrentRowQuickHandle, x:Int32">
                                       <ActivityAction.Argument1>
@@ -1193,7 +1193,7 @@
                                       <ActivityAction.Argument2>
                                         <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
                                       </ActivityAction.Argument2>
-                                      <Sequence DisplayName="For Each Excel Row" sap:VirtualizedContainerService.HintSize="1113.6,15840" sap2010:WorkflowViewState.IdRef="Sequence_239">
+                                      <Sequence DisplayName="For Each Excel Row" sap:VirtualizedContainerService.HintSize="1214.4,18307.2" sap2010:WorkflowViewState.IdRef="Sequence_239">
                                         <Sequence.Variables>
                                           <Variable x:TypeArguments="x:Int32" Name="RowNumber_global" />
                                         </Sequence.Variables>
@@ -1278,7 +1278,7 @@
                                             </scg:List>
                                           </ui:MultipleAssign.AssignOperations>
                                         </ui:MultipleAssign>
-                                        <If DisplayName="If - Ellenőrzés Státusz" sap:VirtualizedContainerService.HintSize="1051.2,15539.2" sap2010:WorkflowViewState.IdRef="If_55">
+                                        <If DisplayName="If - Ellenőrzés Státusz" sap:VirtualizedContainerService.HintSize="1152,18006.4" sap2010:WorkflowViewState.IdRef="If_55">
                                           <If.Condition>
                                             <InArgument x:TypeArguments="x:Boolean">
                                               <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_722" xml:space="preserve">//!(string.IsNullOrEmpty(CurrentRow.ByField["Ellenőrzés Státusz"])) &amp;&amp;
@@ -1314,13 +1314,13 @@
                                             </Sequence>
                                           </If.Then>
                                           <If.Else>
-                                            <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="1017.6,15148" sap2010:WorkflowViewState.IdRef="Sequence_214">
+                                            <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="1118.4,17615.2" sap2010:WorkflowViewState.IdRef="Sequence_214">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="955.2,15059.2" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1056,17526.4" sap2010:WorkflowViewState.IdRef="Sequence_41">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -2251,7 +2251,7 @@
                                                     </Sequence>
                                                   </If.Else>
                                                 </If>
-                                                <Sequence sap2010:Annotation.AnnotationText=" (UPDATE - 2023-06-30  - &quot;.&quot;-OS DÁTUMOK KEZELÉSE)" DisplayName="Dátum Átalakítás És Ellenőrzés" sap:VirtualizedContainerService.HintSize="892.8,3868" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                                                <Sequence sap2010:Annotation.AnnotationText=" (UPDATE - 2023-06-30  - &quot;.&quot;-OS DÁTUMOK KEZELÉSE)" DisplayName="Dátum Átalakítás És Ellenőrzés" sap:VirtualizedContainerService.HintSize="993.6,6511.2" sap2010:WorkflowViewState.IdRef="Sequence_42">
                                                   <Sequence.Variables>
                                                     <Variable x:TypeArguments="scg:List(x:String)" Name="dátumHeaderek" />
                                                   </Sequence.Variables>
@@ -2274,39 +2274,39 @@
                                                       </InArgument>
                                                     </Assign.Value>
                                                   </Assign>
-                                                  <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each currentDateHeader" sap:VirtualizedContainerService.HintSize="830.4,3634.4" sap2010:WorkflowViewState.IdRef="ForEach`1_1">
+                                                  <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each currentDateHeader" sap:VirtualizedContainerService.HintSize="931.2,6277.6" sap2010:WorkflowViewState.IdRef="ForEach`1_1">
                                                     <ui:ForEach.Body>
                                                       <ActivityAction x:TypeArguments="x:String">
                                                         <ActivityAction.Argument>
                                                           <DelegateInArgument x:TypeArguments="x:String" Name="currentDateHeader" />
                                                         </ActivityAction.Argument>
-                                                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="796.8,3496.8" sap2010:WorkflowViewState.IdRef="Sequence_43">
+                                                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="897.6,6140" sap2010:WorkflowViewState.IdRef="Sequence_43">
                                                           <sap:WorkflowViewStateService.ViewState>
                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                             </scg:Dictionary>
                                                           </sap:WorkflowViewStateService.ViewState>
-                                                          <If DisplayName="If Column Has Value in the Current Row" sap:VirtualizedContainerService.HintSize="734.4,3408" sap2010:WorkflowViewState.IdRef="If_10">
+                                                          <If DisplayName="If Column Has Value in the Current Row" sap:VirtualizedContainerService.HintSize="835.2,6051.2" sap2010:WorkflowViewState.IdRef="If_10">
                                                             <If.Condition>
                                                               <InArgument x:TypeArguments="x:Boolean">
                                                                 <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_65">CurrentRow.ByField[currentDateHeader].Length() &gt; 0</CSharpValue>
                                                               </InArgument>
                                                             </If.Condition>
                                                             <If.Then>
-                                                              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="700.8,3105.6" sap2010:WorkflowViewState.IdRef="Sequence_44">
+                                                              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="801.6,4908" sap2010:WorkflowViewState.IdRef="Sequence_44">
                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                   </scg:Dictionary>
                                                                 </sap:WorkflowViewStateService.ViewState>
-                                                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="638,141" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info">
+                                                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="739.2,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info">
                                                                   <ui:LogMessage.Message>
                                                                     <InArgument x:TypeArguments="x:Object">
                                                                       <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_66">string.Format("a &lt;{0}&gt; oszlop {1} tipusú", currentDateHeader, CurrentRow.ByField[currentDateHeader].RawValueType.ToString())</CSharpValue>
                                                                     </InArgument>
                                                                   </ui:LogMessage.Message>
                                                                 </ui:LogMessage>
-                                                                <If DisplayName="If Date COntains a DOT" sap:VirtualizedContainerService.HintSize="638.4,547.2" sap2010:WorkflowViewState.IdRef="If_67">
+                                                                <If DisplayName="If Date COntains a DOT" sap:VirtualizedContainerService.HintSize="739.2,547.2" sap2010:WorkflowViewState.IdRef="If_67">
                                                                   <If.Condition>
                                                                     <InArgument x:TypeArguments="x:Boolean">
                                                                       <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_781">CurrentRow.ByField[currentDateHeader].ToString().Contains(".")</CSharpValue>
@@ -2343,7 +2343,7 @@
                                                                     </Sequence>
                                                                   </If.Else>
                                                                 </If>
-                                                                <Switch x:TypeArguments="x:String" DisplayName="Switch" sap:VirtualizedContainerService.HintSize="638.4,2328.8" sap2010:WorkflowViewState.IdRef="Switch`1_6">
+                                                                <Switch x:TypeArguments="x:String" DisplayName="Switch" sap:VirtualizedContainerService.HintSize="739.2,4097.6" sap2010:WorkflowViewState.IdRef="Switch`1_6">
                                                                   <Switch.Expression>
                                                                     <InArgument x:TypeArguments="x:String">
                                                                       <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_285">CurrentRow.ByField[currentDateHeader].RawValueType.ToString()</CSharpValue>
@@ -2355,14 +2355,14 @@
                                                                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                                     </scg:Dictionary>
                                                                   </sap:WorkflowViewStateService.ViewState>
-                                                                  <Sequence x:Key="System.Double" DisplayName="Double Case" sap:VirtualizedContainerService.HintSize="598.4,1469.6" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                                                                  <Sequence x:Key="System.Double" DisplayName="Double Case" sap:VirtualizedContainerService.HintSize="699.2,1904.8" sap2010:WorkflowViewState.IdRef="Sequence_46">
                                                                     <sap:WorkflowViewStateService.ViewState>
                                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                                       </scg:Dictionary>
                                                                     </sap:WorkflowViewStateService.ViewState>
-                                                                    <Assign sap:VirtualizedContainerService.HintSize="536,82" sap2010:WorkflowViewState.IdRef="Assign_18">
+                                                                    <Assign sap:VirtualizedContainerService.HintSize="636.8,113.6" sap2010:WorkflowViewState.IdRef="Assign_18">
                                                                       <Assign.To>
                                                                         <OutArgument x:TypeArguments="ue:ExcelValue">
                                                                           <CSharpReference x:TypeArguments="ue:ExcelValue" sap2010:WorkflowViewState.IdRef="CSharpReference`1_47">CurrentRow.ByField[currentDateHeader]</CSharpReference>
@@ -2374,7 +2374,7 @@
                                                                         </InArgument>
                                                                       </Assign.Value>
                                                                     </Assign>
-                                                                    <Switch x:TypeArguments="x:String" DisplayName="Switch - What Type of Date Info It Is" sap:VirtualizedContainerService.HintSize="536,1299" sap2010:WorkflowViewState.IdRef="Switch`1_7">
+                                                                    <Switch x:TypeArguments="x:String" DisplayName="Switch - What Type of Date Info It Is" sap:VirtualizedContainerService.HintSize="636.8,1702.4" sap2010:WorkflowViewState.IdRef="Switch`1_7">
                                                                       <Switch.Expression>
                                                                         <InArgument x:TypeArguments="x:String">
                                                                           <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_286">currentDateHeader</CSharpValue>
@@ -2386,7 +2386,7 @@
                                                                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                                         </scg:Dictionary>
                                                                       </sap:WorkflowViewStateService.ViewState>
-                                                                      <Sequence x:Key="Személy: Születési dátum" DisplayName="Születési Idő" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_47">
+                                                                      <Sequence x:Key="Személy: Születési dátum" DisplayName="Születési Idő" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_47">
                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -2461,7 +2461,7 @@ Excel.Sheet["Munka1"].Range[CurrentRow.ByField[currentDateHeader].Address]</CSha
                                                                           </Assign.Value>
                                                                         </Assign>
                                                                       </Sequence>
-                                                                      <Sequence x:Key="Személy: Útlevél kiállításának dátuma" DisplayName="Útlevél Kiállításának Dátuma" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_50">
+                                                                      <Sequence x:Key="Személy: Útlevél kiállításának dátuma" DisplayName="Útlevél Kiállításának Dátuma" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_50">
                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -2536,7 +2536,7 @@ Excel.Sheet["Munka1"].Range[CurrentRow.ByField[currentDateHeader].Address]</CSha
                                                                           </Assign.Value>
                                                                         </Assign>
                                                                       </Sequence>
-                                                                      <Sequence x:Key="Személy: Útlevél lejáratának dátuma" DisplayName="Útlevél Lejárata" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_53">
+                                                                      <Sequence x:Key="Személy: Útlevél lejáratának dátuma" DisplayName="Útlevél Lejárata" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_53">
                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -2611,7 +2611,7 @@ Excel.Sheet["Munka1"].Range[CurrentRow.ByField[currentDateHeader].Address]</CSha
                                                                           </Assign.Value>
                                                                         </Assign>
                                                                       </Sequence>
-                                                                      <Sequence x:Key="Személy: Tartózkodási engedély érvényessége" DisplayName="Tartózkodási Engedély Lejárata" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_56">
+                                                                      <Sequence x:Key="Személy: Tartózkodási engedély érvényessége" DisplayName="Tartózkodási Engedély Lejárata" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_56">
                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -2686,14 +2686,14 @@ Excel.Sheet["Munka1"].Range[CurrentRow.ByField[currentDateHeader].Address]</CSha
                                                                           </Assign.Value>
                                                                         </Assign>
                                                                       </Sequence>
-                                                                      <Sequence x:Key="Foglalkoztatóval kötött megállapodás kelte" DisplayName="Foglalkoztatóval Kötött Megállapodás" sap:VirtualizedContainerService.HintSize="496,415" sap2010:WorkflowViewState.IdRef="Sequence_59">
+                                                                      <Sequence x:Key="Foglalkoztatóval kötött megállapodás kelte" DisplayName="Foglalkoztatóval Kötött Megállapodás" sap:VirtualizedContainerService.HintSize="596.8,869.6" sap2010:WorkflowViewState.IdRef="Sequence_59">
                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                                           </scg:Dictionary>
                                                                         </sap:WorkflowViewStateService.ViewState>
-                                                                        <If sap:VirtualizedContainerService.HintSize="434,182" sap2010:WorkflowViewState.IdRef="If_15">
+                                                                        <If sap:VirtualizedContainerService.HintSize="534.4,676" sap2010:WorkflowViewState.IdRef="If_15">
                                                                           <If.Condition>
                                                                             <InArgument x:TypeArguments="x:Boolean">
                                                                               <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_719">CurrentRow.ByField[currentDateHeader].DateTimeValue &lt;= DateTime.Today</CSharpValue>
@@ -2706,13 +2706,13 @@ Excel.Sheet["Munka1"].Range[CurrentRow.ByField[currentDateHeader].Address]</CSha
                                                                             </scg:Dictionary>
                                                                           </sap:WorkflowViewStateService.ViewState>
                                                                           <If.Then>
-                                                                            <Sequence sap:VirtualizedContainerService.HintSize="376,229" sap2010:WorkflowViewState.IdRef="Sequence_60">
+                                                                            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,254.4" sap2010:WorkflowViewState.IdRef="Sequence_60">
                                                                               <sap:WorkflowViewStateService.ViewState>
                                                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                                 </scg:Dictionary>
                                                                               </sap:WorkflowViewStateService.ViewState>
-                                                                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,141" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="Info">
+                                                                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="Info">
                                                                                 <ui:LogMessage.Message>
                                                                                   <InArgument x:TypeArguments="x:Object">
                                                                                     <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_93">string.Format("&lt;{0}&gt; adataiban a &lt;{1}&gt; oszlopban megfelelő a dátumformátum({2}).", CurrentRow.ByField["Személy: Születési vezetéknév"].ToString()+" "+CurrentRow.ByField["Személy: Születési keresztnév"].ToString(), currentDateHeader, CurrentRow.ByField[currentDateHeader].ToString())</CSharpValue>
@@ -2722,13 +2722,13 @@ Excel.Sheet["Munka1"].Range[CurrentRow.ByField[currentDateHeader].Address]</CSha
                                                                             </Sequence>
                                                                           </If.Then>
                                                                           <If.Else>
-                                                                            <Sequence sap:VirtualizedContainerService.HintSize="481,226" sap2010:WorkflowViewState.IdRef="Sequence_61">
+                                                                            <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="500.8,251.2" sap2010:WorkflowViewState.IdRef="Sequence_61">
                                                                               <sap:WorkflowViewStateService.ViewState>
                                                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                                 </scg:Dictionary>
                                                                               </sap:WorkflowViewStateService.ViewState>
-                                                                              <ueab:FormatRangeX DisplayName="Format Cells" sap:VirtualizedContainerService.HintSize="439,138" sap2010:WorkflowViewState.IdRef="FormatRangeX_5">
+                                                                              <ueab:FormatRangeX DisplayName="Format Cells" sap:VirtualizedContainerService.HintSize="438.4,162.4" sap2010:WorkflowViewState.IdRef="FormatRangeX_5">
                                                                                 <ueab:FormatRangeX.Alignment>
                                                                                   <ui:AlignmentOptions HorizontalAlignment="xlHAlignGeneral" VerticalAlignment="xlVAlignBottom" WrapText="False" />
                                                                                 </ueab:FormatRangeX.Alignment>
@@ -2748,7 +2748,7 @@ Excel.Sheet["Munka1"].Range[CurrentRow.ByField[currentDateHeader].Address]</CSha
                                                                             </Sequence>
                                                                           </If.Else>
                                                                         </If>
-                                                                        <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_23">
+                                                                        <Assign sap:VirtualizedContainerService.HintSize="534.4,104.8" sap2010:WorkflowViewState.IdRef="Assign_23">
                                                                           <Assign.To>
                                                                             <OutArgument x:TypeArguments="x:Boolean">
                                                                               <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_334">Oszlopok_dictionary[currentDateHeader]</CSharpReference>
@@ -2763,7 +2763,7 @@ Excel.Sheet["Munka1"].Range[CurrentRow.ByField[currentDateHeader].Address]</CSha
                                                                       </Sequence>
                                                                     </Switch>
                                                                   </Sequence>
-                                                                  <Switch x:TypeArguments="x:String" x:Key="System.DateTime" DisplayName="Switch - What Type of Date Info It Is" sap:VirtualizedContainerService.HintSize="497,325" sap2010:WorkflowViewState.IdRef="Switch`1_8">
+                                                                  <Switch x:TypeArguments="x:String" x:Key="System.DateTime" DisplayName="Switch - What Type of Date Info It Is" sap:VirtualizedContainerService.HintSize="636.8,1679.2" sap2010:WorkflowViewState.IdRef="Switch`1_8">
                                                                     <Switch.Expression>
                                                                       <InArgument x:TypeArguments="x:String">
                                                                         <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_287">currentDateHeader</CSharpValue>
@@ -2775,7 +2775,7 @@ Excel.Sheet["Munka1"].Range[CurrentRow.ByField[currentDateHeader].Address]</CSha
                                                                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                                       </scg:Dictionary>
                                                                     </sap:WorkflowViewStateService.ViewState>
-                                                                    <Sequence x:Key="Személy: Születési dátum" DisplayName="DateTime Születési Dátum" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_62">
+                                                                    <Sequence x:Key="Személy: Születési dátum" DisplayName="DateTime Születési Dátum" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_62">
                                                                       <sap:WorkflowViewStateService.ViewState>
                                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -2850,7 +2850,7 @@ Excel.Sheet["Munka1"].Range[CurrentRow.ByField[currentDateHeader].Address]</CSha
                                                                         </Assign.Value>
                                                                       </Assign>
                                                                     </Sequence>
-                                                                    <Sequence x:Key="Személy: Útlevél kiállításának dátuma" DisplayName="DateTime Útlevél Kiállíátásának Dátuma" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_65">
+                                                                    <Sequence x:Key="Személy: Útlevél kiállításának dátuma" DisplayName="DateTime Útlevél Kiállíátásának Dátuma" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_65">
                                                                       <sap:WorkflowViewStateService.ViewState>
                                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -2925,7 +2925,7 @@ Excel.Sheet["Munka1"].Range[CurrentRow.ByField[currentDateHeader].Address]</CSha
                                                                         </Assign.Value>
                                                                       </Assign>
                                                                     </Sequence>
-                                                                    <Sequence x:Key="Személy: Útlevél lejáratának dátuma" DisplayName="DateTime Útlevél Lejáratának Dátuma" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_68">
+                                                                    <Sequence x:Key="Személy: Útlevél lejáratának dátuma" DisplayName="DateTime Útlevél Lejáratának Dátuma" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_68">
                                                                       <sap:WorkflowViewStateService.ViewState>
                                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -3000,7 +3000,7 @@ Excel.Sheet["Munka1"].Range[CurrentRow.ByField[currentDateHeader].Address]</CSha
                                                                         </Assign.Value>
                                                                       </Assign>
                                                                     </Sequence>
-                                                                    <Sequence x:Key="Személy: Tartózkodási engedély érvényessége" DisplayName="DateTime Tartózkodási Engedély Dátuma" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_71">
+                                                                    <Sequence x:Key="Személy: Tartózkodási engedély érvényessége" DisplayName="DateTime Tartózkodási Engedély Dátuma" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_71">
                                                                       <sap:WorkflowViewStateService.ViewState>
                                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -3075,14 +3075,14 @@ Excel.Sheet["Munka1"].Range[CurrentRow.ByField[currentDateHeader].Address]</CSha
                                                                         </Assign.Value>
                                                                       </Assign>
                                                                     </Sequence>
-                                                                    <Sequence x:Key="Foglalkoztatóval kötött megállapodás kelte" DisplayName="DateTime Megállapodás Dátuma" sap:VirtualizedContainerService.HintSize="577,870" sap2010:WorkflowViewState.IdRef="Sequence_74">
+                                                                    <Sequence x:Key="Foglalkoztatóval kötött megállapodás kelte" DisplayName="DateTime Megállapodás Dátuma" sap:VirtualizedContainerService.HintSize="596.8,869.6" sap2010:WorkflowViewState.IdRef="Sequence_74">
                                                                       <sap:WorkflowViewStateService.ViewState>
                                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                                         </scg:Dictionary>
                                                                       </sap:WorkflowViewStateService.ViewState>
-                                                                      <If sap:VirtualizedContainerService.HintSize="515,637" sap2010:WorkflowViewState.IdRef="If_20">
+                                                                      <If sap:VirtualizedContainerService.HintSize="534.4,676" sap2010:WorkflowViewState.IdRef="If_20">
                                                                         <If.Condition>
                                                                           <InArgument x:TypeArguments="x:Boolean">
                                                                             <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_825">CurrentRow.ByField[currentDateHeader].DateTimeValue &lt;= DateTime.Today</CSharpValue>
@@ -3095,13 +3095,13 @@ Excel.Sheet["Munka1"].Range[CurrentRow.ByField[currentDateHeader].Address]</CSha
                                                                           </scg:Dictionary>
                                                                         </sap:WorkflowViewStateService.ViewState>
                                                                         <If.Then>
-                                                                          <Sequence sap:VirtualizedContainerService.HintSize="376,229" sap2010:WorkflowViewState.IdRef="Sequence_75">
+                                                                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,254.4" sap2010:WorkflowViewState.IdRef="Sequence_75">
                                                                             <sap:WorkflowViewStateService.ViewState>
                                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                               </scg:Dictionary>
                                                                             </sap:WorkflowViewStateService.ViewState>
-                                                                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,141" sap2010:WorkflowViewState.IdRef="LogMessage_19" Level="Info">
+                                                                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_19" Level="Info">
                                                                               <ui:LogMessage.Message>
                                                                                 <InArgument x:TypeArguments="x:Object">
                                                                                   <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_120">string.Format("&lt;{0}&gt; adataiban a &lt;{1}&gt; oszlopban megfelelő a dátumformátum({2}).", CurrentRow.ByField["Személy: Születési vezetéknév"].ToString()+" "+CurrentRow.ByField["Személy: Születési keresztnév"].ToString(), currentDateHeader, CurrentRow.ByField[currentDateHeader].ToString())</CSharpValue>
@@ -3111,13 +3111,13 @@ Excel.Sheet["Munka1"].Range[CurrentRow.ByField[currentDateHeader].Address]</CSha
                                                                           </Sequence>
                                                                         </If.Then>
                                                                         <If.Else>
-                                                                          <Sequence sap:VirtualizedContainerService.HintSize="481,226" sap2010:WorkflowViewState.IdRef="Sequence_76">
+                                                                          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="500.8,251.2" sap2010:WorkflowViewState.IdRef="Sequence_76">
                                                                             <sap:WorkflowViewStateService.ViewState>
                                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                               </scg:Dictionary>
                                                                             </sap:WorkflowViewStateService.ViewState>
-                                                                            <ueab:FormatRangeX DisplayName="Format Cells" sap:VirtualizedContainerService.HintSize="439,138" sap2010:WorkflowViewState.IdRef="FormatRangeX_10">
+                                                                            <ueab:FormatRangeX DisplayName="Format Cells" sap:VirtualizedContainerService.HintSize="438.4,162.4" sap2010:WorkflowViewState.IdRef="FormatRangeX_10">
                                                                               <ueab:FormatRangeX.Alignment>
                                                                                 <ui:AlignmentOptions HorizontalAlignment="xlHAlignGeneral" VerticalAlignment="xlVAlignBottom" WrapText="False" />
                                                                               </ueab:FormatRangeX.Alignment>
@@ -3137,7 +3137,7 @@ Excel.Sheet["Munka1"].Range[CurrentRow.ByField[currentDateHeader].Address]</CSha
                                                                           </Sequence>
                                                                         </If.Else>
                                                                       </If>
-                                                                      <Assign sap:VirtualizedContainerService.HintSize="515,82" sap2010:WorkflowViewState.IdRef="Assign_28">
+                                                                      <Assign sap:VirtualizedContainerService.HintSize="534.4,104.8" sap2010:WorkflowViewState.IdRef="Assign_28">
                                                                         <Assign.To>
                                                                           <OutArgument x:TypeArguments="x:Boolean">
                                                                             <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_339">Oszlopok_dictionary[currentDateHeader]</CSharpReference>
@@ -3151,7 +3151,7 @@ Excel.Sheet["Munka1"].Range[CurrentRow.ByField[currentDateHeader].Address]</CSha
                                                                       </Assign>
                                                                     </Sequence>
                                                                   </Switch>
-                                                                  <Sequence x:Key="System.String" DisplayName="System.String Case" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_77">
+                                                                  <Sequence x:Key="System.String" DisplayName="System.String Case" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_77">
                                                                     <sap:WorkflowViewStateService.ViewState>
                                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -3191,13 +3191,13 @@ Excel.Sheet["Munka1"].Range[CurrentRow.ByField[currentDateHeader].Address]</CSha
                                                               </Sequence>
                                                             </If.Then>
                                                             <If.Else>
-                                                              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,140.8" sap2010:WorkflowViewState.IdRef="Sequence_45">
+                                                              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="559.2,981.6" sap2010:WorkflowViewState.IdRef="Sequence_45">
                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                   </scg:Dictionary>
                                                                 </sap:WorkflowViewStateService.ViewState>
-                                                                <Switch x:TypeArguments="x:String" DisplayName="Switch - What Type of Date Info It Is" sap:VirtualizedContainerService.HintSize="280,52" sap2010:WorkflowViewState.IdRef="Switch`1_9">
+                                                                <Switch x:TypeArguments="x:String" DisplayName="Switch - What Type of Date Info It Is" sap:VirtualizedContainerService.HintSize="496.8,892.8" sap2010:WorkflowViewState.IdRef="Switch`1_9">
                                                                   <Switch.Expression>
                                                                     <InArgument x:TypeArguments="x:String">
                                                                       <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_288">currentDateHeader</CSharpValue>
@@ -3205,11 +3205,11 @@ Excel.Sheet["Munka1"].Range[CurrentRow.ByField[currentDateHeader].Address]</CSha
                                                                   </Switch.Expression>
                                                                   <sap:WorkflowViewStateService.ViewState>
                                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                                                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                                     </scg:Dictionary>
                                                                   </sap:WorkflowViewStateService.ViewState>
-                                                                  <Sequence x:Key="Személy: Születési dátum" DisplayName="Üres Születési Dátum" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_78">
+                                                                  <Sequence x:Key="Személy: Születési dátum" DisplayName="Üres Születési Dátum" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_78">
                                                                     <sap:WorkflowViewStateService.ViewState>
                                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -3227,7 +3227,7 @@ Excel.Sheet["Munka1"].Range[CurrentRow.ByField[currentDateHeader].Address]</CSha
                                                                       </Assign.Value>
                                                                     </Assign>
                                                                   </Sequence>
-                                                                  <Sequence x:Key="Személy: Útlevél kiállításának dátuma" DisplayName="Üres Útlevél Kiállíátsa" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_79">
+                                                                  <Sequence x:Key="Személy: Útlevél kiállításának dátuma" DisplayName="Üres Útlevél Kiállíátsa" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_79">
                                                                     <sap:WorkflowViewStateService.ViewState>
                                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -3245,7 +3245,7 @@ Excel.Sheet["Munka1"].Range[CurrentRow.ByField[currentDateHeader].Address]</CSha
                                                                       </Assign.Value>
                                                                     </Assign>
                                                                   </Sequence>
-                                                                  <Sequence x:Key="Személy: Tartózkodási engedély érvényessége" DisplayName="Üres Tartózkodási Engedély" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_80">
+                                                                  <Sequence x:Key="Személy: Tartózkodási engedély érvényessége" DisplayName="Üres Tartózkodási Engedély" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_80">
                                                                     <sap:WorkflowViewStateService.ViewState>
                                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -3263,7 +3263,7 @@ Excel.Sheet["Munka1"].Range[CurrentRow.ByField[currentDateHeader].Address]</CSha
                                                                       </Assign.Value>
                                                                     </Assign>
                                                                   </Sequence>
-                                                                  <Sequence x:Key="Foglalkoztatóval kötött megállapodás kelte" DisplayName="Üres Foglalkoztató Megállapodás" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_81">
+                                                                  <Sequence x:Key="Foglalkoztatóval kötött megállapodás kelte" DisplayName="Üres Foglalkoztató Megállapodás" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_81">
                                                                     <sap:WorkflowViewStateService.ViewState>
                                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -3283,7 +3283,7 @@ Excel.Sheet["Munka1"].Range[CurrentRow.ByField[currentDateHeader].Address]</CSha
                                                                       </Assign.Value>
                                                                     </Assign>
                                                                   </Sequence>
-                                                                  <Sequence x:Key="Személy: Útlevél lejáratának dátuma" DisplayName="DateTime Útlevél Lejáratának Dátuma" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_217">
+                                                                  <Sequence x:Key="Személy: Útlevél lejáratának dátuma" DisplayName="DateTime Útlevél Lejáratának Dátuma" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_217">
                                                                     <sap:WorkflowViewStateService.ViewState>
                                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -3321,26 +3321,26 @@ Excel.Sheet["Munka1"].Range[CurrentRow.ByField[currentDateHeader].Address]</CSha
                                                     </sap:WorkflowViewStateService.ViewState>
                                                   </ui:ForEach>
                                                 </Sequence>
-                                                <Sequence DisplayName="Ellenőrzés ÉS Szinezés" sap:VirtualizedContainerService.HintSize="892.8,10639.2" sap2010:WorkflowViewState.IdRef="Sequence_172">
+                                                <Sequence DisplayName="Ellenőrzés ÉS Szinezés" sap:VirtualizedContainerService.HintSize="993.6,10463.2" sap2010:WorkflowViewState.IdRef="Sequence_172">
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
-                                                  <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, x:Boolean)" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="ITT TÖRTÉNIK A NEM KÉPI VAGY DÁTUM MEZŐK ELLENŐRZÉSE. A SIKERES VAGY SIKERTELEN ELLENŐRZÉSRE VONATKOZÓ TRUE VAGY FALSE ÉRTÉKEKET ITT KAPJA MEG AZ ADOTT KULCS A DICTIONARYBEN" DisplayName="For Each Boolean értékek hozzáadása" sap:VirtualizedContainerService.HintSize="592.8,9322.4" sap2010:WorkflowViewState.IdRef="ForEach`1_15">
+                                                  <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, x:Boolean)" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="ITT TÖRTÉNIK A NEM KÉPI VAGY DÁTUM MEZŐK ELLENŐRZÉSE. A SIKERES VAGY SIKERTELEN ELLENŐRZÉSRE VONATKOZÓ TRUE VAGY FALSE ÉRTÉKEKET ITT KAPJA MEG AZ ADOTT KULCS A DICTIONARYBEN" DisplayName="For Each Boolean értékek hozzáadása" sap:VirtualizedContainerService.HintSize="592.8,9146.4" sap2010:WorkflowViewState.IdRef="ForEach`1_15">
                                                     <ui:ForEach.Body>
                                                       <ActivityAction x:TypeArguments="scg:KeyValuePair(x:String, x:Boolean)">
                                                         <ActivityAction.Argument>
                                                           <DelegateInArgument x:TypeArguments="scg:KeyValuePair(x:String, x:Boolean)" Name="dict_item" />
                                                         </ActivityAction.Argument>
-                                                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="559.2,9116" sap2010:WorkflowViewState.IdRef="Sequence_177">
+                                                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="559.2,8940" sap2010:WorkflowViewState.IdRef="Sequence_177">
                                                           <sap:WorkflowViewStateService.ViewState>
                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                             </scg:Dictionary>
                                                           </sap:WorkflowViewStateService.ViewState>
-                                                          <Switch x:TypeArguments="x:String" DisplayName="Switch Ellenőrzések" sap:VirtualizedContainerService.HintSize="496.8,9027.2" sap2010:WorkflowViewState.IdRef="Switch`1_11">
+                                                          <Switch x:TypeArguments="x:String" DisplayName="Switch Ellenőrzések" sap:VirtualizedContainerService.HintSize="496.8,8851.2" sap2010:WorkflowViewState.IdRef="Switch`1_11">
                                                             <Switch.Default>
                                                               <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334.4,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_73">
                                                                 <ui:LogMessage.Level>
@@ -3875,7 +3875,7 @@ Excel.Sheet["Munka1"].Range[CurrentRow.ByField[currentDateHeader].Address]</CSha
                                                                 </scg:Dictionary>
                                                               </sap:WorkflowViewStateService.ViewState>
                                                             </Assign>
-                                                            <Assign x:Key="Anyanyelve" sap2010:Annotation.AnnotationText="KÖTELEZŐ ADAT" sap:VirtualizedContainerService.HintSize="434,113" sap2010:WorkflowViewState.IdRef="Assign_166">
+                                                            <Assign x:Key="Anyanyelve" sap2010:Annotation.AnnotationText="KÖTELEZŐ ADAT" sap:VirtualizedContainerService.HintSize="433.6,112.8" sap2010:WorkflowViewState.IdRef="Assign_166">
                                                               <Assign.To>
                                                                 <OutArgument x:TypeArguments="x:Boolean">
                                                                   <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_317">Oszlopok_dictionary[dict_item.Key]</CSharpReference>
@@ -3892,7 +3892,7 @@ Excel.Sheet["Munka1"].Range[CurrentRow.ByField[currentDateHeader].Address]</CSha
                                                                 </scg:Dictionary>
                                                               </sap:WorkflowViewStateService.ViewState>
                                                             </Assign>
-                                                            <If x:Key="Munkavállaló: Emelet" sap2010:Annotation.AnnotationText="OPCIONÁLIS ADAT&#xA;" DisplayName="If Munkavállaló: Emelet" sap:VirtualizedContainerService.HintSize="200,94" sap2010:WorkflowViewState.IdRef="If_52">
+                                                            <If x:Key="Munkavállaló: Emelet" sap2010:Annotation.AnnotationText="OPCIONÁLIS ADAT&#xA;" DisplayName="If Munkavállaló: Emelet" sap:VirtualizedContainerService.HintSize="200,68.8" sap2010:WorkflowViewState.IdRef="If_52">
                                                               <If.Condition>
                                                                 <InArgument x:TypeArguments="x:Boolean">
                                                                   <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_649">CurrentRow.ByField["Munkavállaló: Emelet"].Length() &gt; 0</CSharpValue>
@@ -3946,7 +3946,7 @@ Excel.Sheet["Munka1"].Range[CurrentRow.ByField[currentDateHeader].Address]</CSha
                                                                 </Sequence>
                                                               </If.Else>
                                                             </If>
-                                                            <If x:Key="Munkavégzési Emelet" sap2010:Annotation.AnnotationText="OPCIONÁLIS ADAT" DisplayName="If Munkavégzési Emelet" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="If_53">
+                                                            <If x:Key="Munkavégzési Emelet" sap2010:Annotation.AnnotationText="OPCIONÁLIS ADAT" DisplayName="If Munkavégzési Emelet" sap:VirtualizedContainerService.HintSize="200,56" sap2010:WorkflowViewState.IdRef="If_53">
                                                               <If.Condition>
                                                                 <InArgument x:TypeArguments="x:Boolean">
                                                                   <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_619">CurrentRow.ByField["Munkavégzési Emelet"].Length() &gt; 0</CSharpValue>
@@ -4000,7 +4000,7 @@ Excel.Sheet["Munka1"].Range[CurrentRow.ByField[currentDateHeader].Address]</CSha
                                                                 </Sequence>
                                                               </If.Else>
                                                             </If>
-                                                            <If x:Key="Munkavégzési közterület jellege" sap2010:Annotation.AnnotationText="OPCIONÁLIS ADAT" DisplayName="If Munkavégzési Közterület Jellege" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="If_54">
+                                                            <If x:Key="Munkavégzési közterület jellege" sap2010:Annotation.AnnotationText="OPCIONÁLIS ADAT" DisplayName="If Munkavégzési Közterület Jellege" sap:VirtualizedContainerService.HintSize="200,56" sap2010:WorkflowViewState.IdRef="If_54">
                                                               <If.Condition>
                                                                 <InArgument x:TypeArguments="x:Boolean">
                                                                   <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_621">CurrentRow.ByField["Munkavégzési közterület jellege"].Length() &gt; 0</CSharpValue>
@@ -4054,7 +4054,7 @@ Excel.Sheet["Munka1"].Range[CurrentRow.ByField[currentDateHeader].Address]</CSha
                                                                 </Sequence>
                                                               </If.Else>
                                                             </If>
-                                                            <Sequence x:Key="Munkavállaló: Házszám" sap2010:Annotation.AnnotationText="FELTÉTELESEN OPCIONÁLIS/KÖTELEZŐ ADAT" DisplayName="Munkavállaló: Házszám" sap:VirtualizedContainerService.HintSize="450,112" sap2010:WorkflowViewState.IdRef="Sequence_220">
+                                                            <Sequence x:Key="Munkavállaló: Házszám" sap2010:Annotation.AnnotationText="FELTÉTELESEN OPCIONÁLIS/KÖTELEZŐ ADAT" DisplayName="Munkavállaló: Házszám" sap:VirtualizedContainerService.HintSize="416,56" sap2010:WorkflowViewState.IdRef="Sequence_220">
                                                               <sap:WorkflowViewStateService.ViewState>
                                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -4187,7 +4187,7 @@ Excel.Sheet["Munka1"].Range[CurrentRow.ByField[currentDateHeader].Address]</CSha
                                                                 </If.Else>
                                                               </If>
                                                             </Sequence>
-                                                            <Sequence x:Key="Munkavállaló: HRSZ" sap2010:Annotation.AnnotationText="FELTÉTELESEN OPCIONÁLIS/KÖTELEZŐ ADAT" DisplayName="Munkavállaló: HRSZ" sap:VirtualizedContainerService.HintSize="450,112" sap2010:WorkflowViewState.IdRef="Sequence_233">
+                                                            <Sequence x:Key="Munkavállaló: HRSZ" sap2010:Annotation.AnnotationText="FELTÉTELESEN OPCIONÁLIS/KÖTELEZŐ ADAT" DisplayName="Munkavállaló: HRSZ" sap:VirtualizedContainerService.HintSize="416,56" sap2010:WorkflowViewState.IdRef="Sequence_233">
                                                               <sap:WorkflowViewStateService.ViewState>
                                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -4326,7 +4326,7 @@ Excel.Sheet["Munka1"].Range[CurrentRow.ByField[currentDateHeader].Address]</CSha
                                                                 </If.Else>
                                                               </If>
                                                             </Sequence>
-                                                            <Assign x:Key="Szakképzettsége" sap2010:Annotation.AnnotationText="KÖTELEZŐ ADAT" sap:VirtualizedContainerService.HintSize="434,113" sap2010:WorkflowViewState.IdRef="Assign_212">
+                                                            <Assign x:Key="Szakképzettsége" sap2010:Annotation.AnnotationText="KÖTELEZŐ ADAT" sap:VirtualizedContainerService.HintSize="433.6,112.8" sap2010:WorkflowViewState.IdRef="Assign_212">
                                                               <Assign.To>
                                                                 <OutArgument x:TypeArguments="x:Boolean">
                                                                   <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_380">Oszlopok_dictionary[dict_item.Key]</CSharpReference>
@@ -4343,7 +4343,7 @@ Excel.Sheet["Munka1"].Range[CurrentRow.ByField[currentDateHeader].Address]</CSha
                                                                 </scg:Dictionary>
                                                               </sap:WorkflowViewStateService.ViewState>
                                                             </Assign>
-                                                            <Assign x:Key="Munkáltató házszám/hrsz" sap2010:Annotation.AnnotationText="KÖTELEZŐ ADAT" sap:VirtualizedContainerService.HintSize="434,113" sap2010:WorkflowViewState.IdRef="Assign_213">
+                                                            <Assign x:Key="Munkáltató házszám/hrsz" sap2010:Annotation.AnnotationText="KÖTELEZŐ ADAT" sap:VirtualizedContainerService.HintSize="433.6,112.8" sap2010:WorkflowViewState.IdRef="Assign_213">
                                                               <Assign.To>
                                                                 <OutArgument x:TypeArguments="x:Boolean">
                                                                   <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_381">Oszlopok_dictionary[dict_item.Key]</CSharpReference>
@@ -4360,7 +4360,7 @@ Excel.Sheet["Munka1"].Range[CurrentRow.ByField[currentDateHeader].Address]</CSha
                                                                 </scg:Dictionary>
                                                               </sap:WorkflowViewStateService.ViewState>
                                                             </Assign>
-                                                            <Assign x:Key="Munkáltató közterület neve" sap2010:Annotation.AnnotationText="KÖTELEZŐ ADAT" sap:VirtualizedContainerService.HintSize="434,113" sap2010:WorkflowViewState.IdRef="Assign_214">
+                                                            <Assign x:Key="Munkáltató közterület neve" sap2010:Annotation.AnnotationText="KÖTELEZŐ ADAT" sap:VirtualizedContainerService.HintSize="433.6,112.8" sap2010:WorkflowViewState.IdRef="Assign_214">
                                                               <Assign.To>
                                                                 <OutArgument x:TypeArguments="x:Boolean">
                                                                   <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_382">Oszlopok_dictionary[dict_item.Key]</CSharpReference>
@@ -4954,13 +4954,13 @@ Excel.Sheet["Munka1"].Range[CurrentRow.ByField[currentDateHeader].Address]</CSha
               </ueab:ExcelProcessScopeX.Body>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ueab:ExcelProcessScopeX>
           </Sequence>
-          <Sequence DisplayName="Log és Státusz Jelentése" sap:VirtualizedContainerService.HintSize="603.2,48" sap2010:WorkflowViewState.IdRef="Sequence_108">
+          <Sequence DisplayName="Log és Státusz Jelentése" sap:VirtualizedContainerService.HintSize="1536,48" sap2010:WorkflowViewState.IdRef="Sequence_108">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -4985,7 +4985,7 @@ Excel.Sheet["Munka1"].Range[CurrentRow.ByField[currentDateHeader].Address]</CSha
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="668.8,106.4" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="1601.6,106.4" sap2010:WorkflowViewState.IdRef="Catch`1_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -5004,7 +5004,7 @@ Excel.Sheet["Munka1"].Range[CurrentRow.ByField[currentDateHeader].Address]</CSha
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence DisplayName="Log és Státsuz Jelentése" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_118">
+              <Sequence DisplayName="Log és Státsuz Jelentése" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="Sequence_118">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -5036,7 +5036,7 @@ Excel.Sheet["Munka1"].Range[CurrentRow.ByField[currentDateHeader].Address]</CSha
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:ReportStatus>
               </Sequence>
-              <Assign sap:VirtualizedContainerService.HintSize="450,82" sap2010:WorkflowViewState.IdRef="Assign_41">
+              <Assign sap:VirtualizedContainerService.HintSize="449.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_41">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">
                     <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_281">callerType</CSharpReference>
@@ -5046,7 +5046,7 @@ Excel.Sheet["Munka1"].Range[CurrentRow.ByField[currentDateHeader].Address]</CSha
                   <InArgument x:TypeArguments="x:String">general</InArgument>
                 </Assign.Value>
               </Assign>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Email Küldés.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="450,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Systems\\Utils\\Email Küldés.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Email Küldés.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="449.6,271.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Systems\\Utils\\Email Küldés.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InArgument x:TypeArguments="x:String" x:Key="email_recipient_In">
                     <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_578">emailRecipient_In</CSharpValue>
