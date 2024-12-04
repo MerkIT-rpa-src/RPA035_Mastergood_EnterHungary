@@ -2168,7 +2168,7 @@
                 <Transition DisplayName="Ignore Error" sap:VirtualizedContainerService.HintSize="450,507" sap2010:WorkflowViewState.IdRef="Transition_10">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:PointCollection x:Key="ConnectorLocation">553.2,258.9 523.2,258.9 523.2,261.09999999999997 394,261.09999999999997</av:PointCollection>
+                      <av:PointCollection x:Key="ConnectorLocation">553.2,259.44 523.2,259.44 523.2,261.64 393.8,261.64</av:PointCollection>
                       <x:Int32 x:Key="SrcConnectionPointIndex">21</x:Int32>
                       <x:Int32 x:Key="DestConnectionPointIndex">20</x:Int32>
                     </scg:Dictionary>
@@ -2177,11 +2177,11 @@
                     <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_230">abortIgnoreRestart == 2</CSharpValue>
                   </Transition.Condition>
                   <Transition.To>
-                    <State x:Name="__ReferenceID49" sap2010:Annotation.AnnotationText="Process next transaction input data&#xA;Call Performer workflow file" DisplayName="Process State" sap:VirtualizedContainerService.HintSize="681.6,1383.2" sap2010:WorkflowViewState.IdRef="State_2">
+                    <State x:Name="__ReferenceID49" sap2010:Annotation.AnnotationText="Process next transaction input data&#xA;Call Performer workflow file" DisplayName="Process State" sap:VirtualizedContainerService.HintSize="240.8,128.8" sap2010:WorkflowViewState.IdRef="State_2">
                       <State.Entry>
                         <TryCatch DisplayName="Try Catch Process State" sap:VirtualizedContainerService.HintSize="636.8,923.2" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                           <TryCatch.Try>
-                            <Flowchart sap2010:Annotation.AnnotationText="- Get Next Transaction Data&#xA;- If not finished, process item" DisplayName="Process State Flowchart" sap:VirtualizedContainerService.HintSize="1394.4,510.4" sap2010:WorkflowViewState.IdRef="Flowchart_3">
+                            <Flowchart sap2010:Annotation.AnnotationText="- Get Next Transaction Data&#xA;- If not finished, process item" DisplayName="Process State Flowchart" sap:VirtualizedContainerService.HintSize="600,668.8" sap2010:WorkflowViewState.IdRef="Flowchart_3">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -2220,7 +2220,7 @@
                                     <av:PointCollection x:Key="ConnectorLocation">290,95 290,125 129.5,125 129.5,160</av:PointCollection>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <ui:MultipleAssign sap2010:Annotation.AnnotationText="Init values for process sequence:&#xA;- Process&#xA;- AbortIgnoreRestart&#xA;- SystemError&#xA;- BusinessRuleException" DisplayName="Init values for process sequence" sap:VirtualizedContainerService.HintSize="478.4,242.39999999999998" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
+                                <ui:MultipleAssign sap2010:Annotation.AnnotationText="Init values for process sequence:&#xA;- Process&#xA;- AbortIgnoreRestart&#xA;- SystemError&#xA;- BusinessRuleException" DisplayName="Init values for process sequence" sap:VirtualizedContainerService.HintSize="110.4,70.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
                                   <ui:MultipleAssign.AssignOperations>
                                     <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
                                       <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_20">
@@ -2929,7 +2929,7 @@
                         <Transition DisplayName="Finished" sap:VirtualizedContainerService.HintSize="463,508" sap2010:WorkflowViewState.IdRef="Transition_7">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <av:PointCollection x:Key="ConnectorLocation">273.4,351.79999999999995 273.4,381.79999999999995 269.8,381.79999999999995 269.8,419</av:PointCollection>
+                              <av:PointCollection x:Key="ConnectorLocation">273.4,351.79999999999995 273.4,381.8 269.8,381.8 269.8,419</av:PointCollection>
                               <x:Int32 x:Key="SrcConnectionPointIndex">39</x:Int32>
                               <x:Int32 x:Key="DestConnectionPointIndex">38</x:Int32>
                             </scg:Dictionary>
